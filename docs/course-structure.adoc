@@ -230,6 +230,7 @@ Ausgestaltung und Modi der Prüfungen aktuell noch nicht final festgelegt. Es gi
 . Prüfung des *Grundverständnisses*: vorbereiteter Use-Case, konzeptionell mündliches Gespräch, Gruppenarbeit an der Tafel, Fragen und Antworten
 ////
 
+
 == Optionale Themen
 
 === Software Patterns
