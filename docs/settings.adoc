@@ -40,13 +40,20 @@
 // #  b) https://www.w3schools.com/charsets/ref_utf_symbols.asp
 // #
 
+////
+Known Color Names for 'Role'
+Aqua, Black, Blue, Fuchsia, Gray, Green, Lime, Maroon,
+Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
+////
+
+
 :icon-welcome:          icon:heart[role=red]
 :icon-update-project:   icon:arrow-circle-o-down[role=red]
 :icon-dir:              icon:folder[role=yellow]
-:icon-dir-src:          icon:folder[role=blue]
-:icon-dir-test:         icon:folder[role=yellow]
-:icon-dir-package:      icon:folder[role=red]
-:icon-dir-target:       icon:folder[role=green]
+:icon-dir-src:          icon:folder[role=aqua]
+:icon-dir-test:         icon:folder[role=lime]
+:icon-dir-package:      icon:folder[role=silver]
+:icon-dir-target:       icon:folder[role=red]
 :icon-exercise:         icon:flask[role=red]
 :icon-topic:            icon:book[role=gray]
 :icon-theory:

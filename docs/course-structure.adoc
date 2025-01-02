@@ -14,21 +14,21 @@ endif::[]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-intro/docs/intro.adoc[module-intro]*
+| {icon-topic}  |  | *link:../module-intro/docs/intro.adoc[module-intro]*
 |===
 
 include::../module-intro/docs/intro.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 11:45 | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
+| {icon-topic}  |  | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
 |===
 
 include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:45 - 12:15 | *link:../module-classes/docs/classes.adoc[module-classes]*
+| {icon-topic}  |  | *link:../module-classes/docs/classes.adoc[module-classes]*
 |===
 
 ----
@@ -40,14 +40,14 @@ include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:00 | *link:../module-classes/docs/classes.adoc[module-classes]*
+| {icon-topic}  |  | *link:../module-classes/docs/classes.adoc[module-classes]*
 |===
 
 include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+| {icon-topic}  |  | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
@@ -56,14 +56,14 @@ include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+| {icon-topic}  |  | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:30 - 11:45 | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
+| {icon-topic}  |  | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
 |===
 
 include::../module-datatypes/docs/datatypes.adoc[tag="content"]
@@ -73,21 +73,21 @@ include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:00 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
+| {icon-topic}  |  | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
 |===
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:00 - 11:00 | *link:../module-loops/docs/loops.adoc[module-loops]*
+| {icon-topic}  |  | *link:../module-loops/docs/loops.adoc[module-loops]*
 |===
 
 include::../module-loops/docs/loops.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:00 - 12:15 | *link:../module-collections/docs/collections.adoc[module-collections]*
+| {icon-topic}  |  | *link:../module-collections/docs/collections.adoc[module-collections]*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
@@ -97,21 +97,21 @@ include::../module-collections/docs/collections.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:45 | *link:../module-operators/docs/operators.adoc[module-operators]*
+| {icon-topic}  |  | *link:../module-operators/docs/operators.adoc[module-operators]*
 |===
 
 include::../module-operators/docs/operators.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:45 - 11:10 | *link:../module-associations/docs/associations.adoc[module-associations]*
+| {icon-topic}  |  | *link:../module-associations/docs/associations.adoc[module-associations]*
 |===
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:10 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
+| {icon-topic}  |  | *link:../module-generics/docs/generics.adoc[module-generics]*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
@@ -121,14 +121,14 @@ include::../module-generics/docs/generics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-generics/docs/generics.adoc[module-generics]*
+| {icon-topic}  |  | *link:../module-generics/docs/generics.adoc[module-generics]*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
+| {icon-topic}  |  | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
 |===
 
 include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
@@ -138,21 +138,21 @@ include::../module-funcprogramming/docs/functional-programming.adoc[tag="content
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
+| {icon-topic}  |  | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
 |===
 
 include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 11:30 | *link:../module-statics/docs/statics.adoc[module-statics]*
+| {icon-topic}  |  | *link:../module-statics/docs/statics.adoc[module-statics]*
 |===
 
 include::../module-statics/docs/statics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:30 - 12:15 | *link:../module-enums/docs/enums.adoc[module-enums]*
+| {icon-topic}  |  | *link:../module-enums/docs/enums.adoc[module-enums]*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
@@ -162,28 +162,28 @@ include::../module-enums/docs/enums.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:15 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+| {icon-topic}  |  | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
 |===
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic} | 10:15 - 11:15 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
+| {icon-topic} |  | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:15 - 11:45 | *link:../module-records/docs/records.adoc[module-records]*
+| {icon-topic} |  | *link:../module-records/docs/records.adoc[module-records]*
 |===
 
 include::../module-records/docs/records.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 12:00 - 12:15 |  [blue]#*Prüfungsvorbereitung* für Zuhause#
+| {icon-topic} |  |  [blue]#*Prüfungsvorbereitung* für Zuhause#
 |===
 
 
@@ -191,14 +191,14 @@ include::../module-records/docs/records.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 09:45 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+| {icon-topic} |  | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
 |===
 
 include::../module-clean-code/docs/clean-code.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:45 - 12:15 | Prüfungsvorbereitung & -organisation
+| {icon-topic} |  | Prüfungsvorbereitung & -organisation
 |===
 
 [subs=normal]

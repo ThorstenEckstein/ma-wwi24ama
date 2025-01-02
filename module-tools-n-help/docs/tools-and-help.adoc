@@ -35,10 +35,10 @@ Im *Allgemeinen*:
     {icon-dir} docs        -> Dokumentation zum Modul
     {icon-dir} src         -> Wurzel für den gesamten Sourcecode
       {icon-dir} main      -> Wurzel für den "produktiven" Sourcecode
-        {icon-dir-src} java ...
-      {icon-dir-test} test      -> Wurzel für den Test-Sourcecode
-        {icon-dir-src} java ...
-    {icon-dir-target} target      -> Kompilierte Klassen
+        {icon-dir} java ...
+      {icon-dir-test} [lime]#test#      -> [lime]#Wurzel für den Test-Sourcecode#
+        {icon-dir-test} [lime]#java# ...
+    {icon-dir-target} [red]#target#      -> [red]#Kompilierte Klassen#
 ----
 
 Am *Beispiel* des ersten Moduls `module-classes`:
@@ -50,7 +50,7 @@ Am *Beispiel* des ersten Moduls `module-classes`:
     {icon-dir} docs
     {icon-dir} src
       {icon-dir} main
-        {icon-dir-src} java              -> ab hier "Package" Verzeichnisse
+        {icon-dir} java              -> ab hier "Package" Verzeichnisse
           {icon-dir-package} de
             {icon-dir-package} dhbw
               {icon-dir-package} demo        -> Klassen zur Demonstration,
@@ -59,7 +59,7 @@ Am *Beispiel* des ersten Moduls `module-classes`:
                                implementiert werden
               {icon-dir-package} solution    -> Klassen, die Lösungen für die Tests sind
       {icon-dir-test} test
-        {icon-dir-src} java
+        {icon-dir-test} java
           {icon-dir-package} de
              ...
     {icon-dir-target} target
@@ -199,8 +199,8 @@ Ein paar *Tipps* dazu:
 // grid="none", frame="none"
 [cols="^1,^1", grid="none", frame="none"]
 |===
-| An der Cursorposition "Rechts-Klick" > `Generate ...`
-| An der Cursorposition > IntelliJ-Menü `Code` > `Generate ...`
+| An der Cursorposition _Rechts-Klick_ > `Generate ...`
+| An der Cursorposition > _IntelliJ-Menü_ > `Code` > `Generate ...`
 
 | image:images/contextmenu-1.png[]
 | image:images/contextmenu-2.png[]
@@ -231,8 +231,8 @@ Hier wählt man dann einfach die gewünschte *kontext-spezifische* Funktion:
 [cols="^1,^1", grid="none", frame="none"]
 |===
 
-| Anzeige von möglichen Methoden einer Instanz
-| Auswahlmöglichkeiten für nutzbare Typen, hier Klassen
+| _Anzeige von möglichen Methoden einer Instanz_
+| _Auswahlmöglichkeiten für nutzbare Typen, hier Klassen_
 
 | image:images/contextmenu-5.png[]
 | image:images/contextmenu-6.png[]
