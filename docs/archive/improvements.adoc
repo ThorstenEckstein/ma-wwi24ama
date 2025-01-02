@@ -1,0 +1,53 @@
+include::../settings.adoc[]
+
+== Verbesserungsvorschläge & Ideen für den nächsten Kurs
+
+=== Reorganisation von Themen und Kurstagen
+
+Idee: Fachliche Themen einzeln in separate `adoc` auslagern, und ebenso Code & Tests in einem separaten Modul und getrennt nach Packages bereitstellen. Wenn alle Themen auf diese Weise verfügbar sind, kann im zweiten Schritt jeder Kurs(tag) beliebig mit Themen ausgestaltet werden. Das könnte wie folgt aussehen:
+
+*Option 1*: Alle Sourcen & Tests in einem einzigen Modul, Doku aber in Kursen verteilt mit Themenzusammenstellung
+
+----
+/Kurs                 (Workspace)
+  /themen             (Modul)
+    /src/main/java
+      de.dhbw.basics.collections --> Klassen
+      de.dhbw.basics.refsemantics
+      de.dhbw.basics.threads
+      ...
+    /src/test/java
+      de.dhbw.basics.collections --> Tests
+      de.dhbw.basics.refsemantics
+      de.dhbw.basics.threads
+      ...
+  /course-1           (Modul)
+    course-1.adoc
+      + Collections
+      + Threads
+  /course-2           (Modul)
+    course-2.adoc
+      + Reference Semantics
+  ...
+----
+
+*Option 2*: Alle Sourcen & Tests jeweils in getrennten Modulen, Doku nach Kursen organisiert mit Themenzusammenstellung ([red]#aktuell favorisiert!#)
+
+----
+/Kurs                 (Workspace)
+  /collections        (Modul)
+    /src/main/java
+    /src/test/java
+  /threads            (Modul)
+    /src/main/java
+    /src/test/java
+  /refsemantics       (Modul)
+    /src/main/java
+    /src/test/java
+  ...
+  /course             (Modul)
+    day-1.adoc
+    day-2.adoc
+    day-3.adoc
+    ...
+----

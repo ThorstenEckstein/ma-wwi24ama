@@ -1,0 +1,50 @@
+include::../settings.adoc[]
+
+= Literatur
+
+
+*(1) Java ist auch eine Insel: Das Standardwerk für Programmierer*
+
+ Autor  : Christian Ullenboom
+ Verlag : Rheinwerk Computing
+
+-> https://www.amazon.de/Java-auch-eine-Insel-Programmierer/dp/3836287455/ref=sr_1_1?crid=3T9BZWQKLSUIB&keywords=java+ist+auch+eine+insel+2023&qid=1680705352&sprefix=java%2Caps%2C112&sr=8-1[Amazon-Link]
+
+Dieses Buch ist _das_ Standardbuch. Wenn man dieses Buch hat, braucht man wahrscheinlich kein zweites. Das wäre also die erste Wahl als Nachschlagewerk, aber es enthält eben viel mehr als im Kurs besprochen wurde. Das Buch wird regelmäßig aktualisiert.
+
+*(2) Sprechen Sie Java?: Eine Einführung in das systematische Programmieren*
+
+ Autor  : Hanspeter Mössenböck
+ Verlag : dpunkt.verlag
+
+-> https://www.amazon.de/Sprechen-Sie-Java-systematische-Programmieren/dp/3864900999/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1680704661&sr=8-19[Amazon-Link]
+
+Das Buch enthält sehr viele Aspekte, die im Kurs besprochen wurden. Es ist zwar schon etwas älter, aber diese Gundlagen ändern sich nicht so häufig.
+
+*(3) Java: Kompendium: Professionell Java programmieren lernen*
+
+ Autor: Markus Neumann
+ Verlag: bmu Verlag
+
+-> https://www.amazon.de/Java-Kompendium-Professionell-programmieren-lernen/dp/3966450534/ref=sr_1_18?adgrpid=1201766860002075&hvadid=75110546598466&hvbmt=bp&hvdev=c&hvlocphy=130687&hvnetw=s&hvqmt=p&hvtargid=kwd-75110626383533%3Aloc-72&hydadcr=23684_2253604&keywords=grundkurs+in+java&qid=1680704661&sr=8-18[Amazon-Link]
+
+Das Buch ist umfangreicher und enthält auch Teile, die für den Kurs nicht so wichtig waren (z.B. GUI Programmierung), aber dafür ist es aktueller und eignet sich gut als Nachschlagewerk.,
+
+
+*(4) Complete Java 2 Certification Study Guide 5. Auflage*
+
+ Autoren : Philip Heller, Simon Roberts
+ Verlag  : Sybex
+
+-> https://www.amazon.com/-/de/dp-0782144195/dp/0782144195/ref=dp_ob_title_bk[Amazon-Link]
+
+Mit diesem Buch kann man die Grundlagen von Java in sehr detaillierter Weise vertiefen, daher muss es auch nicht höchst aktuell sein. Anhand von Fragen kann man sein Wissen testen. "Früher" waren die Inhalte Basis für eine Java Zertifizierung.
+
+*(5) Clean Code - Refactoring, Patterns, Testen und Techniken für sauberen Code* (dt. Ausgabe)
+
+ Autor  : Robert C. Martin
+ Verlag : mitp
+
+-> https://www.amazon.de/Clean-Code-Refactoring-Patterns-Techniken/dp/3826655486/ref=sr_1_1?keywords=clean+code+deutsche+ausgabe&qid=1681395633&sprefix=clean+code+deut%2Caps%2C87&sr=8-1[Amazon-Link]
+
+Das Buch ist ein Muss für alle Entwickler, Software-Ingenieure, Projektmanager, Team-Leiter oder Systemanalytiker, die daran interessiert sind, besseren Code zu produzieren. Es gilt so ein wenig als "Bibel" für Codequalität. Nicht direkt für den Anfang, als Begleitung sehr wichtig.

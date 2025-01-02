@@ -1,0 +1,37 @@
+// --- Name
+:module-name:  module-archive
+:module-title: Archiv, Ablage, Datensicherung
+
+// --- References
+:mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]
+:mod-ref-test: pass:n[src/[green]#*test*#/java/de/dhbw]
+
+// --- Hyperlinking
+:mod-lnk-docs: .
+:mod-lnk-src:  ../src/main/java/de/dhbw
+:mod-lnk-test: ../src/test/java/de/dhbw
+
+// display variables, set to 'true' to display in module docs!
+:show-variables: true
+
+ifeval::[{show-variables} == true]
+[big]#*Module Settings*#
+
+*About:*
+
+. Hyperlinks: variables having `lnk` in the name are used for real *hyperlinking*, readers can _follow_ or _call_ by clicking the link
+
+. References: variables having `ref` in the name are used just *redirect* visually, so readers _know_ where to go next without clicking the link
+
+[cols="3m,7m"]
+|===
+| Variable           | Value
+
+| module-name        | {module-name}
+| mod-ref-src        | {mod-ref-src}
+| mod-ref-test       | {mod-ref-test}
+| mod-lnk-docs       | {mod-lnk-docs}
+| mod-lnk-src        | {mod-lnk-src}
+| mod-lnk-test       | {mod-lnk-test}
+|===
+endif::[]

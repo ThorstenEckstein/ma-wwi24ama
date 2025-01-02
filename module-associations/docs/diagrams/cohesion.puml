@@ -1,0 +1,56 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com
+
+scale 0.8
+left to right direction
+
+skinparam ArrowColor black
+skinparam PackageBackgroundColor<<coh>> lightred
+
+Namespace P1 {
+ class A
+ class B
+ class C
+
+ A -> B
+ B -d-> C
+}
+
+Namespace P2 {
+ class E
+ class F
+
+ F -> E
+}
+
+Namespace P3 #ffdddd {
+ class G
+ class H
+ class I
+ class K
+
+ H -> I
+ I -u-> G
+ G -> K
+}
+
+Namespace P4 {
+ class J
+}
+
+P1  ....>   P2
+P2  <....   P3
+P2  ..d..>  P4
+
+' P1  ...[thickness=3,#red]..>  P2
+' P2  <..[thickness=3,#red]..   P3
+' P2  ...[thickness=3,#red]d..> P4
+
+note right of P3
+ //Alle Klassen innerhalb des//
+ //Paketes haben z.B. etwas mit//
+ //"Bestellungen" zu tun//
+endnote
+
+@enduml

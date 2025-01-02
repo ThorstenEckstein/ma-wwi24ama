@@ -1,0 +1,23 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+ !No content, module-archive servers as backup module to preserve code and doc!
+----
+end::content[]
+////
+
+== Archive
+
+====
+IMPORTANT: _No content, module-archive servers as backup module to preserve code and doc!_
+====

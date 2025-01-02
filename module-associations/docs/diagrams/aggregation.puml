@@ -1,0 +1,17 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com
+
+scale 1.0
+
+ShoppingCart o---  Product
+
+City         o---  Inhabitant
+
+Group        o---  Member
+
+'note right of Member
+' ?
+'endnote
+
+@enduml

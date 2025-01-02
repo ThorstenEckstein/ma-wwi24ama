@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-exceptions
+:module-title: Fehlerbehandlung & -vermeidung

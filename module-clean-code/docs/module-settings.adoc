@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-clean-code
+:module-title: Clean Code, Prinzipien & Strategien

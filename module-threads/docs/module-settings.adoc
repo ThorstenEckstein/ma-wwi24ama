@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-threads
+:module-title: Parallele Programmierung mit Threads

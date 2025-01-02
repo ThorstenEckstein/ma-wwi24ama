@@ -1,0 +1,272 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Kontrollstrukturen
+1.1. Konditionalsausdrücke
+1.1.1. if - else-if - else
+1.1.2. switch case
+1.2. Schleifen
+1.2.1. for (each)
+1.2.2. (do) while
+----
+end::content[]
+////
+
+== Kontrollstrukturen
+
+=== Konditionalsausdrücke
+
+==== `if - else-if - else`
+
+Java kennt folgende bedingte Anweisungen, um bestimmten Code auszuführen:
+
+* `if`, um einen Codeblock anzugeben, der ausgeführt werden soll, wenn eine angegebene Bedingung _wahr_ ist
+* `else`, um einen Codeblock anzugeben, der ausgeführt werden soll, wenn dieselbe Bedingung _falsch_ ist
+* `else if`, um eine neue Bedingung anzugeben, die getestet werden soll, wenn die erste Bedingung _falsch_ ist
+
+*Beispiel*:
+
+[,java]
+----
+if (index == 0) {
+  // wenn index == 0 ist wahr
+}
+else if (index == 1) {
+  // wenn index == 0 falsch ist und index == 1 ist wahr
+}
+else {
+  // alle anderen Fälle, also beide zuvor falsch sind
+}
+----
+
+Für einfache `if-else` Ausdrücke gibt es auch eine Kurzschreibweise, die sogenannten `ternären` Operatoren:
+
+ var = (condition) ? expressionTrue :  expressionFalse;
+
+Zum Beispiel:
+
+ String result = (index == 0) ? "passt scho'" : "nix da";
+
+
+==== `switch case`
+
+Das Schlüsselwort `switch` wird benutzt, um viele alternative Codeblöcke anzugeben, die ausgeführt werden sollen
+
+Anstatt also viele `if..else`-Anweisungen zu schreiben, können  `switch`-Anweisung verwendet werden. Die switch-Anweisung wählt einen von vielen auszuführenden Codeblöcken aus:
+
+[,java]
+----
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default: <1>
+    // code block
+}
+----
+
+<1> Die Schlüsselwörter `break` und `default` sind optional.
+
+Mit der Version Java SE 17 wurde `pattern matching` für Switch-Ausdrücke und -Anweisungen (JEP 406) als Vorschaufunktion eingeführt. Dieses bietet mehr Flexibilität bei der Definition von Bedingungen für Switch-Fälle.
+
+Zusätzlich zu den `case` Labels, die jetzt Pattern enthalten können, ist der Ausdruck nicht mehr auf nur wenige Typen beschränkt. Bei Java < 17 unterstützten Switch-Cases nur das einfache Testen eines Case-Selektors, der genau mit einem konstanten Wert übereinstimmen musste (und dies mussten entweder Number, String oder eine Konstante sein).
+
+Siehe auch -> https://www.baeldung.com/java-switch-pattern-matching
+
+[,java]
+----
+final String b = "B";
+switch (args[0]) {
+    case "A" -> System.out.println("Parameter is A");
+    case b   -> System.out.println("Parameter is b");
+    default  -> System.out.println("Parameter is unknown");
+};
+----
+
+=== Schleifen
+
+==== `for (each)`
+
+Eine `for`-Schleife ist eine Kontrollstruktur, die es ermöglicht, bestimmte Vorgänge durch Inkrementieren und Auswerten eines Schleifenzählers zu wiederholen.
+
+Vor der ersten Iteration wird der Schleifenzähler initialisiert, dann wird die Bedingungsauswertung durchgeführt, gefolgt von der Schrittdefinition (normalerweise eine einfache Inkrementierung).
+
+Die *Syntax* der for-Schleife ist:
+
+[, java]
+----
+for (Initialization; boolean-expression; Step) {
+   statement;
+}
+----
+
+Am *Beispiel*:
+
+[, java]
+----
+for (int i = 0; i < 5; i++) {
+   System.out.println("simple for loop: i = " + i);
+}
+----
+
+Die in for-Anweisungen verwendete Initialisierung, der boolesche Ausdruck und der Inkrement-Schritt sind optional.
+
+Hier ist ein Beispiel für eine unendliche for-Schleife:
+
+[, java]
+----
+for ( ; ; ) {
+    // infinite for loop
+}
+----
+
+*Erweiterte `for` Schleife*
+
+Seit Java 5 gibt es eine zweite Art von `for`-Schleife namens *enhanced `for`*. Sie macht es einfacher, alle Elemente in einem Array oder einer Collection zu durchlaufen.
+
+Die allgemeine Syntax der erweiterten for-Schleife ist:
+
+[, java]
+----
+for(<Type> item : items) {
+    statement;
+}
+----
+
+Da diese Schleife im Vergleich zur Standard-for-Schleife vereinfacht ist, müssen wir beim Initialisieren einer Schleife nur zwei Dinge deklarieren:
+
+. Das *Handle* für ein Element, über das wir gerade iterieren
+. Das *Source* Array/Collections
+
+_Enhanced Loop_ Beispiel:
+
+[, java]
+----
+int[] intArr = { 0,1,2,3,4 };
+
+for (int num : intArr) {
+    System.out.println(
+        "Enhanced for-each loop: i = " + num);
+}
+----
+
+Es kann auch gut verwendet werden, um über verschiedene Java-Datenstrukturen zu iterieren:
+
+Gegeben eine List von `String` Werten:
+
+[, java]
+----
+List<String> list = List.of("A","B","C");
+
+for (String item : list) {
+    System.out.println(item);
+}
+----
+
+Zu guter Letzt, können auch *Lamdba* Ausdrücke (funktionale Interfaces, dazu gibt es ein eigenes Modul) genutzt werden:
+
+[, java]
+----
+List<String> letters = new ArrayList<>();
+
+letters.add("A");
+letters.add("B");
+letters.add("C");
+
+letters.forEach(letter -> System.out.println(letter));
+----
+
+
+==== `(do) while`
+
+*while*
+
+Die While-Schleife ist eine der grundlegenden Schleifenanweisungen von Java. Es wiederholt eine Anweisung oder einen Anweisungsblock, während sein steuernder `boolescher` Ausdruck wahr ist.
+
+Die *Syntax* der while-Schleife ist:
+
+[, java]
+----
+while (boolean-expression) {
+    statement;
+}
+----
+
+Der boolesche Ausdruck der Schleife wird vor der ersten Iteration der Schleife ausgewertet – was bedeutet, dass die Schleife möglicherweise nicht einmal ausgeführt wird, wenn die Bedingung mit `falsch` ausgewertet wird.
+
+Ein einfaches Beispiel:
+
+[, java]
+----
+int i = 0;
+while (i < 5) {
+    System.out.println("While loop: i = " + i++);
+}
+----
+
+*do-while*
+
+Die do-while-Schleife funktioniert genauso wie die while-Schleife, mit der Ausnahme, dass die erste Bedingungsauswertung nach der ersten Iteration der Schleife erfolgt:
+
+[, java]
+----
+do {
+   statement;
+} while (boolean-expression);
+----
+
+Ein einfaches Beispiel:
+
+[, java]
+----
+int i = 0;
+do {
+   System.out.println("Do-While loop: i = " + i++);
+} while (i < 5);
+----
+
+
+*Demo*:
+
+Die Unit-Tests zur *Demonstration* finden sich hier:
+
+[subs=normal]
+ -> {mod-ref-test}/loops/LoopsDemoTests.java
+
+
+*Übungen*:
+
+[subs=normal]
+ -> {mod-ref-test}/loops/LoopsExerciseTests.java
+
+
+*Übung 1*:
+
+Gegeben eine Liste mit Zahlen. Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` Schleife (IntelliJ: _"fori"_) und teste das Ergebnis mithilfe von `assertEquals`.
+
+_Optional_: Wandele die for Schleife in eine `enhanced for` Schleife um.
+
+*Übung 2*:
+
+Gegeben ein Startwert von `10`. Implementiere einen _CountDown_ mithilfe einer `while` Schleife, die den CountDown solange runterzählt, bis die `0` erreicht ist und dann abbricht.
+
+
+== References
+
+See also:
+
+* https://www.baeldung.com/java-for-loop[For Loop]
+* https://www.baeldung.com/java-while-loop[While Loop]

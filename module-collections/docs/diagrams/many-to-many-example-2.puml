@@ -1,0 +1,38 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.8
+left to right direction
+
+frame "V1" {
+
+  class CourseV1 {
+    Set students
+  }
+  class StudentV1 {
+    Set courses
+  }
+
+  CourseV1  "n"--"m"  StudentV1  : < Teilnahmen\n> Einschreibungen
+
+}
+
+frame "V2" {
+
+  class CourseV2
+  class StudentV2
+  class Registration {
+    Long studentId
+    Long courseId
+
+    LocalDate date
+  }
+
+  CourseV2             "n"-"m"  StudentV2
+  (CourseV2,StudentV2)  ....    Registration
+
+}
+
+
+@enduml

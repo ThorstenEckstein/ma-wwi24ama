@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-object-contract
+:module-title: Objekt-Vertrag, equals(), hashCode() etc.

@@ -1,0 +1,266 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Implementierung mit Interfaces
+1.1. Erzeugungsregeln
+1.2. Was kann mit Interfaces eigentlich erreicht werden?
+2. Abstrakte Klassen
+----
+end::content[]
+////
+
+== Implementierung mit Interfaces
+
+[ <<about_interfaces,Inhalt>> | <<demos_interfaces,Demo>> | <<exercises_interfaces,Übungen>> ]
+
+
+[[about_interfaces]]
+In Java, ein *Interface* ist ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist ein wichtiges *Kernkonzept* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung umzusetzen.
+
+Die Signatur des Interfaces erfordert das Schlüsselwort
+
+ interface
+
+Eine Beispiel-Signatur
+
+[source, java]
+----
+public interface MyInterface {
+    // Inhalt des Interfaces
+}
+----
+
+Die Implementierung eines Interfaces erfolgt mit dem Schlüsselwort
+
+ implements
+
+Eine Beispiel-Realisierung
+
+[source, java]
+----
+public class Car implements Vehicle {
+    // Implementierung des Interfaces
+}
+----
+
+
+=== Erzeugungsregeln
+
+In einem *Interface* ist gestattet:
+
+* konstante Variablen
+* abstrakte Methoden
+* statische Methoden
+* `default` Methoden
+
+Darüber hinaus ist *wichtig*, dass ...
+
+* Interfaces nicht direkt instanziiert werden können,
+* ein Interface _"leer"_ sein kann, also ohne Konstanten oder Methoden,
+* das Schlüsselwort `final` nicht genutzt werden kann, da sonst ein Compiler Error entsteht,
+* alle Interface Deklarationen `public` oder `default` access haben müssen; der `abstract` Modifizierer wird vom Compiler automatisch hinzugefügt,
+* Interface Methoden nicht `protected` oder `final` sein können,
+* Seit Java 9 erlaubt ein Interface die Möglichkeit, private Methoden in Interfaces zu definieren,
+* Interface Variablen sind `public`, `static`, und `final` per Definition.
+
+Die _grafische_ Darstellung der Beziehung zwischen Interfaces und deren Implementierung sieht folgendermaßen aus:
+
+[plantuml, title="Interface & Realisierung", png, align="center"]
+....
+include::diagrams/interfaces.puml[]
+....
+
+=== Was kann mit Interfaces eigentlich erreicht werden?
+
+[big]#Verhaltensvorschrift#
+
+Schnittstellen werden verwendet, um bestimmte Verhaltensfunktionen zu definieren, die von "beliebigen" Klassen umgesetzt werden können. Beispiele für Java-Schnittstellen sind `Comparable`, `Comparator` und `Cloneable`. Sie können durch konkrete Klassen implementiert werden.
+
+Für mehr Information dazu siehe -> https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html[Comparable.html]
+
+[big]#Mehrfach-Vererbung#
+
+Java-Klassen unterstützen nur die einfache (singuläre) Vererbung. Durch die Verwendung von Schnittstellen sind wir jedoch auch in der Lage, Mehrfachvererbungen zu implementieren.
+
+[big]#Polymorphismus#
+
+Bei Polymorphismus handelt es sich um die Fähigkeit eines Objekts, während der Laufzeit unterschiedliche Formen anzunehmen. Genauer gesagt handelt es sich um die Ausführung der `Override`-Methode, die sich zur Laufzeit auf einen bestimmten Objekttyp bezieht.
+
+In Java kann Polymorphismus mithilfe von Schnittstellen erreicht werden. Beispielsweise kann die Shape-Schnittstelle verschiedene Formen annehmen – es kann ein Kreis oder ein Quadrat sein.
+
+Am *Beispiel* der Klasse `Shape`:
+
+[source, java]
+----
+public interface Shape {
+  String name();
+}
+----
+
+Die Klasse `Kreis`:
+
+[source, java]
+----
+public class Circle implements Shape {
+
+    @Override
+    public String name() {
+        return "Circle";
+    }
+}
+----
+
+Und noch die `Quadrat` Klasse:
+
+[source, java]
+----
+public class Square implements Shape {
+
+    @Override
+    public String name() {
+        return "Square";
+    }
+}
+----
+
+
+[%linenums, java, indent=0]
+----
+include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
+----
+
+
+[[demos_interfaces]]
+*Demo*:
+
+Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
+
+[subs=normal]
+ -> {mod-ref-test}/demo/InterfaceDemoTest.java
+
+
+
+== Abstrakte Klassen
+
+Man könnte behaupten, eine abstrakte Klasse sei eine Art *Hybrid* zwischen
+
+. einer *konkreten* _Klasse_ auf der einen Seite und
+. einem *abstrakten* _Interface_ auf der anderen.
+
+Mit einer abstrakten Klasse können die Merkmale beider Welten (konkret & abstrakt) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
+
+[big]#Schlüsselkonzepte#
+
+Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
+
+ abstract
+
+Die wichtigsten *Merkmale* dieser Abstraktionen sind:
+
+* Eine abstrakte Klasse enthält den abstrakten *Modifikator* `abstract` in der Klassensignatur
+* Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
+* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
+* Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
+* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse implementieren oder selbst abstrakt sein
+
+Die zugehörige *grafische Darstellung* dieser Beziehung mit Beispiel:
+
+[plantuml, title="Abstrakte Klassen & Vererbung", png, align="center"]
+....
+include::diagrams/abstract.puml[]
+....
+
+*Beispiel* abstrakte Klasse & Methode:
+
+[source, java]
+----
+public abstract class MyClass {
+
+    public abstract void myMethod();
+
+}
+----
+
+[[demos_abstractclasses]]
+*Demo*:
+
+[subs=normal]
+ -> {mod-ref-test}/demo/AbstractsDemoTest.java
+
+
+[big]#Nutzung abstrakter Klassen#
+
+Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
+
+* *Kapselung* allgemeiner Funktionen in einer Klasse (*Wiederverwendung* von Code). Diese sollen von mehreren verwandten Unterklassen gemeinsam genutzt werden
+* Es muss nur teilweise eine API definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
+* Die Unterklassen müssen eine oder mehrere gemeinsame Methoden oder Felder mit *geschützten* Zugriffsmodifikatoren erben
+* Da sich die Verwendung abstrakter Klassen außerdem implizit mit Basistypen und Untertypen befasst, werden außerdem die Vorteile des *Polymorphismus* genutzt
+
+Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
+
+'''
+
+[[exercises_interfaces_and_abstract_classes]]
+*Übungen*:
+
+Übung 1 - Interface::
+
+Erzeuge folgende *Klassen*:
+
+. Ein *Interface* `Zug` mit den Schnittstellenmethoden
+.. `getNumber` (soll den Wert des Feldes `number` vom Typ `String` zurückgeben) sowie
+.. `setNumber` (soll den Wert des Feldes `number` setzen)
+. Eine konkrete Klasse `Regionalzug`, die die Schnittstelle `Zug` realisiert
+. Schreibe einen Test, setze eine Zugnummer, hole diese wieder und teste den korrekten Wert
+
+
+Umsetzung in
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/InterfaceExerciseTest.java
+
+
+Übung 2 - Mini-Modell mit abstrakter klassen und Interface::
+
+Ein Anwendungsfall (_echte Aussage aus einem Kunden-Interview)_:
+
+====
+_Es gibt zwei unterschiedliche Typen von (Zug-) Waggons. Es gibt Waggons für "Fahrgäste" und für "Frachtgüter". Als Teil eines Zuges sind die Waggons immer geordnet, sie bilden die sog. "Wagen-Reihung"._
+====
+
+Erzeuge ein kleines, aber "vollständiges" *Klassenmodell* daraus:
+
+. Eine Schnittstelle `Wagon` mit Methoden
+.. zum _Holen_ und _Setzen_ der Wagon-Reihenfolge (engl. `order` (Datentyp `int`))
+. Eine abstrakte Klasse `DefaultWagon`, die die Schnittstelle und die dortigen Methoden realisiert
+.. (_Optional_) Das Feld `order` soll dabei möglichst stark geschützt sein
+. Zwei konkrete Klassen, die beide von der abstrakten Klasse _erben_, nämlich
+.. `PassengerWagon` und
+.. `FreightWagon`
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/ModelExerciseTest.java
+
+
+[%collapsible, title="_Aufklappen mit grafischer Darstellung als kleine Hilfe..._"]
+====
+[plantuml, title="Ein kleines Klassenmodell", png, align="center"]
+....
+include::diagrams/model.puml[]
+....
+====
+
+
+== Referenzen
+

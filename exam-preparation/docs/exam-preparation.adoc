@@ -1,0 +1,197 @@
+include::../../docs/settings.adoc[]
+
+:toc:
+
+= Aufgaben als Prüfungsvorbereitung
+
+== Übungsmodelle/Übungsszenarien
+
+*Aufgabe*:
+
+Anhand der, durch Kunden, natürlich-sprachlich formulierten Anwendungsszenarien sollen Java Klassenmodelle erstellt werden. Grundsätzlich können/sollen dabei möglichst folgende _Phasen_ durchlaufen werden:
+
+. *Verstehen der "Fachlichkeit"* durch Analyse der Anforderungen
+. *Festlegung* z.B. von Klassen-, Feld- oder Methodennamen
+. *Grafische Umsetzung* des Modells, empfohlen wird UML2, andere Notationen sind aber erlaubt. Sie müssen aber vom Kunden verstanden werden können (z.B. mittels Legende)
+. *Technische Umsetzung* in konkrete Pakete, Klassen, Felder und/oder Methoden (Operationen)
+. *Testen* (Beweisführung) des technischen Modells durch ein oder mehrere Unit-Tests, etwa durch konkrete Instanziierung der Modellklassen
+
+Wurzel-*Package* für die Modellklassen, ggf. pro Szenario noch ein zusätzliches Package zur Vermeidung von Namenskonflikten und zur besseren Strukturierung:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/ScenarioTests.java
+
+
+=== Szenario 1: Stromkunden-Verwaltung
+
+====
+Der Kunde `DB Energie` entwickelt eine Software zur Verwaltung ihrer Stromkunden.
+
+Dazu haben die *Kunden* jeweils ein oder mehrere *Accounts*. Für jeder Account kann es höchstens einen *Vertrag* geben, in dem der *Tarif* der Stromlieferung definiert ist.
+
+Wichtig ist auch, dass für jeden Kunden der *Gesamtstromverbrauch* eines Jahres gespeichert werden kann
+====
+
+----
+Mögliche ...
+- Klassen
+- Methoden
+----
+
+
+=== Szenario 2: World of Codecraft
+
+====
+Der Kunde `DeeHahBeeWee` möchte ein MMORPG im Internet anbieten.
+
+Im Spiel gibt es eine _feste Menge_ (3) von *Quests*, die von *Spielern* bzw, deren *Avataren* gespielt werden können. Gleichzeitig können Spieler andererseits mehrere Quests beginnen. Jedem Spieler steht dabei aber _nur eine_ *Waffe* zur Verfügung.
+
+Zu beachten ist, dass _laufende bzw. bereits begonnen Quests_ durchaus auch abgesprochen werden können.
+====
+
+----
+Mögliche ...
+- Klassen
+- Methoden
+----
+
+
+== Programmieraufgaben
+
+Wurzel-*Package*, nutzbar für mögliche Implementierungen/Klassen, die im Rahmen der Aufgabe erstellt werden können:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/ProgrammingTests.java
+
+
+=== Aufgabe 1: Aufzählungen
+
+Gegeben sei die folgende *Aufzählung*. Implementiere zwei beispielhafte `switch` Anweisung für die Elemente dieses `enum's`, einmal in "alter" Form und einmal als "enhanced switch". Nutze dazu einfach einen *Unit-Tests*:
+
+[source, java]
+----
+public enum Spielkarte {
+    KREUZ, PIK, HERZ, CARO;
+}
+----
+
+
+=== Aufgabe 2: _"Gleich ist nicht gleich gleich"_
+
+Übung zur Klasse `Object` bzgl. des *Gleichheitskonzeptes* in Java:
+
+* Erstellen Sie eine Klasse `Password`
+* mit einem Feld `String value` und
+* einem `Konstruktor`, über den das Passwort angegeben wird
+* Testen Sie die Gleichheit der folgenden zwei Instanzen mit gleichem Passwortwert in einem Unit-Test
+
+[,java]
+----
+Password p1 = new Password("x84jdf754hf6");
+Password p2 = new Password("x84jdf754hf6");
+----
+
+* Überschreiben Sie in `Password` die Object-Methoden `equals()` und `hashCode()` unter Nutzung des Feldes `value` und möglichst mittels Code-Generierung, und zum Schluss
+* Testen Sie erneut, ob die obigen Instanzen gleich sind
+
+
+== Quizfragen (10)
+
+Wurzel-*Package*, nutzbar für mögliche Implementierungen/Klassen, die im Rahmen der Aufgabe erstellt werden können:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/QuizTests.java
+
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Welche der folgenden *Listentypen* wäre am passendsten zur Speicherung von Listenelementen geeignet, wenn ein Listenelement aus einem Schlüssel und einem Wert besteht und deren Einträge natürlich sortiert werden sollen?
+
+----
+A. Collection
+B. List
+C. Set
+D. TreeMap
+E. Vector
+----
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Nenne zwei *Eigenschaften* der Klasse/Implementierung `LinkedList` aus dem _Collections_ Framework?
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Was bedeutet *Überladen* (von Methoden)?
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Setzen Sie die erforderlichen *Schlüsselworte* im folgenden kleinen Klassenmodell ein!
+
+[, java]
+----
+public interface Executable {}
+public abstract class Task __________ Executable {}
+public class Batchtask __________ Task {}
+----
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Was ist der Unterschied zwischen *impliziter* und *expliziter Umwandlung* von primitiven Datentypen? Nennen Sie je ein Beispiel.
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Welcher *Beziehungstyp* mit welche *Kardinalität* ist hier implementiert?
+
+[source, java]
+----
+public class Building {
+  private List<Room> rooms;
+}
+----
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Was ist eine *generische* Klasse?
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Was ist ein *funktionales Interface* und nennen sie mindestens 2 aus dem Bereich der Lambda's?
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Was ist die *Bedeutung* des Ausdrucks `checked exception`?
+
+
+:question-seq: {counter:question-seq}
+[.big.red]#*Frage {question-seq}*#: Welche der drei Aussagen trifft bzgl. des Schlüsselwortes `static` zu?
+
+(_der Code-Ausschnitt unten dient als Ansichtsbeispiel_)
+
+----
+A. Der Aufruf einer statischen Methode kann nur über eine Instanz der umgebenden Klasse erfolgen
+B. Der Wert einer statischen Klassenvariable kann nicht geändert werden
+C. Der Aufruf einer statischen Methode erfordert keine Instanz der umgebenden Klasse
+----
+
+[source, java]
+----
+public class DateConverter {
+  public static String TIME_ZONE = "UTC";
+  public static Date parse(String dateAsString) { ... }
+}
+----

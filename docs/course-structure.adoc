@@ -1,0 +1,285 @@
+include::settings.adoc[]
+
+:toc:
+:sectnums!:
+
+= Programmierung II mit Java
+
+:show-scheduled-course-days: false
+ifeval::[{show-scheduled-course-days} == true]
+include::includes/course-day-schedules.adoc[]
+endif::[]
+
+== Tag 1 - Willkommen, Setup & Einführung in Klassen
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-intro/docs/intro.adoc[module-intro]*
+|===
+
+include::../module-intro/docs/intro.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 11:45 | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
+|===
+
+include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:45 - 12:15 | *link:../module-classes/docs/classes.adoc[module-classes]*
+|===
+
+----
+1. Organisation & Nutzung von Java Klassen
+2. Klassen & Instanzen
+----
+
+== Tag 2 - Klassen & Interfaces
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:00 | *link:../module-classes/docs/classes.adoc[module-classes]*
+|===
+
+include::../module-classes/docs/classes.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+|===
+
+include::../module-interfaces/docs/interfaces.adoc[tag="content"]
+
+== Tag 3 - Abstraktionen & Datentypen
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+|===
+
+include::../module-interfaces/docs/interfaces.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:30 - 11:45 | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
+|===
+
+include::../module-datatypes/docs/datatypes.adoc[tag="content"]
+
+
+== Tag 4 - Kontrollstrukturen, Sichtbarkeiten & Collections
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:00 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
+|===
+
+include::../module-visibility/docs/visibility.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:00 - 11:00 | *link:../module-loops/docs/loops.adoc[module-loops]*
+|===
+
+include::../module-loops/docs/loops.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:00 - 12:15 | *link:../module-collections/docs/collections.adoc[module-collections]*
+|===
+
+include::../module-collections/docs/collections.adoc[tag="content"]
+
+
+== Tag 5 - Operators, Associations & Java Generics
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:45 | *link:../module-operators/docs/operators.adoc[module-operators]*
+|===
+
+include::../module-operators/docs/operators.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:45 - 11:10 | *link:../module-associations/docs/associations.adoc[module-associations]*
+|===
+
+include::../module-associations/docs/associations.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:10 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
+|===
+
+include::../module-generics/docs/generics.adoc[tag="content"]
+
+
+== Tag 6 - Generics, funktionale Programmierung & Enums
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-generics/docs/generics.adoc[module-generics]*
+|===
+
+include::../module-generics/docs/generics.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 12:15 | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
+|===
+
+include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
+
+
+== Tag 7 - Ausnahmen, Fehlerbehandlung, Statics & Enums
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
+|===
+
+include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 11:30 | *link:../module-statics/docs/statics.adoc[module-statics]*
+|===
+
+include::../module-statics/docs/statics.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:30 - 12:15 | *link:../module-enums/docs/enums.adoc[module-enums]*
+|===
+
+include::../module-enums/docs/enums.adoc[tag="content"]
+
+
+== Tag 8 - Referenzsemantik, Object-Vertrag & Records
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:15 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+|===
+
+include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic} | 10:15 - 11:15 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
+|===
+
+include::../module-object-contract/docs/object-contract.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:15 - 11:45 | *link:../module-records/docs/records.adoc[module-records]*
+|===
+
+include::../module-records/docs/records.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 12:00 - 12:15 |  [blue]#*Prüfungsvorbereitung* für Zuhause#
+|===
+
+
+== Tag 9 - Prüfungsvorbereitung
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 09:45 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+|===
+
+include::../module-clean-code/docs/clean-code.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:45 - 12:15 | Prüfungsvorbereitung & -organisation
+|===
+
+[subs=normal]
+----
+*Mögliche Elemente*:
+
+- Szenarien & Modelle (vorbereitet)
+- Programmieraufgaben
+- Quizfragen
+- Themen im "Schnelldurchlauf"
+- Organisation der Prüfung
+- Zeit für Fragen
+----
+
+
+== Tag 10 - Prüfungen
+
+Ausgestaltung und Modi der Prüfungen aktuell noch nicht final festgelegt. Es gibt aber folgende *Idee*. Die *Prüfung* besteht insgesamt aus zwei Teilen:
+
+[subs=normal]
+ *Dauer*          : 1h
+ *Kandidat:Innen* : 3er Gruppen
+
+////
+[arabic]
+. Prüfung der *Programmierkenntnisse*, entweder ...
+.. als 3-4er Gruppe am vorbereiteten Rechner gemeinsam & live Progemmieraufgaben lösen, mit Unit-Tests und Klassen in /src Paketen, oder ...
+.. manuell schriftlich auf Papier, individuell
+. Prüfung des *Grundverständnisses*: vorbereiteter Use-Case, konzeptionell mündliches Gespräch, Gruppenarbeit an der Tafel, Fragen und Antworten
+////
+
+== Optionale Themen
+
+=== Software Patterns
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
+|===
+
+include::../module-patterns/docs/patterns.adoc[tag="content"]
+
+=== Datenbankprogrammierung mit Java
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-databases/docs/databases.adoc[module-databases]*
+|===
+
+include::../module-databases/docs/databases.adoc[tag="content"]
+
+=== Parallele Programmierung mit Threads
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-threads/docs/threads.adoc[module-threads]*
+|===
+
+include::../module-threads/docs/threads.adoc[tag="content"]
+
+
+=== Integration von Software/-komponenten
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-integration/docs/integration.adoc[module-integration]*
+|===
+
+include::../module-integration/docs/integration.adoc[tag="content"]
+
+=== Javadoc
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 11:15 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
+|===
+
+include::../module-javadoc/docs/javadoc.adoc[tag="content"]
+
+////
+====
+[red]#*Folgendes ist noch nicht geplant/integriert!*#
+====
+////

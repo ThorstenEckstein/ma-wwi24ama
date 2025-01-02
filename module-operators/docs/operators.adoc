@@ -1,0 +1,67 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Logische Operatoren
+----
+end::content[]
+////
+
+
+== Logische Operatoren
+
+Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten und werden z. B. für Bedingungen von `if` Anweisungen oder Schleifen verwendet.
+
+Durch die logischen Operatoren können einzelne Wahrheitswerte negiert oder verknüpft werden, wobei das Ergebnis immer ein `boolean` ist.
+
+Es gibt verschiedene *logische Operatoren*:
+
+[cols="^1m,9e"]
+|===
+| Operator | Erläuterung/Bedeutung
+
+| &&
+| Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Werte wahr sind. Ist an dieser Stelle bereits der erste Operator falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
+
+| &
+| Einfaches UND ist eine logische UND-Verknüpfung. Bei dieser logischen UND-Verknüpfung werden beide Operanden ausgewertet.
+
+| &vert;&vert;
+| Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Werte falsch sind. Ist an dieser Stelle bereits der erste Operator wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
+
+| &vert;
+| Einfaches ODER ist eine logische ODER-Verknüpfung. Bei dieser logischen ODER-Verknüpfung werden beide Operanden ausgewertet.
+
+| !
+| Das Ausrufezeichen ist der Negierungsoperator in der booleschen Logik. Aus wahr (true) wird falsch (false) und umgekehrt.
+
+| ^
+| Das "Dach" wird als Exklusiv-Oder bezeichnet. Entweder der erste oder der zweite Ausdruck muss wahr sein. Es dürfen aber nicht beide Ausdrücke gleich sein, damit das Ergebnis wahr wird.
+|===
+
+
+=== Demonstrationen
+
+Tests zur *Demonstration*:
+
+[subs=normal]
+ {mod-ref-test}/operators/OperatorDemoTests.java
+
+
+=== Übungen
+
+[[enums-exercise-1]]
+*Übung 1:*
+
+Erstelle eine `boolean` Variable, _negiere_ diese und teste das Ergebnis in einem Unit-Test.
+
+

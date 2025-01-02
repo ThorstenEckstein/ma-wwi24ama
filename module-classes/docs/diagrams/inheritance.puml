@@ -1,0 +1,16 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 1.0
+
+abstract class AbstractSuperClass {}
+class ConcreteSuperClass {}
+class "       SubClass1        " as SubClass1
+class "       SubClass2        " as SubClass2
+
+AbstractSuperClass <|-- SubClass1    : \tinherits (extends)
+
+ConcreteSuperClass <|-- SubClass2
+
+@enduml

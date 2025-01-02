@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-statics
+:module-title: Statische Klassen & Methoden

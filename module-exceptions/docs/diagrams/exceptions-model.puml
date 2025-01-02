@@ -1,0 +1,51 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.8
+
+' skin params, settings
+
+skinparam note {
+  fontStyle italic
+}
+
+skinparam class {
+  backgroundColor<<app>> #fffff0
+}
+
+skinparam groupInheritance 1
+
+' classes
+
+interface ContextAware <<app>> {
+  ExceptionContext getContext();
+  void setContext(ExceptionContext context);
+}
+class Exception
+class RuntimeException
+abstract class ApplicationRuntimeException <<app>>
+abstract class CheckedException <<app>>
+class ValidationException <<app>>
+class TrainTooLateException <<app>>
+class ProductNotUnique\nException <<app>>
+class PassengerLimitPerWagon\nExceededException <<app>>
+
+' Associations
+
+' from Java Libraries
+Exception            <|--   RuntimeException
+Exception            <|--   CheckedException
+RuntimeException     <|--   ApplicationRuntimeException
+' Application specific
+ContextAware         <|..   ApplicationRuntimeException
+ContextAware         <|..   CheckedException
+
+ApplicationRuntimeException <|-- ValidationException
+ApplicationRuntimeException <|-- ProductNotUnique\nException
+RuntimeException            <|-- NullPointerException
+
+CheckedException     <|--  PassengerLimitPerWagon\nExceededException
+CheckedException     <|-- TrainTooLateException
+
+@enduml

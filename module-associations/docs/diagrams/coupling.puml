@@ -1,0 +1,23 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com
+
+scale 1.2
+
+skinparam ArrowColor darkred
+
+class A
+class B
+class C
+class D
+
+A  -[thickness=3]r->   B : "         "
+A  -r->   B : "         "
+A  -d->   C
+B  <---  D
+B  --[thickness=5]->  D
+D  -r->   C : "         "
+A  --->   D
+B  <-u-   C
+
+@enduml

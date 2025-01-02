@@ -1,0 +1,228 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Qualität in Softwareprojekten
+2. Erzeugungsmuster (Creational Patterns)
+3. Strukturmuster (Structural Patterns)
+4. Verhaltensmuster (Behavioral Patterns)
+5. Architekturmuster (Architectural Patterns)
+6. Refactoring
+----
+end::content[]
+////
+
+
+== Qualität in Softwareprojekten
+
+Softwarequalität ist normiert und kann gemessen werden.
+
+Die internationale Organisation für Standardisierung (kurz `ISO`) und die internationale Kommission für Elektrotechnik (kurz `IEC`) definieren mit Normen wie der `ISO 25010` ein System zur einheitlichen Bewertung von *standardisierten Softwareentwicklung*.
+
+[subs=normal]
+ -> https://de.wikipedia.org/wiki/ISO/IEC_25000[ISO 25000]
+
+In dem in der `ISO 25010` verankerten Leitfaden für Software Systeme _„Software Product Quality Requirements and Evaluation (`SQuaRE`)“_ werden relevante Richtlinien zur Qualität von Software und Softwareentwicklung im Detail erläutert:
+
+. *Funktionalität*
+  * vollständig hinsichtlich der Softwarefunktionalität
+  * funktional korrekt
+  * angemessene Funktionalität
+. *Zuverlässigkeit*
+  * ausgereifte Software
+  * Verfügbarkeit
+  * Fehlertoleranz
+  * Wiederherstellbarkeit
+. *Effizienz, Performance*
+  * gutes Zeitverhalten
+  * Ressourcen effektiv nutzen
+  * Kapazitäten schonen
+. *Sicherheit*
+  * Datenschutz
+  * Integrität
+  * nicht manipulierbar
+  * sichere Administration und geschützte Benutzer-Accounts
+  * Authentifizierbarkeit
+. *Kompatibilität*
+  * optimale Co-Existenz zu anderen Softwareprodukten
+  * Interoperabilität
+. *Usability*
+  * leicht erlernbar (und lernfähig)
+  * gute Bedienbarkeit (auch für behinderte Menschen)
+  * Schutz vor Fehlbedienung durch Nutzer
+  * Ästhetisches User-Interface
+. *Wartbarkeit*
+  * modularer Aufbau
+  * wiederverwendbare Komponenten
+  * gute Analyse-Funktion
+  * leicht modifizierbar
+  * umfangreiche Testoptionen
+. *Portierbarkeit*
+  * gute Adaptivität
+  * leicht zu installieren
+  * einfach austauschbar
+
+Siehe z.B. -> https://de.wikipedia.org/wiki/Softwarequalit%C3%A4t[Softwarequalität bei Wikipedia]
+
+
+== Erzeugungsmuster (Creational Patterns)
+
+*Factory*
+
+Versteckt eine komplexe Initialisierung bzw. Erzeugung in Fabrik-Methoden oder -Klassen. Oft in statischer Weise.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-creation-factory"]
+----
+
+
+== Strukturmuster (Structural Patterns)
+
+*Decorator (V1)*
+
+Fügt zusätzlich Verantwortlichkeiten einer Klasse hinzu. Geeignet, wenn die genutzte Funktionalität aus Dritt-Bibliotheken kommt und angepasst werden soll.
+
+CAUTION: Kann leicht das _Single-Responsibility-Principle_ aushebeln!
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-structure-decorator-1"]
+----
+
+*Decorator (V2)*
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-structure-decorator-2"]
+----
+
+*Proxy*
+
+Repräsentiert einen Stellvertreter oder einen Platzhalter für das eigentliche zu nutzende Objekt dar und stellt auf diese Weise einen kontrollierbaren Zugriff auf die darunter liegende Klasse/Objekt bereit.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-structure-proxy"]
+----
+
+
+== Verhaltensmuster (Behavioral Patterns)
+
+*Adapter*
+
+Fügt einer Klasse zusätzliche Funktionalität dynamisch (d.h. zur Laufzeit) hinzu. Ist vergleichbar mit "Subclassing", bleibt dabei aber flexibler.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-behavior-adapter"]
+----
+
+*Observer*
+
+Definiert eine 1:n Beziehung zwischen einem Objekt, das seine Zustandsänderung mitteilen möchte und Objekte, die diese Änderungen automatisch konsumieren (beobachten) wollen.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-behavior-observer"]
+----
+
+*Strategy*
+
+Definiert eine Familie von Algorithmen, kapselt diese jeweils in separaten Klassen und macht sie dadruch austauschbar (_pluggable_). Nutzende Klassen sind gegenüber dem Austausch der Algorithmen agnostisch, sie bemerken ihn gar nicht.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-behavior-strategy"]
+----
+
+*Template*
+
+Definiert das _"Skelett"_ eines Algorithmus als Operation (Methode) mit vorgegebenem Ablauf und überlässt die Implementierung den (erbenden) Klassen für die ganze oder auch nur Teile des Algorithmus. Die Struktur des Algorithmus bleibt dabei aber immer gleich.
+
+[source, java, indent=0, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-behavior-template"]
+----
+
+
+== Architekturmuster (Architectural Patterns)
+
+*Filter-Chain*
+
+Typisches Architekturmuster, erlaubt die Aneinanderreihung von (in sich geschlossenen) unabhängigen Verarbeitungsschritten mit klaren Ein- und Ausgabewerten.
+
+[source, java, indent=0]
+----
+include::{mod-lnk-test}/demo/PatternTest.java[tags="pattern-architecture-filter-1"]
+----
+
+
+== Refactoring
+
+Es ist vollkommen "normal", dass (der eigene) Code mehrfach überarbeitet werden muss. Das ist gängige Praxis, und so gut wie niemand schreibt auf Anhieb sehr guten Sourcecode.
+
+IMPORTANT: _Es sollte immer beachtet werden, unter welchen Umständen Software entwickelt wird oder wurde, d.h. z.B. mit welchem Zeitdruck, mit welchen Anforderungen oder von welchen "Charakteren"!_
+
+Es ergibt also recht häufig die Notwendigkeit, den Code weiterzuentwickeln. Die Softwarequalität lässt sich glücklicherweise meistens und bis zu einem bestimmten Grad auf recht einfache Weise und auch schnell verbessern.
+
+Auch wenn man selbst die Qualität des eigenen Codes manchmal nur schwer bewerten kann, gibt es eine Reihe von Tools, Methoden und Hilfestellungen, die genutzt werden können. Dazu gehören:
+
+* Test Driven Development (`TDD`)
+* Design Patterns (s.o.)
+* Metriken (z.B. die `Zyklomatische Komplexität`)
+* Tools, die die Qualität automatisch checken, z.B. `SonarQube`
+* Code-Refactorings
+
+Besonders die `Refactorings` gehören zum Alltag eines Entwicklers und sollten _"wie selbstverständlich"_ permanent beachtet und genutzt werden. Man findet hier oft die Regel...
+
+TIP: _Jedesmal, wenn man an einer Stelle im Sourcecode arbeitet, sollte diese etwas verbessert verlassen als man sie vorgefunden hat (Pfadfinder-Regel)._
+
+Zur Verbesserung des Codes fängt man mit einfachen Aspekten an, von denen die meisten in den `Clean Code` Prinzipien formalisiert sind. Manches fällt einem aber schnell auf. Die Dinge, die vor allem das Verständnis des Codes verschlechtern oder die einem sonst "irgendwie merkwürdig" vorkommen, nenn man auch gerne
+
+ (Code) Smells
+
+Dazu zählen (Auszug) ...
+
+* unklare Variablen- oder Klassennamen
+* "Magic Numbers"
+* komplexe Methodensignaturen
+* Methoden mit tiefen Verschachtelungen
+* Methoden mit "zu viel" Code (zu viele Zeilen)
+
+Zur Durchführung von Refactorings kann und sollte jede IDE meist in sehr gut unterstützter Weise genutzt werden. IntelliJ hat dafür u.a. ganz Menüs wie `Code` oder `Refactor`.
+
+Ein einfacheres *Beispiel* findet sich hier:
+
+[subs=normal]
+ {mod-ref-src}/refactoring/BeforeRefactoring.java
+
+Komplexer Code ist häufig sehr schwer zu verändern, wie hier - deutlich komplexeren Beispielen - zu sehen:
+
+[subs=normal]
+ /[blue]#*docs*#/resources/bad-code-example-1.java
+
+[source, java, indent=0]
+----
+include::./resources/bad-code-example-1.java[tags="bad-code-example-1"]
+----
+
+sowie
+
+[subs=normal]
+ /[blue]#*docs*#/resources/bad-code-example-2.java
+
+[source, java, indent=0]
+----
+include::resources/bad-code-example-2.java[tags="bad-code-example-2"]
+----
+

@@ -1,0 +1,12 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 1.0
+
+interface Interface
+Interface <|.. Implementation      : realizes\n(implements)
+
+note right of Implementation: Synonyme:\nImplementierung,\nRealisierung
+
+@enduml

@@ -1,0 +1,4 @@
+// --- Name
+:module-name:  module-collections
+:module-title: Collections Framework & API
+

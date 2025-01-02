@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-databases
+:module-title: Datenbank Programmierung

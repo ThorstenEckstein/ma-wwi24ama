@@ -1,0 +1,58 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+'
+' This model represents the planning view from the timetable perspective
+' This is internally known as the "IST" view
+'
+
+'skinparam groupInheritance 2
+
+scale 0.8
+
+interface Train {
+  String getNumber()
+}
+abstract class BaseTrain {
+  String number
+  Locomotive loco
+  List wagons
+}
+class LongDistanceTrain
+class RegionalTrain
+class Locomotive
+
+interface Driver
+class TrainDriver
+
+interface Wagon
+abstract class BaseWagon
+class PassengerWagon
+class FreightWagon
+
+'class Network
+class Topology
+class Route
+class Section
+
+' Train model
+Train             <|..          BaseTrain         : realizes
+BaseTrain         <|--          LongDistanceTrain : is a
+BaseTrain         <|--          RegionalTrain     : is a
+BaseTrain         -l->          Locomotive        : > has
+BaseTrain         o-r-  "0..*"  Wagon             : consists of
+Wagon             <|..          BaseWagon         : realizes
+BaseWagon         <|--          PassengerWagon    : is a
+BaseWagon         <|--          FreightWagon      : is a
+
+' Route model
+Topology          o-d-  "0..*"  Route             : collection\nof
+Route             *-d-  "1..*" Section            : composed\nof
+
+' Journey model
+
+Train             -u->         Driver             : < drives
+Driver            <|.u.        TrainDriver        : realizes
+
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.9
+
+skinparam class {
+  BorderColor<<extra-class>> Red
+}
+skinparam note {
+  fontStyle italic
+}
+skinparam groupInheritance 1
+
+class Throwable
+class Exception
+class Error
+class RuntimeException
+class CheckedException <<extra-class>>
+
+Throwable   <|--   Exception
+Throwable   <|--   Error
+Exception   <|--   RuntimeException
+Exception   <|--   CheckedException
+
+note bottom of Error
+ - <color:red>Should not</color> be caught
+ - <color:red>Could</color> be declared
+ - <color:red>Irrecoverable</color> errors
+end note
+
+note right of Exception
+ The class Exception and any
+ subclasses that are not also
+ subclasses of RuntimeException
+ are checked exceptions!
+end note
+
+note bottom of RuntimeException
+(a.k.a. Unchecked Exceptions)
+ - <color:red>Could</color> be caught
+ - <color:red>Could</color> be declared
+ - Maybe <color:red>recoverable</color>
+end note
+
+note bottom of CheckedException
+Not part of the standard
+library of Java:
+ - <color:red>Must</color> be caught
+ - <color:red>Must</color> be declared
+ - <color:red>Recoverable</color> errors
+end note
+
+@enduml

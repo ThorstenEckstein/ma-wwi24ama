@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2020 Thorsten Eckstein
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.dhbw.adv-dev</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>AdvancedProgrammingII</name>
+    <description>DHBW Mannheim :: LV Advanced Programming in Java (II)</description>
+    <url>https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24</url>
+
+    <modules>
+        <module>commons</module>
+        <module>docs</module>
+        <module>exam-preparation</module>
+
+        <module>module-associations</module>
+        <module>module-archive</module>         <!-- backup -->
+        <module>module-classes</module>
+        <module>module-clean-code</module>      <!-- optional -->
+        <module>module-collections</module>
+        <module>module-databases</module>       <!-- optional -->
+        <module>module-datatypes</module>
+        <module>module-enums</module>
+        <module>module-exceptions</module>
+        <module>module-funcprogramming</module>
+        <module>module-generics</module>
+        <module>module-integration</module>      <!-- optional -->
+        <module>module-interfaces</module>
+        <module>module-intro</module>
+        <module>module-javadoc</module>
+        <module>module-loops</module>
+        <module>module-object-contract</module>
+        <module>module-operators</module>
+        <module>module-patterns</module>         <!-- optional -->
+        <module>module-records</module>
+        <module>module-semantics</module>        <!-- optional -->
+        <module>module-statics</module>
+        <module>module-template</module>         <!-- template -->
+        <module>module-threads</module>          <!-- optional -->
+        <module>module-tools-n-help</module>
+        <module>module-visibility</module>
+    </modules>
+
+    <!--
+    | Known issues:
+    |
+    | (1) Warning-Message at the end of a build:
+    |    [WARNING] Plugin validation issues were detected in 1 plugin(s)
+    |    [WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+    |    [WARNING] For more or less details, use 'maven.plugin.validation' property with one of the
+    |              values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+    |  Remark: See "https://stackoverflow.com/questions/76355897/plugin-validation-issues-were-detected-in-plugins"
+    |  Remark: Introduced in maven 3.9.x the maven validator shows you plugins that are not maven 4.x compatible.
+    |          As long as you stay below maven 4.x there will be no impact to your build.
+    |
+    -->
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.dhbw.adv-dev</groupId>
+                <artifactId>commons</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--
+     | Basically, there are 2 ways to distribute dependencies to child poms:
+     |
+     | 1. Using <dependencies />
+     |    You can declare the dependencies in the parent pom in the <dependencies /> node.
+     |    Each child will benefit from the dependency and does not need to re-declare it, these dependencies
+     |    are in place.
+     |    NOTE: Child pom will always import these dependencies, regardless of being required or not, that is the biggest
+     |    disadvantage of this approach.
+     |
+     | 2. Using <dependencyManagement />
+     |    You can declare the dependencies in the parent pom under the <dependencyManagement /> node.
+     |    Each child that requires it, adds the dependency in its own <dependencies /> node.
+     |    In such a case, the version of the dependency is not required to be specified. This way is the
+     |    recommended way to manage dependencies, and used in all modules, where no version should appear!
+     |
+    -->
+    <properties>
+        <!-- project configuration -->
+        <java.version>
+            <!-- tag::java-version[] -->
+            21
+            <!-- end::java-version[] -->
+        </java.version>
+
+        <!-- maven plugin configuration -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.1.0</maven.surefire.plugin.version>
+
+        <!-- dependencies specified for child-modules -->
+        <unit-jupiter-engine.version>5.9.3</unit-jupiter-engine.version>
+        <junit-jupiter-params.version>5.9.3</junit-jupiter-params.version>
+        <junit-platform-suite-engine.version>1.9.3</junit-platform-suite-engine.version>
+        <commons.version>1.0</commons.version>
+
+    </properties>
+
+    <!--
+     | Following dependencies are automatically known/added in (all) child modules
+    -->
+    <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${unit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit-jupiter-params.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>${junit-platform-suite-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <release>17</release>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                    <!--
+                    <configuration>
+                        <argLine>
+                            - -illegal-access=permit
+                        </argLine>
+                    </configuration>
+                    -->
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-interfaces
+:module-title: APIs, Abstraktionen & Sichtbarkeiten

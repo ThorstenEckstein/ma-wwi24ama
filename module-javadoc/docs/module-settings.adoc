@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-javadoc
+:module-title: Javadoc

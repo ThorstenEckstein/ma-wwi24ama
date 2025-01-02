@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-template
+:module-title: Vorlage, Schablone für Modul-Kopien

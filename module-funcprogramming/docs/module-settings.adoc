@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-funcprogramming
+:module-title: Funktionale Programmierung in Java

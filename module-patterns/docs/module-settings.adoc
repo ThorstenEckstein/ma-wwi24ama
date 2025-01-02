@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-patterns
+:module-title: Entwurfsmuster, Design Patterns

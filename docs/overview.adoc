@@ -1,0 +1,124 @@
+include::settings.adoc[]
+
+====
+[big]#*Fortgeschrittene Programmierung mit Java*#
+====
+
+== Überblick
+
+*Übersicht*
+[subs=normal]
+----
+ *Hochschule*        : Duale Hochschule BaWü (Mannheim)
+ *Fachbereich*       : Studienbereich Wirtschaft, Wirtschaftsinformatik,
+                     Appl. Management
+ *Lehrveranstaltung* : Fortgeschrittene Programmierung mit Java (WWI23AMA)
+ *Lehrform*          : Seminar mit Übungen
+ *Prüfungsleistung*  : _-noch festzulegen-_
+ *Dozent*            : Thorsten Eckstein
+----
+
+*Standard- & ergänzende Lehrinhalte*
+[subs=normal]
+----
+*Standard*
+ U.a. fortgeschrittene objektorientierte Konzepte: Generische Interfaces
+ und Klassen, Nutzung der Klassenbibliothek. Ereignisbehandlung.
+ Fortgeschrittene Programmiermethodik: Parallele Programmierung mit
+ Threads, Synchronisations- & Kommunikationskonzepte, Ein- und Ausgabe
+ über Streams, Datenbanken und Objektrelationales Mapping.
+
+*Ergänzend*
+ - Design Prinzipien
+ - Design Patterns
+ - Code Qualität
+ - TDD, JUnit
+----
+
+*Terminierung*
+[subs=normal]
+----
+ *KW    Mo       - So           Veranstaltungstag*
+ ------------ Beginn des Semesters (17.02.25) -------------
+ --------------------- Beginn der LV ----------------------
+ 08    17.02.25 - 23.02.25     1:  *Di., 18.02.*  13:00-16:00
+ 09    24.02.25 - 02.03.25     2:  *Di., 25.02.*  13:00-16:00
+ 10    03.03.25 - 09.03.25     3:  *Mi., 05.03.*  09:15-12:15
+ 11    10.03.25 - 16.03.25     4:  *Mi., 12.03.*  09:15-12:15
+ 12    17.03.25 - 23.03.25     5:  *Di., 18.03.*  13:00-16:00
+ 13    24.03.25 - 30.03.25     6:  *Mi., 26.03.*  09:15-12:15
+ 14    31.03.25 - 06.04.25     7:  *Mi., 02.04.*  09:15-12:15
+ 15    07.04.25 - 13.04.25     8:  *Mi., 09.04.*  09:15-12:15
+                   (17.04.-21.04. Ostern)
+ 16    14.04.25 - 20.04.25     9:  *Mi., 16.04.*  09:15-12:15
+ 17    21.04.25 - 27.04.25    10:  *Mi., 23.04.*  09:15-12:15
+ 18    28.04.25 - 04.05.25    11:  *Mi., 30.04.*  09:15-12:15 (Ersatztermin)
+ ---------------------- Ende der LV -----------------------
+ 18    28.04.25 - 04.05.25         *Prüfungswoche 1/2*
+ 19    05.05.25 - 11.05.25         *Prüfungswoche 2/2*
+ ------------- Ende des Semesters (09.05.25) --------------
+----
+
+== Kursstruktur
+
+Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
+
+[cols="^1s,^3m,6"]
+|===
+| Teil | Zeit (ungefähr) | Inhalt
+
+| 1
+| 09:15 - 10:30
+a| [red]#*Themenbereich 1*# (1-2 Module), in aller Regel mit
+
+* Theorie
+* Demo
+* Übungen
+
+| 2
+| 10:30 - 10:45
+e| {indent-4} [green]#*Pause*#
+
+| 3
+| 09:15 - 10:30
+a| [red]#*Themenbereich 2*# (1-2 Module), ebenfalls i.d.R. mit
+
+* Theorie
+* Demo
+* Übungen
+|===
+
+
+== Raum
+
+*Raum*: `184C`
+
+
+== Links & Referenzen
+
+Asciidoc::
+-> https://docs.asciidoctor.org/asciidoc/latest/[docs.asciidoctor.org]
+
+Oracle Java 17 Documentation::
+-> https://docs.oracle.com/en/java/javase/17/docs/api/index.html[docs.oracle.com]
+
+UML Beziehungen::
+-> https://www.ibm.com/docs/de/rational-soft-arch/9.6.1?topic=diagrams-relationships-in-class[Beziehungen in Klassendiagrammen]
+
+Generics::
+-> https://de.wikipedia.org/wiki/Generische_Programmierung_in_Java[Generics bei Wikipedia]
+
+Lambdas::
+-> https://www.baeldung.com/java-8-lambda-expressions-tips[Lambda Ausdrücke am Beispiel]
+
+Funktionale Interfaces::
+-> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html[docs.oracle.com für `java.util.function`]
+
+Integration::
+-> https://www.amazon.de/s?k=enterprise+integration+patterns+deutsch&i=stripbooks&crid=28SN4MQVVJUZV&sprefix=enterprise+integration+patterns%2Cstripbooks%2C74&ref=nb_sb_ss_fb_1_31[Edison Wesley: Enterprise Integration Patterns]
+
+////
+== Glossar
+
+include::archive/glossary.adoc[]
+////

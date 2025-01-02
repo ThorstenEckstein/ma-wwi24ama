@@ -1,0 +1,29 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.8
+
+/'
+ Systembeschreibung, z.B.:
+  - "Ein Zug besteht aus mehreren Wagons"
+'/
+
+class Train1
+class Wagon1
+
+class Train2
+class Wagon2
+
+class Train3
+class Wagon3
+
+' Relations:
+'   a) "- - - ->"  = dependency
+'   b) "------->"  = association
+
+Train1   "  "   --d-    "  "   Wagon1   :  has >
+Train2   "1 "   --d->   "n "   Wagon2   : " has"
+Train3   "  "   o--d-   "  "   Wagon3   : " Recommended way to \n represent an 'Aggregation'"
+
+@enduml

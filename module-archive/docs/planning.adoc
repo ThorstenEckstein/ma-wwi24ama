@@ -1,0 +1,58 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+[big]#*ALTE DARSTELLUNG DER MODUL AGENDAS (Beispiel):*#
+
+Übersicht:
+
+[cols="1h,2", grid="none"]
+|===
+
+| Modultitel       | {module-title}
+| Modulverzeichnis | {icon-dir} `{module-name}`
+|===
+
+Modulstruktur:
+
+ifeval::[{show-timeslots} == true]
+[cols="^1a,<2,^1,<6a", grid=rows]
+|===
+| Done         | Zeit            | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | 09:15 - 09:20   | {icon-setup}    | {update}
+| * [ ] {nbsp} | 09:20 - 09:40   | {icon-topic}    | *Implementierungen* mit Interfaces
+| * [ ] {nbsp} | 09:40 - 10:00   | {icon-exercise} | _Übung 1_: Interfaces & deren Implementierung
+| * [ ] {nbsp} | 10:00 - 10:15   | {icon-topic}    | `abstract`: *Abstrakte* Klassen
+| * [ ] {nbsp} | 10:15 - 10:30   | {icon-exercise} | _Übung 2_: Abstraktion
+
+|              | 10:30 - 10:45   |                 | {pause}
+
+| * [ ] {nbsp} | 10:45 - 11:00   | {icon-topic}    | Sichtbarkeiten & Scopes: *Access Modifier*
+| * [ ] {nbsp} | 11:00 - 11:30   | {icon-exercise} | _Übung 3_: Ein "volles" Klassenmodell mit Interface, abstrakter Klasse, konkreter Klasse, Feld, Konstruktor & Methode
+
+| * [ ] {nbsp} | 11:30 - 11:45   | {icon-topic}    | Packages & Import (Compiler Errors)
+| * [ ] {nbsp} | 11:45 - 12:00   | {icon-setup}    | Code Generierung mit der IDE (Autocompletion, Vorschläge)
+| * [ ] {nbsp} | 12:00 - 12:15   |                 | _Puffer-Zeit oder {icon-topic} optionales Modul_
+|===
+endif::[]
+
+ifeval::[{show-timeslots} == false]
+[cols="^1a,^1a,<8a", grid=rows]
+|===
+| Done         | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {icon-setup}    | {update}
+| * [ ] {nbsp} | {icon-topic}    | *Implementierungen* mit Interfaces
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Interfaces & deren Implementierung
+| * [ ] {nbsp} | {icon-topic}    | `abstract`: *Abstrakte* Klassen
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Abstraktion
+
+|              |                 | {pause}
+
+| * [ ] {nbsp} | {icon-topic}    | Sichtbarkeiten & Scopes: *Access Modifier*
+| * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Ein "volles" Klassenmodell mit Interface, abstrakter Klasse, konkreter Klasse, Feld, Konstruktor & Methode
+| * [ ] {nbsp} | {icon-topic}    | Packages & Import (Compiler Errors)
+| * [ ] {nbsp} | {icon-setup}    | Code Generierung mit der IDE (Autocompletion, Vorschläge)
+
+|===
+endif::[]

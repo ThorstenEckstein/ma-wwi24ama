@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.dhbw.adv-dev</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>module-databases</artifactId>
+	<packaging>jar</packaging>
+    <name>module-databases</name>
+
+	<properties>
+		<commons.version>1.0</commons.version>
+		<dbunit.version>2.7.3</dbunit.version>
+		<h2.database.version>2.2.224</h2.database.version>
+		<postgresql.version>42.7.3</postgresql.version>
+		<junit.4.version>4.13.2</junit.4.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>de.dhbw.adv-dev</groupId>
+			<artifactId>commons</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.4.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>${dbunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql
+		 |
+		 | The following dependency overrides the transitive dependency that comes with 'dbunit' above!
+		 | Because the postgres dependency is explicitly added here, it automatically overrides the
+		 | transitively used one, and will be automatically ignored/omitted in build.
+		 | Reason: Security issues in outdated version found in maven:org.postgresql:postgresql:42.3.1
+		 | like "5.5 Exposure of Sensitive Information to an Unauthorized Actor vulnerability (CVE-2022-21724)"
+		 |
+		-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.database.version}</version>
+			<!--
+			<scope>test</scope>
+			-->
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- currently everything is specified in super pom  -->
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>maven_central</id>
+			<name>Maven Central</name>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
+	</repositories>
+
+</project>

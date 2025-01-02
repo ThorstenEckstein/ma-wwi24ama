@@ -1,0 +1,51 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+'skinparam groupInheritance 2
+
+'
+' This model represents the planning view from the timetable perspective
+' This is internally known as the "SOLL" view
+'
+' "A train departs from a start station (and platform) and arrives at a
+' final target station (and at a platform). The train can also stop at
+' stations in between. A trip is a real operation phase of the train and
+' is planned in a timetable"
+'
+'
+
+scale 1.0
+
+' Infrastructure
+interface Train
+interface Driver
+class Station
+class Platform
+
+' Timetable Planning
+class Timetable
+class Trip
+class Schedule {
+  Train    train
+  Driver   tbf
+
+  Station  from
+  DateTime departure
+
+  Station  to
+  DateTime arrival
+}
+
+' Schedule model
+Timetable     o-d-     Trip
+Trip          *-d-     Schedule
+Schedule      -d->     Driver     : > driven by
+Schedule      -r->     Station    : > from
+Schedule      -r->     Station    : > to
+Schedule      -l->     Train
+
+Station           o-r-         Platform
+
+note right of Trip: Composition of multiple\nTrip Sections (=Schedules)
+@enduml

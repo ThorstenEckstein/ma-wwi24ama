@@ -1,0 +1,144 @@
+include::../settings.adoc[]
+
+*Stand der Planung*: `[red]#20.02.2024#`
+
+//[subs=normal]
+[.small]
+----
+Mit:
+[S] = Soll : Inhalt "soll" an diesem Tag besprochen werden
+[I] = Ist  : Inhalt "ist" an diesem Tag besprochen worden
+
+Di. 27.02.2024, 09:15 - 12:15 ::::: "Tag 1" :::::
+   09:15 - 09:45 (30') [WI+S : Welcome ]  Herzlich Willkommen!
+   09:45 - 10:00 (15') [WI+S : Domain  ]  Fachlicher Schwerpunkt der Lehrveranstaltung
+   10:00 - 10:30 (30') [WI+S : Setup   ]  Technisches Setup (Workspace, Java, IntelliJ, Git)
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:00 (15') [T+H  : Topic   ]  Projektverwaltung mit Maven, Projektstruktur
+   11:00 - 11:15 (15') [T+H  : Topic   ]  Test-Driven-Development (TDD)
+   11:15 - 11:45 (30') [T+H  : Topic   ]  Hilfreiches: Quellcodegenerierung, Autocompletion, Icons & Symbole
+   11:45 - 11:55 (10') [C+O  : Demo    ]  Organisation & Nutzung von Java Klassen
+   11:55 - 12:15 (20') [C+O  : Topic   ]  Klassen & Instanzen
+
+
+Di. 05.03.2024, 09:15 - 12:15 ::::: "Tag 2" :::::
+   09:15 - 09:17 ( 2') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   09:17 - 09:20 ( 3') [WI+S : Setup   ]  Update Project
+   09:20 - 09:35 (15') [C+O  : Topic   ]  Klassen & Instanzen (Wiederholung oder Fortsetzung Tag 1)
+   09:35 - 09:50 (15') [C+O  : Demo    ]  Demo zum Thema Klassen & Instanzen
+   09:50 - 10:05 (15') [C+O  : Exercise]  Übungen zum Thema Klassen & Instanzen
+   10:05 - 10:20 (15') [C+O  : Topic   ]  Vererbung
+   10:20 - 10:30 (10') [C+O  : Demo    ]  Demo zum Thema Vererbung
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:00 (15') [C+O  : Exercise]  Übung zum Thema Vererbung
+   11:00 - 11:15 (15') [C+O  : Topic   ]  Polymorphismus
+   11:15 - 11:30 (15') [C+O  : Demo    ]  Demo zum Thema Polymorphismus
+   11:30 - 11:45 (15') [C+O  : Topic   ]  Überladen & Übersteuern im Kontext von Polymorphismus
+   11:45 - 12:00 (15') [C+O  : Demo    ]  Demo zu Überladen & Übersteuern
+   12:00 - 12:00 ( 0') [C+O  : Reference]  Ref. -> Übungen zu Überladen & Übersteuern inkludiert in Übungen zu Interfaces
+   12:00 - 12:15 (15') [I+AC : Topic   ]  Einführung in Interfaces
+
+
+Di. 12.03.2024, 09:15 - 12:15 ::::: "Tag 3" :::::
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:40 (15') [I+AC : Topic   ]  Kurze Wiederholung Interfaces (Abstraktion Typ 1)
+   09:40 - 09:50 (10') [I+AC : Demo    ]  Demo zu Abstraktionen: Interfaces
+   09:50 - 10:05 (15') [I+AC : Exercise]  Übung zu Abstraktionen: Interfaces
+   10:05 - 10:20 (15') [Opt  : Topic   ]  Abstrakte Klassen (Abstraktion Typ 2)
+   10:20 - 10:30 (10') [I+AC : Demo    ]  Demo zu Abstraktionen: abstrakte Klasse
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:05 (20') [I+AC : Exercise]  Übung zu Abstraktionen: abstrakte Klassen & Interfaces
+   11:05 - 11:20 (15') [D+C  : Topic   ]  Datentypen
+   11:20 - 11:35 (15') [D+C  : Topic   ]  Typumwandlung (Casting)
+   11:35 - 11:50 (15') [D+C  : Demo    ]  Demo zu Datentypen & Typumwandlung
+   11:50 - 12:10 (20') [D+C  : Exercise]  Übung zu Datentypen & Typumwandlung
+   12:10 - 12:15 ( 5') [Misc : Buffer  ]  Pufferzeit am Ende
+
+
+Di. 19.03.2024, 09:15 - 12:15 ::::: "Tag 4" :::::
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Welcome etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:40 (15') [V+AM : Topic   ]  Sichtbarkeiten & Scopes: Access Modifier
+   09:40 - 09:55 (15') [V+AM : Demo    ]  Demo zum Thema Access Modifier
+   09:55 - 10:15 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
+   10:15 - 10:30 (15') [L+C  : Demo    ]  Demo zu Kontrollstrukturen
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:05 (20') [L+C  : Exercise]  Übung zu Kontrollstrukturen
+   11:05 - 11:35 (30') [C+E  : Topic   ]  Java Collections API
+   11:35 - 11:55 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API
+   11:55 - 12:10 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API
+   12:10 - 12:15 ( 5') [Misc : Buffer  ]  Pufferzeit am Ende
+
+
+Di. 26.03.2024, 09:15 - 12:15 ::::: "Tag 5" :::::
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:45 (20') [Ops  : Topic   ]  Logische Operatoren
+   09:45 - 09:55 (10') [Ops  : Demo    ]  Demo zu Operatoren
+   09:55 - 10:10 (15') [Ops  : Exercise]  (Optional) Übung zu Operatoren
+   10:10 - 10:40 (30') [A    : Topic   ]  Assoziationen zwischen Klassen
+   10:40 - 10:55 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:55 - 11:15 (20') [A    : Demo    ]  Demo zum Thema Assoziationen zwischen Klassen
+   11:15 - 11:35 (20') [A    : Exercise]  Übungen zum Thema Assoziationen zwischen Klassen (1:n)
+   11:35 - 12:00 (25') [Gen  : Topic   ]  Java Generics (Theorie I)
+   12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit (verbraucht durch Fragen zu Themen)
+
+
+Di. 02.04.2024, 09:15 - 12:15 ::::: "Tag 6" :::::
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:40 (15') [Gen  : Topic   ]  Java Generics (Wiederholung)
+   09:40 - 10:00 (20') [Gen  : Demo    ]  Demos zu Java Generics
+   10:00 - 10:30 (30') [Gen  : Exercise]  Übungen zu Java Generics
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:25 (40') [Func : Topic   ]  Funktionale Programmierung in Java
+   11:25 - 11:45 (20') [Func : Demo    ]  Demos zu funktionaler Programmierung
+   11:45 - 12:15 (30') [Func : Exercise]  Übungen zu funktionaler Programmierung
+
+
+Di. 09.04.2024, 09:15 - 12:15 ::::: "Tag 7" :::::
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:55 (30') [Exc  : Topic   ]  Exceptions & Exception Handling
+   09:55 - 10:05 (10') [Exc  : Demo    ]  Demo zu Exceptions & Exception Handling
+   10:05 - 10:30 (25') [Exc  : Exercise]  Übungen zu Exceptions & Exception Handling
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 11:00 (15') [Stat : Topic   ]  Statische Elemente (Statics)
+   11:00 - 11:15 (15') [Stat : Demo    ]  Demo zu statischen Elementen
+   11:15 - 11:30 (15') [Rec  : Topic   ]  Java Records
+   11:30 - 11:45 (15') [Rec  : Demo    ]  Demo zu Java Records
+   11:45 - 11:55 (10') [C+E  : Topic   ]  Enums
+   11:55 - 12:05 (10') [C+E  : Demo    ]  Demo zu Enums
+   12:05 - 12:15 (10') [C+E  : Exercise]  Übung zu Enums
+
+
+Di. 16.04.2024, 09:15 - 12:15 ::::: "Tag 8" :::::
+   [ ] [ ] 09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   [ ] [ ] 09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   [ ] [ ] 09:25 - 09:50 (25') [Sem  : Topic   ]  Referenzsemantik
+   [ ] [ ] 09:50 - 10:10 (20') [Sem  : Demo    ]  Demo zum Thema Referenzsemantik
+   [ ] [ ] 10:10 - 10:30 (20') [Sem  : Exercise]  Übungen zum Thema Referenzsemantik
+           10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   [ ] [ ] 10:45 - 11:05 (20') [Docs : Topic   ]  Dokumentation mit JavaDoc
+   [ ] [ ] 11:05 - 11:15 (10') [Docs : Demo    ]  Demo zur Dokumentation mit JavaDoc
+   [ ] [ ] 11:15 - 11:35 (20') [CCnP : Topic   ]  Clean Code
+   [ ] [ ] 11:35 - 11:55 (20') [CCnP : Demo    ]  Demo zum Thema Clean Code
+   [ ] [ ] 11:55 - 12:05 (10') [CCnP : Exercise]  Übungen zum Thema Clean Code ("Spass-Quiz")
+   [ ] [ ] 12:05 - 12:15 (10') [Misc : Buffer  ]  Pufferzeit am Ende
+
+
+Di. 23.04.2024, 09:15 - 12:15 ::::: "Tag 9" :::::
+   [ ] [ ] 09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+   [ ] [ ] 09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   [ ] [ ] 09:25 - 10:10 (45') [CCnP : Topic   ]  Code-Qualität: Design Patterns
+   [ ] [ ] 10:10 - 10:25 (15') [CCnP : Demo    ]  Demo zum Thema Design Patterns
+   [ ] [ ] 10:25 - 10:30 ( 5') [CCnP : Exercise]  Übungen zum Thema Design Patterns ("Spass-Quiz oder sowas")
+           10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   [ ] [ ] 10:45 - 12:00 (75') [Exm  : Exam    ]  Prüfungsvorbereitung & -organisation
+   [ ] [ ] 12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+
+Di. 30.04.2024, 09:15 - 17:15 ::::: "Tag 10" ::::: /////////// '17:15' != '12:15' ///////////
+   [ ] [ ] 09:15 - 17:15 (480') [Exm  : Exam    ]  Semesterprüfung (schriftlich + mündlich)
+----

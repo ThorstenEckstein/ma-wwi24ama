@@ -1,0 +1,137 @@
+include::../settings.adoc[]
+
+=== Erfahrungsprotokoll & Planung
+
+[cols="^1,^1m,^1m,7e"]
+|===
+| | PLAN (1) | IST (2) | Inhalt, Kommentar
+
+a| * [x] {nbsp} | 1 | 1 | IDE Setup (Git, IntelliJ, Maven, PlugIns)
+
+a| * [x] {nbsp} | 1 | 1 | Einführung Maven, Projektstruktur & pom
+
+a| * [x] {nbsp} | 1 | 1 | TDD Einführung
+
+a| * [x] {nbsp} | 1 | 1 | Git Einführung & clone project
+
+a| * [x] {nbsp} | 1 | 1 | Klassen & Objekte
+a| * [x] {nbsp} | 1 | 1 | Vererbung & Interfaces
+a| * [x] {nbsp} | 1 | 1 | abstrakte Klassen
+
+a| * [x] {nbsp} | 1 | 1 | Access Modifier (Sichtbarkeiten, Scopes)
+
+a| * [x] {nbsp} | 1 | 2 | Update Project bzw. git pull
+
+a| * [x] {nbsp} | 1 | 2 | Übung: "Ein erstes Klassenmodell & der erste Unit-Test"
+
+a| * [x] {nbsp} | 1 | 2 | Einführung Objektvertrag (hashCode(), equals())
+a| * [x] {nbsp} | - | 2 | NEU: Debugging in der IDE
+a| * [x] {nbsp} | 2 | 3 | Übung 1a: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
+a| * [x] {nbsp} | 2 | 3 | Übung 1b: equals() und hashCode()
+
+a| * [ ] {nbsp} | 2 | 3 | Unit-Test Demo: In `BasicsTest` die Wiederholungsübungen durchgehen (Passengers add/remove)
+
+a| * [x] {nbsp} | 2 | 3 | Methoden überladen, überschreiben/übersteuern
+a| * [x] {nbsp} | 2 | 3 | Unit-Test Demo: Overload, Override mit "Display"
+
+a| * [x] {nbsp} | 2 | 3 | Collections API Einführung
+
+a| * [x] {nbsp} | (2) | 4 | Einführung Datentypen & Umwandlung
+a| * [x] {nbsp} | (2) | 4 | Demo: Datentyp-Umwandlung
+a| * [x] {nbsp} | (2) | 4 | Übung 2a+b: Datentyp-Umwandlung
+
+a| * [x] {nbsp} | (2) | 4 | Schlüsselwort "Static"
+a| * [x] {nbsp} | (2) | 4 | Demo: Static (Factory) Klasse
+
+a| * [x] {nbsp} | (2) | 4 | Einführung Schleifen
+a| * [x] {nbsp} | (2) | 4 | Demo: For-Each-Loop
+
+a| * [x] {nbsp} | (2) | 4 | Wiederholung Klassenmodell
+a| * [x] {nbsp} | (2) | 4 | Übung 3: Klassenmodell implementieren und "generate code" nutzen
+
+a| * [x] {nbsp} | 2 | 4 | Wiederholung: Collections Framework
+a| * [x] {nbsp} | 2 | 4 | Übung 4a: Eine Liste implementieren und die "for-each-loop" nutzen zur Summierung
+
+a| * [x] {nbsp} | 2 | 4 | Übung 4b: Eine SortedMap implementieren und sie Sortierung prüfen
+
+a| * [x] {nbsp} | 2 | 5 | Theorie: Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition
+a| * [x] {nbsp} | 2 | 5 | Demo: OneToOne, OneToMany am Beispiel
+a| * [x] {nbsp} | 2 | 5 | Übung 5: Assoziation mit Kurs und Student:innen
+
+a| * [x] {nbsp} | 2 | 5 | Theorie: Many-To-Many
+a| * [x] {nbsp} | 2 | 5 | Demo: ManyToMany am Beispiel der n:m Relation (Kurs, Student:innen)
+a| * [x] {nbsp} | 2 | 5 | Übung 6: ManyToMany, Information Hiding
+
+a| * [x] {nbsp} | 3 | 6 | (*Modul*) Einführung Java Generics
+a| * [x] {nbsp} | 3 | 6 | Demo in Klasse GenericsTest
+a| * [x] {nbsp} | 3 | 6 | Übungen 1 - Calculator
+a| * [x] {nbsp} | 3 | 6 | Übungen 2 - Workflow mit Steps
+
+a| * [x] {nbsp} | - | 7 | NEU: (*Exkurs*) Packages & Import (Compiler Errors und Behebung)
+
+a| * [x] {nbsp} | 3 | 7 | (*Modul*) funktionale Programmierung, Streaming API
+a| * [x] {nbsp} | 3 | 7 | Demo in Klasse Lambda- und StreamingTests
+a| * [x] {nbsp} | 3 | 7 | Übungen 1 - Loop über bool'sche Liste mit Ausgabe
+a| * [x] {nbsp} | 3 | 7 | Übungen 2a+2b - "Summe berechnen" früher + heute
+a| * [x] {nbsp} | 3 | 7 | Übungen 3 - (optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen
+
+a| * [x] {nbsp} | 4 | 8 | (*Modul*) Enumerations
+a| * [x] {nbsp} | 4 | 8 | Demos mit EnumTests
+a| * [x] {nbsp} | 4 | 8 | Übung 1 - 'Switch' anstelle von 'if-elseif-else'
+a| * [x] {nbsp} | 4 | 8 | Übung 2 - Enum mit r,g,b Datenfeldern
+
+a| * [x] {nbsp} | 6 | 8 | (*Modul*) Exceptions
+a| * [x] {nbsp} | 6 | 8 | Demos, mit/ohne Context, mit/ohne Handler
+
+a| * [x] {nbsp} | ! | 9 | Zwischenprüfung
+
+a| * [ ] {nbsp} | 6 | - | Übungen 1 - Neue Exception bauen, werfen und behandeln
+
+a| * [x] {nbsp} | 9 | 9 | (*Exkurs*) Logische Operatoren (aktuell noch in module-enums
+a| * [x] {nbsp} | 9 | 9 | Theorie logische Operatoren
+a| * [x] {nbsp} | 9 | 9 | Demos mit OperatorTests
+
+a| * [x] {nbsp} | 9 | 9 | (*Exkurs*) Schleifen
+a| * [x] {nbsp} | 9 | 9 | Demos mit LoopTests
+
+4+a|
+====
+{continue-here}
+====
+
+a| * [ ] {nbsp} | 1 | 10 | (*Modul*) Referenz-Semantik
+a| * [ ] {nbsp} | 1 | 10 | Demo in Klasse SemanticTests
+a| * [ ] {nbsp} | 1 | 10 | Übungen 1 - Grafische Erläuterung
+
+a| * [ ] {nbsp} | 7 | 10 | (OPTIONAL) (*Modul*) Datenbanken
+a| * [ ] {nbsp} | 7 | 10 | Demo in Klasse DataSourceDBUnitTests & vorbereiteten SQL Dateien
+
+a| * [ ] {nbsp} | 10 | 10 | Literaturempfehlungen -> docs/asciidoc/references.pdf
+
+a| * [ ] {nbsp} | 10 | 10 | Live-Projekt Beispiele (Doremar, RBLTNG)
+
+a| * [ ] {nbsp} | 10 | 10 | Code-Qualität
+
+(a) Beispiele: -> course-9/docs/resources: bad code examples
+
+(b) Metrik: Zyklomatische Komplexität, siehe -> course-8/docs/course-8.adoc
+
+a| * [ ] {nbsp} | - | 10 | Bewerbungsgespräch (Softwareentwickler)
+
+a| * [ ] {nbsp} | 10 | 10 | Fragen, Wiederholungen, FAQ zu den Kursinhalten
+
+a| * [ ] {nbsp} | 10 | 10 | Informationen zur Abschlussprüfung
+
+//4+a|
+//====
+//====
+
+//
+//a| * [ ] {nbsp} | 6 | 9 | (*Modul*) JavaDoc
+//a| * [ ] {nbsp} | 6 | 9 | Demo, HTML Generierung
+//a| * [ ] {nbsp} | 6 | 9 | Übungen 1 - Dokumentation einer kleinen API
+//
+
+|===
+[small]#*(1)* = Thema war ursprünglich geplant für Seminartag `n`, oder "neu eingeführt" mit Klammern `(n)`,
+*(2)* = Thema war tatsächlich Inhalt des Seminartags `n`,#

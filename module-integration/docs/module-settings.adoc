@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-integration
+:module-title: Integration auf verschiedenen Ebenen

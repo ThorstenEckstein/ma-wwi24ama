@@ -1,0 +1,34 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.8
+
+/'
+ Systembeschreibung, z.B.:
+  - "Der Fahrplan enthält alle geplanten Zugfahrten ..."
+  - "Eine Planfahrt definiert, welcher Zug wann und von wo nach wo fährt ..."
+'/
+
+class Train       /' Zug        '/
+{
+  String number
+}
+class Route       /' Strecke    '/
+{
+  Station from
+  Station to
+}
+class Timetable   /' Fahrplan   '/
+class Journey     /' (Zug)Fahrt '/
+{
+  Long trainNumber
+  Long routeId
+  DateTime departure
+}
+
+Route          "n" -    "m"   Train
+(Route,Train)      ..         Journey
+Journey        "n" --o  "1"   Timetable
+
+@enduml

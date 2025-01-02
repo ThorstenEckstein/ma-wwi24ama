@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-generics
+:module-title: Java Generics

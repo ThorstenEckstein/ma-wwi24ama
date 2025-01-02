@@ -1,0 +1,7 @@
+include::../../docs/settings.adoc[]
+
+// --- Name
+:module-name:  exam.preparation
+:module-title: Prüfungsvorbereitung
+
+:show-exam-preface: true

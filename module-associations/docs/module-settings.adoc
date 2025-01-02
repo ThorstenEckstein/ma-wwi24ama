@@ -1,0 +1,4 @@
+// --- Name
+:module-name:  module-associations
+:module-title: Assoziationen zwischen Klassen, Relationen
+

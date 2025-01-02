@@ -1,0 +1,178 @@
+// NOTES:
+// - The asciidoc intention "errors in source code blocks" is disabled
+//   (see asciidoc plugin intention settings, Settings > Editor Intentions)
+
+
+// ######################### document settings
+:icons: font
+:icon-set: fas
+:sectnums:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+//:stylesdir: styles
+//:stylesheet: dhbw.css
+
+// #
+// # Special settings
+// # For pass-through macros see also: -> https://docs.asciidoctor.org/asciidoc/latest/pass
+// #
+
+:nl: pass:[<br/>]
+:tbd: pass:n[[blue]#_to be continued here ..._#]
+:continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
+//:example: pass:[&#63;]
+//:example-caption: {example}
+:module:              Modul
+:update:              pass:n[_Update project ..._]
+:demo:                Demo:
+:pause:               pass:n[[red]#*&nbsp;&nbsp;&nbsp;&nbsp;/// PAUSE ///*#]
+:indent-1:            pass:n[&nbsp;]
+:indent-2:            pass:n[&nbsp;&nbsp;]
+:indent-3:            pass:n[&nbsp;&nbsp;&nbsp;]
+:indent-4:            pass:n[&nbsp;&nbsp;&nbsp;&nbsp;]
+// true -> shows tables that contain timeslots for content elements
+:show-timeslots:      true
+
+// #
+// # Icons & Symbols
+// # See also:
+// #  a) https://fontawesome.com/v4/icons/
+// #  b) https://www.w3schools.com/charsets/ref_utf_symbols.asp
+// #
+
+:icon-welcome:          icon:heart[role=red]
+:icon-update-project:   icon:arrow-circle-o-down[role=red]
+:icon-dir:              icon:folder[role=yellow]
+:icon-dir-src:          icon:folder[role=blue]
+:icon-dir-test:         icon:folder[role=yellow]
+:icon-dir-package:      icon:folder[role=red]
+:icon-dir-target:       icon:folder[role=green]
+:icon-exercise:         icon:flask[role=red]
+:icon-topic:            icon:book[role=gray]
+:icon-theory:
+:icon-award:            icon:trophy[role=yellow]
+:icon-demo:             icon:eye[role=gray]
+:icon-setup:            icon:gear[role=blue]
+:icon-exam:             icon:graduation-cap[role=black]
+:icon-domain:           icon:train[role=red]
+:icon-one:
+:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
+
+// #
+// # Titles
+// #
+
+:course-title-count: {counter:course-title-count}
+
+:day-1: Tag 1 - Willkommen, Setup & Einführung in Klassen
+:day-2: Tag 2 - Klassen & Interfaces
+:day-3: Tag 3 - Datentypen, Access Modifier & Kontrollstrukturen
+:day-4: Tag 4 - Collections, Assoziationen
+:day-5: Tag 5 - Enums & Java Generics
+:day-6: Tag 6 - Funktionale Programmierung
+:day-7: Tag 7 - Ausnahmen, Fehlerbehandlung, Records & Statics
+:day-8: Tag 8 - Referenzsemantik, Javadoc, Clean Code
+:day-9: Tag 9 - Code-Qualität, Prüfungsvorbereitung
+:day-10: Tag 10 - Prüfungstage/-block
+
+// For all modules apply ...
+:modules-root:     ..
+:modules-prefix:   module
+// for each module
+:module-docs:      docs
+:module-sources:   pass:n[src/[blue]#*main*#/java]
+:module-tests:     pass:n[src/[green]#*test*#/java]
+:basic-package:    de/dhbw
+:package-demo:     demo
+:package-exercise: exercise
+:package-solution: solution
+
+// --- References: just to show i.e. paths to readers
+:mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]
+:mod-ref-test: pass:n[src/[green]#*test*#/java/de/dhbw]
+
+// --- Hyperlinking: for includes from adoc to sources/test packages
+:mod-lnk-docs: .
+:mod-lnk-src:  ../src/main/java/de/dhbw
+:mod-lnk-test: ../src/test/java/de/dhbw
+
+// #
+// # Exam, Questions and Answers
+// #
+// # - https://www.tutorialspoint.com/java/java_interview_questions.htm
+
+// display global variables, set to 'true' to display in module docs!
+:show-variables: false
+:show-structure: false
+
+ifeval::[{show-variables} == true]
+[big]#*Settings*#
+
+*About:*
+
+//. variables having `modules` as prefix apply globally to all modules
+//. variables having just `module` as prefix apply for each module
+
+[cols="3h,7m"]
+|===
+| Variable         | Value
+
+| icons                 | {icons}
+| icon-set              | {icon-set}
+| sectnums              | {sectnums}
+| toc-title             | {toc-title}
+| toclevels             | {toclevels}
+| nl                    | {nl}
+| tbd                   | {tbd}
+| continue-here         | {continue-here}
+| module                | {module}
+| update                | {update}
+| demo                  | {demo}
+| pause                 | {pause}
+| indent-1              | {indent-1}
+| indent-2              | {indent-2}
+| indent-3              | {indent-3}
+| indent-4              | {indent-4}
+| show-timeslots        | {show-timeslots}
+| icon-welcome          | {icon-welcome}
+| icon-update-project   | {icon-update-project}
+| icon-dir              | {icon-dir}
+| icon-dir-src          | {icon-dir-src}
+| icon-dir-test         | {icon-dir-test}
+| icon-exercise         | {icon-exercise}
+| icon-topic            | {icon-topic}
+| icon-theory           | {icon-theory}
+| icon-award            | {icon-award}
+| icon-demo             | {icon-demo}
+| icon-setup            | {icon-setup}
+| icon-exam             | {icon-exam}
+| icon-domain           | {icon-domain}
+| icon-one              | {icon-one}
+| symbol-update-project | {symbol-update-project}
+| day-1                 | {day-1}
+| day-2                 | {day-2}
+| day-3                 | {day-3}
+| day-4                 | {day-4}
+| day-5                 | {day-5}
+| day-6                 | {day-6}
+| day-7                 | {day-7}
+| day-8                 | {day-8}
+| day-9                 | {day-9}
+| day-10                | {day-10}
+| modules-root          | {modules-root}
+| modules-prefix        | {modules-prefix}
+| module-docs           | {module-docs}
+| module-sources        | {module-sources}
+| module-tests          | {module-tests}
+| basic-package         | {basic-package}
+| package-demo          | {package-demo}
+| package-exercise      | {package-exercise}
+| package-solution      | {package-solution}
+| mod-ref-src           | {mod-ref-src}
+| mod-ref-test          | {mod-ref-test}
+| mod-lnk-docs          | {mod-lnk-docs}
+| mod-lnk-src           | {mod-lnk-src}
+| mod-lnk-test          | {mod-lnk-test}
+|===
+endif::[]
+

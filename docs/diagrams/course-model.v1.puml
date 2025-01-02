@@ -1,0 +1,54 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+skinparam groupInheritance 1
+
+scale 1.0
+
+class Course {
+  Agenda agenda;
+}
+class Agenda {
+  LinkedList<Item> items;
+}
+interface Item {
+  Duration calculateDuration();
+}
+class CourseDay implements Item {
+  LocalDate date
+}
+class Module implements Item {
+  LocalDate date
+}
+class Content implements Item {
+  enum ContentType type
+}
+enum ContentType {
+  Welcome, Break, Topic, ...
+}
+enum Modules {
+  WelcomeAndSetup, Break, Generics, ...
+}
+
+class CourseDaySchedule {}
+class ContentSchedule {}
+class CourseDayScheduler {
+  schedule(Course);
+}
+
+Course      ..>        Agenda       : "contains one"
+CourseDay   ..>        Agenda
+Module      ..>        Agenda
+'Content     ..>        Agenda
+Agenda      o--        Item         : " contains many"
+'Item        <|..       CourseDay    : "realizes"
+'Item        <|.[#red]. Module       : "realizes" <<deprecated>>
+'Item        <|..       Content      : "realizes"
+Content     ..>        ContentType  : " has type"
+Content     ..>        Modules      : " has module"
+
+CourseDayScheduler ..> CourseDay         : "use"
+CourseDayScheduler ..> CourseDaySchedule : "use"
+
+@enduml

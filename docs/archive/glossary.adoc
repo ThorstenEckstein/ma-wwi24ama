@@ -1,0 +1,214 @@
+:icons: font
+
+[[alphabet]]
+[.small]
+[.text-center]
+****
+<<A,A>> | <<B,B>> | <<C,C>> | <<D,D>> | <<E,E>> | <<F,F>> | <<G,G>> | <<H,H>> | <<I,I>> | <<J,J>> | <<K,K>> | <<L,L>> | <<M,M>> | <<N,N>> | <<O,O>> | <<P,P>> | <<Q,Q>> | <<R,R>> | <<S,S>> | <<T,T>> | <<U,U>> | <<V,V>> | <<W,W>> | <<X,X>> | <<Y,Y>> | <<Z,Z>>
+****
+
+[cols="2a,2,6"]
+|===
+| Term | Synonym / Translation | Definition / Description
+
+// ######################################
+// ###                A               ###
+// ######################################
+3+| [[A]] [red]#*A*#
+
+s|App
+| WebApp
+|Sum of components belonging to an application, which can be used by Users in the browser (Frontend und Backend, includes endpoints)
+
+// ######################################
+// ###                B               ###
+// ######################################
+3+| [[B]] [red]#*B*#
+
+s|Backend
+|
+|A server providing an API for some resources
+
+s| [[BFP]] Betriebsfahrplan
+|
+| Der Betriebsfahrplan (betriebliche Zugfahrplan) stellt die Sicht des Eisenbahnverkehrsunternehmens (EVU) auf den Zugfahrplan mit Fahrlagen und Reihungen dar. Der verkehrliche Zugfahrplan (Kundensicht) kann vom betrieblichen Zugfahrplan abweichen. Schlüssel ist die betriebliche Zugnummer (Train ID). Siehe auch -> <<KFP,Kundenfahrplan>>
+
+// ######################################
+// ###                C               ###
+// ######################################
+3+| [[C]] [red]#*C*#
+
+// ######################################
+// ###                D               ###
+// ######################################
+3+| [[D]] [red]#*D*#
+
+s| Dispositions-maßnahme
+| (Disruption) Measure
+| Eine Dispositionsmaßnahme bündelt die Änderung einer Menge von Zugfahrten (Teil-/Ausfall, Zusatz-/Ersatzzug, Zusatz/Ausfall Halt, Umleitungen,...) mit den dazugehörigen Kommunikationselementen, d.h. den Informationen, die an Zugpersonale und Reisende weitergegeben werden.
+
+s| Domain
+| (Fach-) Domäne
+| A domain is a field of knowledge, impact or activity. The area of expertise, for which a user uses an application, is the domain of the software.
+
+// ######################################
+// ###                E               ###
+// ######################################
+3+| [[E]] [red]#*E*#
+
+s| Entity
+|
+| Spezifisch annotiertes Persistenzobjekt im Kontext von JPA
+
+// ######################################
+// ###                F               ###
+// ######################################
+3+| [[F]] [red]#*F*#
+
+s|Fahrtereignis
+|
+| i.e. "AN" (Ankunft, Arrival)
+
+s|Frontend
+|
+|Static content, loaded and executed by the browser, also called "User Interface"
+
+// ######################################
+// ###                G               ###
+// ######################################
+3+| [[G]] [red]#*G*#
+
+// ######################################
+// ###                H               ###
+// ######################################
+3+| [[H]] [red]#*H*#
+
+// ######################################
+// ###                I               ###
+// ######################################
+3+| [[I]] [red]#*I*#
+
+// ######################################
+// ###                J               ###
+// ######################################
+3+| [[J]] [red]#*J*#
+
+// ######################################
+// ###                K               ###
+// ######################################
+3+| [[K]] [red]#*K*#
+
+s| [[KFP]] Kundenfahrplan
+|
+| Der Kundenfahrplan stellt die verkehrliche Sicht auf eine durchgängige Fahrt einer Fahrzeuggruppe (eines Zugteils) dar. Er beinhaltet die Zugfahrpläne eingeschränkt auf den öffentlichen Fernverkehr mit ihren Fahrlagen für den betrachteten Zeitraum und die an den Kunden kommunizierte Soll-Reihung für alle Gültigkeitstage des Zugfahrplans. Er wird im Prozess regelmäßig mit den geplanten Tagespaketen abgeglichen. Siehe auch -> <<BFP,Betriebsfahrplan>>
+
+// ######################################
+// ###                L               ###
+// ######################################
+3+| [[L]] [red]#*L*#
+
+// ######################################
+// ###                M               ###
+// ######################################
+3+| [[M]] [red]#*M*#
+
+// ######################################
+// ###                N               ###
+// ######################################
+3+| [[N]] [red]#*N*#
+
+// ######################################
+// ###                O               ###
+// ######################################
+3+| [[O]] [red]#*O*#
+
+s|[[ortungsmeldung]] Ortungsmeldung
+| -> <<zuglaufmeldung, Zuglaufmeldung>>, Zuglaufereignis
+|Message about the current train location, with or without geo coordinates
+
+// ######################################
+// ###                P               ###
+// ######################################
+3+| [[P]] [red]#*P*#
+
+// ######################################
+// ###                Q               ###
+// ######################################
+3+| [[Q]] [red]#*Q*#
+
+// ######################################
+// ###                R               ###
+// ######################################
+3+| [[R]] [red]#*R*#
+
+// ######################################
+// ###                S               ###
+// ######################################
+3+| [[S]] [red]#*S*#
+
+s| SCS
+|
+| Self-contained System, see also -> https://scs-architecture.org/[scs-architecture.org]
+
+s| Strecke
+| Track
+| A track is a one or double-railed connection of two points with its own kilometerage, on which regular train traffic is accomplished, was accomplished or is to be accomplished in the future.
+
+// ######################################
+// ###                T               ###
+// ######################################
+3+| [[T]] [red]#*T*#
+
+s| Tier
+| Stufe
+| The term tier refers to physical entities like deliverables or deployable applications.
+
+// ######################################
+// ###                U               ###
+// ######################################
+3+| [[U]] [red]#*U*#
+
+s| [[UIC2102]] UIC 2102
+| -> <<zuglaufmeldung, Zuglaufmeldung>>
+a| Diese Meldung erfolgt bei
+
+* Ankunft, Ab- oder Durchfahrt in vereinbarten Meldepunkten und/oder
+* Erreichen der vereinbarten Vorlaufzeit und/oder
+* Erreichen einer neuen Soll-/Ist-Abweichung über den vereinbarten Schwellenwert hinaus.
+
+// ######################################
+// ###                V               ###
+// ######################################
+3+| [[V]] [red]#*V*#
+
+// ######################################
+// ###                W               ###
+// ######################################
+3+| [[W]] [red]#*W*#
+
+// ######################################
+// ###                X               ###
+// ######################################
+3+| [[X]] [red]#*X*#
+
+// ######################################
+// ###                Y               ###
+// ######################################
+3+| [[Y]] [red]#*Y*#
+
+// ######################################
+// ###                Z               ###
+// ######################################
+3+| [[Z]] [red]#*Z*#
+
+s| [[zuglaufmeldung]] Zuglaufmeldung
+| train movement message, -> <<ortungsmeldung, Ortungsmeldung>>, -> <<UIC2102, UIC 2102>>
+| Message sent whenever a train arrives, passes or departs a location monitored by the monitoring system used by the network operator (i.e. Fahrerlaubnis or Ankunftsmeldung)
+
+|===
+
+[.small]
+[.text-center]
+****
+<<A,A>> | <<B,B>> | <<C,C>> | <<D,D>> | <<E,E>> | <<F,F>> | <<G,G>> | <<H,H>> | <<I,I>> | <<J,J>> | <<K,K>> | <<L,L>> | <<M,M>> | <<N,N>> | <<O,O>> | <<P,P>> | <<Q,Q>> | <<R,R>> | <<S,S>> | <<T,T>> | <<U,U>> | <<V,V>> | <<W,W>> | <<X,X>> | <<Y,Y>> | <<Z,Z>>
+****

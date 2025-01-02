@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-enums
+:module-title: Enumerations (Aufzählungen)

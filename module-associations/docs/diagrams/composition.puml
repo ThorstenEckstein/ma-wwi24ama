@@ -1,0 +1,13 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com
+
+scale 1.0
+
+Building   *---  Room
+
+HumanBeing *---  BodyPart
+
+Train      *---  Wagon
+
+@enduml

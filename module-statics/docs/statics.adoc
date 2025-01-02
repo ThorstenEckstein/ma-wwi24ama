@@ -1,0 +1,77 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Statische Klassen und Variablen
+----
+end::content[]
+////
+
+== Statische Klassen und Variablen
+
+[ <<about_statics,Inhalt>> | <<demos_statics,Demo>> | <<exercises_statics,Übungen>> ]
+
+[[about_statics]]
+Das Schlüsselwort
+
+ static
+
+bedeutet im Wesentlichen, das die Felder (Attribute) oder Methoden einer Klasse nicht an die Erzeugung einer *Instanz* dieser Klasse gebunden sind. Das Ganze lässt sich besser anhand von Beispielen und Code verdeutlichen.
+
+Ein *Beispiel*:
+
+[source,java]
+----
+import java.util.HashMap;public class Configuration {
+
+    // statisches Feld
+    public static final String SETTING_KEY_AUTHOR = "setting.author"; <1>
+    public static Map<String, String> settings = new HashMap<>();
+
+    // static initializer
+    static { <2>
+        settings.put(SETTING_KEY_AUTHOR, "Lady Gaga");
+    }
+
+    // statische Methode
+    public static String getSetting(String key) { <3>
+        return settings.get(key);
+    }
+
+}
+----
+<1> statisches Feld
+<2> statischer Initialisierer (static initializer)
+<3> statische Methode
+
+/////////////////////////////
+[[demos_statics]]
+Zum obigen Beispiel gibt's eine *Demo*:
+
+[subs=normal]
+ {module-ref-tests}/demo/StaticsDemoTest.java (Test 3)
+/////////////////////////////
+
+[[exercises_statics]]
+*Übungen*:
+
+[subs=normal]
+ {mod-ref-test}/exercise/StaticsExerciseTest.java
+
+*Übung 1*:
+
+Erzeuge ...
+
+- eine Klasse `Car` mit einem Feld `type` (String) und einem zugehörigen Konstruktor
+- eine Klasse `CarFactory` mit einer statischen Methode mit dem Parameter `Type`, die neue Car-Instanzen zurückgibt
+- einen Test, der die Factory benutzt und den/die Car-Type(s) testet
+

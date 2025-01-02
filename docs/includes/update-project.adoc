@@ -1,0 +1,32 @@
+include::../settings.adoc[]
+
+////
+
+ CAUTION:
+  (1) As soon as images are included, the image paths are interpreted
+      from "there", so that the path must match the requirements from
+      'after' being included! As a result, the image are NOT shown here,
+      but are displayed correctly after this chapter in included some-
+      where else in another document!
+
+////
+
+Das *Projekt* bzw. der "_lokale Workspace_", d.h. euer lokales Arbeitsverzeichnis, in dem alle Sourcen liegen, muss als allererstes zum Start in den Tag aktualisiert werden, d.h. ...
+
+{symbol-update-project} `Update Project...`
+
+Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
+
+[cols="^6a,^4a", grid="0", frame="0"]
+|===
+
+<| Das geht am besten mithilfe der IDE im Menü oder über das GIT Icon:
+|
+image::../../docs/images/git-pull.png[width="65%", align="center"]
+
+<| Danach muss - im sich öffnenden Dialog - noch folgendes bestätigt werden: _merge incoming changes into the current branch_
+|
+image::../../docs/images/git-accept-merge.png[width="85%", align="center"]
+|===
+
+Der Vorgang sollte mit einer Erfolgsmeldung abschließen.

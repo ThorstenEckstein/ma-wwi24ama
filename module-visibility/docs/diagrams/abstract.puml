@@ -1,0 +1,19 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 1.0
+
+abstract class AbstractClass
+AbstractClass <|-- ConcreteClass    : inherits\n(extends)
+
+interface Identifiable
+abstract class NaturalPerson
+class Citizen
+
+Identifiable <|.. NaturalPerson : implements
+NaturalPerson <|-- Citizen : extends
+
+note top of AbstractClass: spezielle Symbolik  "(A)"\nsowie <i>kursive</i> Schrift
+
+@enduml

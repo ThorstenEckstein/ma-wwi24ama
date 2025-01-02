@@ -1,0 +1,21 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+scale 0.9
+
+abstract class Parent1
+Parent1 <|-- Subclass    : inherits\n(extends)
+
+interface Parent2
+Parent2 <|.. Class2      : realizes\n(implements)
+
+Whole1  *--  PartClass1  : is compo-\nsed of
+
+Whole2  o--  PartClass2  : aggregates
+
+ClassA  <..  ClassB      : uses
+
+ClassC  <--  ClassD      : is asso-\nciated with
+
+@enduml
