@@ -24,16 +24,41 @@ end::content[]
 
 *Organisation*
 
-Die Ablage bzw. Speicherung eine Java Klassen in Form von Dateien erfolgt in Verzeichnissen, die ihrerseits hierarchisch angelegt werden (können aber nicht müssen). Im Kontext von Java werden diese Ablageverzeichnisse *Packages* genannt. Der Java Compiler registriert den Ablageort einer Java Klasse, indem in dieser ganz zu Beginn das Schlüsselwort
+image:../../docs/images/intellij-symbol-package.png[] Die Ablage bzw. Speicherung eine Java Klassen in Form von Dateien erfolgt in Verzeichnissen, die ihrerseits hierarchisch angelegt werden (können aber nicht müssen). Im Kontext von Java werden diese Ablageverzeichnisse *Packages* genannt. Der Java Compiler registriert den Ablageort einer Java Klasse, indem in dieser ganz zu Beginn das Schlüsselwort
 
  package
 
-genutzt wird, zusammen mit der voll-qualifizierten Verzeichnis-Hierarchie unter Nutzung von Punkten als Trennzeichen, also etwa
+genutzt wird, zusammen mit der voll-qualifizierten Verzeichnis-Hierarchie unter Nutzung von Punkten `.` als Trennzeichen, also etwa
 
- package de.dhbw.domain.model;
+ package de.dhbw.demo.classes;
 
 
-Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem Namen der Klassensignatur, sondern nur in Verbindung mit dem package, in dem sie sich befindet. Beides ergibt den sog. *voll-qualifizierten Klassen-Namen*, etwa
+Die *Pakete* finden sich 1:1 in Form von *Verzeichnissen* wieder:
+
+[cols="6a,4a", frame="none", grid="none"]
+|===
+| Allgemein:
+[subs=normal]
+----
+...
+...
+{icon-dir-src} src/main/java (Wurzel Quellcode-Dateien)
+  ...
+  ...
+  {icon-dir} <package>
+    {icon-dir} <package>
+      {icon-dir} <package>
+        {icon-dir} <package>
+          <file> (.java)
+----
+
+| Beispiel:
+
+image::../../docs/images/intellij-src-packages.png[]
+|===
+// image::../../docs/images/intellij-symbol-package.png[]
+
+Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem Namen der Klassensignatur, sondern nur in Verbindung mit dem package, in dem sie sich befindet. Beides ergibt den sog. *voll-qualifizierten Klassen-Namen*, z.B.
 
  de.dhbw.domain.model.Train
 
@@ -64,21 +89,19 @@ public class MyClass {
 [ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]
 
 [[about_classes]]
-Kurz etwas *Theorie* vorab bzw. zur Wiederholung:
+Zunächst die *Theorie* (ggf. Wiederholung):
 
-Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der *objektorientierten Programmierung* ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
+Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der *objektorientierten Programmierung* ein abstraktes Modell bzw. einen Bauplan für eine Reihe von "ähnlichen" Objekten.
 
 Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt *Attribute* (auch Eigenschaften, Felder) und *Methoden* (bzw. Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
 
 Eine Java Klasse hat in der Regel folgende Bestandteile:
 
-* Eigenschaft (Feld),
-* Konstruktor und
-* Verhaltensweise (Methode):
+* Eigenschaft (Feld, engl. _field_),
+* Konstruktor (engl. _constructor_) und
+* Verhaltensweise (Methode, engl. _method_):
 
-Die wichtigsten Elemente von Java:
-
-Die *Klassensignatur* selbst:
+Die wichtigsten Elemente von Java sind die *Klassensignatur* selbst:
 
 [source,java]
 ----
@@ -98,16 +121,16 @@ public class MyClass {
 }
 ----
 
-Eine Klasse mit (Default-) *Konstruktor* (engl. _constructor_, oder abgekürzt oft einfach `c'tor`):
+Eine Klasse mit (Default-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
 
-In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren. Dazu wird das Schlüsselwort `new` benutzt (siehe unten):
 
 [source,java]
 ----
 public class MyClass {
 
     public MyClass() {
-        super(); // Aufruf des Default-C'tors der Elternklasse
+        super(); // Aufruf des Default-c'tors der Elternklasse
     }
 }
 ----
@@ -119,13 +142,12 @@ Eine Klasse mit einem *Konstruktor*, der ein Argument hat:
 public class MyClass {
 
     public MyClass(String arg) {
-        // Verarbeitung des Arguments,
+        // Verarbeitung des Arguments 'arg',
         // z.B. mittels 'this' oder 'super'
     }
 
 }
 ----
-
 
 Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte:
 
@@ -142,18 +164,45 @@ Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte
 Train train  =   new       Train();
 ----
 
-Eine Klasse mit einer *Methode* bzw. einer Verhaltensweise:
+
+Klassen besitzen meistens auch "Eigenschaften" in Form von einer oder mehreren *Feldern*. Zunächst ein Beispiel:
 
 [source,java]
 ----
-public class MyClass {
+public class Person {
 
-    public String doSomething() {
-        return "result";
-    }
+    // Eigenschaft
+    public String name;
 
 }
 ----
+
+IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` hat eine Eigenschaft `Name`
+
+
+Klassen besitzen darüber hinaus meistens auch "Verhalten" in Form von einer oder mehreren *Methoden*. Am Beispiel:
+
+[source,java]
+----
+public class Person {
+
+    public String name;
+
+    // Verhalten
+    public String getName() {
+        // Umsetzung des Verhaltens
+        return name;
+    }
+
+    // Verhalten
+    public String smile() {
+        // Umsetzung des Verhaltens "lächeln"
+        return ":-)";
+    }
+}
+----
+
+Dazu eine ...
 
 
 [[demos_classes]]
