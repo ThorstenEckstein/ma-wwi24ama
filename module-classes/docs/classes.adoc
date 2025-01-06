@@ -249,21 +249,33 @@ NOTE: _Was fällt bei den Implementierungen besonders ins Auge?_
 [[about_inheritance]]
 Bei der *Vererbung* in Java wird zwischen einer *Super*- und einer *Subklasse* unterschieden.
 
-Die _Superklasse_, auch Eltern- oder Basisklasse genannt, ist vielfach eine Zusammenfassung von allgemeinen Attributen und Methoden unterschiedlicher aber ähnlicher Objekte (*Verallgemeinerung*).
+Die _Superklasse_, auch Eltern- oder Basisklasse genannt, ist vielfach eine Zusammenfassung von allgemeinen Attributen und Methoden unterschiedlicher aber ähnlicher Objekte. Zweck ist dementsprechend eine
 
-Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` sind. Des Weiteren kann die Subklasse um eigene Attribute und Methoden erweitert werden. Man spricht hier von einer *Spezialisierung* der Subklasse von der Superklasse.
+[subs=normal]
+ *Verallgemeinerung*
+
+Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` sind. Des Weiteren kann die Subklasse um eigene Attribute und Methoden erweitert werden. Man spricht hier von einer
+
+[subs=normal]
+ *Spezialisierung*
+
+der Superklasse in Form der Subklasse.
 
 Eine Vererbung in Java findet über das Schlüsselwort
 
  extends
 
-statt. Der zugehörige Quellcode:
+statt. Etwas Quellcode:
 
 [source,java]
 ----
-public class SuperClass { }
+public class SuperClass {
+    /* restlicher Inhalt der Super-Klasse */
+}
 
-public class SubClass extends SuperClass { }
+public class SubClass extends SuperClass {
+    /* restlicher Inhalt der Sub-Klasse */
+}
 ----
 
 Die _grafische_ Darstellung der Vererbung sieht folgendermaßen aus:
@@ -275,15 +287,16 @@ include::diagrams/inheritance.puml[]
 
 
 ====
-IMPORTANT: Einschub: -> <<../../module-object-contract/docs/object-contract.adoc#object-contract, Der Objektvertrag>> im Modul `module-object-contract`
+IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigenschaften besitzen. Diese sind im -> <<../../module-object-contract/docs/object-contract.adoc#object-contract,Objektvertrag>> im Modul `module-object-contract` detailliert erläutert. Dies ist aber Gegenstand zum Ende dieses Kurses!
 ====
 
 
 [[demos_inheritance]]
 *Demo*:
 
+.canInheritSuperClass()
 [subs=normal]
- -> {mod-ref-test}/demo/inheritance/InheritanceTest.java
+ -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
 
 == Polymorphismus
@@ -297,6 +310,7 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 [[demos_polymorphism]]
 *Demo*:
 
+.canUsePolymorphism1() & canUsePolymorphism2()
 [subs=normal]
  -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
@@ -320,9 +334,9 @@ In einer Unterklasse können Methoden
 
 werden.
 
-Von *Überladung* wird gesprochen, wenn eine Unterklasse neues Verhalten *hinzufügt*.
+Von *Überladung* wird gesprochen, wenn eine (Unter-)Klasse neues bzw. zusätzliches Verhalten *hinzufügt*.
 
-Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
+Das *Übersteuern* (synonym: _Überschreiben_) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
 
 // float="left"
 [plantuml, "overrides", png, align="center"]
@@ -330,23 +344,47 @@ Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geer
 include::diagrams/override.puml[]
 ....
 
-
 [source,java,title="Beispiel Überladen von Methoden"]
+----
+include::{mod-lnk-src}/demo/overload/Display.java[lines="3..7"]
+----
+
+[source,java]
 ----
 include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
 ----
 
+Die Überladung tritt hier in zwei Formen auf:
+
+- Zum einen gibt es mehrere Methoden mit gleichem Methodennamen in einer Klasse
+- Zum anderen werden neben der geerbten Methode noch zwei weitere mit gleichem Methodennamen hinzugefügt
+
+Beim *Übersteuern* wird eine geerbte Methode durch eine neue Implementierung ersetzt:
+
 .Beispiel Übersteuern von Methoden
 [source,java]
 ----
-include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
+include::{mod-lnk-src}/demo/override/DefaultDisplay.java[lines="5..10"]
+----
+
+[source,java]
+----
+include::{mod-lnk-src}/demo/override/PlatformDisplay.java[lines="3..10"]
 ----
 
 Die zugehörige *Annotation* (eine Art "Anzeiger") im Code ist
 
  @Override
 
-Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
+Durch sie lässt sich schnell erkennen, welche Methoden in der Subklasse geerbte (oder Interface-) Methoden übersteuern.
+
+Auch die IDE zeigt viele solcher Informationen an, z.B. als Symbol image:images/ide-symbol-override.png[] am linken Rand des Editors. Wenn man nun noch mit dem Mauszeiger über das Symbol "fährt", komm etwas Ähnliches wie folgendes ...
+
+image::images/ide-symbol-override-mouseover.png[]
+
+oder rechts neben einer Methodensignatur:
+
+image::images/ide-hint-override.png[]
 
 Die zugehörigen *Unit-Tests* finden sich hier:
 
@@ -377,12 +415,20 @@ _Testklasse_, in der die Übungen implementiert werden können:
 
 Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
-* Eine Klasse `Zug` mit
-** einem String Feld `number` und
-** einer Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
-* Eine Klasse `Fernzug`, die von der Klasse `Zug` erbt
+*Teil 1*
+
+* Eine Klasse `Zug` implementieren
+* Eine Klasse `Fernzug` implementieren, die von der Klasse `Zug` erbt
+* Im Test: Lege eine Instanz der Klasse Zug (oder Fernzug?) an
+* Teste, ob die Instanz nicht `null` ist, also korrekt erzeugt wurde
+
+*Teil 2 (extended)*
+
+* Die Klasse `Zug` bekommt
+** ein Feld mit Datentyp `String` namens `number`
+** eine Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
 * Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
-* Teste, welchen Wert das Feld `number` hat
+* Im Unit-Test: Teste, welchen Wert das Feld `number` standardmäßig hat (oder setze einen Wert und teste diesen)
 
 {nl}
 

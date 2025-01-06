@@ -3,15 +3,27 @@ package de.dhbw.solution.inheritance;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InheritanceSolutionTest {
 
     @Test
-    @DisplayName("Übung 1: Fernzug erbt von Zug")
+    @DisplayName("Übung 1: Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
     public void solution1() {
         // given
+        Zug zug = new Fernzug();
+
+        // when
+
+        // then
+        assertNotNull(zug);
+    }
+
+    @Test
+    @DisplayName("Übung 1 (extended): Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
+    public void solution1_extended() {
+        // given
+        // Zug zug = new Fernzug();
         Fernzug zug = new Fernzug();
 
         // when

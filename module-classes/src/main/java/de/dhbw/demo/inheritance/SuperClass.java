@@ -9,8 +9,7 @@ public class SuperClass {
     }
 
     public String whoAmI() {
-        String className = SuperClass.class.getSimpleName();
-        return className;
+        return SuperClass.class.getSimpleName();
     }
 
 }

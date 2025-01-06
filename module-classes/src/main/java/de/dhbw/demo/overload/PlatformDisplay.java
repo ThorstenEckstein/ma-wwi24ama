@@ -2,15 +2,13 @@ package de.dhbw.demo.overload;
 
 import java.util.List;
 
-public class PlatformDisplay {
+public class PlatformDisplay extends Display {
 
     // multiple methods can be used to
     // update a platforms' display
 
-    public void update() {}
+    public void update(String line) { /* omitted */ }
 
-    public void update(String line) {}
-
-    public void update(List<String> lines) {}
+    public void update(List<String> lines) { /* omitted */ }
 
 }
