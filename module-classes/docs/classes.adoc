@@ -62,6 +62,7 @@ Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem
 
  de.dhbw.domain.model.Train
 
+[[about_import]]
 *Importierung (Nutzung)*
 
 Wenn eine Java Klasse in/von einer anderen genutzt werden soll, muss sie zuerst *importiert* bzw. *bekannt gemacht* werden. Dazu muss sie mit ihrem _voll-qualifizierten Namen_ (s.o.) ganz am Anfang der Datei angegeben werden. Das Package entspricht dabei dem Verzeichnis, in dem die Datei abgelegt ist. Dazu dient das *Schlüsselwort*
