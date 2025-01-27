@@ -33,7 +33,7 @@ end::content[]
 [cols="2h,8", grid="none"]
 |===
 
-| image:images/portrait_v2.1.png[] | *Thorsten Eckstein*
+| image:images/portrait_v2.1_biometrisch.png[] | *Thorsten Eckstein*
 
 | Konzern         | Deutsche Bahn, ca. 335.000 Mitarbeiter
 
