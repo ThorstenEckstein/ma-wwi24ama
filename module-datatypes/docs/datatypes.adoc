@@ -68,6 +68,10 @@ wert1 = (int) wert2; // Umwandlung per 'cast'
 
 == Typumwandlung von komplexen Datentypen (Klassen)
 
+====
+IMPORTANT: Übergang zum Modul: Komplexe Datentypen in Form von Klassen -> <<../../module-classes/docs/classes.adoc#tdd, Klassen & Instanzen>>, dann ggf. wieder hierher zurück!
+====
+
 Auch *komplexe Datentypen* - also Instanzen von Java *Klassen* - können den Typen wechseln. Das ist natürlich ebenso klaren Regeln unterworfen.
 
 So z.B. kann eine Klasse `Regionalzug` den Datentypen `Zug` bekommen, wenn die Klassen in einer Vererbungshierarchie stehen, ähnlich bei `Interfaces`. Das haben wir insb. schon im vorigen Modul `module-classes` gesehen und genutzt.
