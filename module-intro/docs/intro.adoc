@@ -15,9 +15,10 @@ tag::content[]
 2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
 2.1. Kontext
 2.2. Klassenmodell
+3. Prozess der Softwareentwicklung
 3. IDE Setup
 3.1. Lokales Arbeitsverzeichnis: Der Workspace
-3.2. Programmiersprache Java
+3.2. Java Version
 3.3. IDE IntelliJ
 3.4. Quellcodeverwaltung: Git
 3.5. Herunterladen der Kursinhalte (Git mit IntelliJ)
@@ -88,6 +89,18 @@ include::diagrams/business-model-ist.puml[]
 include::diagrams/business-model-soll.puml[]
 ....
 
+== Prozess der Softwareentwicklung
+
+Den "agilen" Entwicklungsprozess (agile Software Development) kann am besten mittels Grafik erläutert werden:
+
+.Der agile Entwicklungsprozess
+image::images/agile-software-engineering.png[]
+
+In allen Teilschritten des Prozesses werden viele verschiedene **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
+
+* Entwicklungsumgebung `IntelliJ` und
+* Quellcodeverwaltung `Git`
+
 
 == IDE Setup
 
@@ -146,20 +159,7 @@ Wie gesagt, hierin werden die Kursinhalte in den nächsten Schritten dann lokal 
 ////
 
 
-=== Agile Software Development
-
-Der "agile" Entwicklungsprozess als Grafik:
-
-.Der agile Entwicklungsprozess
-image::images/agile-software-engineering.png[]
-
-In diesem Kontext werden viele **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
-
-* IntelliJ
-* Git
-
-
-=== Programmiersprache `Java`
+=== `Java` Version
 
 *Empfehlung*: Im Kurs soll folgende *Java* Version verwendet werden:
 
@@ -169,6 +169,8 @@ include::../../pom.xml[tags="java-version"]
 ----
 
 Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 21 ("Major") nicht so wichtig sind.
+
+Eine von mehreren Möglichkeiten, die aktuelle genutzte Java Version herauszufinden, ist:
 
 - In den neuen Workspace, momentan noch leeren Ordner (s.o.), wechseln
 
@@ -182,18 +184,24 @@ Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Min
 
 Dann sollte eine Java Version angezeigt werden.
 
+Eine andere ist einfach innerhalb von IntelliJ, *nachdem* wir die LV-Inhalte bzw. das Gitlab-Repository heruntergeladen haben.
+
+Ist dies erfolgt, kann man einfach hier schauen:
+
+ Datei > Projektstruktur > SDKs
+
 
 === IDE `IntelliJ`
 
-Die empfohlene IDE ist `IntelliJ`. Die LV-Inhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
+Die empfohlene IDE ist `IntelliJ`. Die LV-Inhalte sollten sowohl in der _Community_ als auch in der _Ultimate_ Edition funktionieren.
 
-Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein muss (falls noch nicht vorhanden, bitte installieren):
+Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein sollte (falls noch nicht vorhanden, bitte installieren):
 
- IntelliJ IDEA 2024.3.1 (Community oder Ultimate Edition)
+ IntelliJ IDEA 2024.3.1
+
+Kleinere Abweichungen in der Version sollten kein Problem sein, die letzten Versionen sind in aller Regel untereinander kompatibel. Bei Problemen versucht man es einfach mit der aktuellsten IDE Version.
 
 TIP: [small]#Alternativ könnte auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), die Lehrveranstaltung wurde für IntelliJ vorbereitet!#
-
-IntelliJ bietet ein neben dem Standard-Layout auch ein experimentelles, das aktiviert werden kann.
 
 
 [big]#IntelliJ *PlugIns*#
@@ -204,7 +212,7 @@ Die PlugIns von IntelliJ finden sich hier über das Haupt-Menü:
 
 
 *Bundled PlugIns*::
-Mit IntelliJ werden bereits diverse PlugIns *automatisch mitinstalliert*, zu diesen gehören die folgenden. Sie sind für das Seminar erforderlich und sollen anfangs mal geprüft werden:
+Mit IntelliJ werden bereits diverse PlugIns *automatisch mitinstalliert*, zu diesen gehören die folgenden. Sie sind für das Seminar erforderlich und sollen anfangs mal geprüft werden (Menü `IntelliJ > Settings > PlugIns`):
 
 [cols="3l,7e", grid="none", frame="none"]
 |===
@@ -245,18 +253,24 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 
 Web: https://de.wikipedia.org/wiki/Git
 
-*Git* ist ein verteiltes Versionsverwaltungssystem für Quellcode und setzt folgenden *Workflow* um:
+*Git* ist ein sogenanntes _verteiltes_ Versionsverwaltungssystem für Quellcode und setzt folgenden *Workflow* um, bzw. bietet folgende Funktionen:
 
 image::images/git-workflow.png[width=80%, align=center]
 
-Allerdings kommt im Kurs nur ein kleiner Teil hiervon zum Einsatz, lediglich das erstmalige *Downloaden* (`clone`) & die regelmäßige *Aktualisierung* (`pull`) der lokalen Dateien wird benötigt:
+In dieser LV kommt aber nur ein kleiner Teil hiervon zum Einsatz, lediglich das erstmalige *Downloaden* (`clone`) & die regelmäßige *Aktualisierung* (`pull`) der lokalen Dateien wird benötigt:
 
 image::images/git-workflow-clone-pull.png[width=80%, align=center]
 
-Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien abgelegt, also z.B. ein Windows-Verzeichnis, in das der Quellcode heruntergeladen wird:
+Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien gespeichert, also z.B. das Verzeichnis, in das der Quellcode heruntergeladen wird:
+
+In Windows bspw.:
 
 [Beispiel]
  D:/Projekte
+
+oder unter MacOS im Benutzerverzeichnis (aktueller Benutzer hier `<name>`)
+
+ /Users/<name>/Projects
 
 
 === Herunterladen der Kursinhalte (Git mit IntelliJ)
@@ -271,7 +285,7 @@ image::images/intellij-start.png[width="75%", align="center"]
 [start=3]
 . Nun soll das Projekt von GtHub *heruntergeladen* werden, dazu gibt es 2 Varianten:
 
-.. `Get from VCS` anklicken (VCS = Version Control System, `Git`) image:images/intellij-start-get-from-vcs.png[ align="center"]
+.. `Clone Repository`, in älteren Versionen `Get from VCS` anklicken (VCS = Version Control System, `Git`)  image:images/intellij-clone-repository.png[align="center", width="55%"] oder image:images/intellij-start-get-from-vcs.png[align="center"]
 
 .. oder über die Menüoption `Git > clone ...` aufrufen (_falls bereits ein anderes Projekt in IntelliJ automatisch geladen wurde_)
 
@@ -282,8 +296,8 @@ image::images/intellij-git-menu-clone.png[width="25%", align="center"]
 
 [subs=normal]
 ----
-*URL*       : https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git
-*Workspace* : <dein-lokales-Arbeitsverzeichnis>
+*URL*       : https://github.com/ThorstenEckstein/ma-wwi24ama
+*Workspace* : <dein-lokales-Arbeitsverzeichnis>/ma-wwi24ama
 ----
 
 image::images/intellij-git-clone-dialog.png[width="75%", align="center"]
@@ -294,7 +308,7 @@ image::images/intellij-git-clone-dialog.png[width="75%", align="center"]
 image::images/intellij-git-trust-project.png[width="50%", align="center"]
 
 [start=6]
-. Im Falle von "3b" (siehe oben) kann man noch entscheiden, ob das Projekt *in einem separaten Fenster* geöffnet werden soll -> `[New Window]`:
+. Gegenenfalls muss noch entscheiden, ob das Projekt *in einem separaten Fenster* geöffnet werden soll -> `[New Window]`:
 
 image::images/intellij-git-new-window.png[width="50%", align="center"]
 
@@ -309,6 +323,10 @@ Zur Überprüfung einmal (in der IDE) schauen, ob der richtige *Branch* namens
 heruntergeladen wurde. Dies ist sozusagen eine spezielle Variante (oder auch Version), die im Semester genutzt wird.
 
 image::images/intellij-git-cloned-branch.png[width="50%", align="center"]
+
+Ergebnis sollte jetzt sein, dass das Projekt für die LV in der IDE enthalten bzw. geladen ist.
+
+(Optional) Ergänzend für *erfahrenere* Benutzer:
 
 Es kann auch die _Kommandozeile_ genutzt werden, um das Repository zu klonen, dazu gibt es ein paar Tipps im folgenden Abschnitt, kann aber für den Moment ignoriert werden, es sei denn, das der Weg über IntelliJ nicht funktionieren sollte.
 
@@ -328,11 +346,11 @@ Es kann auch die _Kommandozeile_ genutzt werden, um das Repository zu klonen, da
 
 * Innerhalb dieses Verzeichnisses wird das Repository *geklont*, d.h. heruntergeladen. Das Repository lautet:
 
- https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24
+ https://github.com/ThorstenEckstein/ma-wwi24ama
 
 Dieses Repository wird geklont und damit zu einer lokalen Kopie im *Workspace* mit:
 
- git clone https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git -b hands-on <1>
+ git clone https://github.com/ThorstenEckstein/ma-wwi24ama.git -b hands-on <1>
 
 <1> Der Branch-Name `hands-on` ist hier wichtig, das ist der exakte "Ort" in der Online-Quellcodeverwaltung (Repository), von dem aus heruntergeladen wird!
 
