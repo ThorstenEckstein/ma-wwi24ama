@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class InheritanceExerciseTest {
 
     @Test
-    @DisplayName("Übung Teil 1: Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
-    public void exercise1() {
+    @DisplayName("Übung 3 Teil 1: Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
+    public void exercise3() {
         // given :: Klassen implementieren und hier Instanzen erzeugen
 
         // when :: In dieser Exercise gibt es hier nichts zu tun, ich persönlich schreibe diese "Abschnitt"
@@ -21,8 +21,8 @@ public class InheritanceExerciseTest {
     }
 
     @Test
-    @DisplayName("Übung Teil 2 (extended): Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
-    public void solution1_extended() {
+    @DisplayName("Übung 3 Teil 2 (extended): Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
+    public void exercise3_extended() {
         // given
 
         // when

@@ -57,7 +57,7 @@ Ein paar wichtige Begriffe:
 
 image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
-=== Klassenmodell
+=== Vorschau: Klassenmodell
 
 Eine solche Fachlichkeit (s.o.) muss, um Applikationen zu erstellen, in (Fach-) *Klassenmodellen* abgebildet werden, z.B. mit folgenden Objekten:
 
@@ -91,15 +91,15 @@ include::diagrams/business-model-soll.puml[]
 
 == Prozess der Softwareentwicklung
 
-Den "agilen" Entwicklungsprozess (agile Software Development) kann am besten mittels Grafik erläutert werden:
+Der *agile Entwicklungsprozess* (agile Software Development) kann am besten mittels Grafik erläutert werden:
 
 .Der agile Entwicklungsprozess
-image::images/agile-software-engineering.png[]
+image::images/agile-software-engineering.png[align="center"]
 
 In allen Teilschritten des Prozesses werden viele verschiedene **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
 
-* Entwicklungsumgebung `IntelliJ` und
-* Quellcodeverwaltung `Git`
+* Entwicklungsumgebung `IntelliJ` (v.a. in Phasen "Design", "Develop" und "Test") sowie
+* Quellcodeverwaltung `Git` (eigentlich in allen Phasen)
 
 
 == IDE Setup
@@ -285,7 +285,7 @@ image::images/intellij-start.png[width="75%", align="center"]
 [start=3]
 . Nun soll das Projekt von GtHub *heruntergeladen* werden, dazu gibt es 2 Varianten:
 
-.. `Clone Repository`, in älteren Versionen `Get from VCS` anklicken (VCS = Version Control System, `Git`)  image:images/intellij-clone-repository.png[align="center", width="55%"] oder image:images/intellij-start-get-from-vcs.png[align="center"]
+.. `Clone Repository`, in älteren Versionen `Get from VCS` anklicken (VCS = Version Control System, `Git`)  image:images/intellij-clone-repository.png[align="center", width="23%"] oder image:images/intellij-start-get-from-vcs.png[align="center"]
 
 .. oder über die Menüoption `Git > clone ...` aufrufen (_falls bereits ein anderes Projekt in IntelliJ automatisch geladen wurde_)
 

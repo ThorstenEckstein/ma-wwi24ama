@@ -24,7 +24,22 @@ include::../module-intro/docs/intro.adoc[tag="content"]
 | {icon-topic}  |  | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
 |===
 
-include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
+// include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
+----
+1. Projektverwaltung mit Maven & Projektstruktur
+2. Test-Driven-Development (TDD)
+3. Generierung von Quellcode mit der IDE
+4. Autocompletion
+5. Icons & Symbole in der IDE
+6. Tipps, Tricks, Probleme & Lösungen
+----
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  |  | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
+|===
+
+include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -60,13 +75,6 @@ include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  |  | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
-|===
-
-include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 
 == Tag 4 - Kontrollstrukturen, Sichtbarkeiten & Collections

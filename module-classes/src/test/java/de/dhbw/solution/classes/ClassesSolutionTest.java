@@ -56,10 +56,10 @@ public class ClassesSolutionTest {
               2. die zum Attribut gehörende `get` und `set` Methode,
               3. erstelle dann die `equals()` und `hashCode()` Methoden durch Code Generierung,
               4. zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
-              
+            
               Ableitung eines Interfaces aus einer Klasse:
               images/extract-interface-from-class.png
-              
+            
               Öffnen der Klasse 'Person' (Cursor irgendwo)
               > Menu > Refactor > Extract/Introduce > Interface ...
               > Dialog ausfüllen ... Create

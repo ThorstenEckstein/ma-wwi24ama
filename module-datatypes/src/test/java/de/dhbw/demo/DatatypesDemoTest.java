@@ -5,6 +5,7 @@ import de.dhbw.demo.Train;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@SuppressWarnings("CastCanBeRemovedNarrowingVariableType")
 public class DatatypesDemoTest {
 
     @Test

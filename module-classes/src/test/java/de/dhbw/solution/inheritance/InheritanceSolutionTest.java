@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InheritanceSolutionTest {
 
     @Test
-    @DisplayName("Übung 1: Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
-    public void solution1() {
+    @DisplayName("Übung 3: Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
+    public void solution3() {
         // given
         Zug zug = new Fernzug();
 
@@ -20,7 +20,7 @@ public class InheritanceSolutionTest {
     }
 
     @Test
-    @DisplayName("Übung 1 (extended): Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
+    @DisplayName("Übung 3 (extended): Eine Klassen 'Fernzug' erbt von einer Klassen 'Zug'")
     public void solution1_extended() {
         // given
         // Zug zug = new Fernzug();
