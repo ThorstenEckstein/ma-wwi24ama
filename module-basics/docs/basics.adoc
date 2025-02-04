@@ -58,7 +58,7 @@ Wenn man im Rahmen dieses "Ausprobierens" Klassen angelegt werden, so sollen die
 [subs=normal]
  module-basics/{mod-ref-src}/exercise/*
 
-Die "echten" Klassen, die im test genutzt werden sollen, werden automatisch erkannt, wenn die obige Struktur genutzt wird. Wenn nicht, dann bitte folgenden Hinweis beachten.
+Die "echten" Klassen, die im Test genutzt werden sollen, werden automatisch erkannt, wenn die obige Struktur genutzt wird. Wenn nicht, dann bitte folgenden Hinweis beachten.
 
 CAUTION: _Achtung: Wenn man eigene Pakete/Verzeichnisse für neue Klassen anlegt, so müssen diese ggf. importiert werden. Mehr dazu siehe ->_
 `/module-classes/docs/classes.adoc` im Abschnitt "Importierung".

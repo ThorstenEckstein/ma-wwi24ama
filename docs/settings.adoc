@@ -62,6 +62,7 @@ Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 :icon-setup:            icon:gear[role=blue]
 :icon-exam:             icon:graduation-cap[role=black]
 :icon-domain:           icon:train[role=red]
+:icon-module:           icon:cube[role=green]
 :icon-one:
 :symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 
