@@ -8,7 +8,7 @@ public class ModelExerciseTest {
     @Test
     @DisplayName("""
        Übung 3: Erzeuge ein kleines, aber "vollständiges" Klassenmodell
-       
+    
        1. Eine Schnittstelle Wagon mit Methoden
          a) zum Holen und Setzen der Wagon-Reihenfolge (engl. order (Datentyp int))
        2. Eine abstrakte Klasse DefaultWagon, die die Schnittstelle und die dortigen Methoden realisiert

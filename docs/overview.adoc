@@ -12,7 +12,7 @@ include::settings.adoc[]
  *Hochschule*        : Duale Hochschule BaWü (Mannheim)
  *Fachbereich*       : Studienbereich Wirtschaft, Wirtschaftsinformatik,
                      Appl. Management
- *Lehrveranstaltung* : Fortgeschrittene Programmierung mit Java (WWI23AMA)
+ *Lehrveranstaltung* : Fortgeschrittene Programmierung mit Java (WWI24AMA)
  *Lehrform*          : Seminar mit Übungen
  *Prüfungsleistung*  : _-noch festzulegen-_
  *Dozent*            : Thorsten Eckstein

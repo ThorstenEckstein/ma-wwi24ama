@@ -4,13 +4,15 @@
 
 scale 1.0
 
-abstract class AbstractSuperClass {}
 class ConcreteSuperClass {}
 class "       SubClass1        " as SubClass1
+
+abstract class AbstractSuperClass {}
 class "       SubClass2        " as SubClass2
 
-AbstractSuperClass <|-- SubClass1    : \tinherits (extends)
+ConcreteSuperClass <|-- SubClass1    : \tinherits (extends)
 
-ConcreteSuperClass <|-- SubClass2
+AbstractSuperClass <|-- SubClass2
+
 
 @enduml

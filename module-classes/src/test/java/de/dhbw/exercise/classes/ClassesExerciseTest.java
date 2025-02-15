@@ -42,9 +42,9 @@ public class ClassesExerciseTest {
               1. konkrete Klasse `Person` mit einem Attribut `name`, erstelle dann
               2. die zum Attribut gehörende `get` und `set` Methode,
               3. erstelle dann die `equals()` und `hashCode()` Methoden durch Code Generierung,
-              4. zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
+              4. (optional) leite aus dieser konkreten Klasse ein Interface `Mensch` ab
             """)
-    public void exercise3() {
+    public void exercise4() {
         // given
 
         // when

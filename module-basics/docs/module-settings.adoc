@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-basics
+:module-title: Grundlagen der Progammierung

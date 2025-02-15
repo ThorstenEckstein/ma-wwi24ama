@@ -24,19 +24,45 @@ end::content[]
 
 *Organisation*
 
-Die Ablage bzw. Speicherung eine Java Klassen in Form von Dateien erfolgt in Verzeichnissen, die ihrerseits hierarchisch angelegt werden (können aber nicht müssen). Im Kontext von Java werden diese Ablageverzeichnisse *Packages* genannt. Der Java Compiler registriert den Ablageort einer Java Klasse, indem in dieser ganz zu Beginn das Schlüsselwort
+image:../../docs/images/intellij-symbol-package.png[] Die Ablage bzw. Speicherung eine Java Klassen in Form von Dateien erfolgt in Verzeichnissen, die ihrerseits hierarchisch angelegt werden (können aber nicht müssen). Im Kontext von Java werden diese Ablageverzeichnisse *Packages* genannt. Der Java Compiler registriert den Ablageort einer Java Klasse, indem in dieser ganz zu Beginn das Schlüsselwort
 
  package
 
-genutzt wird, zusammen mit der voll-qualifizierten Verzeichnis-Hierarchie unter Nutzung von Punkten als Trennzeichen, also etwa
+genutzt wird, zusammen mit der voll-qualifizierten Verzeichnis-Hierarchie unter Nutzung von Punkten `.` als Trennzeichen, also etwa
 
- package de.dhbw.domain.model;
+ package de.dhbw.demo.classes;
 
 
-Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem Namen der Klassensignatur, sondern nur in Verbindung mit dem package, in dem sie sich befindet. Beides ergibt den sog. *voll-qualifizierten Klassen-Namen*, etwa
+Die *Pakete* finden sich 1:1 in Form von *Verzeichnissen* wieder:
+
+[cols="6a,4a", frame="none", grid="none"]
+|===
+| Allgemein:
+[subs=normal]
+----
+...
+...
+{icon-dir-src} src/main/java (Wurzel Quellcode-Dateien)
+  ...
+  ...
+  {icon-dir} <package>
+    {icon-dir} <package>
+      {icon-dir} <package>
+        {icon-dir} <package>
+          <file> (.java)
+----
+
+| Beispiel:
+
+image::../../docs/images/intellij-src-packages.png[]
+|===
+// image::../../docs/images/intellij-symbol-package.png[]
+
+Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem Namen der Klassensignatur, sondern nur in Verbindung mit dem package, in dem sie sich befindet. Beides ergibt den sog. *voll-qualifizierten Klassen-Namen*, z.B.
 
  de.dhbw.domain.model.Train
 
+[[about_import]]
 *Importierung (Nutzung)*
 
 Wenn eine Java Klasse in/von einer anderen genutzt werden soll, muss sie zuerst *importiert* bzw. *bekannt gemacht* werden. Dazu muss sie mit ihrem _voll-qualifizierten Namen_ (s.o.) ganz am Anfang der Datei angegeben werden. Das Package entspricht dabei dem Verzeichnis, in dem die Datei abgelegt ist. Dazu dient das *Schlüsselwort*
@@ -64,21 +90,19 @@ public class MyClass {
 [ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]
 
 [[about_classes]]
-Kurz etwas *Theorie* vorab bzw. zur Wiederholung:
+Zunächst die *Theorie* (ggf. Wiederholung):
 
-Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der *objektorientierten Programmierung* ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
+Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der *objektorientierten Programmierung* ein abstraktes Modell bzw. einen Bauplan für eine Reihe von "ähnlichen" Objekten.
 
 Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt *Attribute* (auch Eigenschaften, Felder) und *Methoden* (bzw. Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
 
 Eine Java Klasse hat in der Regel folgende Bestandteile:
 
-* Eigenschaft (Feld),
-* Konstruktor und
-* Verhaltensweise (Methode):
+* Eigenschaft (Feld, engl. _field_),
+* Konstruktor (engl. _constructor_) und
+* Verhaltensweise (Methode, engl. _method_):
 
-Die wichtigsten Elemente von Java:
-
-Die *Klassensignatur* selbst:
+Die wichtigsten Elemente von Java sind die *Klassensignatur* selbst:
 
 [source,java]
 ----
@@ -98,16 +122,16 @@ public class MyClass {
 }
 ----
 
-Eine Klasse mit (Default-) *Konstruktor* (engl. _constructor_, oder abgekürzt oft einfach `c'tor`):
+Eine Klasse mit (Default-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
 
-In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren. Dazu wird das Schlüsselwort `new` benutzt (siehe unten):
 
 [source,java]
 ----
 public class MyClass {
 
     public MyClass() {
-        super(); // Aufruf des Default-C'tors der Elternklasse
+        super(); // Aufruf des Default-c'tors der Elternklasse
     }
 }
 ----
@@ -119,13 +143,12 @@ Eine Klasse mit einem *Konstruktor*, der ein Argument hat:
 public class MyClass {
 
     public MyClass(String arg) {
-        // Verarbeitung des Arguments,
+        // Verarbeitung des Arguments 'arg',
         // z.B. mittels 'this' oder 'super'
     }
 
 }
 ----
-
 
 Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte:
 
@@ -142,18 +165,45 @@ Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte
 Train train  =   new       Train();
 ----
 
-Eine Klasse mit einer *Methode* bzw. einer Verhaltensweise:
+
+Klassen besitzen meistens auch "Eigenschaften" in Form von einer oder mehreren *Feldern*. Zunächst ein Beispiel:
 
 [source,java]
 ----
-public class MyClass {
+public class Person {
 
-    public String doSomething() {
-        return "result";
-    }
+    // Eigenschaft
+    public String name;
 
 }
 ----
+
+IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` hat eine Eigenschaft `Name`
+
+
+Klassen besitzen darüber hinaus meistens auch "Verhalten" in Form von einer oder mehreren *Methoden*. Am Beispiel:
+
+[source,java]
+----
+public class Person {
+
+    public String name;
+
+    // Verhalten
+    public String getName() {
+        // Umsetzung des Verhaltens
+        return name;
+    }
+
+    // Verhalten
+    public String smile() {
+        // Umsetzung des Verhaltens "lächeln"
+        return ":-)";
+    }
+}
+----
+
+Dazu eine ...
 
 
 [[demos_classes]]
@@ -200,21 +250,33 @@ NOTE: _Was fällt bei den Implementierungen besonders ins Auge?_
 [[about_inheritance]]
 Bei der *Vererbung* in Java wird zwischen einer *Super*- und einer *Subklasse* unterschieden.
 
-Die _Superklasse_, auch Eltern- oder Basisklasse genannt, ist vielfach eine Zusammenfassung von allgemeinen Attributen und Methoden unterschiedlicher aber ähnlicher Objekte (*Verallgemeinerung*).
+Die _Superklasse_, auch Eltern- oder Basisklasse genannt, ist vielfach eine Zusammenfassung von allgemeinen Attributen und Methoden unterschiedlicher aber ähnlicher Objekte. Zweck ist dementsprechend eine
 
-Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` sind. Des Weiteren kann die Subklasse um eigene Attribute und Methoden erweitert werden. Man spricht hier von einer *Spezialisierung* der Subklasse von der Superklasse.
+[subs=normal]
+ *Verallgemeinerung*
+
+Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` sind. Des Weiteren kann die Subklasse um eigene Attribute und Methoden erweitert werden. Man spricht hier von einer
+
+[subs=normal]
+ *Spezialisierung*
+
+der Superklasse in Form der Subklasse.
 
 Eine Vererbung in Java findet über das Schlüsselwort
 
  extends
 
-statt. Der zugehörige Quellcode:
+statt. Etwas Quellcode:
 
 [source,java]
 ----
-public class SuperClass { }
+public class SuperClass {
+    /* restlicher Inhalt der Super-Klasse */
+}
 
-public class SubClass extends SuperClass { }
+public class SubClass extends SuperClass {
+    /* restlicher Inhalt der Sub-Klasse */
+}
 ----
 
 Die _grafische_ Darstellung der Vererbung sieht folgendermaßen aus:
@@ -226,15 +288,16 @@ include::diagrams/inheritance.puml[]
 
 
 ====
-IMPORTANT: Einschub: -> <<../../module-object-contract/docs/object-contract.adoc#object-contract, Der Objektvertrag>> im Modul `module-object-contract`
+IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigenschaften besitzen. Diese sind im -> <<../../module-object-contract/docs/object-contract.adoc#object-contract,Objektvertrag>> im Modul `module-object-contract` detailliert erläutert. Dies ist aber Gegenstand zum Ende dieses Kurses!
 ====
 
 
 [[demos_inheritance]]
 *Demo*:
 
+.canInheritSuperClass()
 [subs=normal]
- -> {mod-ref-test}/demo/inheritance/InheritanceTest.java
+ -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
 
 == Polymorphismus
@@ -248,6 +311,7 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 [[demos_polymorphism]]
 *Demo*:
 
+.canUsePolymorphism1() & canUsePolymorphism2()
 [subs=normal]
  -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
@@ -271,9 +335,9 @@ In einer Unterklasse können Methoden
 
 werden.
 
-Von *Überladung* wird gesprochen, wenn eine Unterklasse neues Verhalten *hinzufügt*.
+Von *Überladung* wird gesprochen, wenn eine (Unter-)Klasse neues bzw. zusätzliches Verhalten *hinzufügt*.
 
-Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
+Das *Übersteuern* (synonym: _Überschreiben_) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
 
 // float="left"
 [plantuml, "overrides", png, align="center"]
@@ -281,23 +345,47 @@ Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geer
 include::diagrams/override.puml[]
 ....
 
-
 [source,java,title="Beispiel Überladen von Methoden"]
+----
+include::{mod-lnk-src}/demo/overload/Display.java[lines="3..7"]
+----
+
+[source,java]
 ----
 include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
 ----
 
+Die Überladung tritt hier in zwei Formen auf:
+
+- Zum einen gibt es mehrere Methoden mit gleichem Methodennamen in einer Klasse
+- Zum anderen werden neben der geerbten Methode noch zwei weitere mit gleichem Methodennamen hinzugefügt
+
+Beim *Übersteuern* wird eine geerbte Methode durch eine neue Implementierung ersetzt:
+
 .Beispiel Übersteuern von Methoden
 [source,java]
 ----
-include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
+include::{mod-lnk-src}/demo/override/DefaultDisplay.java[lines="5..10"]
+----
+
+[source,java]
+----
+include::{mod-lnk-src}/demo/override/PlatformDisplay.java[lines="3..10"]
 ----
 
 Die zugehörige *Annotation* (eine Art "Anzeiger") im Code ist
 
  @Override
 
-Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
+Durch sie lässt sich schnell erkennen, welche Methoden in der Subklasse geerbte (oder Interface-) Methoden übersteuern.
+
+Auch die IDE zeigt viele solcher Informationen an, z.B. als Symbol image:images/ide-symbol-override.png[] am linken Rand des Editors. Wenn man nun noch mit dem Mauszeiger über das Symbol "fährt", komm etwas Ähnliches wie folgendes ...
+
+image::images/ide-symbol-override-mouseover.png[]
+
+oder rechts neben einer Methodensignatur:
+
+image::images/ide-hint-override.png[]
 
 Die zugehörigen *Unit-Tests* finden sich hier:
 
@@ -328,12 +416,20 @@ _Testklasse_, in der die Übungen implementiert werden können:
 
 Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
-* Eine Klasse `Zug` mit
-** einem String Feld `number` und
-** einer Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
-* Eine Klasse `Fernzug`, die von der Klasse `Zug` erbt
+*Teil 1*
+
+* Eine Klasse `Zug` implementieren
+* Eine Klasse `Fernzug` implementieren, die von der Klasse `Zug` erbt
+* Im Test: Lege eine Instanz der Klasse Zug (oder Fernzug?) an
+* Teste, ob die Instanz nicht `null` ist, also korrekt erzeugt wurde
+
+*Teil 2 (extended)*
+
+* Die Klasse `Zug` bekommt
+** ein Feld mit Datentyp `String` namens `number`
+** eine Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
 * Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
-* Teste, welchen Wert das Feld `number` hat
+* Im Unit-Test: Teste, welchen Wert das Feld `number` standardmäßig hat (oder setze einen Wert und teste diesen)
 
 {nl}
 

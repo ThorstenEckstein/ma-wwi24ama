@@ -1,9 +1,7 @@
 package de.dhbw.demo;
 
 import de.dhbw.demo.override.DefaultDisplay;
-import de.dhbw.demo.override.Display;
 import de.dhbw.demo.override.PlatformDisplay;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -30,7 +28,7 @@ public class OverloadAndOverrideTest {
     @Test
     public void canOverrideMethods1() {
         // given
-        Display display = new DefaultDisplay();
+        DefaultDisplay display = new DefaultDisplay();
 
         // when
         display.update(0, "5 minutes delay");
@@ -42,7 +40,7 @@ public class OverloadAndOverrideTest {
     @Test
     public void canOverrideMethods2() {
         // given
-        Display display = new PlatformDisplay();
+        DefaultDisplay display = new PlatformDisplay();
 
         // when
         display.update(0, "5 minutes delay");

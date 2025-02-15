@@ -10,201 +10,268 @@ ifeval::[{show-scheduled-course-days} == true]
 include::includes/course-day-schedules.adoc[]
 endif::[]
 
-== Tag 1 - Willkommen, Setup & Einführung in Klassen
+== Tag 1 - Willkommen, Setup & primitive Datentypen
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-intro/docs/intro.adoc[module-intro]*
-|===
+[subs=normal]
+ [*Di., 18.02.2025*, 13:00 - 16:00, 180min] [red]#"Course Day 1"#
 
-include::../module-intro/docs/intro.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:45 - 11:45 | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
-|===
-
-include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:45 - 12:15 | *link:../module-classes/docs/classes.adoc[module-classes]*
-|===
-
+[source]
 ----
-1. Organisation & Nutzung von Java Klassen
-2. Klassen & Instanzen
+  1) Willkommen
+  2) Organisation
+  3) Fachlicher Schwerpunkt
+  4) Technical Setup
+  5) Tools: Maven & Projektstruktur
+  6) Pause
+  7) Datentypen in Java
+  8) Typumwandlung (Casting)
+  9) Test-Driven-Development (TDD)
+  10) Demo zu Typumwandlung von primitiven Datentypen
+  11) Übungen zu Typumwandlung von primitiven Datentypen
+  12) Pufferzeit
 ----
 
-== Tag 2 - Klassen & Interfaces
+*Zugehörige Module*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:00 | *link:../module-classes/docs/classes.adoc[module-classes]*
-|===
+. {icon-module} link:../module-intro/docs/intro.adoc[module-intro]
+. {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
+. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
 
-include::../module-classes/docs/classes.adoc[tag="content"]
+*Ergänzend*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
-|===
+Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*, in dem jeder für sich die Grundlagen der Javaprogrammierung einfach (noch) mal, und unabhängig von den übrigen Inhalten, ausprobieren kann.
 
-include::../module-interfaces/docs/interfaces.adoc[tag="content"]
-
-== Tag 3 - Abstraktionen & Datentypen
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
-|===
-
-include::../module-interfaces/docs/interfaces.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:30 - 11:45 | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
-|===
-
-include::../module-datatypes/docs/datatypes.adoc[tag="content"]
+. {icon-exercise} link:../module-basics/docs/basics.adoc[module-basics]
 
 
-== Tag 4 - Kontrollstrukturen, Sichtbarkeiten & Collections
+== Tag 2 - Klassen, Vererbung & Polymorphismus
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:00 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
-|===
+[subs=normal]
+ [*Di., 25.02.2025*, 13:00 - 16:00, 180min] [red]#"Course Day 2"#
 
-include::../module-visibility/docs/visibility.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:00 - 11:00 | *link:../module-loops/docs/loops.adoc[module-loops]*
-|===
+[source]
+----
+  1) Update Project (git pull)
+  2) Klassen & Instanzen
+  3) Demo zu Klassen & Instanzen
+  4) Organisation & Nutzung von Java Klassen (Packages)
+  5) Übungen zu Klassen & Instanzen
+  6) Vererbung (Inheritance)
+  7) Demo zum Thema Vererbung
+  8) Übungen zur Vererbung
+  9) Pause
+  10) Polymorphismus
+  11) Demo Polymorphismus
+  12) Override & Overload
+  13) Demo zu Überladen & Übersteuern
+----
 
-include::../module-loops/docs/loops.adoc[tag="content"]
+*Zugehörige Module*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:00 - 12:15 | *link:../module-collections/docs/collections.adoc[module-collections]*
-|===
-
-include::../module-collections/docs/collections.adoc[tag="content"]
-
-
-== Tag 5 - Operators, Associations & Java Generics
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:45 | *link:../module-operators/docs/operators.adoc[module-operators]*
-|===
-
-include::../module-operators/docs/operators.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:45 - 11:10 | *link:../module-associations/docs/associations.adoc[module-associations]*
-|===
-
-include::../module-associations/docs/associations.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:10 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
-|===
-
-include::../module-generics/docs/generics.adoc[tag="content"]
+. {icon-module} link:../module-classes/docs/classes.adoc[module-classes]
 
 
-== Tag 6 - Generics, funktionale Programmierung & Enums
+== Tag 3 - Interfaces, Abstraktionen & Typumwandlung komplexer Datentypen
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-generics/docs/generics.adoc[module-generics]*
-|===
+[subs=normal]
+ [*Mi., 05.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 3"#
 
-include::../module-generics/docs/generics.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
-|===
+[source]
+----
+  1) Update Project (git pull)
+  2) Kurze Wiederholung Typumwandlung (Casting)
+  3) Demo zu Typumwandlung von komplexer Datentypen (Klassen)
+  4) Übungen zu Typumwandlung von komplexen Datentypen (Klassen)
+  5) Interfaces
+  6) Interfaces Demo
+  7) Interfaces Exercise
+  8) Pause
+  9) Abstrakte Klassen
+  10) Demo abstrakte Klassen
+  11) Übung zu abstrakten Klassen
+  12) Tools: Hilfreiches im Umgang mit IntelliJ
+  13) Pufferzeit
+----
 
-include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
+*Zugehörige Module*:
+
+. {icon-module} link:../module-datatypes/docs/datatypes.adoc.adoc[module-datatypes]
+. {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
+. {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
 
 
-== Tag 7 - Ausnahmen, Fehlerbehandlung, Statics & Enums
+== Tag 4 - Sichtbarkeiten, Kontrollstrukturen & Collections API
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
-|===
+[subs=normal]
+ [*Mi., 12.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 4"#
 
-include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:45 - 11:30 | *link:../module-statics/docs/statics.adoc[module-statics]*
-|===
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Sichtbarkeiten & Scopes
+  4) Demo zu Sichtbarkeiten
+  5) Kontrollstrukturen
+  6) Pause
+  7) Demo zu Kontrollstrukturen
+  8) Übung zu Kontrollstrukturen
+  9) Java Collections API
+  10) Demo zur Collections API
+  11) Übungen Collections API
+  12) Pufferzeit
+----
 
-include::../module-statics/docs/statics.adoc[tag="content"]
+*Zugehörige Module*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:30 - 12:15 | *link:../module-enums/docs/enums.adoc[module-enums]*
-|===
+. {icon-module} link:../module-visibility/docs/visibility.adoc[module-visibility]
+. {icon-module} link:../module-loops/docs/loops.adoc[module-loops]
+. {icon-module} link:../module-collections/docs/collections.adoc[module-collections]
 
-include::../module-enums/docs/enums.adoc[tag="content"]
+
+== Tag 5 - Operatoren, Assoziationen & Java Generics
+
+[subs=normal]
+ [*Di., 18.03.2025*, 13:00 - 16:00, 180min] [red]#"Course Day 5"#
+
+*Inhalt*:
+
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Logische Operatoren
+  4) Demo zu Operatoren
+  5) Übungen zu Operatoren
+  6) Assoziationen zwischen Klassen
+  7) Pause
+  8) Demo zu Assoziationen
+  9) Übungen zu Assoziationen
+  10) Java Generics (Einführung)
+  11) Generics Demo und/oder Pufferzeit
+----
+
+*Zugehörige Module*:
+
+. {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
+. {icon-module} link:../module-associations/docs/associations.adoc[module-associations]
+. {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Einf.)]
+
+
+== Tag 6 - Java Generics (Forts.), funktionale Programmierung
+
+[subs=normal]
+ [*Mi., 26.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
+
+*Inhalt*:
+
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Generics (Wiederholung & Fortsetzung)
+  4) Demos zu Java Generics
+  5) Übungen zu Java Generics
+  6) Pause
+  7) Funktionale Programmierung in Java
+  8) Demos zu funktionaler Programmierung
+  9) Übungen zu funktionaler Programmierung
+  10) Pufferzeit
+----
+
+*Zugehörige Module*:
+
+. {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Forts.)]
+. {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
+
+
+== Tag 7 - Ausnahmen, Fehlerbehandlung, statische Elemente & Enums
+
+[subs=normal]
+ [*Mi., 02.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 7"#
+
+*Inhalt*:
+
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Exceptions & Exception Handling
+  4) Demo zu Exceptions
+  5) Übungen zu Exceptions
+  6) Pause
+  7) Statische Elemente
+  8) Demo zu statischen Elementen
+  9) Enums
+  10) Demo zu Enums
+  11) Übungen zu Enums
+----
+
+*Zugehörige Module*:
+
+. {icon-module} link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]
+. {icon-module} link:../module-statics/docs/statics.adoc[module-statics]
+. {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
 
 
 == Tag 8 - Referenzsemantik, Object-Vertrag & Records
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:15 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
-|===
+[subs=normal]
+ [*Mi., 09.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 8"#
 
-include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic} | 10:15 - 11:15 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
-|===
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Referenzsemantik
+  4) Demo Referenzsemantik
+  5) Der Objektvertrag
+  6) Demos zum Objektvertrag
+  7) Pause
+  8) Übungen zum Objektvertrag
+  9) Java Records
+  10) Demo zu Java Records
+  11) Code-Qualität (Clean Code)
+  12) Prüfungsvorbereitung oder Ausgabe Übungsklausur (Erläuterungen)
+----
 
-include::../module-object-contract/docs/object-contract.adoc[tag="content"]
+*Zugehörige Module*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:15 - 11:45 | *link:../module-records/docs/records.adoc[module-records]*
-|===
-
-include::../module-records/docs/records.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 12:00 - 12:15 |  [blue]#*Prüfungsvorbereitung* für Zuhause#
-|===
+. {icon-module} link:../module-semantics/docs/reference-semantics.adoc[module-semantics]
+. {icon-module} link:../module-object-contract/docs/object-contract.adoc[module-object-contract]
+. {icon-module} link:../module-records/docs/records.adoc[module-records]
+. {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
 
 
 == Tag 9 - Prüfungsvorbereitung
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 09:45 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
-|===
+[subs=normal]
+ [*Mi., 16.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 9"#
 
-include::../module-clean-code/docs/clean-code.adoc[tag="content"]
+*Inhalt*:
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:45 - 12:15 | Prüfungsvorbereitung & -organisation
-|===
+[source]
+----
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Prüfungsvorbereitung I: Fragen, Aufgaben, Demos, Wiederholungen
+  4) Pause
+  5) Prüfungsvorbereitung II: Fragen, Aufgaben, Demos, Wiederholungen
+----
+
+*Mögliche Inhalte zur Prüfungsvorbereitung*:
 
 [subs=normal]
 ----
-*Mögliche Elemente*:
-
 - Szenarien & Modelle (vorbereitet)
 - Programmieraufgaben
 - Quizfragen
@@ -213,16 +280,23 @@ include::../module-clean-code/docs/clean-code.adoc[tag="content"]
 - Zeit für Fragen
 ----
 
+*Zugehörige Module*:
 
-== Tag 10 - Prüfungen
+. {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
+. {icon-module} link:../exam-preparation/docs/exam-preparation.adoc[exam-preparation]
 
-Ausgestaltung und Modi der Prüfungen aktuell noch nicht final festgelegt. Es gibt aber folgende *Idee*. Die *Prüfung* besteht insgesamt aus zwei Teilen:
+
+== (Tag 10+) Semesterabschlussprüfungen
+
+Die Ausgestaltung und der Modus der Prüfungen wird derzeit festgelegt.
+
+////
+Es gibt aber folgende *Idee*. Die *Prüfung* besteht insgesamt aus zwei Teilen:
 
 [subs=normal]
  *Dauer*          : 1h
  *Kandidat:Innen* : 3er Gruppen
 
-////
 [arabic]
 . Prüfung der *Programmierkenntnisse*, entweder ...
 .. als 3-4er Gruppe am vorbereiteten Rechner gemeinsam & live Progemmieraufgaben lösen, mit Unit-Tests und Klassen in /src Paketen, oder ...
@@ -230,56 +304,40 @@ Ausgestaltung und Modi der Prüfungen aktuell noch nicht final festgelegt. Es gi
 . Prüfung des *Grundverständnisses*: vorbereiteter Use-Case, konzeptionell mündliches Gespräch, Gruppenarbeit an der Tafel, Fragen und Antworten
 ////
 
+
 == Optionale Themen
 
 === Software Patterns
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
-|===
-
 include::../module-patterns/docs/patterns.adoc[tag="content"]
+
+&rarr; {icon-module} link:../module-patterns/docs/patterns.adoc[module-patterns]
+
 
 === Datenbankprogrammierung mit Java
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-databases/docs/databases.adoc[module-databases]*
-|===
-
 include::../module-databases/docs/databases.adoc[tag="content"]
+
+&rarr; {icon-module} link:../module-databases/docs/databases.adoc[module-databases]
+
 
 === Parallele Programmierung mit Threads
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-threads/docs/threads.adoc[module-threads]*
-|===
-
 include::../module-threads/docs/threads.adoc[tag="content"]
+
+&rarr; {icon-module} link:../module-threads/docs/threads.adoc[module-threads]
 
 
 === Integration von Software/-komponenten
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-integration/docs/integration.adoc[module-integration]*
-|===
-
 include::../module-integration/docs/integration.adoc[tag="content"]
+
+&rarr; {icon-module} link:../module-integration/docs/integration.adoc[module-integration]
+
 
 === Javadoc
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:45 - 11:15 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
-|===
-
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
-////
-====
-[red]#*Folgendes ist noch nicht geplant/integriert!*#
-====
-////
+&rarr; {icon-module} link:../module-javadoc/docs/javadoc.adoc[module-javadoc]
+

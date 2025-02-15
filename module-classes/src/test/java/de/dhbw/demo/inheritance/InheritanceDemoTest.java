@@ -21,29 +21,15 @@ public class InheritanceDemoTest {
     }
 
     @Test
-    @DisplayName("Demo: Polymorphismus 'whoAmI'")
+    @DisplayName("""
+    Demo: Polymorphismus mit 'getId()'
+    
+          [SuperClass]
+           /  ext.  \
+    [SubClass1] [SubClass1]
+    
+    """)
     public void canUsePolymorphism1() {
-        // given
-        SuperClass clazz = new SuperClass();
-
-        // when
-        String className = clazz.whoAmI();
-
-        // then
-        assertEquals("SuperClass", className);
-
-        clazz = new SubClass1();
-        className = clazz.whoAmI();
-        assertEquals("SubClass1", className);
-
-        clazz = new SubClass2();
-        className = clazz.whoAmI();
-        assertEquals("SubClass2", className);
-    }
-
-    @Test
-    @DisplayName("Demo: Polymorphismus 'getId()'")
-    public void canUsePolymorphism2() {
         // given
         SuperClass class1 = new SubClass1();
         SuperClass class2 = new SubClass2();
@@ -55,6 +41,36 @@ public class InheritanceDemoTest {
         // then
         assertEquals("1", id1);
         assertEquals("2", id2);
+    }
+
+    @Test
+    @DisplayName("""
+    Demo: Polymorphismus 'whoAmI'
+    
+    !!!
+      Zum besseren Verständnis am besten durch den Test 'debuggen'
+      und die Veränderungen be jedem Schritt nachvollziehen
+    !!!
+    
+    """)
+    public void canUsePolymorphism2() {
+        // given :: when :: then
+        SuperClass clazz = new SuperClass();
+        String className = clazz.whoAmI();
+
+        assertEquals("SuperClass", className);
+
+        // given :: when :: then
+        clazz = new SubClass1();
+        className = clazz.whoAmI();
+
+        assertEquals("SubClass1", className);
+
+        // given :: when :: then
+        clazz = new SubClass2();
+        className = clazz.whoAmI();
+
+        assertEquals("SubClass2", className);
     }
 
 }
