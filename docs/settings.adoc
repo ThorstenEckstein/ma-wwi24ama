@@ -66,6 +66,8 @@ Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 :icon-one:
 :symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 
+:docnav: pass:n[[ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]]
+
 // #
 // # Titles
 // #

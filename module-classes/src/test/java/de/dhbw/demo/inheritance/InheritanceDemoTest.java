@@ -25,14 +25,18 @@ public class InheritanceDemoTest {
     Demo: Polymorphismus mit 'getId()'
     
           [SuperClass]
-           /  ext.  \
-    [SubClass1] [SubClass1]
+           /        \
+          / extends  \
+         /            \
+    [SubClass1] [SubClass2]
     
     """)
     public void canUsePolymorphism1() {
         // given
-        SuperClass class1 = new SubClass1();
-        SuperClass class2 = new SubClass2();
+        SubClass1 class1 = new SubClass1();
+        SubClass2 class2 = new SubClass2();
+        //SuperClass class1 = new SubClass1();
+        //SuperClass class2 = new SubClass2();
 
         // when
         String id1 = class1.getId();

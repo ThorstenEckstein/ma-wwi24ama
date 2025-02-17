@@ -87,7 +87,7 @@ public class MyClass {
 
 == Klassen & Instanzen
 
-[ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]
+{docnav}
 
 [[about_classes]]
 Zunächst die *Theorie* (ggf. Wiederholung):
@@ -124,17 +124,23 @@ public class MyClass {
 
 Eine Klasse mit (Default-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
 
-In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren. Dazu wird das Schlüsselwort `new` benutzt (siehe unten):
+In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle *Methoden*, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+
+Zur Erstellung einer Instanz (eines Objektes) wird das Schlüsselwort `new` benutzt (siehe unten):
 
 [source,java]
 ----
 public class MyClass {
 
-    public MyClass() {
-        super(); // Aufruf des Default-c'tors der Elternklasse
+    public MyClass() { <1>
+        super(); // Aufruf des Default C'tors der Elternklasse
     }
 }
 ----
+
+<1> Der Konstruktor bzw. die Konstruktor-Methode.
+
+NOTE: Der Aufruf `super()` wird später in der Betrachtung der *Vererbung* näher erläutert.
 
 Eine Klasse mit einem *Konstruktor*, der ein Argument hat:
 
@@ -178,7 +184,7 @@ public class Person {
 }
 ----
 
-IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` hat eine Eigenschaft `Name`
+IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` [.underline]#hat# eine Eigenschaft `Name`
 
 
 Klassen besitzen darüber hinaus meistens auch "Verhalten" in Form von einer oder mehreren *Methoden*. Am Beispiel:
@@ -190,20 +196,23 @@ public class Person {
     public String name;
 
     // Verhalten
-    public String getName() {
+    public String getName() { <1>
         // Umsetzung des Verhaltens
         return name;
     }
 
     // Verhalten
-    public String smile() {
+    public String smile() { <2>
         // Umsetzung des Verhaltens "lächeln"
         return ":-)";
     }
 }
 ----
 
-Dazu eine ...
+<1> Jede `Person` [.underline]#hat# das Verhalten `Namen zurückgeben` ("... kann den Namen nennen")
+<2> Jede `Person` [.underline]#hat# das Verhalten `lächeln` ("... kann lächeln")
+
+TIP: Über die
 
 
 [[demos_classes]]
@@ -213,7 +222,7 @@ Dazu eine ...
  -> {mod-ref-test}/demo/classes/ClassesDemoTest.java
 
 ====
-IMPORTANT: Einschub: Zur *Theorie* des -> <<../../module-tools-n-help/docs/tools-and-help.adoc#tdd, Test Driven Developments>>, dann wieder hierher zurück!
+IMPORTANT: Einschub: Wiederholung der *Theorie* des -> <<../../module-tools-n-help/docs/tools-and-help.adoc#tdd, Test Driven Developments>>, als Übergang zu den Übungen!
 ====
 
 
@@ -224,7 +233,7 @@ IMPORTANT: Einschub: Zur *Theorie* des -> <<../../module-tools-n-help/docs/tools
  -> {mod-ref-test}/exercise/classes/ClassesExerciseTest.java
 
 
-Erzeuge ein erstes, kleines *Klassenmodell*:
+Erzeuge ein erstes, *Mini-Klassenmodell*:
 
 Übung 1::
 
@@ -281,11 +290,53 @@ public class SubClass extends SuperClass {
 
 Die _grafische_ Darstellung der Vererbung sieht folgendermaßen aus:
 
-[plantuml, title="Inheritance", png, align="center"]
+[plantuml, title="Inheritance/Vererbung", png, align="center"]
 ....
 include::diagrams/inheritance.puml[]
 ....
 
+*Klassenhierarchie und Objekterzeugung*
+
+`super()`
+
+Die Methode `super()` in Java-Klassenkonstruktoren wird verwendet, um den Konstruktor einer Elternklasse aufzurufen.
+
+Dies ist bei der Vererbung von Klassen wichtig und ermöglicht eine kontrollierte Initialisierung der gesamten Objekthierarchie.
+
+Wenn eine Klasse von einer anderen Klasse erbt (mittels Schlüsselwort `extends`), wird beim Erstellen eines Objekts automatisch auch der Konstruktor der Oberklasse aufgerufen.
+
+Mit `super()` kann gesteuert werden, welcher Konstruktor der Oberklasse genau aufgerufen werden soll.
+
+[source, java]
+----
+public class Elternklasse {
+    public Elternklasse() {}
+    public Elternklasse(String parameter) {}
+}
+
+public class Kindklasse extends Elternklasse {
+    // Ohne super(): Ruft automatisch den Standardkonstruktor auf
+    public Kindklasse() {}
+
+    // Mit super(): Ruft einen bestimmten Konstruktor auf,
+    // hier den mit Parameter
+    public Kindklasse(String text) {
+        super(text);
+    }
+}
+----
+
+*`this()`*
+
+Ähnlich wie zuvor gibt es das Schlüsselwort bzw die Methode `this()` in Java-Klassenkonstruktoren. Dis wird verwendet, um andere Konstruktoren *derselben* Klasse aufzurufen
+
+Anders als `super()`, das zur Kommunikation mit der Oberklasse dient, ermöglicht `this()` die Wiederverwendung von Konstruktorlogik innerhalb der eigenen Klasse.
+
+Ein Konstruktor kann mit `this()` einen anderen Konstruktor derselben Klasse aufrufen, um gemeinsame Initialisierungslogik zu teilen. Dies ist besonders nützlich bei Klassen mit mehreren Konstruktoren, die sich ergänzende Aufgaben ausführen.
+
+Die Klasse *Object*
+
+Die oberste Klasse `Object` ist die Elternklasse ALLER anderen Klassen innerhalb von Java. Auf diese Klasse kommen wir gegen Ende der LV zurück. In dieser Klasse sind allgemeine Methoden implementiert, die zusammen auch als _"Objektvertrag"_ bezeichnet werden
 
 ====
 IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigenschaften besitzen. Diese sind im -> <<../../module-object-contract/docs/object-contract.adoc#object-contract,Objektvertrag>> im Modul `module-object-contract` detailliert erläutert. Dies ist aber Gegenstand zum Ende dieses Kurses!
@@ -302,9 +353,9 @@ IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigensc
 
 == Polymorphismus
 
-Die Methoden einer Klasse können der sogenannten *Polymorphie* unterliegen. Polymorphie ist griechisch und bedeutet _Vielgestaltigkeit_. Von Polymorphie spricht man in Java beispielsweise, wenn zwei Klassen denselben Methodennamen verwenden, aber die Implementierung der Methoden sich unterscheidet.
+Die Methoden einer Klasse können der sogenannten *Polymorphie* unterliegen. Polymorphie ist griechisch und bedeutet _Vielgestaltigkeit_. Von Polymorphie spricht man in Java beispielsweise, wenn zwei Klassen denselben Methodennamen verwenden, sich aber die Implementierung der Methoden unterscheidet.
 
-Häufig wird Polymorphie bei der *Vererbung* verwendet, d.h., dass einer Variablen nicht nur Objekte vom Typ der bei der Deklaration angegebenen Klasse zugewiesen werden können, sondern auch Objekte vom Typ der Kind-Klassen. Dies funktioniert nur, weil jede Kind-Klasse auch alle Methoden und Attribute ihrer Elternklassen implementieren muss.
+Häufig wird Polymorphie bei der *Vererbung* verwendet, d.h., dass einer Variablen nicht nur Objekte vom Typ der bei der Deklaration angegebenen Klasse zugewiesen werden können, sondern auch Objekte vom Typ der Kind-Klassen. Dies funktioniert nur, weil jede Kind-Klasse auch alle Methoden und Attribute ihrer Elternklassen implementieren muss bzw. kennt.
 
 Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfügen wie die Elternklasse. Die Methoden können jedoch unterschiedlich implementiert werden, man spricht hier vom *"Überladen"* oder *"Übersteuern"* der Methode (-> mehr dazu siehe nachfolgender Abschnitt).
 
@@ -315,9 +366,9 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 [subs=normal]
  -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
-In diesem Zusammenhang sind die Schlüsselwörter `super` und `this` von besonderer Bedeutung:
+In diesem Zusammenhang sind die Schlüsselwörter `super` und `this` von besonderer Bedeutung, die oben bereits erläutert wurden. Nochmal zur Wiederholung:
 
-* `super`: Referenz für Felder oder Methoden der *Super-Klasse*
+* `super`: Referenz für Felder oder Methoden der *Eltern-Klasse*
 * `this`: Referenz für Felder oder Methoden aus der *eigenen Klasse*
 
 *Fragen*:
@@ -328,22 +379,24 @@ In diesem Zusammenhang sind die Schlüsselwörter `super` und `this` von besonde
 
 == Überladen & Übersteuern (Überschreiben)
 
-In einer Unterklasse können Methoden
+Polymorphismus wird im Code realisiert durch Methoden, die in einer (Unter-)Klasse entweder
 
-* *überladen* (engl. "overload") oder
-* *übersteuert* (engl. "override")
+* *überladen* (engl. "overload", _statische Polymorphie_) oder
+* *übersteuert* (engl. "override", _dynamische Polymorphie_)
 
-werden.
+werden können.
 
-Von *Überladung* wird gesprochen, wenn eine (Unter-)Klasse neues bzw. zusätzliches Verhalten *hinzufügt*.
+Von *Überladung* wird gesprochen, wenn eine (Unter-)Klasse neues bzw. zusätzliches Verhalten *hinzufügt*, und dazu "ähnliche" Methodensignaturen nutzt.
 
 Das *Übersteuern* (synonym: _Überschreiben_) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
 
 // float="left"
-[plantuml, "overrides", png, align="center"]
+[plantuml, title="Überladen/Übersteuern", png, align="center"]
 ....
 include::diagrams/override.puml[]
 ....
+
+Codebeispiele:
 
 [source,java,title="Beispiel Überladen von Methoden"]
 ----
