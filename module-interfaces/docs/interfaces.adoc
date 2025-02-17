@@ -21,11 +21,17 @@ end::content[]
 
 == Implementierung mit Interfaces
 
-[ <<about_interfaces,Inhalt>> | <<demos_interfaces,Demo>> | <<exercises_interfaces,Übungen>> ]
-
+{docnav}
 
 [[about_interfaces]]
-In Java, ein *Interface* ist ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist ein wichtiges *Kernkonzept* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung umzusetzen.
+In Java ist ein *Interface* ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist eines der wichtigsten *Kernkonzepte* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung in der Programmiersprache zur Verfügung zu stellen.
+
+Ein Interface dient als eine Art
+
+[subs=normal]
+ *Vertrag* bzw. *Vorschrift*
+
+*WAS* - die "Funktionalität - eine Schnittstelle zur Verfügung stellt, sie sagt aber nichts über das *WIE* aus, d.h. wie die Funktionalität umgesetzt ist.
 
 Die Signatur des Interfaces erfordert das Schlüsselwort
 
