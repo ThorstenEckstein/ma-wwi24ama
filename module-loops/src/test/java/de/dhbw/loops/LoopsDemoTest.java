@@ -63,4 +63,21 @@ public class LoopsDemoTest {
         System.out.println("Executed case: " + x);
     }
 
+    @Test
+    @DisplayName("Demo 4: pattern matching switch case")
+    public void demo4() {
+        // given
+        int i = 2;
+        int x = switch (i) {
+            case 0 -> i;
+            case 1 -> i;
+            case 2 -> i;
+            default -> -1;
+        };
+
+        // when
+
+        // then
+        System.out.println("Executed case (pattern matching): " + x);
+    }
 }

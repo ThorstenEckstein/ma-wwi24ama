@@ -51,18 +51,18 @@ else {
 
 Für einfache `if-else` Ausdrücke gibt es auch eine Kurzschreibweise, die sogenannten `ternären` Operatoren:
 
- var = (condition) ? expressionTrue :  expressionFalse;
+ var = (condition) ? expressionTrue : expressionFalse;
 
 Zum Beispiel:
 
- String result = (index == 0) ? "passt scho'" : "nix da";
+ String result = (index == 0) ? "passt scho" : "nix da";
 
 
 ==== `switch case`
 
-Das Schlüsselwort `switch` wird benutzt, um viele alternative Codeblöcke anzugeben, die ausgeführt werden sollen
+Das Schlüsselwort `switch` wird benutzt, um viele alternative Codeblöcke anzugeben, die ausgeführt werden sollen.
 
-Anstatt also viele `if..else`-Anweisungen zu schreiben, können  `switch`-Anweisung verwendet werden. Die switch-Anweisung wählt einen von vielen auszuführenden Codeblöcken aus:
+Anstatt also viele `if...else`-Anweisungen zu schreiben, können  `switch`-Anweisung verwendet werden. Die switch-Anweisung wählt einen von vielen auszuführenden Codeblöcken aus:
 
 [,java]
 ----
@@ -78,7 +78,7 @@ switch(expression) {
 }
 ----
 
-<1> Die Schlüsselwörter `break` und `default` sind optional.
+<1> Die Schlüsselwörter `break` und `default` sind optional, deren (Nicht-) Einsatz hat aber Auswirkungen und sollte wohl-überlegt sein!
 
 Mit der Version Java SE 17 wurde `pattern matching` für Switch-Ausdrücke und -Anweisungen (JEP 406) als Vorschaufunktion eingeführt. Dieses bietet mehr Flexibilität bei der Definition von Bedingungen für Switch-Fälle.
 
@@ -135,16 +135,29 @@ for ( ; ; ) {
 
 *Erweiterte `for` Schleife*
 
-Seit Java 5 gibt es eine zweite Art von `for`-Schleife namens *enhanced `for`*. Sie macht es einfacher, alle Elemente in einem Array oder einer Collection zu durchlaufen.
+Seit Java 5 gibt es eine weitere Art von `for`-Schleife namens *enhanced `for` loop*. Sie macht es einfacher, alle Elemente in einem Array oder einer Collection zu durchlaufen.
 
 Die allgemeine Syntax der erweiterten for-Schleife ist:
 
 [, java]
 ----
-for(<Type> item : items) {
+for(<Datentyp> handle : source) {
     statement;
 }
 ----
+
+////
+z.B.
+
+[, java]
+----
+// für eine Liste, die Strings enthält
+List<String> textLines = List.of("textline 1", "textline 2", ...);
+for(<String> line : textLines) {
+    System.out.println(line);
+}
+----
+////
 
 Da diese Schleife im Vergleich zur Standard-for-Schleife vereinfacht ist, müssen wir beim Initialisieren einer Schleife nur zwei Dinge deklarieren:
 
@@ -155,11 +168,11 @@ _Enhanced Loop_ Beispiel:
 
 [, java]
 ----
-int[] intArr = { 0,1,2,3,4 };
+int[] numbers = { 0,1,2,3,4 };
 
-for (int num : intArr) {
+for (int number : numbers) {
     System.out.println(
-        "Enhanced for-each loop: i = " + num);
+        "Enhanced for-each loop: i = " + number);
 }
 ----
 
@@ -176,7 +189,7 @@ for (String item : list) {
 }
 ----
 
-Zu guter Letzt, können auch *Lamdba* Ausdrücke (funktionale Interfaces, dazu gibt es ein eigenes Modul) genutzt werden:
+Zu guter Letzt, können auch *Lamdba* Ausdrücke (funktionale Interfaces, dazu gibt es ein eigenes Modul später im Semester) genutzt werden:
 
 [, java]
 ----

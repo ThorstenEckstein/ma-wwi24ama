@@ -3,10 +3,10 @@
 1 0 obj
 << /Title (Untitled)
 /Author (Thorsten Eckstein)
-/Creator (Asciidoctor PDF 2.3.10, based on Prawn 2.4.0)
-/Producer (Thorsten Eckstein)
-/ModDate (D:20240312172158+01'00')
-/CreationDate (D:20240312172228+01'00')
+/Creator (Thorsten Eckstein)
+/Producer (Asciidoctor PDF 2.3.19, based on Prawn 2.4.0)
+/ModDate (D:20250103084505+01'00')
+/CreationDate (D:20250217160638+01'00')
 >>
 endobj
 2 0 obj
@@ -2940,7 +2940,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /bcfb10+NotoSerif-Bold
 /FontFile2 60 0 R
-/FontBBox [-212 -250 1306 1058]
+/FontBBox [-555 -250 1306 1058]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -3006,7 +3006,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /f6d274+NotoSerif
 /FontFile2 64 0 R
-/FontBBox [-212 -250 1246 1047]
+/FontBBox [-518 -250 1246 1047]
 /Flags 6
 /StemV 0
 /ItalicAngle 0
@@ -3125,7 +3125,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /a1cc88+NotoSerif-Italic
 /FontFile2 72 0 R
-/FontBBox [-254 -250 1238 1047]
+/FontBBox [-421 -250 1238 1047]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
@@ -3179,7 +3179,7 @@ endobj
 << /Type /FontDescriptor
 /FontName /937aa2+NotoSerif-BoldItalic
 /FontFile2 76 0 R
-/FontBBox [-265 -250 1289 1058]
+/FontBBox [-476 -250 1289 1058]
 /Flags 70
 /StemV 0
 /ItalicAngle -12
