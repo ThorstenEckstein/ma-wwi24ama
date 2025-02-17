@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@SuppressWarnings("UnnecessaryLocalVariable")
 public class DatatypesSolutionTest {
 
     @Test
@@ -18,6 +19,8 @@ public class DatatypesSolutionTest {
 
         // then
         assertEquals(49, i);
+        // oder
+        System.out.println("Ergebnis: " + i);
     }
 
     @Test
@@ -31,6 +34,8 @@ public class DatatypesSolutionTest {
 
         // then
         assertEquals(127, b);
+        // oder
+        System.out.println("Ergebnis: " + b);
     }
 
 }

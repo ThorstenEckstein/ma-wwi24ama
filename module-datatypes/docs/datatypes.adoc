@@ -162,5 +162,5 @@ Schreibe je einen Test für
 a. Gegeben `char c = '1'` -> Umwandlung in `int`
 b. Gegeben `int i = 127` -> Umwandlung in `byte`
 
-und prüfe das Ergebnis, also den erwarteten Wert, jeweils mithilfe der Assertions-Methode `assertEquals(<expected>, <actual>)`.
+und prüfe das Ergebnis, also den erwarteten Wert, z.B. mithilfe von `System.out.println` oder mit der "Assertions-Methode" `assertEquals(<expected>, <actual>)`.
 
