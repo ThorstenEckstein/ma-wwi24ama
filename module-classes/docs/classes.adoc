@@ -11,14 +11,46 @@ include::../../docs/settings.adoc[]
 
 tag::content[]
 ----
-1. Organisation & Nutzung von Java Klassen
-2. Klassen & Instanzen
-3. Vererbung
-4. Überladen & Übersteuern (Überschreiben)
+1. Objektorientierte Programmierung
+2. Organisation & Nutzung von Java Klassen
+3. Klassen & Instanzen
+4. Vererbung
 5. Polymorphismus
+6. Überladen & Übersteuern (Überschreiben)
 ----
 end::content[]
 ////
+
+== Objektorientierte Programmierung
+
+Im Wesentlichen stehen sich 2 *Programmierparadigmen* gegenüber:
+
+* das *imperative* Paradigma, aus dem sich OOP *objektorientierte Programmierung* entwickelte, und
+* das *deklarative* Paradigma, das die Grundlage für die _funktionale Programmierung_ bildet.
+
+
+image::../../module-funcprogramming/docs/images/paradigms.png[]
+
+Die *objektorientierte Programmierung (OOP)* ist dabei eine Programmiermethodik, die die reale Welt in Form von Objekten und deren Beziehungen abbildet.
+
+In Java wird diese Methode durch die Verwendung von *Klassen* und *Objekten* umgesetzt, wodurch Programme übersichtlicher und wartbarer werden (sollen).
+
+DIe wesentlichen Grundkonzepte der OOP bzw. deren vier fundamentale Prinzipien sind:
+
+. *Klassen*: Als Baupläne oder Vorlagen für Objekte
+. *Objekte*: Konkrete Instanzen einer Klasse
+. *Vererbung*: Übernahme von Eigenschaften und Verhalten
+. *Kapselung*: Verbergen interner Details
+
+Die objektorientierte Programmierung bietet dabei verschiedene Vorteile, die folgendermaßen zusammengefasst werden können:
+
+* *Wiederverwendbarkeit*: Code kann in verschiedenen Kontexten genutzt werden
+* *Verständlichkeit*: Programme können in logische Einheiten aufgeteilt und damit besser verstanden werden
+* *Modularität*: Verschiedene Programmteile können unabhängig entwickelt werden
+* *Bessere Wartbarkeit*: Änderungen sind einfacher durchzuführen
+
+Diese Struktur ermöglicht es, komplexe Programme zu erstellen, die nah an der realen Welt, leicht zu verstehen und (so das Versprechen) leichter zu warten sind.
+
 
 == Organisation & Nutzung von Java Klassen
 
@@ -71,7 +103,7 @@ Wenn eine Java Klasse in/von einer anderen genutzt werden soll, muss sie zuerst 
 
 wie im folgenden Beispiel zu sehen:
 
-[, java]
+[source, java]
 ----
 package de.dhbw.demo.model; <1>
 
