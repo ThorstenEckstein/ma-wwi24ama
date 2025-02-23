@@ -51,6 +51,32 @@ Die objektorientierte Programmierung bietet dabei verschiedene Vorteile, die fol
 
 Diese Struktur ermöglicht es, komplexe Programme zu erstellen, die nah an der realen Welt, leicht zu verstehen und (so das Versprechen) leichter zu warten sind.
 
+Das lässt sich an folgendem Beispiel verdeutlichen, bei dem es um eine *Kundenanforderung* geht und in einem technischen Modell umgesetzt werden soll.
+
+====
+//tag::scenario[]
+Die Gaming-Plattform _Electron_ beauftragt die Entwicklung einer Spieler-Datenbank.
+Es soll erfasst werden, welche Arten von Spielen die Spieler bevorzugen,
+um Empfehlungen zu generieren. Empfehlungen sollen auch auf Basis der Interessen
+anderer Spieler erfasst werden.
+//end::scenario[]
+====
+
+Vor diesem Hintergrund werden oft auch konkrete *Anforderungen* genannt, z.B. ...
+
+* Es sollen Spiele und Spieler erfasst werden.
+* Für Spiele sollen ein Name und das Genre gespeichert werden.
+* Für Spieler soll erfasst werden, welche Spiele sie besitzen und wie oft sie diese spielen.
+* Auf Basis dieser Daten sollen Empfehlungen für neue Spiele generiert werden können.
+Ein Spiel soll empfohlen werden, wenn der Spieler es noch nicht besitzt und
+es zu einem Genre gehört, das der Spieler mag oder es ein anderer Spieler mag,
+mit dem der Spieler oft interagiert.
+
+[plantuml, align="center", title="Klassenmodell"]
+....
+include::diagrams/example-model.puml[]
+....
+
 
 == Organisation & Nutzung von Java Klassen
 
