@@ -156,9 +156,9 @@ Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareo
 
 Eine Java Klasse hat in der Regel folgende Bestandteile:
 
-* Eigenschaft (Feld, engl. _field_),
-* Konstruktor (engl. _constructor_) und
-* Verhaltensweise (Methode, engl. _method_):
+* 0..n Eigenschaften (Feld, engl. _field_),
+* 1..n Konstruktoren (engl. _constructor_) sowie
+* 0..n Verhaltensweisen (Methode, engl. _method_):
 
 Die wichtigsten Elemente von Java sind die *Klassensignatur* selbst:
 
@@ -168,6 +168,8 @@ public class MyClass {
 
 }
 ----
+
+TIP: _In IntelliJ werden Schlüsselwörter - wie hier `class` in [blue]#*dunkelblauer*# Farbe dargestellt! In anderen IDEs sind solche Schlüsselwörter möglicherweise anders, aber sicher auch erkennbar dargestellt._
 
 Eine Klasse mit einem *Feld* bzw. einer Eigenschaft:
 
@@ -180,7 +182,7 @@ public class MyClass {
 }
 ----
 
-Eine Klasse mit (Default-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
+Eine Klasse mit (*Default*-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
 
 In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle *Methoden*, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
 
@@ -230,7 +232,7 @@ Train train  =   new       Train();
 ----
 
 
-Klassen besitzen meistens auch "Eigenschaften" in Form von einer oder mehreren *Feldern*. Zunächst ein Beispiel:
+Klassen besitzen fast immer auch _Eigenschaften_ in Form von einer oder mehreren *Feldern*. Zunächst ein Beispiel:
 
 [source,java]
 ----
@@ -245,7 +247,7 @@ public class Person {
 IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` [.underline]#hat# eine Eigenschaft `Name`
 
 
-Klassen besitzen darüber hinaus meistens auch "Verhalten" in Form von einer oder mehreren *Methoden*. Am Beispiel:
+Klassen besitzen darüber hinaus vielfach auch _Verhalten_ in Form von einer oder mehreren *Methoden*. Am Beispiel:
 
 [source,java]
 ----
