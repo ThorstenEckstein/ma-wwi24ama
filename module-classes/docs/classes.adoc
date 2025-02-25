@@ -478,12 +478,12 @@ Beim *Übersteuern* wird eine geerbte Methode durch eine neue Implementierung er
 .Beispiel Übersteuern von Methoden
 [source,java]
 ----
-include::{mod-lnk-src}/demo/override/DefaultDisplay.java[lines="5..10"]
+include::{mod-lnk-src}/demo/override/DefaultDisplay.java[lines="5..15"]
 ----
 
 [source,java]
 ----
-include::{mod-lnk-src}/demo/override/PlatformDisplay.java[lines="3..10"]
+include::{mod-lnk-src}/demo/override/PlatformDisplay.java[lines="3..9"]
 ----
 
 Die zugehörige *Annotation* (eine Art "Anzeiger") im Code ist
