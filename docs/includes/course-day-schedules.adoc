@@ -39,15 +39,21 @@ include::../settings.adoc[]
 [Mi., 05.03.2025, 09:20 - 09:25, 5min] "Kurze Wiederholung Typumwandlung (Casting)"
 [Mi., 05.03.2025, 09:25 - 09:40, 15min] "Demo zu Typumwandlung von komplexer Datentypen (Klassen)"
 [Mi., 05.03.2025, 09:40 - 09:55, 15min] "Übungen zu Typumwandlung von komplexen Datentypen (Klassen)"
-[Mi., 05.03.2025, 09:55 - 10:10, 15min] "Interfaces"
-[Mi., 05.03.2025, 10:10 - 10:20, 10min] "Interfaces Demo"
-[Mi., 05.03.2025, 10:20 - 10:35, 15min] "Interfaces Exercise"
-[Mi., 05.03.2025, 10:35 - 10:50, 15min] "Pause"
-[Mi., 05.03.2025, 10:50 - 11:05, 15min] "Abstrakte Klassen"
-[Mi., 05.03.2025, 11:05 - 11:15, 10min] "Demo abstrakte Klassen"
-[Mi., 05.03.2025, 11:15 - 11:35, 20min] "Übung zu abstrakten Klassen"
-[Mi., 05.03.2025, 11:35 - 11:55, 20min] "Tools: Hilfreiches im Umgang mit IntelliJ"
-[Mi., 05.03.2025, 11:55 - 12:15, 20min] "Pufferzeit"
+[Mi., 05.03.2025, 09:55 - 10:10, 15min] "Sichtbarkeiten & Scopes"
+[Mi., 05.03.2025, 10:10 - 10:25, 15min] "Demo zu Sichtbarkeiten"
+[Mi., 05.03.2025, 10:25 - 10:40, 15min] "Pause"
+[Mi., 05.03.2025, 10:40 - 10:55, 15min] "Interfaces"
+[Mi., 05.03.2025, 10:55 - 11:05, 10min] "Interfaces Demo"
+[Mi., 05.03.2025, 11:05 - 11:20, 15min] "Interfaces Exercise"
+[Mi., 05.03.2025, 11:20 - 11:35, 15min] "Abstrakte Klassen"
+[Mi., 05.03.2025, 11:35 - 11:45, 10min] "Demo abstrakte Klassen"
+[Mi., 05.03.2025, 11:45 - 12:05, 20min] "Übung zu abstrakten Klassen"
+[Mi., 05.03.2025, 12:05 - 12:10, 5min] "Tools: Hilfreiches im Umgang mit IntelliJ"
+[Mi., 05.03.2025, 12:10 - 12:15, 5min] "Pufferzeit"
+
+!!!! TAG 4 NEU PLANEN !!!!
+
+Sichtbarkeiten & Scopes & Demo dazu bereits an Tag 3 erledigt, d.h. evtl., wenn's klappt, 30 Minuten gewonnen!
 
 [Mi., 12.03.2025, 09:15 - 12:15, 180min] "Course Day 4"
 [Mi., 12.03.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"

@@ -138,7 +138,7 @@ German german = (German)human; <2>
 german.country = "Germany";
 ----
 
-<1> Zugriff auf das Feld ´name´ der abstrakten Klasse `Human Being`
+<1> Zugriff auf das Feld `name` der abstrakten Klasse `Human Being`
 <2> Zugriff auf das Feld `country` der konkreten Klasse `German` erst NACH dem *Down-Casting* möglich.
 
 

@@ -88,20 +88,22 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
   2) Kurze Wiederholung Typumwandlung (Casting)
   3) Demo zu Typumwandlung von komplexer Datentypen (Klassen)
   4) Übungen zu Typumwandlung von komplexen Datentypen (Klassen)
-  5) Interfaces
-  6) Interfaces Demo
-  7) Interfaces Exercise
-  8) Pause
-  9) Abstrakte Klassen
-  10) Demo abstrakte Klassen
-  11) Übung zu abstrakten Klassen
-  12) Tools: Hilfreiches im Umgang mit IntelliJ
-  13) Pufferzeit
+  5) Sichtbarkeiten & Scopes
+  6) Demo zu Sichtbarkeiten
+  7) Pause
+  8) Interfaces
+  9) Interfaces Demo
+  10) Interfaces Exercise
+  11) Abstrakte Klassen
+  12) Demo abstrakte Klassen
+  13) Übung zu abstrakten Klassen
+  14) Tools: Hilfreiches im Umgang mit IntelliJ
+  15) Pufferzeit
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-datatypes/docs/datatypes.adoc.adoc[module-datatypes]
+. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
 . {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
 
