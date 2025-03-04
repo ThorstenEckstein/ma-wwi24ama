@@ -104,8 +104,9 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 *Zugehörige Module*:
 
 . {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
+. {icon-module} link:../module-visibility/docs/visibility.adoc[module-visibility]
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
-. {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
+. ({icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help])
 
 
 == Tag 4 - Sichtbarkeiten, Kontrollstrukturen & Collections API
