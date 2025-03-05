@@ -89,17 +89,15 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
   3) Demo zu Typumwandlung von komplexer Datentypen (Klassen)
   4) Übungen zu Typumwandlung von komplexen Datentypen (Klassen)
   5) Sichtbarkeiten & Scopes
-  6a) Demo zu Sichtbarkeiten
-  6b) Übung zu Sichtbarkeiten
+  6) Demo zu Sichtbarkeiten
   7) Pause
-  8) Interfaces
-  9) Interfaces Demo
-  10) Interfaces Exercise
-  11) Abstrakte Klassen
-  12) Demo abstrakte Klassen
-  13) Übung zu abstrakten Klassen
-  14) Tools: Hilfreiches im Umgang mit IntelliJ
-  15) Pufferzeit
+  8) Abstrakte Klassen
+  9) Demo abstrakte Klassen
+  10) Übung zu abstrakten Klassen
+  11) Interfaces
+  12) Interfaces Demo
+  13) Interfaces Exercise
+  14) Pufferzeit
 ----
 
 *Zugehörige Module*:
@@ -107,7 +105,6 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
 . {icon-module} link:../module-visibility/docs/visibility.adoc[module-visibility]
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
-. ({icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help])
 
 
 == Tag 4 - Sichtbarkeiten, Kontrollstrukturen & Collections API
