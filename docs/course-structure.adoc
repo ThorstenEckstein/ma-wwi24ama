@@ -121,21 +121,21 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 ----
   1) Come in, sit down and relax
   2) Project Update
-  3) Sichtbarkeiten & Scopes
-  4) Demo zu Sichtbarkeiten
-  5) Kontrollstrukturen
-  6) Pause
-  7) Demo zu Kontrollstrukturen
-  8) Übung zu Kontrollstrukturen
-  9) Java Collections API
-  10) Demo zur Collections API
-  11) Übungen Collections API
-  12) Pufferzeit
+  3) Logische Operatoren
+  4) Demo zu Operatoren
+  5) Übungen zu Operatoren
+  6) Kontrollstrukturen
+  7) Pause
+  8) Demo zu Kontrollstrukturen
+  9) Übung zu Kontrollstrukturen
+  10) Java Collections API
+  11) Demo zur Collections API
+  12) Übungen Collections API
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-visibility/docs/visibility.adoc[module-visibility]
+. {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
 . {icon-module} link:../module-loops/docs/loops.adoc[module-loops]
 . {icon-module} link:../module-collections/docs/collections.adoc[module-collections]
 
@@ -143,7 +143,9 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 5 - Operatoren, Assoziationen & Java Generics
 
 [subs=normal]
- [*Di., 18.03.2025*, 13:00 - 16:00, 180min] [red]#"Course Day 5"#
+ [*Di., 18.03.2025*, 13:30 - 16:00, 180min] [red]#"Course Day 5"#
+
+CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 
 *Inhalt*:
 
@@ -151,20 +153,17 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 ----
   1) Come in, sit down and relax
   2) Project Update
-  3) Logische Operatoren
-  4) Demo zu Operatoren
-  5) Übungen zu Operatoren
-  6) Assoziationen zwischen Klassen
-  7) Pause
-  8) Demo zu Assoziationen
-  9) Übungen zu Assoziationen
-  10) Java Generics (Einführung)
-  11) Generics Demo und/oder Pufferzeit
+  3) Assoziationen zwischen Klassen
+  4) Pause
+  5) Demo zu Assoziationen
+  6) Übungen zu Assoziationen
+  7) Java Generics
+  8) Demos zu Java Generics
+  9) Pufferzeit
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
 . {icon-module} link:../module-associations/docs/associations.adoc[module-associations]
 . {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Einf.)]
 
