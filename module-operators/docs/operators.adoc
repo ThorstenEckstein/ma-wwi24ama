@@ -19,33 +19,46 @@ end::content[]
 
 == Logische Operatoren
 
-Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten und werden z. B. für Bedingungen von `if` Anweisungen oder Schleifen verwendet.
+Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten unter Nutzung des primitiven Datentyps
 
-Durch die logischen Operatoren können einzelne Wahrheitswerte negiert oder verknüpft werden, wobei das Ergebnis immer ein `boolean` ist.
+ boolean bzw. Boolean
+
+und werden u.a. für *Bedingungen von Kontrollstrukturen* (siehe nächstes Thema), etwa für `if` Anweisungen oder Schleifen verwendet.
+
+Durch logische Operatoren können einzelne Wahrheitswerte verändert bzw. negiert und auch verknüpft werden.
+Egal wie, das Ergebnis der Verarbeitung von logischen Operatoren ist immer ein Wahrheitswert, also wieder ein `boolean`.
 
 Es gibt verschiedene *logische Operatoren*:
 
-[cols="^1m,9e"]
+TIP: Vgl. Testklasse: `/module-operators/src/test/java/de/dhbw/operators/OperatorDemoTests.java`
+
+[cols="^1m,9e,1l"]
 |===
-| Operator | Erläuterung/Bedeutung
+| Operator | Erläuterung/Bedeutung | Testmethode
 
 | &&
 | Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Werte wahr sind. Ist an dieser Stelle bereits der erste Operator falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
+| testOperator1()
 
 | &
 | Einfaches UND ist eine logische UND-Verknüpfung. Bei dieser logischen UND-Verknüpfung werden beide Operanden ausgewertet.
+| testOperator2()
 
 | &vert;&vert;
 | Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Werte falsch sind. Ist an dieser Stelle bereits der erste Operator wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
+| testOperator3()
 
 | &vert;
 | Einfaches ODER ist eine logische ODER-Verknüpfung. Bei dieser logischen ODER-Verknüpfung werden beide Operanden ausgewertet.
+| testOperator4()
 
 | !
-| Das Ausrufezeichen ist der Negierungsoperator in der booleschen Logik. Aus wahr (true) wird falsch (false) und umgekehrt.
+| Das Ausrufezeichen ist der Negierungsoperator in der bool'schen Logik. Aus wahr (true) wird falsch (false) und umgekehrt.
+| testOperator5()
 
 | ^
 | Das "Dach" wird als Exklusiv-Oder bezeichnet. Entweder der erste oder der zweite Ausdruck muss wahr sein. Es dürfen aber nicht beide Ausdrücke gleich sein, damit das Ergebnis wahr wird.
+| testOperator6()
 |===
 
 
@@ -59,8 +72,23 @@ Tests zur *Demonstration*:
 
 === Übungen
 
+[subs=normal]
+ {mod-ref-test}/operators/OperatorExerciseTests.java
+
 [[enums-exercise-1]]
 *Übung 1:*
+
+Werte den folgenden Ausdruck aus:
+
+ boolean result = one && two | three;
+
+a) Ermittle das Ergebnis mit `System.out.println(...)` oder `assertEquals(...)`
+
+b) Erläutere die logischen Operatoren
+
+
+[[enums-exercise-2]]
+*Übung 2:*
 
 Erstelle eine `boolean` Variable, _negiere_ diese und teste das Ergebnis in einem Unit-Test.
 

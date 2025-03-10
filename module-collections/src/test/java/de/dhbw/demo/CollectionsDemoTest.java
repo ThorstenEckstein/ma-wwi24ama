@@ -155,7 +155,6 @@ public class CollectionsDemoTest {
         });
     }
 
-
     // ACTIVATE TO DEMONSTRATE EQUALS IN COURSE:
     @Test
     @Disabled

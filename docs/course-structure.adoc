@@ -107,7 +107,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
 
 
-== Tag 4 - Sichtbarkeiten, Kontrollstrukturen & Collections API
+== Tag 4 - Operatoren, Kontrollstrukturen & Collections API
 
 [subs=normal]
  [*Mi., 12.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 4"#
@@ -137,7 +137,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-module} link:../module-collections/docs/collections.adoc[module-collections]
 
 
-== Tag 5 - Operatoren, Assoziationen & Java Generics
+== Tag 5 - Assoziationen & Java Generics
 
 [subs=normal]
  [*Di., 18.03.2025*, 13:30 - 16:00, 180min] [red]#"Course Day 5"#

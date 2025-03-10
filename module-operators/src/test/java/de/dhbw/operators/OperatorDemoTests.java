@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @SuppressWarnings("InnerClassMayBeStatic")
 public class OperatorDemoTests {
 
@@ -30,25 +32,8 @@ public class OperatorDemoTests {
     }
 
     @Test
-    @DisplayName("(1) Logischer Operator: & (both evaluated)")
+    @DisplayName("(1) Logischer Operator: && (at least first evaluated)")
     public void testOperator1() {
-        // given
-        for (Combination combination : combinations) {
-            // when - both are evaluated!
-            boolean result = combination.operand1 & combination.operand2;
-
-            // then
-            System.out.printf("\n%s & %s -> %s",
-                combination.operand1,
-                combination.operand2,
-                result
-            );
-        }
-    }
-
-    @Test
-    @DisplayName("(2) Logischer Operator: &&")
-    public void testOperator2() {
         // given
         for (Combination combination : combinations) {
             // when - evaluation stops after operand1 has been evaluated to 'false'
@@ -64,15 +49,15 @@ public class OperatorDemoTests {
     }
 
     @Test
-    @DisplayName("(3) Logischer Operator: | (both evaluated)")
-    public void testOperator3() {
+    @DisplayName("(2) Logischer Operator: & (both evaluated)")
+    public void testOperator2() {
         // given
         for (Combination combination : combinations) {
-            // when
-            boolean result = combination.operand1 | combination.operand2;
+            // when - both are evaluated!
+            boolean result = combination.operand1 & combination.operand2;
 
             // then
-            System.out.printf("\n%s | %s -> %s",
+            System.out.printf("\n%s & %s -> %s",
                 combination.operand1,
                 combination.operand2,
                 result
@@ -81,8 +66,8 @@ public class OperatorDemoTests {
     }
 
     @Test
-    @DisplayName("(4) Logischer Operator: ||")
-    public void testOperator4() {
+    @DisplayName("(3) Logischer Operator: || (at least first evaluated)")
+    public void testOperator3() {
         // given
         for (Combination combination : combinations) {
             // when - evaluation stops after operand1 has been evaluated to 'false'
@@ -98,8 +83,39 @@ public class OperatorDemoTests {
     }
 
     @Test
-    @DisplayName("(5) Logischer Operator: ^")
+    @DisplayName("(4) Logischer Operator: | (both evaluated)")
+    public void testOperator4() {
+        // given
+        for (Combination combination : combinations) {
+            // when
+            boolean result = combination.operand1 | combination.operand2;
+
+            // then
+            System.out.printf("\n%s | %s -> %s",
+                combination.operand1,
+                combination.operand2,
+                result
+            );
+        }
+    }
+
+    @Test
+    @DisplayName("(5) Logischer Operator: !")
+    @SuppressWarnings("ConstantValue")
     public void testOperator5() {
+        // given
+        boolean isValid = false;
+
+        // when
+        isValid = !isValid;
+
+        // then
+        assertTrue(isValid);
+    }
+
+    @Test
+    @DisplayName("(6) Logischer Operator: ^")
+    public void testOperator6() {
         // given
         for (Combination combination : combinations) {
             // when
