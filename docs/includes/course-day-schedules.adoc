@@ -51,23 +51,21 @@ include::../settings.adoc[]
 [Mi., 05.03.2025, 12:05 - 12:10, 5min] "Tools: Hilfreiches im Umgang mit IntelliJ"
 [Mi., 05.03.2025, 12:10 - 12:15, 5min] "Pufferzeit"
 
-!!!! TAG 4 NEU PLANEN !!!!
-
-Sichtbarkeiten & Scopes & Demo dazu bereits an Tag 3 erledigt, d.h. evtl., wenn's klappt, 30 Minuten gewonnen!
-
 [Mi., 12.03.2025, 09:15 - 12:15, 180min] "Course Day 4"
 [Mi., 12.03.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"
 [Mi., 12.03.2025, 09:19 - 09:20, 1min] "Project Update"
-[Mi., 12.03.2025, 09:20 - 09:35, 15min] "Sichtbarkeiten & Scopes"
-[Mi., 12.03.2025, 09:35 - 09:50, 15min] "Demo zu Sichtbarkeiten"
-[Mi., 12.03.2025, 09:50 - 10:10, 20min] "Kontrollstrukturen"
-[Mi., 12.03.2025, 10:10 - 10:25, 15min] "Pause"
-[Mi., 12.03.2025, 10:25 - 10:40, 15min] "Demo zu Kontrollstrukturen"
-[Mi., 12.03.2025, 10:40 - 11:00, 20min] "Übung zu Kontrollstrukturen"
-[Mi., 12.03.2025, 11:00 - 11:30, 30min] "Java Collections API"
-[Mi., 12.03.2025, 11:30 - 11:50, 20min] "Demo zur Collections API"
-[Mi., 12.03.2025, 11:50 - 12:05, 15min] "Übungen Collections API"
-[Mi., 12.03.2025, 12:05 - 12:15, 10min] "Pufferzeit"
+[Mi., 12.03.2025, 09:20 - 09:40, 20min] "Logische Operatoren"
+[Mi., 12.03.2025, 09:40 - 09:50, 10min] "Demo zu Operatoren"
+[Mi., 12.03.2025, 09:50 - 10:05, 15min] "Übungen zu Operatoren"
+[Mi., 12.03.2025, 10:05 - 10:25, 20min] "Kontrollstrukturen"
+[Mi., 12.03.2025, 10:25 - 10:40, 15min] "Pause"
+[Mi., 12.03.2025, 10:40 - 10:55, 15min] "Demo zu Kontrollstrukturen"
+[Mi., 12.03.2025, 10:55 - 11:15, 20min] "Übung zu Kontrollstrukturen"
+[Mi., 12.03.2025, 11:15 - 11:45, 30min] "Java Collections API"
+[Mi., 12.03.2025, 11:45 - 12:00, 15min] "Demo zur Collections API"
+[Mi., 12.03.2025, 12:00 - 12:15, 15min] "Übungen Collections API"
+
+!!!! TAG 5 NEU PLANEN !!!!
 
 [Di., 18.03.2025, 13:00 - 16:00, 180min] "Course Day 5"
 [Di., 18.03.2025, 13:00 - 13:04, 4min] "Come in, sit down and relax"
