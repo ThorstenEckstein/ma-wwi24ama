@@ -65,6 +65,7 @@ Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 :icon-module:           icon:cube[role=green]
 :icon-one:
 :symbol-update-project: pass:n[[blue]#*&#x2199;*#]
+:q:                     pass:n[[big]#icon:question-circle[role=green]#]
 
 :docnav: pass:n[[ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]]
 
