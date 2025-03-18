@@ -26,6 +26,19 @@ public class GenericsSolutionTests {
     }
 
     @Test
+    @DisplayName("Übung 1 Alternativ: Generischer Calculator")
+    public void solution1a() {
+        // given
+        NumberCalculator<Double> calculator = new NumberCalculator<>();
+
+        // when
+        double result = calculator.add(2.0, 7.0);
+
+        // then
+        assertEquals(9.0, result);
+    }
+
+    @Test
     @DisplayName("Übung 2: Workflow")
     public void solution2() {
         // given
