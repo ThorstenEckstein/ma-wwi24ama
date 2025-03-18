@@ -182,14 +182,14 @@ Eine Möglichkeit ist:
 [,java]
 ----
 public class Document {
-    prrivate TableOfContent toc;
-    public Document(TableOfContent inhaltsverzeichnis) { <1>
+    private TableOfContent toc;
+    public Document(final TableOfContent inhaltsverzeichnis) { <1>
         this.toc = inhaltsverzeichnis
     }
 }
 ----
 
-<1> Starkes *Indiz* für existenzielle Abhängigkeit: Das direkte Setzen der abhängigen KLasse und (oft auch) deren Initialisierung im oder über den _Konstruktor_!
+<1> *Indiz* für existenzielle Abhängigkeit: Das direkte und einmalige Setzen der abhängigen KLasse und (oft auch) deren Initialisierung im oder über den _Konstruktor_!
 
 Eine andere Idee ist in folgender *Demo*-Methode umgesetzt:
 
@@ -205,10 +205,8 @@ Sobald Klassen durch Assoziationen verbunden werden, kommt der Aspekt der *Navig
 
 Letztlich drückt sich die Navigierbarkeit darin aus, ob assoziierte Klassen
 
-* als *komplexes Attribut* -> *(2)* realisiert sind oder
-* nur als *primitiver "Referenz"-Wert*, z.B. die `id` der anderen Klasse -> *(3)*
-
-vorhanden sind (_auch die "besitzende" Klasse hat in aller Regel selbst eine ID -> *(1)*_).
+* als *komplexes Attribut* -> *(2)* realisiert sind oder nur als *primitiver "Referenz"-Wert*, z.B. die `id` der anderen Klasse -> *(3)* vorhanden sind (_auch die "besitzende" Klasse hat in aller Regel selbst eine ID -> (1)_)
+* oder ob die Eigenschaften, insb. andere Klassen, überhaupt *vorhanden* sind oder nicht -> *(4)*
 
 Am *Beispiel*:
 
@@ -222,7 +220,7 @@ public class Train {
                            | // eine Referenz als "virtuelle Beziehung"
 public class Locomotive {  |
     public long id; <------+
-    public Train train;
+    public Train train; <4>
 }
 ----
 
@@ -236,6 +234,11 @@ Siehe Unit-Test:
 
 Ein Beispiel::
 _Jede natürliche Person besitzt *genau* einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann muss aber auch der Personalausweis vernichtet werden, das wurde oben bereits demonstriert._
+
+[plantuml, "one-to-one", png, align="center"]
+....
+include::diagrams/one-to-one-example.puml[]
+....
 
 Es geht hier also oft um die Überlegung zur *Semantik bzw. Qualität* einer Beziehung zwischen zwei abhängigen Objekten!
 
@@ -262,7 +265,7 @@ sowie Implementierungen für V1 und V2:
 [subs=normal]
  {mod-ref-src}/demo/associations.[red]#*n*#.*.java
 
--> Übung 1
+{a} Übung 1 (Beschreibung siehe unten)
 
 
 === Many-to-Many-Assoziation
@@ -287,7 +290,7 @@ Zugehörige Unit-Tests:
  {mod-ref-test}/demo/AssociationsDemoTest.demo3()
 ////
 
-Assoziationen zwischen Java Klassen werden manchmal auch als *Relationen* bezeichnet. Dieser Begriff stammt aus dem Umfeld der *Datenbanken*, meint aber das Gleiche. Dies ist ein optionales Thema und kann bei Gelegenheit eingeschoben werden.
+Assoziationen zwischen Java Klassen werden auch als *Relationen* bezeichnet. Dieser Begriff stammt aber eher aus dem Umfeld der *Datenbanken*, meint aber das Gleiche. Dies ist ein optionales Thema und kann bei Gelegenheit eingeschoben werden.
 
 
 *Übungen*:
