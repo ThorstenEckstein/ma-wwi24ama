@@ -14,6 +14,8 @@ public class NumberCalculator<T extends Number> {
         return a.doubleValue() * b.doubleValue();
     }
 
+    // "Devide" erfordert eine Fließkommazahl als Rückgabewert, daher festgelegt auf 'double'
+
     public double divide(T a, T b) {
         if (b.doubleValue() == 0) {
             throw new ArithmeticException("Division durch Null ist nicht erlaubt.");
