@@ -78,32 +78,21 @@ Day 5: 30 min weniger, Beginn 13:30
 [Di., 18.03.2025, 15:00 - 15:20, 20min] "Demos zu Java Generics"
 [Di., 18.03.2025, 15:20 - 15:30, 10min] "Pufferzeit"
 
-!!!! TAG 6 NEU PLANEN !!!!
-
-[Di., 18.03.2025, 13:00 - 16:00, 180min] "Course Day 5"
-[Di., 18.03.2025, 13:00 - 13:04, 4min] "Come in, sit down and relax"
-[Di., 18.03.2025, 13:04 - 13:05, 1min] "Project Update"
-[Di., 18.03.2025, 13:05 - 13:25, 20min] "Logische Operatoren"
-[Di., 18.03.2025, 13:25 - 13:35, 10min] "Demo zu Operatoren"
-[Di., 18.03.2025, 13:35 - 13:50, 15min] "Übungen zu Operatoren"
-[Di., 18.03.2025, 13:50 - 14:20, 30min] "Assoziationen zwischen Klassen"
-[Di., 18.03.2025, 14:20 - 14:35, 15min] "Pause"
-[Di., 18.03.2025, 14:35 - 14:55, 20min] "Demo zu Assoziationen"
-[Di., 18.03.2025, 14:55 - 15:15, 20min] "Übungen zu Assoziationen"
-[Di., 18.03.2025, 15:15 - 15:45, 30min] "Java Generics"
-[Di., 18.03.2025, 15:45 - 16:00, 15min] "Generics Demo und/oder Pufferzeit"
-
 [Mi., 26.03.2025, 09:15 - 12:15, 180min] "Course Day 6"
 [Mi., 26.03.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"
 [Mi., 26.03.2025, 09:19 - 09:20, 1min] "Project Update"
 [Mi., 26.03.2025, 09:20 - 09:30, 10min] "Generics (kurze Wiederholung)"
-[Mi., 26.03.2025, 09:30 - 09:50, 20min] "Demos zu Java Generics"
-[Mi., 26.03.2025, 09:50 - 10:20, 30min] "Übungen zu Java Generics"
-[Mi., 26.03.2025, 10:20 - 10:35, 15min] "Pause"
-[Mi., 26.03.2025, 10:35 - 11:15, 40min] "Funktionale Programmierung in Java"
-[Mi., 26.03.2025, 11:15 - 11:35, 20min] "Demos zu funktionaler Programmierung"
-[Mi., 26.03.2025, 11:35 - 12:05, 30min] "Übungen zu funktionaler Programmierung"
-[Mi., 26.03.2025, 12:05 - 12:15, 10min] "Pufferzeit"
+[Mi., 26.03.2025, 09:30 - 09:50, 20min] "Übungen zu Java Generics"
+[Mi., 26.03.2025, 09:50 - 10:25, 35min] "Funktionale Programmierung in Java"
+[Mi., 26.03.2025, 10:25 - 10:40, 15min] "Pause"
+[Mi., 26.03.2025, 10:40 - 11:00, 20min] "Demos zu funktionaler Programmierung"
+[Mi., 26.03.2025, 11:00 - 11:30, 30min] "Übungen zu funktionaler Programmierung"
+[Mi., 26.03.2025, 11:30 - 11:45, 15min] "Enums"
+[Mi., 26.03.2025, 11:45 - 11:55, 10min] "Demo zu Enums"
+[Mi., 26.03.2025, 11:55 - 12:10, 15min] "Übungen zu Enums"
+[Mi., 26.03.2025, 12:10 - 12:15, 5min] "Pufferzeit"
+
+!!!! TAG 7 NEU PLANEN !!!!
 
 [Mi., 02.04.2025, 09:15 - 12:15, 180min] "Course Day 7"
 [Mi., 02.04.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"

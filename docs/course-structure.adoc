@@ -165,7 +165,7 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 . {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Einf.)]
 
 
-== Tag 6 - Java Generics (Forts.), funktionale Programmierung
+== Tag 6 - Java Generics, funktionale Programmierung & Enums
 
 [subs=normal]
  [*Mi., 26.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
@@ -176,21 +176,22 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 ----
   1) Come in, sit down and relax
   2) Project Update
-  3) Generics (Wiederholung & Fortsetzung)
-  4) Demos zu Java Generics
-  5) Übungen zu Java Generics
+  3) Generics (kurze Wiederholung)
+  4) Übungen zu Java Generics
+  5) Funktionale Programmierung in Java
   6) Pause
-  7) Funktionale Programmierung in Java
-  8) Demos zu funktionaler Programmierung
-  9) Übungen zu funktionaler Programmierung
-  10) Pufferzeit
+  7) Demos zu funktionaler Programmierung
+  8) Übungen zu funktionaler Programmierung
+  9) Enums
+  10) Demo zu Enums
+  11) Übungen zu Enums
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Forts.)]
+. {icon-module} link:../module-generics/docs/generics.adoc[module-generics] (Forts.)
 . {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
-
+. {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
 
 == Tag 7 - Ausnahmen, Fehlerbehandlung, statische Elemente & Enums
 
