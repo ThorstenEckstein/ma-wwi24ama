@@ -128,10 +128,11 @@ Die im Test benutzten *Implementierungen* gehören in das Package:
 
 TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
 
-[[generics-exercise-1]]
-*Übung 1*::
 
-Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für...
+[[generics-exercise-1]]
+*Übung 1*:: Ein *Interface*
+
+Erstelle ein *Interface* für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für ...
 
 * addieren,
 * subtrahieren,
@@ -142,9 +143,9 @@ Der Taschenrechner sollte mit beliebigen Zahlen-Datentypen umgehen können.
 
 
 [[generics-exercise-2]]
-*Übung 2*::
+*Übung 2*:: Eine *Klasse*
 
- Realisiere einen generischen, konkreten Taschenrechner für die 4 Grundrechenarten, der alle Zahlen-Datentypen verarbeiten kann. Schreibe dazu hier einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten mit Beispielwerten testet, aber mit unterschiedlichen Zahlen-Datentypen.
+Realisiere einen generischen, aber *konkreten* Taschenrechner für die 4 Grundrechenarten, der alle Zahlen-Datentypen verarbeiten kann. Schreibe dazu hier einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten mit Beispielwerten testet, aber mit unterschiedlichen Zahlen-Datentypen.
 
 
 [[generics-exercise-3]]

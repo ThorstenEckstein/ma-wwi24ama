@@ -17,23 +17,23 @@ public class StreamingDemoTests {
 
     @BeforeEach
     public void beforeEach() {
-        this.timetable = new Timetable("Sommerfahrplan 2023");
+        this.timetable = new Timetable("Sommerfahrplan 2025");
 
-        Schedule s1 = Schedule.of("MA", "DA",  DateTimeUtil.of("2022-12-28T10:15:00"), 30);
-        Schedule s2 = Schedule.of("DA", "FFM", DateTimeUtil.of("2022-12-28T11:21:00"), 30);
-        Schedule s3 = Schedule.of("MA", "ST",  DateTimeUtil.of("2022-12-28T10:47:00"), 45);
-        Schedule s4 = Schedule.of("MÜ", "FFM", DateTimeUtil.of("2022-12-28T06:31:00"), 180);
+        Schedule s1 = Schedule.of("MA", "DA",  DateTimeUtil.of("2025-03-18T10:15:00"), 30);
+        Schedule s2 = Schedule.of("DA", "FFM", DateTimeUtil.of("2025-03-18T11:21:00"), 30);
+        Schedule s3 = Schedule.of("MA", "ST",  DateTimeUtil.of("2025-03-18T10:47:00"), 45);
+        Schedule s4 = Schedule.of("MÜ", "FFM", DateTimeUtil.of("2025-03-18T06:31:00"), 180);
 
         // convenient way to add (not too many) instances of Schedule (arbitrary number of args, called 'varargs')
         this.timetable.addSchedules(s1, s2, s3, s4);
     }
 
     public Timetable prepareTimetableForReduceExample() {
-        Timetable timetable = new Timetable("Sommerfahrplan 2023");
+        Timetable timetable = new Timetable("Sommerfahrplan 2025");
 
-        Schedule s1 = Schedule.of("MA", "DA",  DateTimeUtil.of("2022-12-28T08:00:00"), 30);
-        Schedule s2 = Schedule.of("DA", "FFM", DateTimeUtil.of("2022-12-28T08:30:00"), 30);
-        Schedule s3 = Schedule.of("FFM", "KA", DateTimeUtil.of("2022-12-28T09:30:00"), 60);
+        Schedule s1 = Schedule.of("MA", "DA",  DateTimeUtil.of("2025-03-18T08:00:00"), 30);
+        Schedule s2 = Schedule.of("DA", "FFM", DateTimeUtil.of("2025-03-18T08:30:00"), 30);
+        Schedule s3 = Schedule.of("FFM", "KA", DateTimeUtil.of("2025-03-18T09:30:00"), 60);
 
         timetable.addSchedules(s1, s2, s3);
 
@@ -119,13 +119,13 @@ public class StreamingDemoTests {
         //                    ... usw. ...
         //   Iteration n:  ...   +   243  =  393 ("total")
 
-        // int startWert = 0;
-        // Integer total = numbers.stream().reduce(startWert,
-        //   (zwischenErgebnis, naechsteZahl) -> zwischenErgebnis + naechsteZahl);
+        //int startWert = 0;
+        //Integer total = numbers.stream().reduce(startWert, (zwischenErgebnis, naechsteZahl) -> zwischenErgebnis + naechsteZahl);
 
         // vorheriges in kürzerer Form und besser lesbar!
         //   wobei: "Integer::sum" ist hier der "BinaryOperator<T> accumulator"
-        Integer total = numbers.stream().reduce(0, Integer::sum);
+        int startWert = 0;
+        Integer total = numbers.stream().reduce(startWert, Integer::sum);
 
         // then
         assertEquals(393, total);

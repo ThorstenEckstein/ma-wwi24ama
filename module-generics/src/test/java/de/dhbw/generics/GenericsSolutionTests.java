@@ -13,7 +13,7 @@ public class GenericsSolutionTests {
 
     @Test
     @DisplayName("""
-        Übung 1: Taschenrechner mit 4 Grundrechenarten
+        Übung 1: Taschenrechner mit 4 Grundrechenarten (Interface)
         
         Erstelle ein generisches Interface für einen Taschenrechner, der die 4 Grundrechenarten in Form von Methoden
         zur Verfügung stellt, also für
@@ -42,11 +42,11 @@ public class GenericsSolutionTests {
 
     @Test
     @DisplayName("""
-        Übung 2: Taschenrechner mit 4 Grundrechenarten
+        Übung 2: Taschenrechner mit 4 Grundrechenarten (konkrete Klasse)
         
-         Realisiere einen generischen, konkreten Taschenrechner für die 4 Grundrechenarten, der alle Zahlen-Datentypen
-        verarbeiten kann. Schreibe dazu hier einen kleinen Test, der die Funktionsfähigkeit mindestens einer der
-        Rechenarten mit Beispielwerten testet, aber mit unterschiedlichen Zahlen-Datentypen.
+        Realisiere einen generischen, aber konkreten Taschenrechner für die 4 Grundrechenarten, der alle Zahlen-
+        Datentypen verarbeiten kann. Schreibe dazu hier einen kleinen Test, der die Funktionsfähigkeit mindestens
+        einer der Rechenarten mit Beispielwerten testet, aber mit unterschiedlichen Zahlen-Datentypen.
         """)
     public void solution2() {
         // given
