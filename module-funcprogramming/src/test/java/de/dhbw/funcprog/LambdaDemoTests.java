@@ -52,8 +52,7 @@ public class LambdaDemoTests {
             return 2 * x;
         };
 
-        // ... dann kann man aber einfach die 'Wrapper' Varianten nutzen:
-        // UnaryOperator<int> unaryFunction = (int x) -> { return x * x; };
+        // ... oder mit nur einer Angabe eines Zahlentyps:
         UnaryOperator<Integer> unaryFunction = (Integer x) -> {
             return 2 * x;
         };
