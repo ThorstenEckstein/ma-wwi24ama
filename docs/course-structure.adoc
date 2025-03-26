@@ -165,7 +165,7 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 . {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Einf.)]
 
 
-== Tag 6 - Java Generics, funktionale Programmierung & Enums
+== Tag 6 - Java Generics, funktionale Programmierung
 
 [subs=normal]
  [*Mi., 26.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
@@ -177,21 +177,20 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
   1) Come in, sit down and relax
   2) Project Update
   3) Generics (kurze Wiederholung)
-  4) Übungen zu Java Generics
-  5) Funktionale Programmierung in Java
+  4) Demos zu Java Generics
+  5) Übungen zu Java Generics
   6) Pause
-  7) Demos zu funktionaler Programmierung
-  8) Übungen zu funktionaler Programmierung
-  9) Enums
-  10) Demo zu Enums
-  11) Übungen zu Enums
+  7) Funktionale Programmierung in Java
+  8) Demos zu funktionaler Programmierung
+  9) Übungen zu funktionaler Programmierung
+  10) Pufferzeit
 ----
 
 *Zugehörige Module*:
 
 . {icon-module} link:../module-generics/docs/generics.adoc[module-generics] (Forts.)
 . {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
-. {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
+
 
 == Tag 7 - Ausnahmen, Fehlerbehandlung, statische Elemente & Enums
 
@@ -204,19 +203,22 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 ----
   1) Come in, sit down and relax
   2) Project Update
-  3) Exceptions & Exception Handling
-  4) Demo zu Exceptions
-  5) Übungen zu Exceptions
-  6) Pause
-  7) Statische Elemente
-  8) Demo zu statischen Elementen
-  9) Enums
-  10) Demo zu Enums
-  11) Übungen zu Enums
+  3) Funktionale Programmierung in Java (Wiederh.)
+  4) Übungen zu funktionaler Programmierung
+  5) Exceptions & Exception Handling
+  6) Demo zu Exceptions
+  7) Pause
+  8) Übungen zu Exceptions
+  9) Statische Elemente
+  10) Demo zu statischen Elementen
+  11) Enums
+  12) Demo zu Enums
+  13) (Optional) Übungen zu Enums
 ----
 
 *Zugehörige Module*:
 
+. {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
 . {icon-module} link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]
 . {icon-module} link:../module-statics/docs/statics.adoc[module-statics]
 . {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
