@@ -12,12 +12,12 @@ public class StaticsDemoTest {
     @DisplayName("Demo 1: Nutzung eines statischen Feldes")
     public void canUseStaticField() {
         // given
-        AClassWithStaticField aClass = null;
+        // AClassWithStaticField aClass = new AClassWithStaticField();
 
-        // when
+        // when :: beachtet die kursive Schrift, zeigt "statisches Mitglied" an (in Intellij)
         String staticFieldValue = AClassWithStaticField.myField;
 
-        // ist Folgendes möglich (Zugriff auf statisches Feld über die Klasseninstanz)?
+        // Ist folgendes möglich (Zugriff auf statisches Feld über die Klasseninstanz)?
         // String fieldValue = aClass.myField;
 
         // then
@@ -40,13 +40,13 @@ public class StaticsDemoTest {
     @DisplayName("Demo 3: Configuration")
     public void canGetConfigurationSetting() {
         // given
-        String key = Configuration.SETTING_KEY_AUTHOR;
+        String settingKey = Configuration.SETTING_KEY_AUTHOR;
 
         // when
-        String setting = Configuration.getSetting(key);
+        String settingValue = Configuration.getSetting(settingKey);
 
         // then
-        assertEquals("Johnny Walker", setting);
+        assertEquals("Johnny Walker", settingValue);
     }
 
 }
