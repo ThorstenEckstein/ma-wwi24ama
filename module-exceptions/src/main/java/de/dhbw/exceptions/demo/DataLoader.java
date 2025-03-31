@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class DataLoader {
 
-    private ExceptionHandler handler = new DefaultExceptionHandler();
+    private ExceptionHandler exceptionHandler = new DefaultExceptionHandler();
 
     /**
      * Returns a product built with data from underlying CSV file.
@@ -34,7 +34,7 @@ public class DataLoader {
             // we want to handle this exception
             // our own way, using an application-
             // specific exception handler!
-            handler.handle(ioe);
+            exceptionHandler.handle(ioe);
         }
         //end::exception-handling-2[]
 

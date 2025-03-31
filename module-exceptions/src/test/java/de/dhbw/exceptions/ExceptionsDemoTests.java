@@ -61,6 +61,7 @@ public class ExceptionsDemoTests {
 
         // then
         assertEquals(Severity.WARN, thrown.getContext().getSeverity());
+        // repeat: narrowing/down-casting
         assertTrue((int)passengersCount > 80);
 
         System.out.println(Colourizer.red(thrown.getContext().getMessage()));

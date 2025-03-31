@@ -13,24 +13,26 @@ public class TrainObservationMonitor {
         // Code that can throw an exception. For each wagon applies: 4 seats, 20 rows = 80 seats in total
         // Rule 1: 80 < passengers <= 85  -->  WARNING
         // Rule 2: 85 < passengers <= 90  -->  ERROR
-        int nPassengersOnBoard = 81;
+        int seats = 80;
+        int maxCapacity = 90;
+        int nPassengersOnBoard = 92;
 
-        if (validatePassengerLimit(nPassengersOnBoard, 80, 85)) {
+        if (isPassengerCapacityExceeded(nPassengersOnBoard, maxCapacity)) {
 
             // create context for this remarkable situation
             ExceptionContext context = new ExceptionContext();
             context.severity(Severity.WARN)
-                    .message("Number of passengers exceeds limit! WARN: %s < %s <= %s", 80, nPassengersOnBoard, 85)
+                    .message("[WARNING] Number of passengers (%s) exceeds wagon capacity (%s)!", nPassengersOnBoard, maxCapacity)
                     .code(7_01)
                     .item("train", train)
                     .item("wagon", 7)
-                    .item("passengers", 81); // wagon: 4 seats, 20 rows = 80
+                    .item("passengers", nPassengersOnBoard);
 
             throw new PassengerLimitPerWagonExceededException(context);
         }
     }
 
-    private boolean validatePassengerLimit(int passengersCount, int lowerLimit, int upperLimit) {
-        return passengersCount > lowerLimit && passengersCount <= upperLimit;
+    private boolean isPassengerCapacityExceeded(int passengersCount, int upperLimit) {
+        return passengersCount >= upperLimit;
     }
 }
