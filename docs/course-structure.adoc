@@ -235,22 +235,22 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 ----
   1) Come in, sit down and relax
   2) Project Update
-  3) Referenzsemantik
-  4) Demo Referenzsemantik
-  5) Der Objektvertrag
-  6) Demos zum Objektvertrag
+  3) Der Objektvertrag
+  4) Demos zum Objektvertrag
+  5) Übungen zum Objektvertrag
+  6) Referenzsemantik
   7) Pause
-  8) Übungen zum Objektvertrag
+  8) Demo Referenzsemantik
   9) Java Records
   10) Demo zu Java Records
-  11) Code-Qualität (Clean Code)
-  12) Prüfungsvorbereitung oder Ausgabe Übungsklausur (Erläuterungen)
+  11) Clean Code
+  12) Pufferzeit
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-semantics/docs/reference-semantics.adoc[module-semantics]
 . {icon-module} link:../module-object-contract/docs/object-contract.adoc[module-object-contract]
+. {icon-module} link:../module-semantics/docs/reference-semantics.adoc[module-semantics]
 . {icon-module} link:../module-records/docs/records.adoc[module-records]
 . {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
 

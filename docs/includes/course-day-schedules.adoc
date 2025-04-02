@@ -105,21 +105,21 @@ Day 5: 30 min weniger, Beginn 13:30
 [Mi., 02.04.2025, 12:05 - 12:15, 10min] "Demo zu Enums"
 [Mi., 02.04.2025, 12:15 - 12:15, 0min] "(Optional) Übungen zu Enums"
 
-!!!! TAG 8 NEU PLANEN !!!!
-
 [Mi., 09.04.2025, 09:15 - 12:15, 180min] "Course Day 8"
 [Mi., 09.04.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"
 [Mi., 09.04.2025, 09:19 - 09:20, 1min] "Project Update"
-[Mi., 09.04.2025, 09:20 - 09:40, 20min] "Referenzsemantik"
-[Mi., 09.04.2025, 09:40 - 09:55, 15min] "Demo Referenzsemantik"
-[Mi., 09.04.2025, 09:55 - 10:10, 15min] "Der Objektvertrag"
-[Mi., 09.04.2025, 10:10 - 10:25, 15min] "Demos zum Objektvertrag"
-[Mi., 09.04.2025, 10:25 - 10:40, 15min] "Pause"
-[Mi., 09.04.2025, 10:40 - 11:00, 20min] "Übungen zum Objektvertrag"
+[Mi., 09.04.2025, 09:20 - 09:35, 15min] "Der Objektvertrag"
+[Mi., 09.04.2025, 09:35 - 09:50, 15min] "Demos zum Objektvertrag"
+[Mi., 09.04.2025, 09:50 - 10:10, 20min] "Übungen zum Objektvertrag"
+[Mi., 09.04.2025, 10:10 - 10:30, 20min] "Referenzsemantik"
+[Mi., 09.04.2025, 10:30 - 10:45, 15min] "Pause"
+[Mi., 09.04.2025, 10:45 - 11:00, 15min] "Demo Referenzsemantik"
 [Mi., 09.04.2025, 11:00 - 11:15, 15min] "Java Records"
 [Mi., 09.04.2025, 11:15 - 11:30, 15min] "Demo zu Java Records"
 [Mi., 09.04.2025, 11:30 - 11:55, 25min] "Clean Code"
-[Mi., 09.04.2025, 11:55 - 12:15, 20min] "Prüfungsvorbereitung/Übungsklausur"
+[Mi., 09.04.2025, 11:55 - 12:15, 20min] "Pufferzeit"
+
+!!!! TAG 9 NEU PLANEN !!!!
 
 [Mi., 16.04.2025, 09:15 - 12:15, 180min] "Course Day 9"
 [Mi., 16.04.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"
