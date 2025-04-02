@@ -17,53 +17,29 @@ Prüfungsleistung   : Schriftliche & mündliche Prüfung
 Dozent             : Thorsten Eckstein
 ```
 
-## Prüfungsleistungen
+## Informationen zur Abschlussprüfung
 
-Die gesamte Prüfungsleistung beinhaltet *zwei Teile*. Beide Leistungen ergeben zusammen das Gesamt-Prüfungsergebnis.
+Die Prüfung hat den Character einer **Simulation** des realen Arbeitsalltags von Softwareentwickler:innen.
 
-Die Teile sind:
+Sie beinhaltet *zwei Teile*. Beide Leistungen ergeben zusammen das Gesamt-Prüfungsergebnis.
 
-1. Schriftliche *Prüfung* (Test auf Papier oder am Rechner) über die Inhalte der Lehrveranstaltungen von Herrn Hüchting & Herrn Eckstein, Dauer `30 min`
+Die Prüfung wird in der Regel in `3er`-Gruppen durchgeführt.
 
-2. Mündliche *Prüfung* in `3er`-Gruppen mit einer Dauer von insgesamt `30 min`.
+Die zwei Teile der insg. **60-minütigen Prüfung** sind:
 
-Die beiden *Prüfungsleistungen* werden separat bewertet (benotet) und gehen zur Hälfte in die Gesamtnote ein.
+1. *Mündlicher Teil* mit technischer Softwaremodellierung oder Interview, mit einer Dauer von bis zu *30 min*.
 
-Weitere Informationen dazu folgen, sobald die Planung der Prüfungen endgültig festgelegt wurde.
+2. *Schriftlicher Teil*, live am Rechner, über den vorhergehenden Teil oder die Inhalte der gesamten Lehrveranstaltungen mit einer Dauer von bis zu *30 min*.
 
-<!--
-
-### Abschlussprüfung
-
-Die *mündlichen Abschlussprüfungen* finden nach derzeitigem Planungsstand an folgenden Tagen statt:
-
-**ddd, dd.mm.2024**
-
-und
-
-**ddd, dd.mm.2024**
-
-Die Prüfungen sind in `3er-Gruppen` organisiert und auf diese Tage verteilt. Die *Zusammensetzung* der Gruppen wird vorher bekannt gegeben (siehe unten).
-
-Die Abschlussprüfung umfasst *Inhalte* aus beiden Lehrveranstaltungen:
+Die Prüfungsgegenstände stammen aus beiden Lehrveranstaltungen, von Herrn Hüchting sowie Herrn Eckstein:
 
 1. _Algorithmen & Datenstrukturen_ (Herr Hüchting)
 2. _Fortgeschrittenen Programmierung mit Java_ (Herr Eckstein)
 
-### Zeitliche Planung
+Beide *Teilleistungen* werden folgendermaßen bewertet bzw. benotet:
 
-Die nachfolgende Tabelle enthält die *zeitliche Planung* zur Durchführung:
+- Beide Teile gehen je zur Hälfte in die Gesamtnote ein
+- Im mündlichen Teil: An Fragen und Antworten oder Diskussionen sollen sich die Kandidaten aktiv beteiligen, auch fehlende Beteiligung wird bewertet
+- Im schriftlichen Teil: Das Live-Coding soll individuell von wechselnden Kandidaten durchgeführt werden 
 
-![test](./docs/images/zeitplan.png)
-
-[cols="5h,^2m,^1m,^1m,^1m"]
-|===
-| Name	| Datum	| Von	| Bis	| Raum
-
-| group #1	| dd., dd.mm.2024	| 09:00	| 10:00	| room
-
-|===
-
-_Viel Spaß und viel Erfolg!_
-
--->
+Daraus folgt, dass individuell unterschiedliche Prüfungsleistungen entsprechend individuell unterschiedlich benotet werden können. Es ist aber durchaus auch eine Gruppenbenotung möglich, wodurch alle Kandidaten der Gruppe die gleiche Abschlussnote erhalten.
