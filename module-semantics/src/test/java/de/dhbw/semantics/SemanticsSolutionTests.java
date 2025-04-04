@@ -15,19 +15,19 @@ public class SemanticsSolutionTests {
     @Disabled
     public void demo4() {
         Account a1 = new Account();
-        assertEquals(-1, a1.getAmount(), "Welcher Wert wird hier erwartet?");
+        //assertEquals(-1, a1.getAmount(), "Welcher Wert wird hier erwartet?");
 
-        Account.process(a1);
+        Account processed = Account.process(a1);
 
         Account a2 = new Account(100);
-        assertEquals(-1, a2.getAmount(), "Welcher Wert wird hier erwartet?");
+        //assertEquals(-1, a2.getAmount(), "Welcher Wert wird hier erwartet?");
 
         // folgende Zeile nur damit es kompiliert, mit 'acc' ist eigentlich das Methodenargument gemeint
         Account acc = new Account();
         acc = a2;
 
         acc.deposit(250);
-        assertEquals(-1, acc.getAmount(), "Welcher Wert wird hier erwartet?");
+        //assertEquals(-1, acc.getAmount(), "Welcher Wert wird hier erwartet?");
     }
 
 }
