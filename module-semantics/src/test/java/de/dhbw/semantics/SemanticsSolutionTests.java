@@ -17,7 +17,7 @@ public class SemanticsSolutionTests {
         Account a1 = new Account();
         //assertEquals(-1, a1.getAmount(), "Welcher Wert wird hier erwartet?");
 
-        Account processed = Account.process(a1);
+        Account.process(a1);
 
         Account a2 = new Account(100);
         //assertEquals(-1, a2.getAmount(), "Welcher Wert wird hier erwartet?");

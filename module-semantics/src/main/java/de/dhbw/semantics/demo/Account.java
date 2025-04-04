@@ -19,15 +19,7 @@ public class Account {
     }
 
     // just for demonstration purposes!
-    public static Account process(Account acc) {
-
-        Account a2 = new Account(100);
-        acc = a2;
-
+    public static void process(Account acc) {
         acc.deposit(250);
-
-        // ... and maybe more with 'acc' ...
-
-        return a2;
     }
 }
