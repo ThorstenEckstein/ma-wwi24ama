@@ -43,7 +43,7 @@ endif::[]
 
 Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*, in dem jeder für sich die Grundlagen der Javaprogrammierung einfach (noch) mal, und unabhängig von den übrigen Inhalten, ausprobieren kann.
 
-. {icon-exercise} link:../module-basics/docs/basics.adoc[module-basics]
+. {icon-exercise} link:../module-experiments/docs/experiments.adoc[module-experiments]
 
 
 == Tag 2 - Klassen, Vererbung & Polymorphismus
