@@ -18,6 +18,7 @@ public class SemanticsSolutionTests {
         //assertEquals(-1, a1.getAmount(), "Welcher Wert wird hier für a1 erwartet?");
 
         Account.process(a1);
+        //assertEquals(-1, a1.getAmount(), "Welcher Wert wird hier für a1 erwartet?");
 
         Account a2 = new Account(100);
         //assertEquals(-1, a2.getAmount(), "Welcher Wert wird hier für a2 erwartet?");
