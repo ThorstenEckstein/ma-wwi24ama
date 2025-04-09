@@ -22,7 +22,6 @@ public class SemanticsSolutionTests {
         Account a2 = new Account(100);
         //assertEquals(-1, a2.getAmount(), "Welcher Wert wird hier erwartet?");
 
-        // folgende Zeile nur damit es kompiliert, mit 'acc' ist eigentlich das Methodenargument gemeint
         Account acc = new Account();
         acc = a2;
 
