@@ -31,6 +31,7 @@
         <module>module-datatypes</module>
         <module>module-enums</module>
         <module>module-exceptions</module>
+        <module>module-experiments</module>
         <module>module-funcprogramming</module>
         <module>module-generics</module>
         <module>module-integration</module>      <!-- optional -->
