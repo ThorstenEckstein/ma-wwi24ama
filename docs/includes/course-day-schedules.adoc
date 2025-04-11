@@ -1,6 +1,6 @@
 include::../settings.adoc[]
 
-*Stand der Planung*: `[red]#15.02.2025#`
+*Stand der Planung*: `[red]#11.04.2025#`
 
 //[subs=normal]
 [.small]
@@ -65,9 +65,7 @@ include::../settings.adoc[]
 [Mi., 12.03.2025, 11:45 - 12:00, 15min] "Demo zur Collections API"
 [Mi., 12.03.2025, 12:00 - 12:15, 15min] "Übungen Collections API"
 
-Day 5: 30 min weniger, Beginn 13:30
-
-[Di., 18.03.2025, 13:00 - 15:30, 150min] "Course Day 5"
+[Di., 18.03.2025, 13:00 - 15:30, 150min] "Course Day 5" (!!! 30 min weniger, Beginn 13:30 !!!)
 [Di., 18.03.2025, 13:00 - 13:04, 4min] "Come in, sit down and relax"
 [Di., 18.03.2025, 13:04 - 13:05, 1min] "Project Update"
 [Di., 18.03.2025, 13:05 - 13:35, 30min] "Assoziationen zwischen Klassen"
@@ -118,8 +116,6 @@ Day 5: 30 min weniger, Beginn 13:30
 [Mi., 09.04.2025, 11:15 - 11:30, 15min] "Demo zu Java Records"
 [Mi., 09.04.2025, 11:30 - 11:55, 25min] "Clean Code"
 [Mi., 09.04.2025, 11:55 - 12:15, 20min] "Pufferzeit"
-
-!!!! TAG 9 NEU PLANEN !!!!
 
 [Mi., 16.04.2025, 09:15 - 12:15, 180min] "Course Day 9"
 [Mi., 16.04.2025, 09:15 - 09:19, 4min] "Come in, sit down and relax"

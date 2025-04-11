@@ -27,7 +27,25 @@ Zugehöriger *Unit-Tests*:
  {mod-ref-test}/exam/ScenarioTests.java
 
 
-=== Szenario 1: Stromkunden-Verwaltung
+=== Szenario 1: Semester-Planung
+
+====
+Der Kunde `DHBW` beauftragt die Entwicklung einer Software zur besseren Planung von Lehrveranstaltungen, die im Rahmen eines Studiums durchgeführt werden.
+
+Dazu sollen einzelne *Inhalte*, die Gegenstand einer LV sind, als eine Art Bausteine zunächst erstellt werden können. Diese sollen dann für die *zeitliche Planung* von Lehrveranstaltungen herangezogen werden können.
+
+Wünschenswert ist auch, dass die Lehrinhalte *kategorisiert* werden können und je Baustein eine *Dauer* angegeben werden kann.
+====
+
+----
+Mögliche ...
+- Klassen
+- Felder
+- Methoden
+----
+
+
+=== Szenario 2: Stromkunden-Verwaltung
 
 ====
 Der Kunde `DB Energie` entwickelt eine Software zur Verwaltung ihrer Stromkunden.
@@ -40,14 +58,15 @@ Wichtig ist auch, dass für jeden Kunden der *Gesamtstromverbrauch* eines Jahres
 ----
 Mögliche ...
 - Klassen
+- Felder
 - Methoden
 ----
 
 
-=== Szenario 2: World of Codecraft
+=== Szenario 3: World of Codecraft
 
 ====
-Der Kunde `DeeHahBeeWee` möchte ein MMORPG im Internet anbieten.
+Der Kunde `CodeSteam` möchte ein MMORPG im Internet anbieten.
 
 Im Spiel gibt es eine _feste Menge_ (3) von *Quests*, die von *Spielern* bzw, deren *Avataren* gespielt werden können. Gleichzeitig können Spieler andererseits mehrere Quests beginnen. Jedem Spieler steht dabei aber _nur eine_ *Waffe* zur Verfügung.
 
@@ -57,6 +76,7 @@ Zu beachten ist, dass _laufende bzw. bereits begonnen Quests_ durchaus auch abge
 ----
 Mögliche ...
 - Klassen
+- Felder
 - Methoden
 ----
 
