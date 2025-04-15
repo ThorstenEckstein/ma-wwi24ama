@@ -36,6 +36,8 @@ Die Prüfungsgegenstände stammen aus beiden Lehrveranstaltungen, von Herrn Hüc
 1. _Algorithmen & Datenstrukturen_ (Herr Hüchting)
 2. _Fortgeschrittenen Programmierung mit Java_ (Herr Eckstein)
 
+<!--
+!UNGÜLTIG!
 Beide *Teilleistungen* werden folgendermaßen bewertet bzw. benotet:
 
 - Beide Teile gehen je zur Hälfte in die Gesamtnote ein
@@ -43,3 +45,4 @@ Beide *Teilleistungen* werden folgendermaßen bewertet bzw. benotet:
 - Im schriftlichen Teil: Das Live-Coding soll individuell von wechselnden Kandidaten durchgeführt werden 
 
 Daraus folgt, dass individuell unterschiedliche Prüfungsleistungen entsprechend individuell unterschiedlich benotet werden können. Es ist aber durchaus auch eine Gruppenbenotung möglich, wodurch alle Kandidaten der Gruppe die gleiche Abschlussnote erhalten.
+-->
