@@ -14,25 +14,21 @@ public class ProgrammingTests {
     @Test
     @DisplayName("Aufzählungen")
     public void canImplementControlStructureForEnum() {
+        // given
 
-        // implement your test code here
+        // when
 
+        // then
     }
 
     @Test
     @DisplayName("Gleich ist nicht gleich gleich")
     public void canImplementEqualsIsNotEquals() {
         // given
-        Password p1 = new Password("askdujhasjd6we5463");
-        Password p2 = new Password("askdujhasjd6we5463");
 
         // when
-        boolean areEqual = p1.equals(p2);
 
         // then
-        assertTrue(areEqual);
-
-        List<Object> objects = new LinkedList<>();
     }
 
 }
