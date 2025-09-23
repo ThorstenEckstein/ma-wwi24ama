@@ -23,7 +23,6 @@
 
         <module>module-associations</module>
         <module>module-archive</module>         <!-- backup -->
-        <module>module-experiments</module>
         <module>module-classes</module>
         <module>module-clean-code</module>      <!-- optional -->
         <module>module-collections</module>

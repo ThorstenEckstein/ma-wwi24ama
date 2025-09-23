@@ -70,7 +70,7 @@ Der Kunde `CodeSteam` möchte ein MMORPG im Internet anbieten.
 
 Im Spiel gibt es eine _feste Menge_ (3) von *Quests*, die von *Spielern* bzw, deren *Avataren* gespielt werden können. Gleichzeitig können Spieler andererseits mehrere Quests beginnen. Jedem Spieler steht dabei aber _nur eine_ *Waffe* zur Verfügung.
 
-Zu beachten ist, dass _laufende bzw. bereits begonnen Quests_ durchaus auch abgesprochen werden können.
+Zu beachten ist, dass _laufende bzw. bereits begonnene Quests_ durchaus auch abgebrochen werden können.
 ====
 
 ----
