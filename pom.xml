@@ -23,7 +23,6 @@
 
         <module>module-associations</module>
         <module>module-archive</module>         <!-- backup -->
-        <module>module-basics</module>
         <module>module-classes</module>
         <module>module-clean-code</module>      <!-- optional -->
         <module>module-collections</module>
@@ -31,6 +30,7 @@
         <module>module-datatypes</module>
         <module>module-enums</module>
         <module>module-exceptions</module>
+        <module>module-experiments</module>
         <module>module-funcprogramming</module>
         <module>module-generics</module>
         <module>module-integration</module>      <!-- optional -->

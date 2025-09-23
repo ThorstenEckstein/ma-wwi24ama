@@ -4,10 +4,16 @@
 
 scale 0.8
 
+class MonitorDisplay {
+  update() { ... }
+  update(String text) { ... }
+  update(String[] textLines) { ... }
+}
+
 interface Display {
   update(index, row)
 }
-class DefaultDisplay {
+abstract class DefaultDisplay {
   update(index, row)
 }
 class PlatformDisplay {

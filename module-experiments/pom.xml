@@ -9,9 +9,9 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>module-basics</artifactId>
+    <artifactId>module-experiments</artifactId>
     <packaging>jar</packaging>
-    <name>module-basics</name>
+    <name>module-experiments</name>
 
     <properties>
         <!-- nothing specific yet, see parent pom -->

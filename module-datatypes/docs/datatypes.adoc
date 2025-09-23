@@ -138,7 +138,7 @@ German german = (German)human; <2>
 german.country = "Germany";
 ----
 
-<1> Zugriff auf das Feld ´name´ der abstrakten Klasse `Human Being`
+<1> Zugriff auf das Feld `name` der abstrakten Klasse `Human Being`
 <2> Zugriff auf das Feld `country` der konkreten Klasse `German` erst NACH dem *Down-Casting* möglich.
 
 
@@ -162,5 +162,5 @@ Schreibe je einen Test für
 a. Gegeben `char c = '1'` -> Umwandlung in `int`
 b. Gegeben `int i = 127` -> Umwandlung in `byte`
 
-und prüfe das Ergebnis, also den erwarteten Wert, jeweils mithilfe der Assertions-Methode `assertEquals(<expected>, <actual>)`.
+und prüfe das Ergebnis, also den erwarteten Wert, z.B. mithilfe von `System.out.println` oder mit der "Assertions-Methode" `assertEquals(<expected>, <actual>)`.
 

@@ -19,13 +19,87 @@ tag::content[]
 end::content[]
 ////
 
-== Implementierung mit Interfaces
+== Abstrakte Klassen
 
-[ <<about_interfaces,Inhalt>> | <<demos_interfaces,Demo>> | <<exercises_interfaces,Übungen>> ]
+In Java gibt es neben konkreten Klassen auch *abstrakte Datentypen*. Sie enthalten auch eine Sammlung von Attributen und Methoden, diese können aber konkret oder abstrakt sein.
 
+Die "Abstraktion" ist eines der wichtigsten *Kernkonzepte* in Java und wird vor allem eingesetzt, um verschiedene Dinge umzusetzen. Dazu gehören u.a.
+
+* Wiederverwendbarkeit,
+* Polymorphism oder
+* Mehrfach-Vererbung
+
+Man kann sagen, eine abstrakte Klasse sei eine Art *Hybrid* zwischen
+
+. einer *konkreten* _Klasse_ auf der einen Seite und
+. einem *abstrakten* _Interface_ auf der anderen (siehe nächstes Kapitel).
+
+Mit einer abstrakten Klasse können die Merkmale beider Welten (konkret & abstrakt) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
+
+[big]#Schlüsselkonzepte#
+
+Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
+
+ abstract
+
+Die wichtigsten *Merkmale* dieser Abstraktionen sind:
+
+* Eine abstrakte Klasse enthält den abstrakten *Modifikator* `abstract` in der Klassensignatur
+* Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
+* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
+* Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
+* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse implementieren oder selbst abstrakt sein
+
+Die zugehörige *grafische Darstellung* dieser Beziehung mit Beispiel:
+
+[plantuml, title="Abstrakte Klassen & Vererbung", png, align="center"]
+....
+include::diagrams/abstract.puml[]
+....
+
+*Beispiel* abstrakte Klasse & Methode:
+
+[source, java]
+----
+public abstract class MyClass {
+
+    public abstract void myMethod();
+
+}
+----
+
+[[demos_abstractclasses]]
+*Demo*:
+
+[subs=normal]
+-> {mod-ref-test}/demo/AbstractsDemoTest.java
+
+
+[big]#Nutzung abstrakter Klassen#
+
+Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
+
+* *Kapselung* allgemeiner Funktionen in einer Klasse (*Wiederverwendung* von Code). Diese sollen von mehreren verwandten Unterklassen gemeinsam genutzt werden
+* Es muss nur teilweise eine API definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
+* Die Unterklassen müssen eine oder mehrere gemeinsame Methoden oder Felder mit *geschützten* Zugriffsmodifikatoren erben
+* Da sich die Verwendung abstrakter Klassen außerdem implizit mit Basistypen und Untertypen befasst, werden außerdem die Vorteile des *Polymorphismus* genutzt
+
+Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
+
+
+== Interfaces
+
+{docnav}
 
 [[about_interfaces]]
-In Java, ein *Interface* ist ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist ein wichtiges *Kernkonzept* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung umzusetzen.
+In Java ist ein *Interface* ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist eines der wichtigsten *Kernkonzepte* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung in der Programmiersprache zur Verfügung zu stellen.
+
+Ein Interface dient als eine Art
+
+[subs=normal]
+ *Vertrag* bzw. *Vorschrift*
+
+*WAS* - die "Funktionalität - eine Schnittstelle zur Verfügung stellt, sie sagt aber nichts über das *WIE* aus, d.h. wie die Funktionalität umgesetzt ist.
 
 Die Signatur des Interfaces erfordert das Schlüsselwort
 
@@ -80,7 +154,7 @@ Die _grafische_ Darstellung der Beziehung zwischen Interfaces und deren Implemen
 include::diagrams/interfaces.puml[]
 ....
 
-=== Was kann mit Interfaces eigentlich erreicht werden?
+=== Warum Interfaces?
 
 [big]#Verhaltensvorschrift#
 
@@ -147,67 +221,6 @@ Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
 
 [subs=normal]
  -> {mod-ref-test}/demo/InterfaceDemoTest.java
-
-
-
-== Abstrakte Klassen
-
-Man könnte behaupten, eine abstrakte Klasse sei eine Art *Hybrid* zwischen
-
-. einer *konkreten* _Klasse_ auf der einen Seite und
-. einem *abstrakten* _Interface_ auf der anderen.
-
-Mit einer abstrakten Klasse können die Merkmale beider Welten (konkret & abstrakt) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
-
-[big]#Schlüsselkonzepte#
-
-Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
-
- abstract
-
-Die wichtigsten *Merkmale* dieser Abstraktionen sind:
-
-* Eine abstrakte Klasse enthält den abstrakten *Modifikator* `abstract` in der Klassensignatur
-* Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
-* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
-* Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
-* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse implementieren oder selbst abstrakt sein
-
-Die zugehörige *grafische Darstellung* dieser Beziehung mit Beispiel:
-
-[plantuml, title="Abstrakte Klassen & Vererbung", png, align="center"]
-....
-include::diagrams/abstract.puml[]
-....
-
-*Beispiel* abstrakte Klasse & Methode:
-
-[source, java]
-----
-public abstract class MyClass {
-
-    public abstract void myMethod();
-
-}
-----
-
-[[demos_abstractclasses]]
-*Demo*:
-
-[subs=normal]
- -> {mod-ref-test}/demo/AbstractsDemoTest.java
-
-
-[big]#Nutzung abstrakter Klassen#
-
-Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
-
-* *Kapselung* allgemeiner Funktionen in einer Klasse (*Wiederverwendung* von Code). Diese sollen von mehreren verwandten Unterklassen gemeinsam genutzt werden
-* Es muss nur teilweise eine API definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
-* Die Unterklassen müssen eine oder mehrere gemeinsame Methoden oder Felder mit *geschützten* Zugriffsmodifikatoren erben
-* Da sich die Verwendung abstrakter Klassen außerdem implizit mit Basistypen und Untertypen befasst, werden außerdem die Vorteile des *Polymorphismus* genutzt
-
-Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
 
 '''
 

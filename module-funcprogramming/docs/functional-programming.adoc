@@ -46,7 +46,7 @@ Imperative *Programme* funktionieren ähnlich. Zuweisungsanweisungen werden verw
 
 Zusammenfassend sind die wichtigsten Eigenschaften imperativer Programmierungen:
 
-* veränderlicher Zustand
+* veränderliche Zustände
 * Schritt-für-Schritt-Ausführung von Anweisungen und
 * die Reihenfolge der Anweisungen ist wichtig
 
@@ -60,17 +60,17 @@ Die Charakteristiken von deklarativer Software sind:
 * Das Endergebnis hängt nicht von einem externen Zustand ab
 * Fehlen eines inneren Zustands zwischen den Ausführungen
 * Determinismus – für die gleichen Eingabeargumente liefert das Programm immer das gleiche Ergebnis
-* Die Ausführungsreihenfolge ist nicht immer wichtig – sie kann asynchron sein
+* Die Ausführungsreihenfolge ist nicht (immer) wichtig – sie kann asynchron sein
 
 Die *funktionale Programmierung* ist eine _Teilmenge_ der deklarativen Programmierung. Sie stellt ein _eigenständiges Programmierparadigma_ dar.
 
 
-=== Lambda Ausdrücke
+=== (Funktionale) Lambda Ausdrücke
 
 Bei der *funktionalen Programmierung* stehen also Funktionen im Mittelpunkt, sie werden nicht nur
 
-* definiert und
-* angewendet
+* (_wie Variablen_) *definiert* und
+* (_wie Methoden_) *angewendet*
 
 sondern auch
 
@@ -78,24 +78,9 @@ sondern auch
 * als Parameter eingesetzt verwendet oder als
 * Funktionsergebnisse genutzt.
 
-Mit *Lambda Ausdrücken* wurde ein lang gefordertes Sprachkonstrukt in Java eingeführt, dass es in ähnlicher Form in anderen Programmiersprachen bereits gibt, z.B. in `C#`.
-
-Der Einsatz von Lambdas erfordert zum Teil eine andere Denkweise und führt zu einem anderen Programmierstil, die wie oben gesagt dem Paradigma der _funktionalen Programmierung_ folgt.
-
-Insbesondere in den Bereichen der Parallelverarbeitung von Daten sowie im Bereich der Frameworks finden sich viele Implementierungen, ebenso im Bereich des - bereits bekannten - *Collection* Frameworks.
-
-Ein Lambda ist ein *Behälter für Sourcecode*, einer Methode sehr ähnlich, allerdings
-
-* ohne _Namen_ und
-* ohne expliziten _Rückgabewert_ und
-* ohne Deklaration von _Exceptions_
-
-Vereinfacht ausgedrückt kann man einen Lambda-Ausdruck am ehesten als eine _anonyme Methode und einer speziellen Syntax_/Kurzform bezeichnen
-
-Seit `Java 8` sind also diese Elemente in der Sprache enthalten.
-
 Die einfachste Form eines *Lambda* Ausdruckes ist:
 
+//[subs=normal]
  parameter -> expression
 
 Um _mehr als einen Parameter_ zu nutzen, müssen runde Klammern angegeben werden:
@@ -106,15 +91,35 @@ Weil die Ausdrücke limitiert sind und direkt einen Wert zurückgeben, kann auch
 
  (parameter1, parameter2) -> { code block }
 
-Zu beachten ist, dass der `{ code block }` ein return statement enthalten muss.
+Zu beachten ist, dass der `{ code block }` ein `return` Statement enthalten muss.
 
-Ein paar einfache Beispiele:
+Mit *Lambda Ausdrücken* wurde ein lang gefordertes Sprachkonstrukt in Java eingeführt, dass es in ähnlicher Form in anderen Programmiersprachen bereits gibt, z.B. in `C#`.
+
+Der Einsatz von Lambdas erfordert zum Teil eine andere Denkweise und führt zu einem anderen Programmierstil, die wie oben gesagt dem Paradigma der *funktionalen Programmierung* folgt.
+
+Insbesondere in den Bereichen der Parallelverarbeitung von Daten sowie im Bereich der Frameworks finden sich viele Implementierungen, ebenso im Bereich des - bereits bekannten - *Collection* Frameworks.
+
+Ein Lambda ist ein *Behälter für Sourcecode*, einer Methode sehr ähnlich, im Unterschied zu einer solchen allerdings
+
+* ohne _Namen_ und
+* ohne expliziten _Rückgabewert_ (größtenteils) und
+* ohne Deklaration von _Exceptions_
+
+Vereinfacht ausgedrückt kann man einen Lambda-Ausdruck am ehesten als
+
+====
+eine *anonyme Methode* mit einer *speziellen Syntax* bzw. Kurzform
+====
+
+bezeichnen. Seit `Java 8` sind diese Elemente in der Sprache enthalten.
+
+Ein paar einfache *Beispiele*:
 
 [, java]
 ----
 (int x, int y) -> { return x + y; }
-(long x) -> { return x + 2; }
-() -> { String error = "invalid"; System.err.println(error); }
+(long x)       -> { return x * 2; }
+()             -> { String error = "invalid"; System.err.println(error); }
 ----
 
 Die Zuweisung von Lambda-Ausdrücken zu Variablen geschieht auf folgende Weise. Dabei ist zu beachten, dass sich diese NICHT - wie alle anderen Klassen in Java - einer Referenz von `java.lang.Object` zuweisen lassen, das würde einen Compiler Fehler verursachen.
@@ -135,31 +140,39 @@ public interface BinaryOperator<T> {
 }
 ----
 
-Die *wichtigsten* funktionalen interfaces sind:
+Die *wichtigsten* funktionalen interfaces sind die *grundlegenden* Interfaces:
 
-. `Consumer<T>` - beschreibt eine Aktion auf einem Element vom Type `T` mittels der Methode `void accept(T)`
-. `Predicate<T>` - definiert eine Methode `boolean test(T)`. Sie berechnet für einen Eingabewert T ein bool'sches Ergebnis. Das lässt sich sehr gut für Filterbedingungen ausnutzen.
-. `Function<T,R>` - Definiert eine Abbildungsmethode durch `R apply(T)`, wodurch Transformationen gut ausgedrückt werden können, gebräuchlich besonders für die Extraktion eines Attributes aus einem komplexen Typ
-. `BiFunction<T,U,R>` und `BiConsumer<T,U>` - wie `Function`, nur mit zwei Eingabewerte `T` und `U`
-. `Supplier<T>` - Stellt ein Ergebnis vom Typ `T` bereit. Im Gegensatz zu `Function<T,R>` erhält ein Supplier keinen Eingabewert mit der Methode `T get()`
+* `Consumer<T>`: Verarbeitet einen Wert ohne Rückgabe. Beschreibt eine Aktion auf einem Element vom Type `T` mittels der Methode `void accept(T)`
+* `Predicate<T>`: Testet eine Bedingung und gibt `boolean` zurück. Definiert eine Methode `boolean test(T)`. Sie berechnet für einen Eingabewert `T` ein bool'sches Ergebnis. Das lässt sich sehr gut für Filterbedingungen ausnutzen
+* `Function<T,R>`: Wandelt einen Typ in einen anderen um. Definiert eine Abbildungsmethode durch `R apply(T)`, wodurch Transformationen gut ausgedrückt werden können, gebräuchlich besonders für die Extraktion eines Attributes aus einem komplexen Typ wie einer Klasse
+* `Supplier<T>`: Liefern einen Wert ohne Eingabe. Stellt ein Ergebnis vom Typ `T` bereit. Im Gegensatz zu `Function<T,R>` erhält ein Supplier keinen Eingabewert, sondern nur die Methode `T get()` ohne Eingabewert
 
-Zu jedem dieser funktionalen Interfaces gibt es einen Unit-Test zur *Demonstration* hier:
+*Zweiparametrige* Varianten:
+
+* `BiPredicate<T,U>`: Testet eine Bedingung mit zwei Parametern
+* `BiConsumer<T,U>`: Verarbeitet zwei verschiedene Parameter
+* `BiFunction<T,U,R>`: Kombiniert zwei Parameter zu einem Ergebnis. Wie `Function`, nur mit zwei Eingabewerte `T` und `U`
+
+*Spezialisierte* Operatoren:
+
+* `UnaryOperator<T>`: Eine spezielle `Function`, bei dem Eingabe- und Ausgabetyp gleich sind
+* `BinaryOperator<T>`: Eine spezielle `BiFunction`, bei dem alle Typen gleich sind
+
+Zu einigen dieser funktionalen Interfaces gibt es einen Unit-Test zur *Demonstration* hier:
 
 [subs="normal"]
  {mod-ref-test}/funcprog/LambdaDemoTests.java
 
 
-=== Streaming (API)
+=== Streams
 
-Das Streaming API stellt im Wesentlichen Methoden zur _schnellen, leicht lesbaren und bequemen_ Verarbeitung von Daten im Sinne einer *Mehrfach-* oder auch *Batch*-Verarbeitung bereit, und zwar in Form sogenannter *Streams*.
+Eine wichtige Anwendung von _funktionalen Interfaces_ in der Java Sprache ist in Form der Java *Streams* umgesetzt. Auf solche Steams können sehr einfach *Lambda*-Ausdrücke angewendet werden. Die `Streaming API` stellt im Wesentlichen Methoden zum Zwecke einer _schnellen, leicht lesbaren und bequemen_ Verarbeitung von Daten - im Sinne einer *Mehrfach-* oder auch *Batch*-Verarbeitung - bereit.
 
-Insbesondere zur verbesserten Verarbeitung von _Listen_ aus dem Collections-Framework in Java wurden diese Komponenten mit Java 8 eingeführt
-
-Aus diesem Grund wird auf einer _normalen_ Liste auch in aller Regel zuerst die Methode
+Insbesondere zur verbesserten Verarbeitung von _Listen_ aus dem Collections-Framework in Java wurden diese Komponenten mit Java 8 eingeführt. Auf einer _normalen_ Liste kann also, neben der bekannten Verarbeitung (Iterationen), die Methode
 
  stream()
 
-aufgerufen, die aus dem Objekttyp `Liste` einen `Stream` macht. Auf diesem _Stream_ lassen sich dann weitere Methoden zur Verarbeitung der Listenelemente aufrufen, und zwar mittels der sogenannten
+aufgerufen werden. SIe macht aus dem Objekttyp `Liste` einen `Stream` (wandelt die Liste in einen Stream um). Auf diesem _Stream_ lassen sich dann weitere Methoden zur Verarbeitung der Listenelemente aufrufen, und zwar mittels der sogenannten
 
  filter-map-reduce
 
@@ -167,7 +180,7 @@ Algorithmen genutzt, um diese Möglichkeiten zusammenzufassen.
 
 Ein ausführliches Beispiel für den Gebrauch in *Listen*:
 
-[source,java,title="Lamdba + Streaming"]
+[source,java,title="Streams & Lambdas"]
 ----
 include::{mod-lnk-test}/funcprog/LambdaDemoTests.java[tag="lambda-example-1"]
 ----
@@ -178,7 +191,7 @@ Im Detail:
 
 Filter werden durch die oben bereits genannten `Predicates` implementiert und in eine Methode namens `filter()` als _funktionales Argument_ übergeben.
 
--> _Welchen Datentyp geben die Predicates zurück?_
+{q} _Welchen Datentyp geben die Predicates zurück?_
 
 Bei der Anwendung mehrerer oder komplexer Filteroperationen sollte allerdings die Performanz beachtet werden. Eine Einschätzung:
 
@@ -277,7 +290,7 @@ include::{mod-lnk-test}/funcprog/FuncProgExerciseTests.java[tags="modern-reduce"
 [[generics-exercise-3]]
 *Übung 3:*
 
-Für einen `Warenkorb` gilt es, die darin enthaltenen 3 `Produkte`nach ihrer `Produktkategorie` zu filtern.
+Für einen `Warenkorb` gilt es, die darin enthaltenen 3 `Produkte` nach ihrer `Produktkategorie` zu filtern.
 
 _Optional: Ermittle den gesamten `Preis` des Warenkorbs als Summe der produkt-spezifischen Einzel-`Preise`._
 

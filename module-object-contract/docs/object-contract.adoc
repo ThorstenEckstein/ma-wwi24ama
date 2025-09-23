@@ -67,6 +67,11 @@ Von diesen *Methoden* sollen die folgenden drei etwas näher betrachtet werden, 
 Die `Object`-Klasse definiert - neben anderen - diese Methoden. Sie werden im Folgenden detailliert erläutert.
 Die `toString()` Methode ist vor allem deshalb interessant, wie sie die Möglichkeit bietet, eine String-Repräsentation des jeweiligen Objektes zu implementieren (dazu später mehr).
 
+=== Objektidentität mit `==`
+
+Ergänzen: technische Identität mittels Gleichheitsoperator, Gegenüberstellung + Code.
+
+
 === Objektidentität mit `hashCode()`
 
 Instanzen von Klassen - also Objekte - besitzen eine implizite *Identität*, eine Zahl.

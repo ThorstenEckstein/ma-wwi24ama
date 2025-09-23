@@ -86,7 +86,7 @@ public class CollectionsDemoTest {
     public void demo3() {
         // given
         // <KEY   , VALUE>
-        Map<String, Double> map = new HashMap<String, Double>();
+        Map<String, Double> map = new HashMap<>();
 
         // when
         map.put("a", 123.45);
@@ -154,7 +154,6 @@ public class CollectionsDemoTest {
             unmodifiableList.add("D");
         });
     }
-
 
     // ACTIVATE TO DEMONSTRATE EQUALS IN COURSE:
     @Test

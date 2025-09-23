@@ -17,7 +17,7 @@ public class LoopsSolutionsTest {
     @DisplayName("Solution for Exercise 1: Eine for Schleife, größte Zahl")
     public void solution1() {
         // given
-        List<Integer> numbers = List.of(2,5,3,8,65,4);
+        List<Integer> numbers = List.of(2, 5, 3, 8, 65, 4);
 
         // when
         int max = 0;

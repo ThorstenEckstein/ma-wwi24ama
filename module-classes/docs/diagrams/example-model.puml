@@ -1,0 +1,40 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/class-diagram
+
+'skinparam groupInheritance 2
+
+scale 0.8
+top to bottom direction
+
+class Player {
+    name: String
+    friends: List<Player>
+    library: List<Game>
+    played: Map<Game, int>
+}
+
+class Game {
+    name: String
+    genre: Genre
+}
+
+enum Genre {
+    Action
+    Strategy
+    RPG
+    MMORPG
+}
+
+class Service {
+  players: List<Player>
+}
+
+'Model
+
+Player              o--- "n"             Game
+Player              o--- "n"             Player
+Game                --- "n"              Genre
+Service             *--- "n"             Player
+
+@enduml

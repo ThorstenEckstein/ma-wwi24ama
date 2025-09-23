@@ -9,6 +9,8 @@ public class ASimpleClass {
      * Konstruktor-Deklaration
      * häufig benutzte Abkürzung: C'tor
      */
-    public ASimpleClass() {}
+    public ASimpleClass() {
+        // Welche Schlüsselwörter bzw. Methoden finden sich hier häufig?
+    }
 
 }

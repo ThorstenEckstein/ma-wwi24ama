@@ -46,22 +46,24 @@ public class LambdaDemoTests {
     public void unaryFunction() {
         // given
 
-        // Hier keine primitiven Datentypen möglich, man nutzt einfach die 'Wrapper' Typen
-        // UnaryOperator<int> unaryFunction = (int x) -> { return x * x; };
+        // Bei Function sind keine primitiven Datentypen möglich ...
 
         Function<Integer, Integer> function = (Integer x) -> {
             return 2 * x;
         };
 
+        // ... oder mit nur einer Angabe eines Zahlentyps:
         UnaryOperator<Integer> unaryFunction = (Integer x) -> {
             return 2 * x;
         };
 
         // when
-        Integer result = unaryFunction.apply(5);
+        Integer functionResult = function.apply(5);
+        Integer unaryFunctionResult = unaryFunction.apply(5);
 
         // then
-        assertEquals(10, result);
+        assertEquals(10, functionResult);
+        assertEquals(10, unaryFunctionResult);
     }
 
     @Test

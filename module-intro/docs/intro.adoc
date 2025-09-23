@@ -322,7 +322,7 @@ Zur Überprüfung einmal (in der IDE) schauen, ob der richtige *Branch* namens
 
 heruntergeladen wurde. Dies ist sozusagen eine spezielle Variante (oder auch Version), die im Semester genutzt wird.
 
-image::images/intellij-git-cloned-branch.png[width="50%", align="center"]
+image::images/intellij-git-cloned-branch.png[width="40%", align="center"]
 
 Ergebnis sollte jetzt sein, dass das Projekt für die LV in der IDE enthalten bzw. geladen ist.
 

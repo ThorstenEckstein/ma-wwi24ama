@@ -8,7 +8,7 @@ public class ClassesExerciseTest {
     @Test
     @DisplayName(
              """
-             Erstelle Klassen im Paket "java/de/dhbw/exercise/classes"
+             Erstelle Klassen im Paket "src/main/java/de/dhbw/exercise/classes"
              1. Erstelle eine neue Klasse Fernzug mit einem parameterlosen Konstruktor
              2. Erstelle eine neue Klasse Regionalzug mit einem parameterlosen Konstruktor
              Teste, ob die Instanzen korrekt erzeugt wurden!

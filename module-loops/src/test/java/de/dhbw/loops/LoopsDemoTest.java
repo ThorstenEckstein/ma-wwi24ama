@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "DuplicateBranchesInSwitch", "DataFlowIssue"})
 public class LoopsDemoTest {
 
     @Test
@@ -41,26 +41,43 @@ public class LoopsDemoTest {
     public void demo3() {
         // given
         int i = 7;
-        int x;
+        int _case;
 
         // when
         switch(i) {
             case 0:
-                x = i;
+                _case = i;
                 break;
             case 1:
-                x = i;
+                _case = i;
                 break;
             case 2:
-                x = i;
+                _case = i;
                 break;
             default:
-                x = -1;
+                _case = -1;
                 break;
         }
 
         // then
-        System.out.println("Executed case: " + x);
+        System.out.println("Executed case: " + _case);
     }
 
+    @Test
+    @DisplayName("Demo 4: pattern matching switch case")
+    public void demo4() {
+        // given
+        int i = 1;
+        int _case = switch (i) {
+            case 0 -> i;
+            case 1 -> i;
+            case 2 -> i;
+            default -> -1;
+        };
+
+        // when
+
+        // then
+        System.out.println("Executed case (pattern matching): " + _case);
+    }
 }

@@ -27,7 +27,7 @@ Aus diesem Grund enthält dieses Modul selbst _keinen eigentlichen Inhalt_ oder 
 Damit man möglichst einfach beginnen kann, gibt es eine vorbereitete *Test-Klasse* hier:
 
 [subs=normal]
- module-basics/{mod-ref-test}/exercise/BasicsExerciseTest.java
+ module-experiments/{mod-ref-test}/exercise/BasicsExerciseTest.java
 
 Sie enthält bereits einen Test, den man umsetzen kann, es können aber natürlich beliebige weitere zu der Klasse hinzugefügt werden. Das geht einfach, indem man einfach weitere Testmethoden hinzufügt. Hier die Vorlagen zum Kopieren:
 
@@ -56,7 +56,7 @@ public void exercise1() {
 Wenn man im Rahmen dieses "Ausprobierens" Klassen angelegt werden, so sollen diese in den *"echten" Sourcecode-Packages* gespeichert werden, und zwar hier:
 
 [subs=normal]
- module-basics/{mod-ref-src}/exercise/*
+ module-experiments/{mod-ref-src}/exercise/*
 
 Die "echten" Klassen, die im Test genutzt werden sollen, werden automatisch erkannt, wenn die obige Struktur genutzt wird. Wenn nicht, dann bitte folgenden Hinweis beachten.
 

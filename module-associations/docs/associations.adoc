@@ -34,13 +34,46 @@ Klassen existieren fast nie unabhängig, denn Software besteht immer auch vielen
 Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dabei gibt es verschiedene Arten von Beziehungen. Die wichtigsten sind:
 
 * *Aufruf* (_dynamische Beziehung zur Laufzeit_), kann innerhalb einer Software sein oder zwischen ganzen Systemen!
+
+[,java]
+----
+public class App {
+    public static void main(String[] args) {
+        Train train = new Train("ICE 234");
+        train.depart();
+        // ....
+    }
+}
+----
+Die Klasse `App` *benutzt* bzw. *ruft* die Klasse `Train` auf
+
 * *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
+
+[,java]
+----
+public class Train extends Vehicle {
+    // ...
+}
+----
+
 * *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
 
-Vielfach wird bzgl. der Beziehungen zwischen Klassen zwischen folgenden zwei grundsätzlichen Varianten unterschieden:
+[,java]
+----
+public class Train {
+    private Driver driver; <1>
+    private List<Wagon> wagons; <1>
+}
+----
+
+<1> Der Zug *hat* einen bzw. *besitzt* den Triebfahrzeugführer, außerdem *besteht* er aus Waggons. Anders ausgedrückt, der Zug *setzt sich zusammen* aus _einem_ Triebfahrzeugführer und _mehreren_ Waggons.
+
+Vielfach wird bzgl. der Beziehungen zwischen Klassen zwischen folgenden zwei grundsätzlichen *Varianten* unterschieden:
 
 . `*is-a*` - Klasse A _ist eine_ Klasse vom Typ B => "Vererbung"
 . `*has-a*` - Klasse A _hat eine_ Klasse B => "Zusammensetzung"
+
+Wie man im Beispiel erkennen kann, spielt es hierbei auch eine Rolle, in welcher _"Menge"_ die anderen Klassen vorkommen. Das kann man unter dem Begriff *"Kardinalität"* zusammenfassen.
 
 Zusammengefasst als Übersicht:
 
@@ -57,7 +90,7 @@ image::images/associations.png[]
 ==== Kopplung
 
 ====
-Art & Grad der Abhängigkeit *zwischen* (einzelnen) Softwaremodulen, insb. Klassen.
+Art & Grad der Abhängigkeit *zwischen* (einzelnen) Softwareelementen, insb. Klassen.
 ====
 
 [plantuml, "coupling", png, align="center", title="Kopplung"]
@@ -66,6 +99,21 @@ include::diagrams/coupling.puml[]
 ....
 
 Die *Kopplung* im obigen Diagramm ist die (Art und) *Anzahl der Pfeile* zwischen den Klassen. Sie gibt an, wie stark die einzelnen Programmmodule (hier Klassen) von den anderen abhängig sind. Wechselwirkungen zwischen zwei Klassen/Objekten treten auf, weil es eine Kopplung gibt. Lose gekoppelte Programme sind flexibel und erweiterbar, je stärker die Kopplung, desto schwieriger wird die Änderbarkeit der Klassen.
+
+{q} _Wie könnte man starke oder schwache Kopplung im Quellcode, z.B. in einer Klasse erkennen?_
+
+////
+[cols="1s,1,1"]
+|===
+| Kriterium | Starke Kopplung | Schwache Kopplung
+
+| Anzahl öffentlicher Methoden | Hoch | Gering
+| Methodenaufrufe zwischen Objekten | Häufig | Selten
+| Parameteranzahl | Hoch | Gering
+| Zugriff auf Attribute | Direkt auf fremde Objekte | Über Schnittstellen
+| Änderungsanfälligkeit | Hohe Auswirkungen bei Änderungen | Isolierte Änderbarkeit
+|===
+////
 
 ==== Kohäsion
 
@@ -84,9 +132,9 @@ IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Be
 
 *Beispiel:*
 
-Die *Organisation dieser LV* ist so aufgebaut. Es gibt viele einzelne Module, in denen Klassen enthalten sind, die eben zu diesem Modul bzw. zu dem jeweiligen Thema gehören (_"hoch kohäsiv"_).
+Die *Organisation dieser LV* ist so aufgebaut. Es gibt viele einzelne Module, in denen Klassen enthalten sind, die eben zu diesem Modul bzw. zu dem jeweiligen Thema gehören, sie sind entsprechend _"hoch kohäsiv"_.
 
-Gleichzeitig haben die Module untereinander keine bzw. sehr wenige Abhängigkeiten (_"loose gekoppelt"_)
+Gleichzeitig haben die Module untereinander keine bzw. sehr wenige Abhängigkeiten. sie sind zu anderen Modulen nur _"lose gekoppelt"_!
 
 
 === Aggregation & Komposition
@@ -96,20 +144,18 @@ Assoziationen können auch *qualitativ und semantisch* recht unterschiedlich sei
 
 ==== Aggregation
 
-Die Aggregation, sowie auch die Komposition, ist eine Assoziation von *Teilen zu einem Ganzen*. Jedes Teil ist zu dem Ganzen mit einer Assoziation "ist-teil-von" (part-of) verbunden.
+Die Aggregation, sowie auch die Komposition, ist eine Assoziation von *Teilen zu einem Ganzen*. Jedes Teil ist zu dem Ganzen mit einer Assoziation *"ist-Teil-von"* (part-of) verbunden.
 
-Ein paar Beispiele dazu:
+Ein paar *Beispiele* dazu:
 
-////
 [plantuml, "aggregation", png, align="center"]
 ....
 include::diagrams/aggregation.puml[]
 ....
-////
 
-image::images/aggregation.png[]
+//image::images/aggregation.png[]
 
-Demo:
+*Demo:*
 [subs=normal]
  {mod-ref-test}/demo/AssociationsDemoTest.demo1()
 
@@ -118,22 +164,34 @@ Demo:
 
 Der Unterschied einer Komposition zur Aggregation ist, dass die Teile, die ein Objekt enthält, von dem Ganzen *existentiell abhängig* sind.
 
-Ein paar Beispiele dazu:
+Auch dazu ein paar *Beispiele*:
 
-////
 [plantuml, "composition", png, align="center"]
 ....
 include::diagrams/composition.puml[]
 ....
-////
 
-image::images/composition.png[]
+//image::images/composition.png[]
 
 Die Unterschiede sind also fein, aber wichtig.
 
-====
-_Es stellt sich außerdem die Frage, wie man so eine *"existentielle Abhängigkeit"* im Code ausdrücken könnte?_
-====
+{q} _Es stellt sich die Frage, wie man so eine *"existentielle Abhängigkeit"* im Code ausdrücken kann?_
+
+Eine Möglichkeit ist:
+
+[,java]
+----
+public class Document {
+    private TableOfContent toc;
+    public Document(final TableOfContent inhaltsverzeichnis) { <1>
+        this.toc = inhaltsverzeichnis
+    }
+}
+----
+
+<1> *Indiz* für existenzielle Abhängigkeit: Das direkte und einmalige Setzen der abhängigen KLasse und (oft auch) deren Initialisierung im oder über den _Konstruktor_!
+
+Eine andere Idee ist in folgender *Demo*-Methode umgesetzt:
 
 *Demo:*
 
@@ -147,12 +205,10 @@ Sobald Klassen durch Assoziationen verbunden werden, kommt der Aspekt der *Navig
 
 Letztlich drückt sich die Navigierbarkeit darin aus, ob assoziierte Klassen
 
-* als Attribut mit `Typ` -> (2) oder
-* nur als `Id` in Form eines primitiven Datentyps -> (3)
+* als *komplexes Attribut* -> *(2)* realisiert sind oder nur als *primitiver "Referenz"-Wert*, z.B. die `id` der anderen Klasse -> *(3)* vorhanden sind (_auch die "besitzende" Klasse hat in aller Regel selbst eine ID -> (1)_)
+* oder ob die Eigenschaften, insb. andere Klassen, überhaupt *vorhanden* sind oder nicht -> *(4)*
 
-vorhanden sind. Auch die "besitzende" Klasse hat in aller Regel selbst eine ID -> (1).
-
-Am Beispiel:
+Am *Beispiel*:
 
 [, java]
 ----
@@ -160,14 +216,15 @@ public class Train {
     public long id; <1>
     public Locomotive locomotive; <2>
     public long locomotiveId; <3>
-}                           |
-                            |
-public class Locomotive {   |
-    public long id; <-------+
-    public Train train; // ist das hier sinnvoll?
+}                          |
+                           | // eine Referenz als "virtuelle Beziehung"
+public class Locomotive {  |
+    public long id; <------+
+    public Train train; <4>
 }
 ----
 
+{q} _Überlegung: Ist es sinnvoll, die Klasse `Train` als Feld/Attribut der Klasse `Locomotive` zu haben?_
 
 === One-to-One-Assoziation
 
@@ -177,6 +234,11 @@ Siehe Unit-Test:
 
 Ein Beispiel::
 _Jede natürliche Person besitzt *genau* einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann muss aber auch der Personalausweis vernichtet werden, das wurde oben bereits demonstriert._
+
+[plantuml, "one-to-one", png, align="center"]
+....
+include::diagrams/one-to-one-example.puml[]
+....
 
 Es geht hier also oft um die Überlegung zur *Semantik bzw. Qualität* einer Beziehung zwischen zwei abhängigen Objekten!
 
@@ -203,7 +265,7 @@ sowie Implementierungen für V1 und V2:
 [subs=normal]
  {mod-ref-src}/demo/associations.[red]#*n*#.*.java
 
--> Übung 1
+{a} Übung 1 (Beschreibung siehe unten)
 
 
 === Many-to-Many-Assoziation
@@ -228,20 +290,15 @@ Zugehörige Unit-Tests:
  {mod-ref-test}/demo/AssociationsDemoTest.demo3()
 ////
 
-Assoziationen zwischen Java Klassen werden manchmal auch als *Relationen* bezeichnet. Dieser Begriff stammt aus dem Umfeld der *Datenbanken*, meint aber das Gleiche. Dies ist ein optionales Thema und kann bei Gelegenheit eingeschoben werden.
+Assoziationen zwischen Java Klassen werden auch als *Relationen* bezeichnet. Dieser Begriff stammt aber eher aus dem Umfeld der *Datenbanken*, meint aber das Gleiche. Dies ist ein optionales Thema und kann bei Gelegenheit eingeschoben werden.
 
 
 *Übungen*:
 
-Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
+Die *Übungen* werden in Form von *Unit-Tests* in folgendem _Package_ implementiert:
 
 [subs=normal]
  {mod-ref-test}/exercises/AssociationsExerciseTest.java
-
-Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode wie zuvor auch in:
-
-[subs=normal]
- {mod-ref-src}/exercises
 
 Übung 1::
 
@@ -251,8 +308,6 @@ Erstelle zwei Klassen
 * `Student`
 
 Der Kurs kann von *mehreren* Student:innen besucht werden. Setze diese Beziehung zwischen den beiden Klassen in der Klasse `Course` um.
-
-Überlege hier auch, welcher *Listentyp* sich dafür am besten eignet.
 
 Übung 2 (optional)::
 

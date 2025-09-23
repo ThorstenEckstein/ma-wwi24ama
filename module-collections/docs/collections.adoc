@@ -70,7 +70,7 @@ image::images/collections-api.png["Collections API",width="100%",align="center"]
 === Java Collections API
 
 Java collection interfaces are the foundation of the Java Collections Framework. All core collection interfaces are generic.
-For example `public interface Collection<E>`. The <E> syntax is for Generics and when we declare Collection (_später mehr zum Thema_ `Generics`)
+For example `public interface Collection<E>`. The `<E>` syntax is for Generics (_später mehr zum Thema_ `Generics`)
 
 . *Collection interface*.
 This is the root of the collection hierarchy. A collection represents a group of objects known as its elements. Some basic operations are provided.
@@ -160,7 +160,7 @@ Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementi
 [subs=normal]
  -> {mod-ref-test}/exercise/CollectionsExerciseTests.java
 
-Die *Testobjekte*, also die zu bearbeitenden Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
+Die *Testobjekte*, also die zu bearbeitenden Klassen, Interfaces oder anderer Sourcecode sollen ggf. getrennt, nämlich hier umgesetzt werden:
 
 [subs=normal]
  {mod-ref-src}/exercise
@@ -171,7 +171,7 @@ Die *Testobjekte*, also die zu bearbeitenden Klassen, Interfaces oder anderer So
 
 Übung 2::
 
-*Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `SortedMap` benutzt wird. Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Überprüfe die Haupt-Charakteristik _"natürliche Sortierung"_ dieses Map-Typs.
+*Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `SortedMap` benutzt wird. Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) als auch für den Wert (V). Überprüfe die Haupt-Charakteristik _"natürliche Sortierung"_ dieses Map-Typs.
 
 ////
 Testfragen::

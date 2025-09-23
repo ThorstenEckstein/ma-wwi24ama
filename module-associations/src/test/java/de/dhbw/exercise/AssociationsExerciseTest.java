@@ -14,7 +14,15 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class AssociationsExerciseTest {
 
     @Test
-    @DisplayName("Übung 1: n:m zwischen Course & Student")
+    @DisplayName("""
+            Erstelle zwei Klassen 'Course' & 'Student', und  der Kurs kann von mehreren Studierenden besucht werden.
+            Implementiere diese Beziehung zwischen den zwei Klassen.
+            
+            Speichere die Klassen im Paket "src/main/java/de/dhbw/exercise/associations"
+            
+            Zusatzfrage 2: Welcher Listentyp eignet sich hier am besten?
+            Zusatzfrage 1: Handelt es sich um eine "Aggregation" oder um eine "Komposition"?
+            """)
     public void exercise1() {
         // given
 

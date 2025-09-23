@@ -46,7 +46,7 @@ include::../src/main/java/de/dhbw/generics/demo/Joiner.java[tag="generic-class"]
 
 Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 
-DIe Nutzung einer generischen Klasse sind entsprechend so aus, der Typ `T` wird konkret angegeben:
+Die Nutzung einer generischen Klasse sieht entsprechend so aus, d.h. der Typ `T` wird konkret angegeben:
 
 [,java]
 ----
@@ -62,8 +62,11 @@ include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method
 
 === Bounded Generics
 
-Oft kommen sogenannte *bounded generics* zum Einsatz.
-Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der generische Typ erben muss. Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
+Oft kommen sogenannte Begrenzungsausdrücke oder *bounded generics* zum Einsatz.
+
+Dabei wird bei der Definition die Oberklasse angegeben, von welcher der *generische Typ erben muss*. Die Blickrichtung ist sozusagen _"nach unten"_.
+
+Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
 
 [, java]
 ----
@@ -71,6 +74,27 @@ Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der
 ----
 
 Hier kann z.B. der genutzte Datentyp ausschließlich ein Zahlen-Datentyp sein, der von `Number` erbt.
+
+Auch die *gegenteilige Blickrichtung* _"nach oben"_ kann auch angegeben werden:
+
+Der Begrenzungsausdruck
+
+[, java]
+----
+<? super Number>
+----
+
+bedeutet, dass der Typ hier ein Supertyp von `Number` sein muss, also Number selbst oder eine Oberklasse von Number.
+
+Es definiert eine untere Grenze (_"lower bound"_) für den erlaubten Typ. Dazu ein Beispiel:
+
+[, java]
+----
+<T extends Number> void add(List<? super Number> list, T element)
+----
+
+`List<? super Number>` ist hier die Angabe dafür, das eine Liste nur Typen akzeptiert, deren Elementtyp Number oder ein Supertyp von Number ist.
+
 
 === Wildcards
 
@@ -82,7 +106,7 @@ Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durch
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {mod-ref-test}/generics/GenericsTests.java
+ {mod-ref-test}/generics/GenericsDemoTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
@@ -95,33 +119,37 @@ Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 Nutze folgendes Package für die *Unit-Tests*:
 
 [subs="normal"]
- {mod-ref-test}/generics/ExerciseTests.java
+ {mod-ref-test}/generics/GenericsExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
  {mod-ref-src}/exercises/*.java
 
+TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
+
 
 [[generics-exercise-1]]
-*Übung 1*::
+*Übung 1*:: Ein *Interface*
 
-Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für...
+Erstelle ein *Interface* für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für ...
 
 * addieren,
 * subtrahieren,
 * multiplizieren und
 * dividieren.
 
-Der Taschenrechner sollte mit einem beliebigen Zahlentyp umgehen können.
-
-TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
-
-_Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface implementiert, und schreibe dazu einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten am Beispiel auch mal testet._
+Der Taschenrechner sollte mit beliebigen Zahlen-Datentypen umgehen können.
 
 
 [[generics-exercise-2]]
-*Übung 2*::
+*Übung 2*:: Eine *Klasse*
+
+Realisiere einen generischen, aber *konkreten* Taschenrechner für die 4 Grundrechenarten, der alle Zahlen-Datentypen verarbeiten kann. Schreibe dazu hier einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten mit Beispielwerten testet, aber mit unterschiedlichen Zahlen-Datentypen.
+
+
+[[generics-exercise-3]]
+*Übung 3*::
 
 Implementiere eine konkrete Klasse `Workflow`.
 
@@ -142,4 +170,3 @@ In der nachstehenden Testklasse finden sich kleine "Quizfragen" für die Inhalte
 === Tipps, Patterns & Best Practices
 
 * Bei Listen sollte man immer mittels Diamond-Operator `<>` den Datentyp für die Liste angeben
-* Benutze den Wildcard-Type `?` (Bsp. `<? extends Number>`) wenn möglich

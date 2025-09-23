@@ -22,21 +22,21 @@ public class FuncProgExerciseTests {
     }
 
     @Test
-    @DisplayName("Exercise 1: Loop with Streams & Lambda")
+    @DisplayName("Exercise 1: A Loop with Streams & Lambda")
     public void exercise1() {
-        // given - some list with boolean values
+        // given - a list with some boolean values
 
         // when - use list.stream() and some lambda expression
         //        to log each list item to console
 
-        // then - nothing here
+        // then - nothing to do
     }
 
     //tag::old-fashioned-reduce[]
     @Test
     @DisplayName("Übung 2a: Calculate a total in old fashioned way")
     public void exercise2a() {
-        // given - a list of min. 5 arbitrary Integers
+        // given - a list of min. 5 arbitrary Integer values
 
         // when - iterate over the list and calculate the total
         // for ( ... : ... ) { ... }
@@ -49,7 +49,7 @@ public class FuncProgExerciseTests {
     @Test
     @DisplayName("Übung 2b: Calculate a total the modern way")
     public void exercise2b() {
-        // given - a list of min. 5 arbitrary Doubles
+        // given - a list of min. 5 arbitrary Double values
 
         // when - loop over the list and calculate the total
 
@@ -60,7 +60,7 @@ public class FuncProgExerciseTests {
     @Test
     @DisplayName("Übung 3: Filter & reduce a shopping cart, calculate total price")
     public void exercise3() {
-        // given - use member 'shoppingCart' containing 3 products, see above
+        // given - use member 'shoppingCart' here, it contains 3 products (see above in method beforeEach())
 
         // when - step 1: filter your shopping cart for products for some 'category'
         // when - step 2: reduce your shopping cart by summing up all product prices
