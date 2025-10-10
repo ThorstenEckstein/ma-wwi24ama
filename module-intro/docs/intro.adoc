@@ -27,6 +27,7 @@ end::content[]
 ////
 
 
+[[welcome]]
 == Welcome
 
 *Über mich*
@@ -36,15 +37,52 @@ end::content[]
 
 | image:images/portrait_v2.1_biometrisch.png[] | *Thorsten Eckstein*
 
-| Konzern         | Deutsche Bahn, ca. 335.000 Mitarbeiter
+| Arbeitgeber     | Deutsche Bahn, ca. 335.000 Mitarbeiter
 
 |                 | DB Systel GmbH, Frankfurt a.M., ca. 7.000 Mitarbeiter,  IT-Dienstleister der Deutschen Bahn
 
-| Qualifikationen | Dipl. Geo-Informatik, zertifizierter Softwareentwickler, zertifizierter Softwarearchitekt
+| Qualifikationen | Dipl. Geo-Informatik, zertifizierter Softwareentwickler, zertifizierter Softwarearchitekt, Lehrbeauftragter
 |===
 
-== Fachlicher Schwerpunkt des Kurses (Zugdisposition)
 
+[[organisation]]
+== Organisation der Lehrveranstaltung
+
+* Termine
+* Anwesenheitspflicht
+* Ablauf
+* Inhalte
+* Mitarbeit
+* Lernkontrolle
+* Prüfung
+
+
+[[goals]]
+== Ziele dieser Lehrveranstaltung
+
+In der LV versuchen wir, folgenden *Ziele* zu erreichen:
+
+icon:graduation-cap[role=green] *Haupt-Lernziele*
+
+. Erarbeitung *grundlegender Fähigkeiten* in der Programmierung mit `Java`, also Umsetzung von Syntax, Regeln & Eigenschaften
+. Kennenlernen des Umgangs mit üblichen *Tools* in der Softwareentwicklung (SWE)
+. Erstellung funktions- und testfähiger *Applikationen*
+. Training der *Denk-, Arbeits- und Vorgehensweisen* in der SWE mit Java
+
+icon:graduation-cap[role=blue] *Neben-Lernziele*
+
+. Verstehen der Objektorientierung
+. Modellierung: Übersetzung von Fachlichkeit in Quellcode
+. Abstraktionsvermögen trainieren
+. Fortgeschrittene Sprachkonzepte kennenlernen
+. "Keine Angst" vor Komplexität
+
+
+[[domain]]
+== Fachlicher Schwerpunkt des Kurses: Bahnbetrieb
+
+
+[[domain-context]]
 === Kontext
 
 Der *Betrieb* von Zügen kann grundsätzlich unterteilt werden in:
@@ -57,6 +95,7 @@ Ein paar wichtige Begriffe:
 
 image::diagrams/business-model.svg["Fachbegriffe",width="75%",align="center"]
 
+[[sneak-preview]]
 === Vorschau: Klassenmodell
 
 Eine solche Fachlichkeit (s.o.) muss, um Applikationen zu erstellen, in (Fach-) *Klassenmodellen* abgebildet werden, z.B. mit folgenden Objekten:
@@ -197,9 +236,9 @@ Die empfohlene IDE ist `IntelliJ`. Die LV-Inhalte sollten sowohl in der _Communi
 
 Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein sollte (falls noch nicht vorhanden, bitte installieren):
 
- IntelliJ IDEA 2024.3.1
+ >= IntelliJ IDEA 2025.2.3 (Enterprise/Community Edition)
 
-Kleinere Abweichungen in der Version sollten kein Problem sein, die letzten Versionen sind in aller Regel untereinander kompatibel. Bei Problemen versucht man es einfach mit der aktuellsten IDE Version.
+Nicht zu große Abweichungen in der Version sollten kein Problem sein, die letzten Versionen sind in aller Regel untereinander kompatibel. Bei Problemen versucht man es einfach mit der aktuellsten IDE Version.
 
 TIP: [small]#Alternativ könnte auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), die Lehrveranstaltung wurde für IntelliJ vorbereitet!#
 

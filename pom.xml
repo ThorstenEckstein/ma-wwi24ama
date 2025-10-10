@@ -23,6 +23,7 @@
 
         <module>module-associations</module>
         <module>module-archive</module>         <!-- backup -->
+        <module>module-basics</module>
         <module>module-classes</module>
         <module>module-clean-code</module>      <!-- optional -->
         <module>module-collections</module>
@@ -95,13 +96,13 @@
         <!-- project configuration -->
         <java.version>
             <!-- tag::java-version[] -->
-            21
+            25
             <!-- end::java-version[] -->
         </java.version>
 
         <!-- maven plugin configuration -->
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
