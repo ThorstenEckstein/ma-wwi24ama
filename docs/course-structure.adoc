@@ -19,24 +19,26 @@ endif::[]
 
 [source]
 ----
-  1) Willkommen
-  2) Organisation
-  3) Fachlicher Schwerpunkt
-  4) Technical Setup
-  5) Tools: Maven & Projektstruktur
-  6) Pause
-  7) Datentypen in Java
-  8) Typumwandlung (Casting)
-  9) Test-Driven-Development (TDD)
-  10) Demo zu Typumwandlung von primitiven Datentypen
-  11) Übungen zu Typumwandlung von primitiven Datentypen
-  12) Pufferzeit
+1)  "Willkommen"
+2)  "Organisation"
+3)  "Technical Setup"
+4)  "Tools: IntelliJ IDE"
+5)  "Tools: Maven & Projektstruktur"
+6)  "Fachlicher Schwerpunkt"
+7)  "Pause"
+8)  "Java Basics"
+9)  "Primitive Datentypen"
+10) "Typumwandlung (Casting)"
+11) "Primitive Datentypen: Demo Typumwandlung"
+12) "Primitive Datentypen: Übung Typumwandlung"
+13) "Lösungsbesprechung"
 ----
 
 *Zugehörige Module*:
 
 . {icon-module} link:../module-intro/docs/intro.adoc[module-intro]
 . {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
+. {icon-module} link:../module-basics/docs/basics.adoc[module-basics]
 . {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
 
 *Ergänzend*:

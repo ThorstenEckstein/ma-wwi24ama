@@ -23,8 +23,10 @@ tag::content[]
 end::content[]
 ////
 
+[[datatypes]]
 == Datentypen
 
+[[datatypes-primitives]]
 === Primitive Datentypen
 
 Übersicht über die Datentypen in Java:
@@ -36,6 +38,52 @@ Quelle: -> https://de.wikibooks.org/wiki/Java_Standard:_Primitive_Datentypen[Wik
 Quelle: -> https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html[Oracle: Datatypes]
 
 
+[[datatypes-primitives-casting]]
+=== Typumwandlungen primitiver Datentypen
+
+*Type-Casting* mit primitiven Datentypen
+
+Man unterscheidet zwischen einer *expliziten* und einer *impliziten* Typumwandlung.
+
+image::images/type-casting.png[width="75%", align="center", title="Widening & Narrowing"]
+
+CAUTION: _Bei der Umwandlung in "kleinere" Datentypen können Fehler auftreten (Informationsverlust), es findet das sogenannte "Narrowing" automatisch statt. Es entsteht zwar kein Compiler-Fehler, aber z.B. die Zahl wird verfälscht (-> https://docs.oracle.com/javase/specs/jls/se17/html/jls-5.html#jls-5.1.3[Narrowing])_
+
+Eine andere Darstellung:
+
+image::diagrams/narrowing.svg[width="80%", align="center"]
+
+
+*Implizite Typumwandlung*
+
+Die implizite Typumwandlung findet automatisch bei der Zuweisung statt. Dies geht jedoch nur, wenn ein niederwertiger Datentyp in einen höher wertigeren Datentypen umgewandelt wird, also z.B. vom Datentyp `int` in den Datentyp `long`:
+
+[, java]
+----
+int wert1 = 10;
+long wert2 = 30;
+wert2 = wert1; // automatische Umwandlung
+----
+
+*Explizite Typumwandlung (Type Casting)*
+
+Die explizite Umwandlung erfolgt durch den sogenannten `cast`-Operator mit runden Klammern. Hier wird von einem höher wertigeren Datentyp in einen nieder wertigen Datentypen umgewandelt. In welchen Datentyp umgewandelt werden soll, muss bei dem cast Operator explizit angegeben werden.
+
+[, java]
+----
+int wert1 = 10;
+float wert2 = 30.5f;
+wert1 = (int) wert2; // Umwandlung per 'cast'
+----
+
+
+////
+--------------------------------------------------------------
+ ACHTUNG :: HIER GGF. UNTERBRECHUNG/LV-WECHSEL BERÜCKSICHTIGEN
+--------------------------------------------------------------
+////
+
+[[datatypes-complex]]
 === Komplexe Datentypen
 
 Komplexe Datentypen in Java sind Datentypen, die sich auf Objekte beziehen und in Form von Klassen implementiert werden. Im Gegensatz zu primitiven Datentypen sind sie nicht vordefiniert, sondern werden vom Entwickler gestaltet.
@@ -72,41 +120,8 @@ Integer j = 42; // Erzeugt ein Integer-Objekt
 Komplexe Datentypen in Java bieten große Flexibilität bei der Strukturierung und Organisation von Daten. Sie ermöglichen die Erstellung von benutzerdefinierten Datenstrukturen und Objekten, was für die objektorientierte Programmierung von besonderer Bedeutung ist.
 
 
-== Typumwandlungen
-
-*Type-Casting* mit primitiven Datentypen
-
-Man unterscheidet zwischen einer *expliziten* und einer *impliziten* Typumwandlung.
-
-image::images/type-casting.png[width="75%", align="center", title="Widening & Narrowing"]
-
-CAUTION: _Bei der Umwandlung in "kleinere" Datentypen können Fehler auftreten (Informationsverlust), es findet das sogenannte "Narrowing" automatisch statt. Es entsteht zwar kein Compiler-Fehler, aber z.B. die Zahl wird verfälscht (-> https://docs.oracle.com/javase/specs/jls/se17/html/jls-5.html#jls-5.1.3[Narrowing])_
-
-
-=== Implizite Typumwandlung
-
-Die implizite Typumwandlung findet automatisch bei der Zuweisung statt. Dies geht jedoch nur, wenn ein niederwertiger Datentyp in einen höher wertigeren Datentypen umgewandelt wird, also z.B. vom Datentyp `int` in den Datentyp `long`:
-
-[, java]
-----
-int wert1 = 10;
-long wert2 = 30;
-wert2 = wert1; // automatische Umwandlung
-----
-
-=== Explizite Typumwandlung (Casting)
-
-Die explizite Umwandlung erfolgt durch den sogenannten `cast`-Operator mit runden Klammern. Hier wird von einem höher wertigeren Datentyp in einen nieder wertigen Datentypen umgewandelt. In welchen Datentyp umgewandelt werden soll, muss bei dem cast Operator explizit angegeben werden.
-
-[, java]
-----
-int wert1 = 10;
-float wert2 = 30.5f;
-wert1 = (int) wert2; // Umwandlung per 'cast'
-----
-
-
-== Typumwandlung von komplexen Datentypen (Klassen)
+[[datatypes-complex-casting]]
+=== Typumwandlungen komplexer Datentypen
 
 ====
 IMPORTANT: Übergang zum Modul: Komplexe Datentypen in Form von Klassen -> <<../../module-classes/docs/classes.adoc#tdd, Klassen & Instanzen>>, dann ggf. wieder hierher zurück!

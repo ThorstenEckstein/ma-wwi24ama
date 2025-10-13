@@ -46,15 +46,22 @@ end::content[]
 
 
 [[organisation]]
-== Organisation der Lehrveranstaltung
+== Organisatorische Hinweise
 
-* Termine
-* Anwesenheitspflicht
-* Ablauf
-* Inhalte
-* Mitarbeit
-* Lernkontrolle
-* Prüfung
+Termine::
+Die LVs sind wie immer im Google Kalender geplant
+
+Anwesenheitspflicht::
+Anwesenheit ist gewünscht, es findet aber keine Anwesenheitskontrolle statt. Bekannte Abwesenheiten bitte ankündigen und begründen.
+
+Ablauf::
+Wöchentliche LVs mit je 3 Zeitstunden und Pausen
+
+LV Inhalte::
+Die meisten Themen beinhalten regelmäßig Theorie, Demonstration, Übungen und Lösungsbesprechung.
+
+Prüfung::
+Details zur Prüfung werden im Laufe des Semesters, mit ausreichend Zeit bis zum Prüfungstermin, bekannt gegeben.
 
 
 [[goals]]
@@ -207,7 +214,7 @@ Wie gesagt, hierin werden die Kursinhalte in den nächsten Schritten dann lokal 
 include::../../pom.xml[tags="java-version"]
 ----
 
-Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 21 ("Major") nicht so wichtig sind.
+Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 25 ("Major") nicht so wichtig sind.
 
 Eine von mehreren Möglichkeiten, die aktuelle genutzte Java Version herauszufinden, ist:
 
@@ -274,7 +281,7 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 
 | image::images/asciidoc-plugin.png[]
 | Einheitliche Erstellung von Dokumentationen, z.B. als PDF
-| >= 0.43.x
+| >= 0.44.x
 
 | image::images/diagrams-net-plugin.png[]
 | Erstellung von beliebigen Diagrammtypen
@@ -282,7 +289,7 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 
 | image::images/plantuml-plugin.png[]
 | Erstellung von UML-Diagrammen
-| >= 7.11.x
+| >= 7.13.x
 
 |===
 [small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns in der Regel recht zeitnah._#
@@ -319,13 +326,15 @@ oder unter MacOS im Benutzerverzeichnis (aktueller Benutzer hier `<name>`)
 
 . *IntelliJ starten*. Wenn zuvor kein anderes Projekt geladen war, dann kommt ...
 
-image::images/intellij-start.png[width="75%", align="center"]
+image::images/intellij-start.png[width="90%", align="center"]
 
 [start=3]
 . Nun soll das Projekt von GtHub *heruntergeladen* werden, dazu gibt es 2 Varianten:
 
-.. `Clone Repository`, in älteren Versionen `Get from VCS` anklicken (VCS = Version Control System, `Git`)  image:images/intellij-clone-repository.png[align="center", width="23%"] oder image:images/intellij-start-get-from-vcs.png[align="center"]
-
+.. `Clone Repository` oder (in älteren Versionen) `Get from VCS` anklicken (VCS = Version Control System, `Git`)
++
+image:images/intellij-clone-repository.png[align="center", width="30%"] oder image:images/intellij-start-get-from-vcs.png[align="center"]
++
 .. oder über die Menüoption `Git > clone ...` aufrufen (_falls bereits ein anderes Projekt in IntelliJ automatisch geladen wurde_)
 
 image::images/intellij-git-menu-clone.png[width="25%", align="center"]
@@ -365,6 +374,8 @@ image::images/intellij-git-cloned-branch.png[width="40%", align="center"]
 
 Ergebnis sollte jetzt sein, dass das Projekt für die LV in der IDE enthalten bzw. geladen ist.
 
+
+////
 (Optional) Ergänzend für *erfahrenere* Benutzer:
 
 Es kann auch die _Kommandozeile_ genutzt werden, um das Repository zu klonen, dazu gibt es ein paar Tipps im folgenden Abschnitt, kann aber für den Moment ignoriert werden, es sei denn, das der Weg über IntelliJ nicht funktionieren sollte.
@@ -410,7 +421,6 @@ Dieses Repository wird geklont und damit zu einer lokalen Kopie im *Workspace* m
 CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
 ====
 
-////
 ._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
 [%collapsible]
 ====
