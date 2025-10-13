@@ -9,7 +9,9 @@ include::../../docs/settings.adoc[]
 
 tag::content[]
 ----
-1. Spracheigenschaften
+1. Syntax
+2. Anweisungen (Statements)
+3. Schlüsselwörter
 ----
 end::content[]
 ////
