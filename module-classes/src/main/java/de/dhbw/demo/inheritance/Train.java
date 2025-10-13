@@ -1,6 +1,6 @@
 package de.dhbw.demo.inheritance;
 
-public class SuperClass {
+public class Train {
 
     public String id = "1";
 
@@ -9,7 +9,7 @@ public class SuperClass {
     }
 
     public String whoAmI() {
-        return SuperClass.class.getSimpleName();
+        return Train.class.getSimpleName();
     }
 
 }

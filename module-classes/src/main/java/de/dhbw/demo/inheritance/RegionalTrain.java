@@ -1,9 +1,9 @@
 package de.dhbw.demo.inheritance;
 
 @SuppressWarnings("all")
-public class SubClass2 extends SuperClass {
+public class RegionalTrain extends Train {
 
-    public SubClass2() {
+    public RegionalTrain() {
         super.id = "2";
     }
 

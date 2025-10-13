@@ -57,23 +57,25 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 
 [source]
 ----
-  1) Update Project (git pull)
-  2) Klassen & Instanzen
-  3) Demo zu Klassen & Instanzen
-  4) Organisation & Nutzung von Java Klassen (Packages)
-  5) Übungen zu Klassen & Instanzen
-  6) Vererbung (Inheritance)
-  7) Demo zum Thema Vererbung
-  8) Übungen zur Vererbung
-  9) Pause
-  10) Polymorphismus
-  11) Demo Polymorphismus
-  12) Override & Overload
-  13) Demo zu Überladen & Übersteuern
+1)  "Update Project (git pull)"
+2)  "Test-Driven-Development (TDD)"
+3)  "Klassen & Instanzen"
+4)  "Organisation & Nutzung von Java Klassen (Packages)"
+5)  "Demo zu Klassen & Instanzen"
+6)  "Übungen zu Klassen & Instanzen"
+7)  "Erstellung einer Java Klasse mithilfe von KI"
+8)  "Pause"
+9)  "Vererbung (Inheritance)"
+10) "Demo zum Thema Vererbung"
+11) "Übungen zur Vererbung"
+12) "Polymorphismus"
+13) "Demo Polymorphismus"
+14) "Pufferzeit"
 ----
 
 *Zugehörige Module*:
 
+. {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help] (TDD)
 . {icon-module} link:../module-classes/docs/classes.adoc[module-classes]
 
 

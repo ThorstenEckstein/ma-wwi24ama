@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SuppressWarnings("GrazieInspection")
 public class ClassesDemoTest {
 
     @Test
@@ -27,7 +26,7 @@ public class ClassesDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2: Nutzung eines Felds")
+    @DisplayName("Demo 2: Nutzung eines Felds / Zugriff auf ein Feld")
     public void canUseField() {
         // given
         AClassWithField aClass = new AClassWithField();
@@ -40,7 +39,7 @@ public class ClassesDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 3: Nutzung einer Methode")
+    @DisplayName("Demo 3: Aufruf einer Methode")
     public void canUseMethod() {
         // given
         AComplexClass aClass = new AComplexClass();

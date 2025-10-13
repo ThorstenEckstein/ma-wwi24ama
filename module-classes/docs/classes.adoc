@@ -28,8 +28,7 @@ Im Wesentlichen stehen sich 2 *Programmierparadigmen* gegenüber:
 * das *imperative* Paradigma, aus dem sich OOP *objektorientierte Programmierung* entwickelte, und
 * das *deklarative* Paradigma, das die Grundlage für die _funktionale Programmierung_ bildet.
 
-
-image::../../module-funcprogramming/docs/images/paradigms.png[]
+image::../../module-funcprogramming/docs/images/paradigms.png[align=center]
 
 Die *objektorientierte Programmierung (OOP)* ist dabei eine Programmiermethodik, die die reale Welt in Form von Objekten und deren Beziehungen abbildet.
 
@@ -160,7 +159,9 @@ Eine Java Klasse hat in der Regel folgende Bestandteile:
 * 1..n Konstruktoren (engl. _constructor_) sowie
 * 0..n Verhaltensweisen (Methode, engl. _method_):
 
-Die wichtigsten Elemente von Java sind die *Klassensignatur* selbst:
+=== Die Klassensignatur
+
+Eine *Signatur* einer Java Klasse stellt quasi den Rahmen des komplexen Datentyps dar und nutze das Schlüsselwort `class`:
 
 [source,java]
 ----
@@ -171,7 +172,7 @@ public class MyClass {
 
 TIP: _In IntelliJ werden Schlüsselwörter - wie hier `class` in [blue]#*dunkelblauer*# Farbe dargestellt! In anderen IDEs sind solche Schlüsselwörter möglicherweise anders, aber sicher auch erkennbar dargestellt._
 
-Eine Klasse mit einem *Feld* bzw. einer Eigenschaft:
+Eine Klasse mit einem *Feld* bzw. einer *Eigenschaft*:
 
 [source,java]
 ----
@@ -182,9 +183,9 @@ public class MyClass {
 }
 ----
 
-Eine Klasse mit (*Default*-) *Konstruktor* (oder abgekürzt oft einfach `c'tor`):
+=== Klassen-Konstruktoren
 
-In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle *Methoden*, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+Ein *Konstruktor* ist eine spezielle *Methode* in einer Klasse, die beim *Erzeugen eines Objekts* aufgerufen wird (wie andere Methoden auch). Er dient/sie dienen dazu, das Objekt zu initialisieren, also Anfangswerte für Felder zu setzen oder notwendige Vorbereitungen zu treffen. In Java hat der Konstruktor immer denselben Namen wie die umgebende Klasse und besitzt _keinen_ Rückgabewert.
 
 Zur Erstellung einer Instanz (eines Objektes) wird das Schlüsselwort `new` benutzt (siehe unten):
 
@@ -192,17 +193,16 @@ Zur Erstellung einer Instanz (eines Objektes) wird das Schlüsselwort `new` benu
 ----
 public class MyClass {
 
-    public MyClass() { <1>
+    // c'tor
+    public MyClass() {
         super(); // Aufruf des Default C'tors der Elternklasse
     }
 }
 ----
 
-<1> Der Konstruktor bzw. die Konstruktor-Methode.
+NOTE: _Der Aufruf `super()` wird später in der Betrachtung der *Vererbung* näher erläutert._
 
-NOTE: Der Aufruf `super()` wird später in der Betrachtung der *Vererbung* näher erläutert.
-
-Eine Klasse mit einem *Konstruktor*, der ein Argument hat:
+Eine Klasse mit einem *Konstruktor*, der ein Argument entgegennimmt:
 
 [source,java]
 ----
@@ -232,20 +232,24 @@ Train train  =   new       Train();
 ----
 
 
+=== Eigenschaften
+
 Klassen besitzen fast immer auch _Eigenschaften_ in Form von einer oder mehreren *Feldern*. Zunächst ein Beispiel:
 
 [source,java]
 ----
 public class Person {
 
-    // Eigenschaft
+    // Eigenschaft mit Sichtbarkeit, Datentyp und Variablenname
     public String name;
 
 }
 ----
 
-IMPORTANT: Die "Lesart" dieses Beispiels lautet: Jede `Person` [.underline]#hat# eine Eigenschaft `Name`
+IMPORTANT: _Die "Lesart" dieses Beispiels lautet: Jede `Person` [.underline]#hat# eine Eigenschaft `Name`_
 
+
+=== Verhalten (Methoden)
 
 Klassen besitzen darüber hinaus vielfach auch _Verhalten_ in Form von einer oder mehreren *Methoden*. Am Beispiel:
 
@@ -272,18 +276,12 @@ public class Person {
 <1> Jede `Person` [.underline]#hat# das Verhalten `Namen zurückgeben` ("... kann den Namen nennen")
 <2> Jede `Person` [.underline]#hat# das Verhalten `lächeln` ("... kann lächeln")
 
-TIP: Über die
-
 
 [[demos_classes]]
 *Demo*:
 
 [subs=normal]
  -> {mod-ref-test}/demo/classes/ClassesDemoTest.java
-
-====
-IMPORTANT: Einschub: Wiederholung der *Theorie* des -> <<../../module-tools-n-help/docs/tools-and-help.adoc#tdd, Test Driven Developments>>, als Übergang zu den Übungen!
-====
 
 
 [[exercises_classes]]
@@ -307,8 +305,11 @@ Folgendes soll implementiert werden:
 
 - Ergänze die Klasse Zug mit einem Feld namens "number". Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
 
+Review::
 
-NOTE: _Was fällt bei den Implementierungen besonders ins Auge?_
+Erzeuge eine oder beide Klassen mithilfe einer KI (GenAI). Wie muss der Prompt formuliert werden, gibt es Besonderheiten zu beachten? Vergleiche die KI-Implementierung mit der manuell implementierten Klasse.
+
+NOTE: _Zusatzfrage: Fällt bei den Implementierungen aus der Übung etwas besonders auf?_
 
 
 == Vererbung

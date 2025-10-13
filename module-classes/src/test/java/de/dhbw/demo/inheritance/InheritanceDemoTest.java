@@ -11,10 +11,10 @@ public class InheritanceDemoTest {
     @DisplayName("Demo: Vererbung von Methoden")
     public void canInheritSuperClass() {
         // given
-        SubClass1 subClass1 = new SubClass1();
+        LongDistanceTrain longDistanceTrain = new LongDistanceTrain();
 
         // when
-        String id = subClass1.getId();
+        String id = longDistanceTrain.getId();
 
         // then
         assertEquals("1", id);
@@ -24,23 +24,23 @@ public class InheritanceDemoTest {
     @DisplayName("""
     Demo: Polymorphismus mit 'getId()'
     
-          [SuperClass]
+          [Train]
            /        \
           / extends  \
          /            \
-    [SubClass1] [SubClass2]
+    [LongDistanceTrain] [RegionalTrain]
     
     """)
     public void canUsePolymorphism1() {
         // given
-        SubClass1 class1 = new SubClass1();
-        SubClass2 class2 = new SubClass2();
-        //SuperClass class1 = new SubClass1();
-        //SuperClass class2 = new SubClass2();
+        LongDistanceTrain longDistanceTrain = new LongDistanceTrain();
+        RegionalTrain regionalTrain = new RegionalTrain();
+        //Train train = new LongDistanceTrain();
+        //Train train = new RegionalTrain();
 
         // when
-        String id1 = class1.getId();
-        String id2 = class2.getId();
+        String id1 = longDistanceTrain.getId();
+        String id2 = regionalTrain.getId();
 
         // then
         assertEquals("1", id1);
@@ -59,22 +59,22 @@ public class InheritanceDemoTest {
     """)
     public void canUsePolymorphism2() {
         // given :: when :: then
-        SuperClass clazz = new SuperClass();
-        String className = clazz.whoAmI();
+        Train train = new Train();
+        String className = train.whoAmI();
 
-        assertEquals("SuperClass", className);
-
-        // given :: when :: then
-        clazz = new SubClass1();
-        className = clazz.whoAmI();
-
-        assertEquals("SubClass1", className);
+        assertEquals("Train", className);
 
         // given :: when :: then
-        clazz = new SubClass2();
-        className = clazz.whoAmI();
+        train = new LongDistanceTrain();
+        className = train.whoAmI();
 
-        assertEquals("SubClass2", className);
+        assertEquals("LongDistanceTrain", className);
+
+        // given :: when :: then
+        train = new RegionalTrain();
+        className = train.whoAmI();
+
+        assertEquals("RegionalTrain", className);
     }
 
 }

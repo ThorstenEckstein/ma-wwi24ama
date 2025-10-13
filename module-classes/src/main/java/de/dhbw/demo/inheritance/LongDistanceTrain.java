@@ -1,7 +1,7 @@
 package de.dhbw.demo.inheritance;
 
 @SuppressWarnings("all")
-public class SubClass1 extends SuperClass {
+public class LongDistanceTrain extends Train {
 
     /*
     @Override
@@ -12,7 +12,7 @@ public class SubClass1 extends SuperClass {
 
     @Override
     public String whoAmI() {
-        String className = SubClass1.class.getSimpleName();
+        String className = LongDistanceTrain.class.getSimpleName();
         return className;
     }
 
