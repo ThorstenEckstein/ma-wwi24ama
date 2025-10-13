@@ -10,7 +10,7 @@ ifeval::[{show-scheduled-course-days} == true]
 include::includes/course-day-schedules.adoc[]
 endif::[]
 
-== Tag 1 - Willkommen, Setup & primitive Datentypen
+== Tag 1 - Setup, Java Basics & primitive Datentypen
 
 [subs=normal]
  [*Di., 18.02.2025*, 13:00 - 16:00, 180min] [red]#"Course Day 1"#
