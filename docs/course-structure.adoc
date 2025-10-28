@@ -39,7 +39,7 @@ endif::[]
 . {icon-module} link:../module-intro/docs/intro.adoc[module-intro]
 . {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]
 . {icon-module} link:../module-basics/docs/basics.adoc[module-basics]
-. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
+. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes] (Teil I)
 
 *Ergänzend*:
 
@@ -48,7 +48,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-exercise} link:../module-experiments/docs/experiments.adoc[module-experiments]
 
 
-== Tag 2 - Klassen, Vererbung & Polymorphismus
+== Tag 2 - Klassen & Instanzen, Vererbung
 
 [subs=normal]
  [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 2"#
@@ -65,11 +65,11 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 6)  "Übungen zu Klassen & Instanzen"
 7)  "Erstellung einer Java Klasse mithilfe von KI"
 8)  "Pause"
-9)  "Vererbung (Inheritance)"
+9)  "Vererbung (ohne Abstraktionen)"
 10) "Demo zum Thema Vererbung"
 11) "Übungen zur Vererbung"
-12) "Polymorphismus"
-13) "Demo Polymorphismus"
+12) "Datentypen II: Die Klasse als komplexer Datentyp"
+13) "Demo: Typumwandlung von Klassen"
 14) "Pufferzeit"
 ----
 
@@ -77,36 +77,35 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 
 . {icon-module} link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help] (TDD)
 . {icon-module} link:../module-classes/docs/classes.adoc[module-classes]
+. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes] (Teil II)
 
 
-== Tag 3 - Interfaces, Abstraktionen & Typumwandlung komplexer Datentypen
+== Tag 3 - Typumwandlung von Klassen, Sichtbarkeit & Interfaces
 
 [subs=normal]
- [*Mi., 05.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 3"#
+ [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 3"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Update Project (git pull)
-  2) Kurze Wiederholung Typumwandlung (Casting)
-  3) Demo zu Typumwandlung von komplexer Datentypen (Klassen)
-  4) Übungen zu Typumwandlung von komplexen Datentypen (Klassen)
-  5) Sichtbarkeiten & Scopes
-  6) Demo zu Sichtbarkeiten
-  7) Pause
-  8) Abstrakte Klassen
-  9) Demo abstrakte Klassen
-  10) Übung zu abstrakten Klassen
-  11) Interfaces
-  12) Interfaces Demo
-  13) Interfaces Exercise
-  14) Pufferzeit
+1)  Update Project (git pull)"
+2)  "Sichtbarkeiten & Scopes"
+3)  "Demo zu Sichtbarkeiten"
+4)  "Kombinationsübungen: Klassen & Sichtbarkeiten"
+5)  "Interfaces"
+6)  "Interfaces Demo"
+7)  "Pause"
+8)  "Interfaces Exercise"
+9)  "Abstrakte Klassen"
+10  "Demo abstrakte Klassen"
+11  "Übung zu abstrakten Klassen"
+12  "Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI"
+13) "Pufferzeit"
 ----
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes]
 . {icon-module} link:../module-visibility/docs/visibility.adoc[module-visibility]
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
 

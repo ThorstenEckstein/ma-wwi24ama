@@ -64,6 +64,7 @@ Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 :icon-domain:           icon:train[role=red]
 :icon-module:           icon:cube[role=green]
 :icon-one:
+:icon-question:         icon:question-circle[role=blue]
 :symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 :q:                     pass:n[[big]#icon:question-circle[role=green]#]
 :a:                     pass:n[[big]#icon:flask[role=blue]#]
@@ -127,7 +128,7 @@ ifeval::[{show-variables} == true]
 
 [cols="3h,7m"]
 |===
-| Variable         | Value
+| Variable              | Value
 
 | icons                 | {icons}
 | icon-set              | {icon-set}
@@ -159,6 +160,7 @@ ifeval::[{show-variables} == true]
 | icon-setup            | {icon-setup}
 | icon-exam             | {icon-exam}
 | icon-domain           | {icon-domain}
+| icon-question         | {icon-question}
 | icon-one              | {icon-one}
 | symbol-update-project | {symbol-update-project}
 | day-1                 | {day-1}
