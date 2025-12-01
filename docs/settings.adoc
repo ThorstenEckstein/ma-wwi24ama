@@ -46,7 +46,7 @@ Aqua, Black, Blue, Fuchsia, Gray, Green, Lime, Maroon,
 Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 ////
 
-
+:icon-prompt:           icon:terminal[role=red]
 :icon-welcome:          icon:heart[role=red]
 :icon-update-project:   icon:arrow-circle-o-down[role=red]
 :icon-dir:              icon:folder[role=yellow]
@@ -70,6 +70,8 @@ Navy, Olive, Purple, Red, Silver, Teal, White, Yellow
 :a:                     pass:n[[big]#icon:flask[role=blue]#]
 
 :docnav: pass:n[[ <<about_classes,Inhalt>> | <<demos_classes,Demo>> | <<exercises_classes,Übungen>> ]]
+
+:prompt:               pass:n[[red]#KI Prompt# {icon-prompt}]
 
 // #
 // # Titles

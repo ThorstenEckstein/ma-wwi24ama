@@ -48,7 +48,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-exercise} link:../module-experiments/docs/experiments.adoc[module-experiments]
 
 
-== Tag 2 - Klassen & Instanzen, Vererbung
+== Tag 2 - Klassen & Instanzen, Vererbung, Typumwandlung von Klassen
 
 [subs=normal]
  [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 2"#
@@ -80,7 +80,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 . {icon-module} link:../module-datatypes/docs/datatypes.adoc[module-datatypes] (Teil II)
 
 
-== Tag 3 - Typumwandlung von Klassen, Sichtbarkeit & Interfaces
+== Tag 3 - Klassen & Sichtbarkeit, Abstraktionen, Interfaces
 
 [subs=normal]
  [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 3"#

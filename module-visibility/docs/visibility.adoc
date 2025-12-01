@@ -68,13 +68,23 @@ include::{mod-lnk-test}/demo/VisibilityDemoTest.java[tags="visibility"]
 [[exercises_scopes]]
 *Übungen*:
 
-keine
-
-////
 [subs=normal]
  -> {mod-ref-test}/exercise/VisibilityExerciseTest.java
 
-Übung 1::
-////
+*Übung 1:*
 
+[loweralpha]
+. Implementiere eine Klasse 'Person' mit den Attributen:
+
+  - Name
+  - Alter
+
+. Entscheide selbst über die Datentypen der Attribute, aber mache sie "nicht öffentlich".
+
+. Erstelle zudem Methoden für das Auslesen und Setzen der Attribute (get-/setName, get-/setAge)
+
+. Schreibe hier einen einfachen Test: Setze konkrete Werte für Name und Alter (set), überprüfe dann,
+ob die Werte korrekt gesetzt wurden (get).
+
+Achte bewusst auf die Sichtbarkeiten der Attribute und Methoden und erkläre diese!
 

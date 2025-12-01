@@ -243,7 +243,7 @@ Die empfohlene IDE ist `IntelliJ`. Die LV-Inhalte sollten sowohl in der _Communi
 
 Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein sollte (falls noch nicht vorhanden, bitte installieren):
 
- >= IntelliJ IDEA 2025.2.3 (Enterprise/Community Edition)
+ >= IntelliJ IDEA 2025.2.5 (Enterprise/Community Edition)
 
 Nicht zu große Abweichungen in der Version sollten kein Problem sein, die letzten Versionen sind in aller Regel untereinander kompatibel. Bei Problemen versucht man es einfach mit der aktuellsten IDE Version.
 
@@ -288,7 +288,7 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 | >= 0.2.6
 
 | image::images/plantuml-plugin.png[]
-| Erstellung von UML-Diagrammen
+| "plantuml4idea": Erstellung von UML-Diagrammen
 | >= 7.13.x
 
 |===

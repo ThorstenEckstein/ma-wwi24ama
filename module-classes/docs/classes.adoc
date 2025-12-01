@@ -71,6 +71,7 @@ Ein Spiel soll empfohlen werden, wenn der Spieler es noch nicht besitzt und
 es zu einem Genre gehört, das der Spieler mag oder es ein anderer Spieler mag,
 mit dem der Spieler oft interagiert.
 
+[[model-example]]
 [plantuml, align="center", title="Klassenmodell"]
 ....
 include::diagrams/example-model.puml[]
@@ -195,7 +196,6 @@ public class MyClass {
 
     // c'tor
     public MyClass() {
-        super(); // Aufruf des Default C'tors der Elternklasse
     }
 }
 ----
@@ -410,6 +410,11 @@ IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigensc
 .canInheritSuperClass()
 [subs=normal]
  -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
+
+
+====
+TIP: {prompt} "_Erstelle eine Beispiel-Klassenhierarchie in Java. Wähle ein Beispiel aus der dem Kontext "Deutsche Bahn" für Klassen. Das Klassenmodell soll jeweils eine Klasse, eine abstrakte Klasse und ein Interface beinhalten._"
+====
 
 
 == Polymorphismus
