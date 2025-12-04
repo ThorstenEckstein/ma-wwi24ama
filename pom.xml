@@ -21,6 +21,7 @@
         <module>docs</module>
         <module>exam-preparation</module>
 
+        <module>module-ai</module>
         <module>module-associations</module>
         <module>module-archive</module>         <!-- backup -->
         <module>module-basics</module>

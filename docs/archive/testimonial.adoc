@@ -29,7 +29,7 @@ a| * [x] {nbsp} | - | 2 | NEU: Debugging in der IDE
 a| * [x] {nbsp} | 2 | 3 | Übung 1a: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
 a| * [x] {nbsp} | 2 | 3 | Übung 1b: equals() und hashCode()
 
-a| * [ ] {nbsp} | 2 | 3 | Unit-Test Demo: In `ExperimentsTest` die Wiederholungsübungen durchgehen (Passengers add/remove)
+a| * [ ] {nbsp} | 2 | 3 | Unit-Test Demo: In `AiDemoTest` die Wiederholungsübungen durchgehen (Passengers add/remove)
 
 a| * [x] {nbsp} | 2 | 3 | Methoden überladen, überschreiben/übersteuern
 a| * [x] {nbsp} | 2 | 3 | Unit-Test Demo: Overload, Override mit "Display"
