@@ -290,6 +290,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 *Zugehörige Module*:
 
 . {icon-module} link:../module-classes/docs/classes.adoc[module-classes]
+. {icon-module} link:../module-ai/docs/ai.adoc[module-ai]
 . {icon-module} link:../exam-preparation/docs/exam-preparation.adoc[exam-preparation]
 
 
