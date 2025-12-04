@@ -270,7 +270,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
   2) Project Update
   3) Polymorphismus >>> /module-classes/docs/classes.adoc, chapter 6
   4) Demo Polymorphismus
-  5) Tipps & Tricks im Umgang mit KI-Tools   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
+  5) KI in der Softwareentwicklung   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
   6) Pause
   7) Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen
 ----
