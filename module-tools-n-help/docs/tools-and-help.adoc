@@ -181,7 +181,38 @@ Dazu eine *Demo*:
  -> {mod-ref-test}/demo/tdd/TddDemoTest.java
 
 
-== Generierung von Quellcode mit der IDE
+== Einsatz von Hilfsmitteln/Tools in der IDE
+
+IntelliJ bietet eine Reihe von Hilfsmitteln im Standard und über PlugIns an, die bei der Implementierung von Code unterstützen können.
+
+Innerhalb der *LV* gelten folgende *Regeln*:
+
+. Die Nutzung von *Code-Generierung* ist direkter _Teil der LV_ und wird nach und nach intensiver genutzt/geübt. Zu Beginn der LV zunächst nicht sinnvoll, gegen Ende aber erlaubt bzw. sogar erwünscht
+
+. Die Nutzung von *Auto-Completion* ist standardmäßig in der IDE _aktiviert_ und kann genutzt werden. Sie kann, z.B. zu Übungszwecken, abgeschaltet werden. Grundsätzlich hilft dieses Feature, Fehler zu vermeiden
+
+. *KI-Tools* werden in dieser LV _nicht_ wirklich eingesetzt, da der Fokus auf dem Erlernen der Grundlagen der Javaprogrammierung liegt. Am Ende der LV ist der Einsatz von KI-Tools aber Gegenstand eines Moduls und wird näher betrachtet
+
+Sowie *Empfehlungen*:
+
+. *Auto-Completion* auch mal abschalten, um sich selbst zu fordern
+. *Auto-Completion* bewusst "lesen", um den Vorschlag zu verstehen
+. *Auto-Completion* nur nutzen, wenn man den Vorschlag versteht
+. *Code-Generierung* üben, aber auch hier gilt: Gezielt einsetzen und Verstehen, was generiert wird.
+. *KI-Tools* zunächst nicht für die Code-Generierung nutzen, aber z.B. zur Erklärung von Code, Algorithmen oder Prinzipien
+. Es ist wichtig, zunächst die *Grundlagen* zu verinnerlichen, sich selbst zu erarbeiten und praktisch zu üben! Erst dann kann eine KI-Antwort bewertet werden
+
+In der *Prüfung*:
+
+. *Auto-Completion* bleibt standardmäßig aktiviert und kann genutzt werden.
+. *Code-Generierung* darf nur auf Anforderung bzw. bei Bedarf mit Rücksprache der Prüfer:Innen genutzt werden.
+. *KI-Tools* sind in der Prüfung nicht erlaubt.
+
+CAUTION: [red]#_Es kann jederzeit Gegenstand der Prüfung sein/werden, dass Kandidat:Innen Quellcode_ OHNE _die Nutzung der obigen Hilfsmittel zu schreiben, daher wird empfohlen, regelmäßig Code selbst zu schreiben und sich nicht zu stark unterstützen zu lassen_#
+
+
+
+=== Generierung von Quellcode mit der IDE
 
 In aller Regel ist es sehr sinnvoll, die Entwicklungsumgebung (IDE) weitreichend zu nutzen. Das gilt insbesondere für die *Erzeugung von Quellcode*. Das Ganze ist grundsätzlich eine Sache der Übung, man sollte sich einfach daran gewöhnen, diese Hilfen möglichst viel als Entwickler:In zu nutzen!
 
@@ -220,7 +251,7 @@ die sog. _Overrides_ bei Vererbungen
 |===
 
 
-== Autocompletion
+=== Automatische Code-Ergänzung (Autocompletion)
 
 Neben der Generierung von Code ist auch die Unterstützung beim Tippen durch die sog. *Autocompletion*, also die automatische Ergänzung/Erkennung des gerade getippten Codes, von besonderer Bedeutung.
 
@@ -239,7 +270,10 @@ Hier wählt man dann einfach die gewünschte *kontext-spezifische* Funktion:
 |===
 
 
-== Icons & Symbole in der IDE
+=== KI Tools
+
+
+=== Icons & Symbole in der IDE
 
 Die _"kleinen Hinweise"_ der IDE helfen dem geübten Auge mit schnellen Informationen. Dazu ein paar Beispiele, wenn man mit der Maus über das jeweilige Symbol fährt:
 

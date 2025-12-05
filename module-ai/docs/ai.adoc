@@ -11,54 +11,104 @@ include::module-settings.adoc[]
 
 tag::content[]
 ----
- 1. Hinweis zum "Ausprobieren & Experimentieren"
+ ...
 ----
 end::content[]
 ////
 
-== Hinweis zum "Ausprobieren & Experimentieren"
 
-Dieses Modul dient einfach als *Übungsmodul*, damit man die Grundlagen der Javaprogrammierung einfach mal und unabhängig von den anderen Inhalten ausprobieren kann.
+== KI in der Softwareentwicklung
 
-Alle wesentlichen Aspekte werden zwar im Lauf der Lehrveranstaltung im Detail besprochen, dennoch kann es hilfreich sein, hier unabhängig nochmal ein paar Dinge für sich selber zu testen und ein _"Gefühl"_ für die Sprache zu bekommen.
+* Aktuelle KI-Tools:
+  - GitHub Copilot
+  - ChatGPT
+  - Amazon Q Developer
+  - Amazon CodeWhisperer
 
-Aus diesem Grund enthält dieses Modul selbst _keinen eigentlichen Inhalt_ oder Theorie. Die theoretischen & praktischen Grundlagen sind Teil der anderen Module, die nach und nach vertieft werden.
+* Einsatzgebiete:
+  - Verstehen von unbekanntem Code
+  - Code-Generierung und -Vervollständigung
+  - Automatisierte Tests
+  - Code-Review und Qualitätssicherung
+  - Erstellung von technischer Dokumentation, z.B. JavaDoc
 
-Damit man möglichst einfach beginnen kann, gibt es eine vorbereitete *Test-Klasse* hier:
 
-[subs=normal]
- module-experiments/{mod-ref-test}/exercise/BasicsExerciseTest.java
+=== Technische Voraussetzungen
 
-Sie enthält bereits einen Test, den man umsetzen kann, es können aber natürlich beliebige weitere zu der Klasse hinzugefügt werden. Das geht einfach, indem man einfach weitere Testmethoden hinzufügt. Hier die Vorlagen zum Kopieren:
+* **IDE:** IntelliJ IDEA mit KI-Plugins
+* **KI-Tools:** Zugang zu GitHub Copilot oder ähnlichen Tools
+* **Java:** JDK 17 oder höher
+* **Testing:** JUnit 5
+* **Build-Tool:** Maven
 
-[source, java]
+
+=== KI im Kontext Zugbetrieb
+
+* *Praxisbeispiel:* Intelligente Zugdisposition
+  - Predictive Maintenance für Züge
+  - Optimierung von Fahrplänen
+  - Anomalieerkennung in Sensordaten
+
+* *Fallstudie:* Deutsche Bahn - KI für Pünktlichkeitsprognosen
+
+
+=== KI-gestützte Java-Entwicklung
+
+*Übung 1:* Implementierung einer Zugklasse mit KI-Unterstützung
+
+[source,java]
 ----
-@Test
-@DisplayName(
-"""
-  <Beschreibung, was in diesem Test getestet werden soll>
-
-  HINWEIS: Der Methodenname muss eindeutig sein, hier 'exercise1()', bei
-           weiteren Tests kann man dann einfach die Nummer hochzählen,
-           der nächste Test wäre also 'exercise2()' oder man nennt die
-           Methode danach, was durch sie getestet werden soll, z.B. so
-           etwas wie 'canCreateInstanceOfClass()'
-""")
-public void exercise1() {
-    // given
-
-    // when
-
-    // then
-}
+Prompt für KI-Tool: "Erstelle eine Java-Klasse 'Zug' für ein Zugüberwachungssystem mit Attributen für ID, Typ, aktuelle Position, Geschwindigkeit und Verspätung. Implementiere Getter/Setter und eine Methode zur Berechnung der voraussichtlichen Ankunftszeit."
 ----
 
-Wenn man im Rahmen dieses "Ausprobierens" Klassen angelegt werden, so sollen diese in den *"echten" Sourcecode-Packages* gespeichert werden, und zwar hier:
+*Übung 2:* Generierung von Unit-Tests
 
-[subs=normal]
- module-experiments/{mod-ref-src}/exercise/*
+[source,java]
+----
+Prompt: "Erstelle einen JUnit Tests für die Zug-Klasse
+mit Edge Cases für Verspätungsberechnung"
+----
 
-Die "echten" Klassen, die im Test genutzt werden sollen, werden automatisch erkannt, wenn die obige Struktur genutzt wird. Wenn nicht, dann bitte folgenden Hinweis beachten.
 
-CAUTION: _Achtung: Wenn man eigene Pakete/Verzeichnisse für neue Klassen anlegt, so müssen diese ggf. importiert werden. Mehr dazu siehe ->_
-`/module-classes/docs/classes.adoc` im Abschnitt "Importierung".
+=== Code-Review mit KI
+
+* Demonstration: Automatisierte Code-Analyse [red]#>>> Beispielcode raussuchen#
+* Diskussion/Review: Qualität der KI-Vorschläge bewerten
+
+
+=== Ethik & Best Practices
+
+*Verantwortungsvoller KI-Einsatz*
+
+* Bias und Fairness: Diskriminierung in Algorithmen vermeiden
+* Transparenz: Nachvollziehbarkeit von KI-Entscheidungen
+* Datenschutz: DSGVO-konforme KI-Implementierung
+
+*Qualitätssicherung*
+
+* Grenzen von KI-generiertem Code erkennen
+* Notwendigkeit menschlicher Überprüfung
+* Testing-Strategien für KI-integrierte Systeme
+
+
+=== Experimente: "Intelligentes Zugüberwachungssystem"
+
+**Szenario:** Entwicklung eines KI-gestützten Systems im Rahmen der Echtzeitüberwachung von Zügen
+
+*Mögliche Experimente*:
+
+. *Anomalieerkennung*: Implementierung eines Algorithmus zur Erkennung ungewöhnlicher Zugbewegungen
+. *Verspätungsprognose*: Entwicklung eines Modells zur Vorhersage von Zugverspätungen
+. *Automatisierte Disposition*: KI-gestützte Umleitung bei Störungen
+
+*Diskussion*
+
+* Diskussion über Implementierungsherausforderungen
+
+
+=== Literatur
+
+* "AI-Powered Software Development" - Martin Fowler
+* "Machine Learning Engineering" - Andriy Burkov
+* "Clean Code" - Robert C. Martin (Kapitel zu KI-generiertem Code)
+
