@@ -166,7 +166,7 @@ include::{agendas}/course-day-8.agenda.txt[]
 . {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
 
 
-== Tag 9 - Prüfungsvorbereitung
+== Tag 9 - Polymorphismus, KI in der Softwareentwicklung & Prüfungsvorbereitung
 
 [subs=normal]
  [*Do., 16.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 9"#
@@ -176,6 +176,13 @@ include::{agendas}/course-day-8.agenda.txt[]
 [source]
 ----
 include::{agendas}/course-day-9.agenda.txt[]
+  1) Come in, sit down and relax
+  2) Project Update
+  3) Polymorphismus >>> /module-classes/docs/classes.adoc, chapter 6
+  4) Demo Polymorphismus
+  5) KI in der Softwareentwicklung   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
+  6) Pause
+  7) Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen
 ----
 
 *Mögliche Inhalte zur Prüfungsvorbereitung*:
@@ -192,7 +199,8 @@ include::{agendas}/course-day-9.agenda.txt[]
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
+. {icon-module} link:../module-classes/docs/classes.adoc[module-classes]
+. {icon-module} link:../module-ai/docs/ai.adoc[module-ai]
 . {icon-module} link:../exam-preparation/docs/exam-preparation.adoc[exam-preparation]
 
 

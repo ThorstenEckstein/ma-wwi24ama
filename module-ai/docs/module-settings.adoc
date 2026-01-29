@@ -1,0 +1,3 @@
+// --- Name
+:module-name:  module-ai
+:module-title: About Artificial Intelligence & its Usage in Software Engineering Projects
