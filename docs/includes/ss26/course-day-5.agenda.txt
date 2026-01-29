@@ -1,0 +1,14 @@
+1) Come in, sit down and relax
+2) Project Update
+3) Override & Overload >>> classes.adoc/chapter 6
+4) Demo zu Überladen & Übersteuern
+5) Assoziationen zwischen Klassen >>> associations.adoc
+6) Demo zu Assoziationen
+7) Pause
+8) Übungen zu Assoziationen >>> associations.adoc/exercise 1 (optional 2)
+9) Lösungsbesprechung
+10) Enums >>> enums.adoc
+11) Demo zu Enums
+12) Übungen zu Enums >>> enums.adoc/exercise 1 & 2
+13) Pufferzeit
+

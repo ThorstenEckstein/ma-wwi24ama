@@ -1,0 +1,9 @@
+1) Come in, sit down and relax
+2) Project Update
+3) Polymorphismus >>> /module-classes/docs/classes.adoc, chapter 6
+4) Demo Polymorphismus
+5) KI in der Softwareentwicklung   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
+6) Pause
+7) Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen
+8) Pufferzeit
+

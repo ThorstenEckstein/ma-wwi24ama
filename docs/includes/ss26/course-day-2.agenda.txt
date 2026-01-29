@@ -1,0 +1,15 @@
+1) Update Project (git pull)
+2) Test-Driven-Development (TDD) >>> tools-and-help.adoc/chapter 2
+3) Klassen & Instanzen >>> classes.adoc
+4) Organisation & Nutzung von Java Klassen (Packages)
+5) Demo zu Klassen & Instanzen
+6) Übungen zu Klassen & Instanzen >>> classes.adoc/exercise 1 & 2
+7) Erstellung einer Java Klasse mithilfe von KI
+8) Pause
+9) Vererbung (Inheritance)
+10) Demo zum Thema Vererbung
+11) Übungen zur Vererbung >>> classes.adoc/exercise 3
+12) Lösungsbesprechung
+13) Datentypen II: Die Klasse als komplexer Datentyp >>> datatypes.adoc/chapter 1.4
+14) Demo: Typumwandlung von Klassen (ohne Abstraktionen)
+

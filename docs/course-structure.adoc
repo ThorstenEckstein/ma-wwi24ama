@@ -5,33 +5,19 @@ include::settings.adoc[]
 
 = Programmierung II mit Java
 
-:show-scheduled-course-days: false
-ifeval::[{show-scheduled-course-days} == true]
-include::includes/course-day-schedules.adoc[]
-endif::[]
+:agendas: includes/ss26
 
 == Tag 1 - Setup, Java Basics & primitive Datentypen
 
 [subs=normal]
- [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 1"#
+ [*Do., 19.02.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 1"#
+
 
 *Inhalt*:
 
 [source]
 ----
-1)  "Willkommen"
-2)  "Organisation"
-3)  "Technical Setup"
-4)  "Tools: IntelliJ IDE"
-5)  "Tools: Maven & Projektstruktur"
-6)  "Fachlicher Schwerpunkt"
-7)  "Pause"
-8)  "Java Basics"
-9)  "Datentypen I: Primitive Datentypen"
-10) "Typumwandlung (Casting)"
-11) "Demo Datentypen I: Umwandlung primitiver Datentypen"
-12) "Übung Datentypen I: Umwandlung primitiver Datentypen"
-13) "Lösungsbesprechung"
+include::{agendas}/course-day-1.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -51,26 +37,13 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 2 - Klassen & Instanzen, Vererbung, Typumwandlung von Klassen
 
 [subs=normal]
- [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 2"#
+ [*Do., 26.02.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 2"#
 
 *Inhalt*:
 
 [source]
 ----
-1)  "Update Project (git pull)"
-2)  "Test-Driven-Development (TDD)"
-3)  "Klassen & Instanzen"
-4)  "Organisation & Nutzung von Java Klassen (Packages)"
-5)  "Demo zu Klassen & Instanzen"
-6)  "Übungen zu Klassen & Instanzen"
-7)  "Erstellung einer Java Klasse mithilfe von KI"
-8)  "Pause"
-9)  "Vererbung (ohne Abstraktionen)"
-10) "Demo zum Thema Vererbung"
-11) "Übungen zur Vererbung"
-12) "Datentypen II: Die Klasse als komplexer Datentyp"
-13) "Demo: Typumwandlung von Klassen"
-14) "Pufferzeit"
+include::{agendas}/course-day-2.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -83,25 +56,13 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 3 - Klassen & Sichtbarkeit, Abstraktionen, Interfaces
 
 [subs=normal]
- [*??., dd.mm.yyyy*, hh:mm - hh:mm, 180min] [red]#"Course Day 3"#
+ [*Do., 05.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 3"#
 
 *Inhalt*:
 
 [source]
 ----
-1)  Update Project (git pull)"
-2)  "Sichtbarkeiten & Scopes"
-3)  "Demo zu Sichtbarkeiten"
-4)  "Kombinationsübungen: Klassen & Sichtbarkeiten"
-5)  "Interfaces"
-6)  "Interfaces Demo"
-7)  "Pause"
-8)  "Interfaces Exercise"
-9)  "Abstrakte Klassen"
-10  "Demo abstrakte Klassen"
-11  "Übung zu abstrakten Klassen"
-12  "Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI"
-13) "Pufferzeit"
+include::{agendas}/course-day-3.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -113,24 +74,13 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 4 - Operatoren, Kontrollstrukturen & Collections API
 
 [subs=normal]
- [*Mi., 12.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 4"#
+ [*Do., 12.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 4"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Logische Operatoren
-  4) Demo zu Operatoren
-  5) Übungen zu Operatoren
-  6) Kontrollstrukturen
-  7) Pause
-  8) Demo zu Kontrollstrukturen
-  9) Übung zu Kontrollstrukturen
-  10) Java Collections API
-  11) Demo zur Collections API
-  12) Übungen Collections API
+include::{agendas}/course-day-4.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -143,23 +93,13 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 5 - Assoziationen & Java Generics
 
 [subs=normal]
- [*Di., 18.03.2025*, 13:30 - 16:00, 180min] [red]#"Course Day 5"#
-
-CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
+ [*Do., 19.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 5"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Assoziationen zwischen Klassen
-  4) Pause
-  5) Demo zu Assoziationen
-  6) Übungen zu Assoziationen
-  7) Java Generics
-  8) Demos zu Java Generics
-  9) Pufferzeit
+include::{agendas}/course-day-5.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -171,22 +111,13 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 == Tag 6 - Java Generics, funktionale Programmierung
 
 [subs=normal]
- [*Mi., 26.03.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
+ [*Do., 26.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Generics (kurze Wiederholung)
-  4) Demos zu Java Generics
-  5) Übungen zu Java Generics
-  6) Pause
-  7) Funktionale Programmierung in Java
-  8) Demos zu funktionaler Programmierung
-  9) Übungen zu funktionaler Programmierung
-  10) Pufferzeit
+include::{agendas}/course-day-6.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -198,25 +129,13 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 == Tag 7 - Ausnahmen, Fehlerbehandlung, statische Elemente & Enums
 
 [subs=normal]
- [*Mi., 02.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 7"#
+ [*Do., 02.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 7"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Funktionale Programmierung in Java (Wiederh.)
-  4) Übungen zu funktionaler Programmierung
-  5) Exceptions & Exception Handling
-  6) Demo zu Exceptions
-  7) Pause
-  8) Übungen zu Exceptions
-  9) Statische Elemente
-  10) Demo zu statischen Elementen
-  11) Enums
-  12) Demo zu Enums
-  13) (Optional) Übungen zu Enums
+include::{agendas}/course-day-7.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -230,24 +149,13 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 == Tag 8 - Referenzsemantik, Object-Vertrag & Records
 
 [subs=normal]
- [*Mi., 09.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 8"#
+ [*Do., 09.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 8"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Der Objektvertrag
-  4) Demos zum Objektvertrag
-  5) Übungen zum Objektvertrag
-  6) Referenzsemantik
-  7) Pause
-  8) Demo Referenzsemantik
-  9) Java Records
-  10) Demo zu Java Records
-  11) Clean Code
-  12) Pufferzeit
+include::{agendas}/course-day-8.agenda.txt[]
 ----
 
 *Zugehörige Module*:
@@ -261,17 +169,13 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 == Tag 9 - Prüfungsvorbereitung
 
 [subs=normal]
- [*Mi., 16.04.2025*, 09:15 - 12:15, 180min] [red]#"Course Day 9"#
+ [*Do., 16.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 9"#
 
 *Inhalt*:
 
 [source]
 ----
-  1) Come in, sit down and relax
-  2) Project Update
-  3) Prüfungsvorbereitung I: Fragen, Aufgaben, Demos, Wiederholungen
-  4) Pause
-  5) Prüfungsvorbereitung II: Fragen, Aufgaben, Demos, Wiederholungen
+include::{agendas}/course-day-9.agenda.txt[]
 ----
 
 *Mögliche Inhalte zur Prüfungsvorbereitung*:
@@ -295,6 +199,11 @@ CAUTION: [red]#_!!! Verkürzung der LV um eine halbe Stunde (13:30 - 16:00)!!!_#
 == (Tag 10+) Semesterabschlussprüfungen
 
 Die Ausgestaltung und der Modus der Prüfungen wird derzeit festgelegt.
+
+[subs=normal]
+ [*Di., 28.04.2026*, 07:00 - 18:00, 600min] [red]#"Exam Day 1"#
+ [*Mi., 29.04.2026*, 07:00 - 18:00, 600min] [red]#"Exam Day 2"#
+
 
 ////
 Es gibt aber folgende *Idee*. Die *Prüfung* besteht insgesamt aus zwei Teilen:

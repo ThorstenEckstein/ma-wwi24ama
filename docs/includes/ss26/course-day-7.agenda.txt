@@ -1,0 +1,12 @@
+1) Come in, sit down and relax
+2) Project Update
+3) Exceptions & Exception Handling >>> exception-handling.adoc
+4) Demo zu Exceptions
+5) Übungen zu Exceptions
+6) Pause
+7) Statische Elemente >>> statics.adoc
+8) Demo zu statischen Elementen
+9) Enums >>> enums.adoc
+10) Demo zu Enums
+11) Klassenmodell/Szenario >>> /exam-preparation/docs/exam-preparation.adoc > Szenario 1: Semester-Planung (Teil I)
+

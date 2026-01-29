@@ -1,0 +1,14 @@
+1) Willkommen >>> intro.adoc
+2) Organisation
+3) Technical Setup
+4) Tools: IntelliJ IDE >>> tools-and-help.adoc
+5) Tools: Maven & Projektstruktur
+6) Fachlicher Schwerpunkt
+7) Pause
+8) Java Basics >>> basics.adoc
+9) Datentypen I: Primitive Datentypen >>> datatypes.adoc/chapter 1.2
+10) Typumwandlung (Casting)
+11) Demo Datentypen I: Umwandlung primitiver Datentypen
+12) Übung Datentypen I: Umwandlung primitiver Datentypen >>> datatypes.adoc/exercise 1
+13) Lösungsbesprechung
+

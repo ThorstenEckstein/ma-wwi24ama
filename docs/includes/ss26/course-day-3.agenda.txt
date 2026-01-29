@@ -1,0 +1,14 @@
+1) Update Project (git pull)
+2) Sichtbarkeiten & Scopes >>> visibility.adoc
+3) Demo zu Sichtbarkeiten
+4) Kombinationsübungen: Klassen & Sichtbarkeiten >>> visibility.adoc/exercise 1
+5) Interfaces
+6) Interfaces Demo
+7) Pause
+8) Interfaces Exercise >>> interfaces.adoc/exercise 1
+9) Abstrakte Klassen
+10) Demo abstrakte Klassen
+11) Übung zu abstrakten Klassen >>> interfaces.adoc/exercise 2
+12) Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI
+13) Pufferzeit
+

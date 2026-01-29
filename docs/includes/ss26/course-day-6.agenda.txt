@@ -1,0 +1,12 @@
+1) Come in, sit down and relax
+2) Project Update
+3) Java Generics >>> generics.adoc
+4) Demos zu Java Generics
+5) Übungen zu Java Generics >>> generics.adoc/exercise 1 & 2 [commons-testdata]
+6) Lösungsbesprechung
+7) Pause
+8) Funktionale Programmierung in Java >>> functional-programming.adoc
+9) Demos zu funktionaler Programmierung
+10) Übungen zu funktionaler Programmierung >>> functional-programming.adoc/exercise 1 & 2 (a,b)
+11) Lösungsbesprechung  [/cop/code-examples/src/test/java/de/db/itcs/cop/datagram/ParseDatagramsTest.java]
+

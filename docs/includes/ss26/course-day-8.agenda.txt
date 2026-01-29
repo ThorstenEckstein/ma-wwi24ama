@@ -1,0 +1,13 @@
+1) Come in, sit down and relax
+2) Project Update
+3) Der Objektvertrag >>> object-contract.adoc
+4) Demos zum Objektvertrag
+5) Übungen zum Objektvertrag
+6) Referenzsemantik >>> references-semantics.adoc
+7) Pause
+8) Demo Referenzsemantik
+9) Java Records >>> records.adoc
+10) Demo zu Java Records
+11) Clean Code
+12) Pufferzeit
+
