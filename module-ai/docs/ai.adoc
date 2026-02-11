@@ -35,11 +35,8 @@ end::content[]
 
 === Technische Voraussetzungen
 
-* **IDE:** IntelliJ IDEA mit KI-Plugins
-* **KI-Tools:** Zugang zu GitHub Copilot oder ähnlichen Tools
-* **Java:** JDK 17 oder höher
-* **Testing:** JUnit 5
-* **Build-Tool:** Maven
+* *IDE:* z.B. IntelliJ IDEA mit KI-Plugins (s.o.)
+* *KI-Tools:* Zugang zu GitHub Copilot oder ähnlichen Tools
 
 
 === KI im Kontext Zugbetrieb
@@ -56,18 +53,21 @@ end::content[]
 
 *Übung 1:* Implementierung einer Zugklasse mit KI-Unterstützung
 
-[source,java]
+[source]
 ----
-Prompt für KI-Tool: "Erstelle eine Java-Klasse 'Zug' für ein Zugüberwachungssystem mit Attributen für ID, Typ, aktuelle Position, Geschwindigkeit und Verspätung. Implementiere Getter/Setter und eine Methode zur Berechnung der voraussichtlichen Ankunftszeit."
+Prompt:
+
+"Erstelle eine Java-Klasse 'Zug' für ein Zugüberwachungssystem mit Attributen für ID, Typ, aktuelle Position, Geschwindigkeit und Verspätung. Implementiere Getter/Setter und eine Methode zur Berechnung der voraussichtlichen Ankunftszeit."
 ----
 
 *Übung 2:* Generierung von Unit-Tests
 
-[source,java]
+[source]
 ----
-Prompt: "Erstelle einen JUnit Tests für die Zug-Klasse
-mit Edge Cases für Verspätungsberechnung"
+Prompt: "Erstelle einen JUnit Tests für die Zug-Klasse mit Edge Cases für Verspätungsberechnung"
 ----
+
+NOTE: _Ein "Edge Case" ist eine Situation, die nur außerhalb der normalen Betriebsparameter oder „Happy Path“-Nutzung auftreten kann und seltene, extreme oder ungewöhnliche Bedingungen beschreibt, deren Verhalten getestet werden sollte._
 
 
 === Code-Review mit KI
