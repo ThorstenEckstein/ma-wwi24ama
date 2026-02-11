@@ -73,12 +73,41 @@ public class MyFirstExample { // Klassenkörper mit Codeblöcken
 Statements sind ausführbare Anweisungen, die wie bereits gesagt mit einem Semikolon abgeschlossen werden. Dazu zählen:
 
 * Deklarationen (z.B. Datentyp und Variable deklarieren, `String`, `var`)
+
+[source,java]
+----
+// Variablen-Deklaration mit explizitem Typ
+int count;
+// Variablen-Deklaration mit Typinferenz
+var count;
+----
+
 * Ausdrucks-Statements (z.B. Methodenaufruf, Zuweisung)
+
+[source,java]
+----
+// Zuweisung ist ein Ausdrucks-Statement
+int a = 5;
+
+// Methodenaufruf als Statement
+System.out.println("Hallo Welt!");
+----
+
 * Kontrollflussanweisungen:
 ** Bedingte Anweisungen: `if`, `else`, `switch`
 ** Schleifen: `for`, `while`, `do-while`
 * Sprunganweisungen: `return`, `break`, `continue`, `throw`
 * Blockanweisungen (Codeblöcke): _geschweifte Klammern_ gruppieren mehrere Statements, also `{ ... }`
+
+[source,java]
+----
+...
+public void blockExample() {
+    int temp = 42;
+    System.out.println("Temp: " + temp);
+}
+...
+----
 
 
 == Schlüsselwörter

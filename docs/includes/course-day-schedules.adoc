@@ -1,6 +1,6 @@
 include::../settings.adoc[]
 
-*Stand der Planung*: `[red]#29.01.2026#`
+*Stand der Planung*: `[red]#11.02.2026#`
 
 *LV planning for: SS26 (V3)*
 
@@ -8,6 +8,9 @@ include::../settings.adoc[]
 [.small]
 ----
 
+"Course Day 1" matches the planned time of 180 min! Everything's ok!
+
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 19.02.2026, 09:15 - 12:15, 180min] "Course Day 1"
   [Content:Welcome     ] [Do., 19.02.2026, 09:15 - 09:25, 10min] "Willkommen" >>> intro.adoc
   [Content:Organization] [Do., 19.02.2026, 09:25 - 09:35, 10min] "Organisation"
@@ -23,7 +26,9 @@ include::../settings.adoc[]
   [Content:Exercise    ] [Do., 19.02.2026, 11:50 - 12:05, 15min] "Übung Datentypen I: Umwandlung primitiver Datentypen" >>> datatypes.adoc/exercise 1
   [Content:Review      ] [Do., 19.02.2026, 12:05 - 12:15, 10min] "Lösungsbesprechung"
 
+"Course Day 2" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 26.02.2026, 09:15 - 12:15, 180min] "Course Day 2"
   [Content:Setup       ] [Do., 26.02.2026, 09:15 - 09:20, 5min] "Update Project (git pull)"
   [Content:Topic       ] [Do., 26.02.2026, 09:20 - 09:35, 15min] "Test-Driven-Development (TDD)" >>> tools-and-help.adoc/chapter 2
@@ -40,7 +45,9 @@ include::../settings.adoc[]
   [Content:Topic       ] [Do., 26.02.2026, 11:50 - 12:00, 10min] "Datentypen II: Die Klasse als komplexer Datentyp" >>> datatypes.adoc/chapter 1.4
   [Content:Demo        ] [Do., 26.02.2026, 12:00 - 12:15, 15min] "Demo: Typumwandlung von Klassen (ohne Abstraktionen)"
 
+"Course Day 3" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 05.03.2026, 09:15 - 12:15, 180min] "Course Day 3"
   [Content:Setup       ] [Do., 05.03.2026, 09:15 - 09:20, 5min] "Update Project (git pull)"
   [Content:Topic       ] [Do., 05.03.2026, 09:20 - 09:35, 15min] "Sichtbarkeiten & Scopes" >>> visibility.adoc
@@ -56,7 +63,9 @@ include::../settings.adoc[]
   [Content:Review      ] [Do., 05.03.2026, 11:45 - 12:05, 20min] "Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI"
   [Content:Buffer      ] [Do., 05.03.2026, 12:05 - 12:15, 10min] "Pufferzeit"
 
+"Course Day 4" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 12.03.2026, 09:15 - 12:15, 180min] "Course Day 4"
   [Content:Arrival     ] [Do., 12.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 12.03.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -72,7 +81,9 @@ include::../settings.adoc[]
   [Content:Exercise    ] [Do., 12.03.2026, 11:50 - 12:05, 15min] "Übungen Collections API" >>> collections.adoc/exercise 1 & 2
   [Content:Review      ] [Do., 12.03.2026, 12:05 - 12:15, 10min] "Lösungsbesprechung"
 
+"Course Day 5" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 19.03.2026, 09:15 - 12:15, 180min] "Course Day 5"
   [Content:Arrival     ] [Do., 19.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 19.03.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -88,7 +99,9 @@ include::../settings.adoc[]
   [Content:Exercise    ] [Do., 19.03.2026, 11:50 - 12:05, 15min] "Übungen zu Enums" >>> enums.adoc/exercise 1 & 2
   [Content:Buffer      ] [Do., 19.03.2026, 12:05 - 12:15, 10min] "Pufferzeit"
 
+"Course Day 6" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 26.03.2026, 09:15 - 12:15, 180min] "Course Day 6"
   [Content:Arrival     ] [Do., 26.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 26.03.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -102,7 +115,9 @@ include::../settings.adoc[]
   [Content:Exercise    ] [Do., 26.03.2026, 11:45 - 12:05, 20min] "Übungen zu funktionaler Programmierung" >>> functional-programming.adoc/exercise 1 & 2 (a,b)
   [Content:Review      ] [Do., 26.03.2026, 12:05 - 12:15, 10min] "Lösungsbesprechung"  [/cop/code-examples/src/test/java/de/db/itcs/cop/datagram/ParseDatagramsTest.java]
 
+"Course Day 7" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 02.04.2026, 09:15 - 12:15, 180min] "Course Day 7"
   [Content:Arrival     ] [Do., 02.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 02.04.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -116,7 +131,9 @@ include::../settings.adoc[]
   [Content:Demo        ] [Do., 02.04.2026, 11:25 - 11:35, 10min] "Demo zu Enums"
   [Content:Exercise    ] [Do., 02.04.2026, 11:35 - 12:15, 40min] "Klassenmodell/Szenario" >>> /exam-preparation/docs/exam-preparation.adoc > Szenario 1: Semester-Planung (Teil I)
 
+"Course Day 8" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 09.04.2026, 09:15 - 12:15, 180min] "Course Day 8"
   [Content:Arrival     ] [Do., 09.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 09.04.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -131,7 +148,9 @@ include::../settings.adoc[]
   [Content:Topic       ] [Do., 09.04.2026, 11:30 - 11:55, 25min] "Clean Code"
   [Content:Buffer      ] [Do., 09.04.2026, 11:55 - 12:15, 20min] "Pufferzeit"
 
+"Course Day 9" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 16.04.2026, 09:15 - 12:15, 180min] "Course Day 9"
   [Content:Arrival     ] [Do., 16.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
   [Content:Setup       ] [Do., 16.04.2026, 09:19 - 09:20, 1min] "Project Update"
@@ -142,8 +161,12 @@ include::../settings.adoc[]
   [Content:Topic       ] [Do., 16.04.2026, 10:35 - 12:05, 90min] "Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen"
   [Content:Buffer      ] [Do., 16.04.2026, 12:05 - 12:15, 10min] "Pufferzeit"
 
+"Course Day 10" matches the planned time of 180 min! Everything's ok!
 
+LV planning for: SS26 (V3)
 [Group:CourseDay   ] [Do., 23.04.2026, 09:15 - 12:15, 180min] "Course Day 10"   (NOTE: Eigentlich Slot für Abschlussprüfungen, ggf. aber Angebot meinerseits: Gemeinsame Prüfungsvorbereitung)
 
 Process finished with exit code 0
+
+
 ----

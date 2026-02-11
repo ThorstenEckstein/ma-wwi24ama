@@ -22,10 +22,10 @@ public class DatatypesDemoTest {
         // when & then - widening (implicit conversion)
 
         /*
-        */
         b = 97;
         System.out.println("Initialwert von 'b': " + b);
         System.out.println("Initialwert von 'i': " + i);
+        */
         //i = b;
         //System.out.println("byte    -> int     : " + i);
 
@@ -33,9 +33,9 @@ public class DatatypesDemoTest {
         i = 2_500_000;
         System.out.println("Initialwert von 'i': " + i);
         System.out.println("Initialwert von 'd': " + d);
+        */
         //d = i;
         //System.out.println("int     -> double  : " + d);
-        */
 
         // when & then - narrowing (explicit casting)
 
@@ -43,17 +43,19 @@ public class DatatypesDemoTest {
         sh = 4_000;
         System.out.println("Initialwert von 'sh': " + sh);
         System.out.println("Initialwert von 'b' : " + b);
-        //b = sh; // b = (byte)sh;
-        //System.err.println("short   -> byte     : " + b);
         */
+        //b = sh;
+        //b = (byte)sh;
+        //System.err.println("short   -> byte     : " + b);
 
         /*
         l = 1_987_654_321_000L;
         System.out.println("Initialwert von 'l': " + l);
         System.out.println("Initialwert von 'i': " + i);
-        //i = l; // i = (int)l;
-        //System.err.println("long     -> int    : " + i);
         */
+        //i = l;
+        //i = (int)l;
+        //System.err.println("long     -> int    : " + i);
 
 
         /*
@@ -69,8 +71,22 @@ public class DatatypesDemoTest {
     }
 
     @Test
-    @DisplayName("Demo : Down-Casting von Objekttypen")
+    @DisplayName("Demo : Datentypen & Umwandlung von komplexen Java-Typen")
     public void demo2() {
+        // given :: komplexe Standard-Datentypen
+        boolean bl = false;
+        String   s = null;
+        long[] arr = {}; // leeres Element vom Typ 'Array', deklariert durch die eckigen Klammern
+
+        s = "true";
+        //bl = s;
+        //bl = Boolean.valueOf(s);
+        System.err.println("String  -> Boolean : " + bl);
+    }
+
+    @Test
+    @DisplayName("Demo : Down-Casting von Objekttypen")
+    public void demo3() {
         // given
         Train train = new RegionalTrain("RB 21", "Baureihe 123");
 

@@ -270,9 +270,6 @@ Hier wählt man dann einfach die gewünschte *kontext-spezifische* Funktion:
 |===
 
 
-=== KI Tools
-
-
 === Icons & Symbole in der IDE
 
 Die _"kleinen Hinweise"_ der IDE helfen dem geübten Auge mit schnellen Informationen. Dazu ein paar Beispiele, wenn man mit der Maus über das jeweilige Symbol fährt:
@@ -294,6 +291,15 @@ Die _"kleinen Hinweise"_ der IDE helfen dem geübten Auge mit schnellen Informat
 Darüber hinaus gibt es viele weitere Infos, deshalb ...
 
 TIP: Einfach ausprobieren und die Maus über alles Mögliche "hovern" ;-)
+
+
+=== KI Tools
+
+Der hier eingesetzte *GitHub Copilot* ist ein KI‑gestützter "Pair Programmer", der direkt im Editor Code‑ und Kommentarvorschläge liefert. Er basiert auf großen Sprachmodellen, die auf öffentlich zugänglichem Quellcode und natürlicher Sprache trainiert wurden und kontextabhängige Vorschläge für einzelne Zeilen, ganze Methoden oder Code‑Blöcke machen können.
+
+. Integration: Plugins für JetBrains (IntelliJ) oder Visual Studio Code und weitere Editoren.
+. Funktionen: Inline‑Vervollständigungen, Generierung von Methoden oder Tests, Vorschläge für Refactorings.
+. Nutzungshinweis: Copilot kann die Produktivität steigern und als Lernhilfe dienen, ersetzt aber nicht das Verständnis des Codes. Alle Vorschläge sollten unbedingt geprüft und ggf. anpasst werden.
 
 
 == Tipps, Tricks, Probleme & Lösungen
