@@ -257,6 +257,13 @@ Umsetzung in
 [subs=normal]
  -> {mod-ref-test}/exercise/InterfaceExerciseTest.java
 
+[%collapsible, title="_Hilfe zu 'Extract Interface ...'_"]
+====
+Cursor auf den Klassennamen, dann über das Menü ...
+
+image::images/extract-interface-from-class.png[align=center]
+====
+
 
 Übung 2 - Mini-Modell mit abstrakter klassen und Interface::
 

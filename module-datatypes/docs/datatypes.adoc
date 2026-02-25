@@ -86,14 +86,14 @@ wert1 = (int) wert2; // Umwandlung per 'cast'
 [[datatypes-complex]]
 === Komplexe Datentypen (Klassen)
 
-Komplexe Datentypen in Java sind Datentypen, die sich auf Objekte beziehen und in Form von Klassen implementiert werden. Im Gegensatz zu primitiven Datentypen sind sie nicht vordefiniert, sondern werden vom Entwickler gestaltet.
+Komplexe Datentypen in Java sind Datentypen, die sich auf Objekte beziehen und in Form von Klassen implementiert werden. Im Gegensatz zu primitiven Datentypen sind sie nicht vordefiniert, sondern werden von Menschen implementiert.
 
 *Hauptarten von komplexen Datentypen*:
 
-_Es gibt einerseits ..._
+_Es gibt ..._
 
 selbst-implementierte Klassen::
-Dienen als Vorlage für Objekte und enthalten verschiedene Komponenten wie Namen, Attribute, Modifikatoren und Methoden.
+Sie dienen als Vorlage für Objekte und enthalten verschiedene Komponenten wie Namen, Attribute, Modifikatoren und Methoden.
 
 _und andererseits von Java mitgelieferte Klassen wie ..._
 
@@ -110,12 +110,12 @@ Enums::
 Ermöglichen die Definition unveränderlicher Werte mit festgelegten Werten.
 
 Wrapper (-Klassen)::
-Für jeden primitiven Datentyp gibt es eine entsprechende Wrapper-Klasse, die neben dem Wert zusätzliche Methoden anbietet. Zum Beispiel:
+Für jeden primitiven Datentyp gibt es eine entsprechende *Wrapper-Klasse*, die neben dem Wert zusätzliche Methoden anbietet. Zum Beispiel:
 
 [source, java]
 ----
 int i = 42;
-Integer j = 42; // Erzeugt ein Integer-Objekt
+Integer j = 42; // Erzeugt ein Objekt des Wrappers 'Integer'
 ----
 
 Komplexe Datentypen in Java bieten große Flexibilität bei der Strukturierung und Organisation von Daten. Sie ermöglichen die Erstellung von benutzerdefinierten Datenstrukturen und Objekten, was für die objektorientierte Programmierung von besonderer Bedeutung ist.

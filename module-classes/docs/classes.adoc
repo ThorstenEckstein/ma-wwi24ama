@@ -231,6 +231,8 @@ Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte
 Train train  =   new       Train();
 ----
 
+IMPORTANT: _Derjenige Konstruktor einer Klasse, der keine Argumente hat, ist der sogenannte *Standard-Konstruktor* (engl. default c'tor). Dieser muss nicht explizit geschrieben werden, denn jede Klasse in Java hat automatisch einen Standard-Konstruktor, aber nur solange es_ keine anderen, _d.h. solche mit Argumenten, gibt!_
+
 
 === Eigenschaften
 
@@ -301,15 +303,18 @@ Folgendes soll implementiert werden:
 - Eine Klasse `Regionalzug` mit einem parameterlosen Konstruktor
 - Einen Test, der die korrekte Instanziierung der Instanzen bestätigt
 
+_Frage: Fällt bei den Implementierungen aus der Übung irgendetwas besonders auf?_
+
+
 Übung 2::
 
-- Ergänze die Klasse Zug mit einem Feld namens "number". Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
+- Ergänze die Klasse Zug mit einem Feld namens `number`. Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
 
 Review::
 
-Erzeuge eine oder beide Klassen mithilfe einer KI (GenAI). Wie muss der Prompt formuliert werden, gibt es Besonderheiten zu beachten? Vergleiche die KI-Implementierung mit der manuell implementierten Klasse.
-
-NOTE: _Zusatzfrage: Fällt bei den Implementierungen aus der Übung etwas besonders auf?_
+====
+TIP: {prompt} "_Erzeuge eine oder beide Klassen mithilfe einer KI (GenAI). Wie muss der Prompt formuliert werden, gibt es Besonderheiten zu beachten? Vergleiche die KI-Implementierung mit der manuell implementierten Klasse._"
+====
 
 
 == Vererbung
@@ -318,21 +323,28 @@ NOTE: _Zusatzfrage: Fällt bei den Implementierungen aus der Übung etwas besond
 
 
 [[about_inheritance]]
-Bei der *Vererbung* in Java wird zwischen einer *Super*- und einer *Subklasse* unterschieden.
+Bei der *Vererbung* in Java wird zwischen _zwei zueinander in Beziehung stehenden_ Klassen, nämlich
+
+* einer *Super*- und
+* einer *Subklasse*,
+
+unterschieden.
 
 Die _Superklasse_, auch Eltern- oder Basisklasse genannt, ist vielfach eine Zusammenfassung von allgemeinen Attributen und Methoden unterschiedlicher aber ähnlicher Objekte. Zweck ist dementsprechend eine
 
 [subs=normal]
  *Verallgemeinerung*
 
-Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` sind. Des Weiteren kann die Subklasse um eigene Attribute und Methoden erweitert werden. Man spricht hier von einer
+Die _Subklasse_, auch Kind- oder Unterklasse bezeichnet, bekommt von ihrer Elternklasse sämtliche Attribute und Methoden vererbt, die nicht `private` (wird vertieft an LV-Tag 3, Kapitel "Sichtbarkeiten") sind.
+
+Insbesondere kann die Subklasse um eigene Attribute und Methoden *erweitert* werden. Man spricht dann von einer
 
 [subs=normal]
  *Spezialisierung*
 
-der Superklasse in Form der Subklasse.
+der Superklasse durch die Subklasse.
 
-Eine Vererbung in Java findet über das Schlüsselwort
+Eine Vererbung in Java findet über das *Schlüsselwort*
 
  extends
 
@@ -356,52 +368,71 @@ Die _grafische_ Darstellung der Vererbung sieht folgendermaßen aus:
 include::diagrams/inheritance.puml[]
 ....
 
-*Klassenhierarchie und Objekterzeugung*
+
+*Objekterzeugung in einer Klassenhierarchie*
+
+Wenn Klassen instanziiert werden, also Objekte aus Klassen erzeugt werden, dann ist die Frage, was _bei diesem Prozess mit etwaigen Eltern- oder Kindklassen geschieht_, d.h. wie die Konstruktoren der Klassenhierarchie aufgerufen werden. Hier kommt das *Schlüsselwort*
 
 `super()`
 
-Die Methode `super()` in Java-Klassenkonstruktoren wird verwendet, um den Konstruktor einer Elternklasse aufzurufen.
+ins Spiel. Mit der Methode `super()` können Elemente der Elternklasse explizit aufgerufen bzw. genutzt werden. Das wird regelmäßig in Konstruktoren gemacht.
 
-Dies ist bei der Vererbung von Klassen wichtig und ermöglicht eine kontrollierte Initialisierung der gesamten Objekthierarchie.
+Die Methode `super()` wird also in Konstruktoren verwendet, um den passenden Konstruktor einer Elternklasse aufzurufen.
 
-Wenn eine Klasse von einer anderen Klasse erbt (mittels Schlüsselwort `extends`), wird beim Erstellen eines Objekts automatisch auch der Konstruktor der Oberklasse aufgerufen.
+Dies ist bei der Vererbung von Klassen wichtig und ermöglicht eine *kontrollierte Initialisierung der gesamten Objekthierarchie*.
 
-Mit `super()` kann gesteuert werden, welcher Konstruktor der Oberklasse genau aufgerufen werden soll.
+Wenn eine Klasse von einer anderen Klasse erbt (mittels Schlüsselwort `extends`), wird beim Erstellen eines Objekts automatisch der passende Konstruktor der Oberklasse aufgerufen.
+
+Mit `super()` kann also gesteuert werden, welcher Konstruktor der Oberklasse genau aufgerufen werden soll.
 
 [source, java]
 ----
 public class Elternklasse {
-    public Elternklasse() {}
-    public Elternklasse(String parameter) {}
+
+    public Elternklasse() { <1>
+        // leerer Standard-Konstruktor
+    }
+    public Elternklasse(String parameter) { <2>
+        // Inhalt des Konstruktors mit einem String-Parameter
+    }
 }
 
 public class Kindklasse extends Elternklasse {
     // Ohne super(): Ruft automatisch den Standardkonstruktor auf
-    public Kindklasse() {}
+    public Kindklasse() {
+        super() <3>
+    }
 
     // Mit super(): Ruft einen bestimmten Konstruktor auf,
     // hier den mit Parameter
     public Kindklasse(String text) {
-        super(text);
+        super(text); <4>
     }
 }
 ----
+<1> Standard-Konstruktor der Elternklasse
+<2> 1-Parameter-Konstruktor der Elternklasse
+<3> Aufruf des Standard-Konstruktors der Elternklasse
+<4> Aufruf des Eltern-Konstruktors mit EINEM String-Parameter
+
 
 *`this()`*
 
-Ähnlich wie zuvor gibt es das Schlüsselwort bzw die Methode `this()` in Java-Klassenkonstruktoren. Dis wird verwendet, um andere Konstruktoren *derselben* Klasse aufzurufen
+Ähnlich wie zuvor gibt es das Schlüsselwort bzw. die Methode `this()`. Sie wird verwendet, um andere Elemente *derselben* Klasse aufzurufen, hier am Beispiel von Konstruktoren-Aufrufen.
 
-Anders als `super()`, das zur Kommunikation mit der Oberklasse dient, ermöglicht `this()` die Wiederverwendung von Konstruktorlogik innerhalb der eigenen Klasse.
+Anders als `super()`, das zur Kommunikation mit der Oberklasse dient, ermöglicht `this()` also die Wiederverwendung von Feldern, Methoden oder Konstruktoren innerhalb der _eigenen_ Klasse.
 
-Ein Konstruktor kann mit `this()` einen anderen Konstruktor derselben Klasse aufrufen, um gemeinsame Initialisierungslogik zu teilen. Dies ist besonders nützlich bei Klassen mit mehreren Konstruktoren, die sich ergänzende Aufgaben ausführen.
+Ein Konstruktor kann also z.B. mit `this()` einen anderen Konstruktor derselben Klasse aufrufen, um gemeinsame Initialisierungslogik zu teilen. Dies ist besonders nützlich bei Klassen mit mehreren Konstruktoren, die sich ergänzende Aufgaben ausführen.
 
-Die Klasse *Object*
 
-Die oberste Klasse `Object` ist die Elternklasse ALLER anderen Klassen innerhalb von Java. Auf diese Klasse kommen wir gegen Ende der LV zurück. In dieser Klasse sind allgemeine Methoden implementiert, die zusammen auch als _"Objektvertrag"_ bezeichnet werden
+Die oberste Klasse `Object`::
+
+Die oberste Klasse `Object` ist die Elternklasse *ALLER* anderen Klassen innerhalb von Java. Auf diese Klasse kommen wir gegen Ende der LV zurück. In dieser Klasse sind allgemeine Methoden implementiert, die zusammen auch als _"Objektvertrag"_ bezeichnet werden
 
 ====
 IMPORTANT: Alle Java Klassen müssen eine Reihe von Regeln befolgen bzw. Eigenschaften besitzen. Diese sind im -> <<../../module-object-contract/docs/object-contract.adoc#object-contract,Objektvertrag>> im Modul `module-object-contract` detailliert erläutert. Dies ist aber Gegenstand zum Ende dieses Kurses!
 ====
+
 
 
 [[demos_inheritance]]
@@ -552,7 +583,7 @@ _Testklasse_, in der die Übungen implementiert werden können:
 
 {nl}
 
-Übung 4 _(optional_)::
+Übung 3 _(optional_)::
 
 Nutze die Test-Klasse
 

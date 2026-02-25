@@ -3,7 +3,7 @@ package de.dhbw.demo;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@SuppressWarnings("CastCanBeRemovedNarrowingVariableType")
+@SuppressWarnings({"CastCanBeRemovedNarrowingVariableType", "WrapperTypeMayBePrimitive"})
 public class DatatypesDemoTest {
 
     @Test
@@ -74,7 +74,7 @@ public class DatatypesDemoTest {
     @DisplayName("Demo : Datentypen & Umwandlung von komplexen Java-Typen")
     public void demo2() {
         // given :: komplexe Standard-Datentypen
-        boolean bl = false;
+        Boolean bl = false;
         String   s = null;
         long[] arr = {}; // leeres Element vom Typ 'Array', deklariert durch die eckigen Klammern
 
