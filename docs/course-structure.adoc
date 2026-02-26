@@ -37,7 +37,7 @@ Das folgende Modul dient einfach als *Übungs- oder auch als Experimentiermodul*
 == Tag 2 - Klassen & Instanzen, Vererbung, Typumwandlung von Klassen
 
 [subs=normal]
- [*Do., 26.02.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 2"#
+ [*Do., 26.02.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 2"#
 
 *Inhalt*:
 
@@ -56,7 +56,7 @@ include::{agendas}/course-day-2.agenda.txt[]
 == Tag 3 - Klassen & Sichtbarkeit, Abstraktionen, Interfaces
 
 [subs=normal]
- [*Do., 05.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 3"#
+ [*Do., 05.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 3"#
 
 *Inhalt*:
 
@@ -74,7 +74,7 @@ include::{agendas}/course-day-3.agenda.txt[]
 == Tag 4 - Operatoren, Kontrollstrukturen & Collections API
 
 [subs=normal]
- [*Do., 12.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 4"#
+ [*Do., 12.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 4"#
 
 *Inhalt*:
 
@@ -93,7 +93,7 @@ include::{agendas}/course-day-4.agenda.txt[]
 == Tag 5 - Assoziationen & Java Generics
 
 [subs=normal]
- [*Do., 19.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 5"#
+ [*Do., 19.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 5"#
 
 *Inhalt*:
 
@@ -111,7 +111,7 @@ include::{agendas}/course-day-5.agenda.txt[]
 == Tag 6 - Java Generics, funktionale Programmierung
 
 [subs=normal]
- [*Do., 26.03.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 6"#
+ [*Do., 26.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 6"#
 
 *Inhalt*:
 
@@ -129,7 +129,7 @@ include::{agendas}/course-day-6.agenda.txt[]
 == Tag 7 - Ausnahmen, Fehlerbehandlung, statische Elemente & Enums
 
 [subs=normal]
- [*Do., 02.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 7"#
+ [*Do., 02.04.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 7"#
 
 *Inhalt*:
 
@@ -149,7 +149,7 @@ include::{agendas}/course-day-7.agenda.txt[]
 == Tag 8 - Referenzsemantik, Object-Vertrag & Records
 
 [subs=normal]
- [*Do., 09.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 8"#
+ [*Do., 09.04.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 8"#
 
 *Inhalt*:
 
@@ -169,7 +169,7 @@ include::{agendas}/course-day-8.agenda.txt[]
 == Tag 9 - Polymorphismus, KI in der Softwareentwicklung & Prüfungsvorbereitung
 
 [subs=normal]
- [*Do., 16.04.2026*, 09:15 - 12:15, 180min] [red]#"Course Day 9"#
+ [*Do., 16.04.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 9"#
 
 *Inhalt*:
 
