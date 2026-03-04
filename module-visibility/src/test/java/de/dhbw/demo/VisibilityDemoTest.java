@@ -10,7 +10,7 @@ public class VisibilityDemoTest {
 
     //tag::visibility[]
     @Test
-    @DisplayName("Demo 3: Sichtbarkeiten von Feldern")
+    @DisplayName("Demo: Sichtbarkeiten von Feldern")
     public void canCheckVisibilityOfFields() {
         // given
         VisibilityExampleClass someClass = new VisibilityExampleClass();
@@ -31,7 +31,7 @@ public class VisibilityDemoTest {
     //end::visibility[]
 
     @Test
-    @DisplayName("Demo 3: Sichtbarkeiten von Konstruktoren und Methoden")
+    @DisplayName("Demo: Sichtbarkeiten von Konstruktoren und Methoden")
     public void canCheckVisibilityOfConstructorsAndMethods() {
         // given
         VisibilityExampleClass someClass = new VisibilityExampleClass();

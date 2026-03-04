@@ -23,21 +23,37 @@ end::content[]
 
 In Java bezeichnet Abstraktion das Prinzip, komplexe Sachverhalte durch *einfachere, abstraktere Modelle* darzustellen, indem unwichtige Details ausgeblendet werden. In der objektorientierten Programmierung (OOP) bedeutet dies, dass nur die relevanten Eigenschaften und Methoden einer Klasse definiert werden und die Implementierungsdetails verborgen bleiben.
 
-Es gibt *zwei Hauptwege*, wie Abstraktion in Java umgesetzt wird, nämlich
+Es gibt *zwei Hauptwege*, wie Abstraktion in Java umgesetzt wird, nämlich durch
 
-. Interfaces und
-. abstrakte Klassen
+. _Interfaces_ und
+. _abstrakte_ Klassen
 
 [[about_abstractclasses]]
-*Ziele* von Abstraktion: Die *Abstraktion* als eines der wichtigsten *Kernkonzepte* in Java wird vor allem eingesetzt, um verschiedene Erfordernisse umzusetzen. Dazu gehören u.a.
+*Ziele* von Abstraktion
 
-* Ermöglichen, auf einem höheren Abstraktionsniveau zu programmieren (z. B. „etwas fährt“, ohne wie genau dies geschieht zu kennen).
-* Wiederverwendbarkeit und Wartbarkeit des Codes verbessern.
-* Implementierungsdetails verstecken und eine klare Programmierschnittstelle (API = Application Programming Interface) für andere Entwickler bieten.
+Die *Abstraktion*, als eines der wichtigsten *Kernkonzepte* in Java, wird vor allem eingesetzt, um verschiedene Erfordernisse umzusetzen. Dazu gehören u.a.
+
+* Ermöglichen, auf einem höheren Abstraktionsniveau zu programmieren (z. B. „etwas fährt“, ohne zu kennen, _wie_ genau dies erfolgt),
+* Wiederverwendbarkeit und Wartbarkeit des Codes verbessern,
+* Implementierungsdetails verstecken und eine klare Programmierschnittstelle für andere Entwickler bieten (Synonyme: Programmiervorschrift, -vertrag, API (Application Programming Interface))
 
 ====
-{icon-question} Was ist eine Programmierschnittstelle (API)?
+{icon-question} In eigenen Worten: Was ist eine Programmierschnittstelle (API)? Beispiele?
 ====
+
+////
+[Beispiel]
+
+Leihen eines Autos bei einem Car Rental Service Anbieter.
+
+Man bucht zunächst (nur) ein Auto bzw. einen Modelltyp beim Anbieter, z.B. einen VW Golf
+
+Interface: WAS will ich buchen bzw. WAS bietet der Verleiher im Katalog an?
+
+Man erhält dann (aber) ein konkretes Auto des gewünschten Typs, z.B. einen grauen Golf VII mit Rückfahrkamera
+
+Implementierung: WIE der Anbieter sein Angebot also umsetzt bzw. WELCHES konkrete Auto man bucht, bleibt sozusagen "versteckt" und wird erst bei der Entgegennahme deutlich.
+////
 
 
 === Interfaces
@@ -67,14 +83,20 @@ public interface MyInterface {
 }
 ----
 
-Die Implementierung eines Interfaces erfolgt mit dem Schlüsselwort
+Die Implementierung eines `Interfaces` durch konkrete `Klassen` erfolgt mit dem Schlüsselwort
 
  implements
 
-Eine Beispiel-Realisierung
+Beispiel-Implementierungen (auch: Realisierungen)
 
 [source, java]
 ----
+public class Bmw implements Car {
+    // Implementierung des Interfaces
+}
+
+ ... oder ...
+
 public class Car implements Vehicle {
     // Implementierung des Interfaces
 }
@@ -94,24 +116,23 @@ Darüber hinaus ist *wichtig*, dass ...
 
 * Interfaces nicht direkt instanziiert werden können,
 * ein Interface _"leer"_ sein kann, also ohne Konstanten oder Methoden,
-* das Schlüsselwort `final` nicht genutzt werden kann, da sonst ein Compiler Error entsteht,
-* alle Interface Deklarationen `public` oder `default` access haben müssen; der `abstract` Modifizierer wird vom Compiler automatisch hinzugefügt,
+* alle Interface Deklarationen haben standardmäßig `public` oder `default` access, `private` Methoden (seit Java 9) sind aber auch erlaubt.
+* Der `abstract` Modifizierer wird vom Compiler automatisch hinzugefügt,
 * Interface Methoden nicht `protected` oder `final` sein können,
-* Seit Java 9 erlaubt ein Interface die Möglichkeit, private Methoden in Interfaces zu definieren,
-* Interface Variablen sind `public`, `static`, und `final` per Definition.
+* Interface Felder (=Konstanten) per Definition `public`, `static`, und `final` sein müssen.
 
 Die _grafische_ Darstellung der Beziehung zwischen Interfaces und deren Implementierung sieht folgendermaßen aus:
 
 [plantuml, title="Interface & Realisierung", png, align="center"]
 ....
-include::diagrams/interfaces.puml[]
+include::./diagrams/interfaces.puml[]
 ....
 
 ==== Warum Interfaces?
 
 [big]#Verhaltensvorschrift#
 
-Schnittstellen werden verwendet, um bestimmte Verhaltensfunktionen zu definieren, die von "beliebigen" Klassen umgesetzt werden können. Beispiele für Java-Schnittstellen sind `Comparable`, `Comparator` und `Cloneable`. Sie können durch konkrete Klassen implementiert werden.
+Schnittstellen werden verwendet, um bestimmte Verhaltensfunktionen zu definieren, die von "beliebigen" Klassen umgesetzt werden können. Beispiele für Java-Schnittstellen sind `Comparable`, `Comparator` und `Cloneable`. Sie werden durch konkrete Klassen implementiert.
 
 Für mehr Information dazu siehe -> https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html[Comparable.html]
 
@@ -121,9 +142,12 @@ Java-Klassen unterstützen nur die einfache (singuläre) Vererbung. Durch die Ve
 
 [big]#Polymorphismus#
 
-Bei Polymorphismus handelt es sich um die Fähigkeit eines Objekts, während der Laufzeit unterschiedliche Formen anzunehmen. Genauer gesagt handelt es sich um die Ausführung der `Override`-Methode, die sich zur Laufzeit auf einen bestimmten Objekttyp bezieht.
+Bei Polymorphismus handelt es sich um die Fähigkeit eines Objekts, während der Laufzeit unterschiedliche Formen anzunehmen.
+Genauer gesagt handelt es sich um die Nutzung der `Override`-Methode, die sich erst zur Laufzeit auf eine bestimmte Klasse bezieht.
 
-In Java kann Polymorphismus mithilfe von Schnittstellen erreicht werden. Beispielsweise kann die Shape-Schnittstelle verschiedene Formen annehmen – es kann ein Kreis oder ein Quadrat sein.
+In Java kann *Polymorphismus* auf einfach Weise mithilfe von Interfaces erreicht werden.
+
+Beispielsweise kann eine `Shape`-Schnittstelle (s.u.) verschiedene Formen annehmen – konkret kann es ein Kreis oder ein Quadrat sein.
 
 Am *Beispiel* der Klasse `Shape`:
 
@@ -147,7 +171,7 @@ public class Circle implements Shape {
 }
 ----
 
-Und noch die `Quadrat` Klasse:
+Und die `Quadrat` Klasse:
 
 [source, java]
 ----
@@ -160,11 +184,20 @@ public class Square implements Shape {
 }
 ----
 
+Und die *Nutzung* im Unit-Test sieht folgendermaßen aus:
 
 [%linenums, java, indent=0]
 ----
 include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
 ----
+
+[[demos_interfaces]]
+*Demo*:
+
+Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
+
+[subs=normal]
+ {mod-ref-test}/demo/InterfaceDemoTest.java
 
 
 === Abstrakte Klassen
@@ -172,23 +205,23 @@ include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
 In Java gibt es auch *abstrakte Klassen*. Sie enthalten, wie ihre konkreten Pendants, auch eine Sammlung von Attributen und Methoden, diese können nun aber _konkret oder abstrakt_ sein. Sie stehen sozusagen _"zwischen"_ konkreten Klassen und Interfaces, s.h. man kann sagen, eine abstrakte Klasse sei eine Art *Hybrid* zwischen
 
 . einer *konkreten* _Klasse_ auf der einen Seite und
-. einem *abstrakten* _Interface_ auf der anderen (siehe nächstes Kapitel).
+. einem *abstrakten* _Interface_ auf der anderen.
 
-Mit einer abstrakten Klasse können die Merkmale beider Welten (konkret & abstrakt) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
+Mit einer abstrakten Klasse können die Merkmale beider Welten (konkrete & abstrakte Merkmale) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
 
 [big]#Schlüsselkonzepte#
 
-Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
+Das *Schlüsselwort*, der "abstrakte Modifikator", zur Umsetzung von Abstraktionen in Java ist
 
  abstract
 
-Die wichtigsten *Merkmale* dieser Abstraktionen sind:
+Die wichtigsten *Merkmale* einer abstrakten Klasse sind:
 
 * Eine abstrakte Klasse enthält den abstrakten *Modifikator* `abstract` in der Klassensignatur
-* Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
-* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
+* Eine abstrakte Klasse kann von Unterklassen beerbt, aber *nicht instanziiert* werden
+* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* enthält, muss die Klasse selbst als abstrakt deklariert werden
 * Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
-* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse implementieren oder selbst abstrakt sein
+* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse realisieren bzw. implementieren oder selbst abstrakt sein
 
 Die zugehörige *grafische Darstellung* dieser Beziehung mit Beispiel:
 
@@ -217,24 +250,15 @@ public abstract class MyClass {
 
 [big]#Nutzung abstrakter Klassen#
 
-Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
+Java `interface` und `abstract class` sind also beide Formen von Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
 
 * *Kapselung* allgemeiner Funktionen in einer Klasse (*Wiederverwendung* von Code). Diese sollen von mehreren verwandten Unterklassen gemeinsam genutzt werden
-* Es muss nur teilweise eine API definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
+* Es muss nur teilweise eine "Implementierungsvorschrift" definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
 * Die Unterklassen müssen eine oder mehrere gemeinsame Methoden oder Felder mit *geschützten* Zugriffsmodifikatoren erben
 * Da sich die Verwendung abstrakter Klassen außerdem implizit mit Basistypen und Untertypen befasst, werden außerdem die Vorteile des *Polymorphismus* genutzt
 
 Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
 
-
-
-[[demos_interfaces]]
-*Demo*:
-
-Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
-
-[subs=normal]
- -> {mod-ref-test}/demo/InterfaceDemoTest.java
 
 '''
 

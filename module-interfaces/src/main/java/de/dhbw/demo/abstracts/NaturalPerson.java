@@ -9,5 +9,9 @@ public abstract class NaturalPerson implements Identifiable {
         return this.id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public abstract String getPhysicalAddress();
 }

@@ -24,22 +24,37 @@ public class AbstractsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2: Interface & abstrakte Klasse in Kombination")
+    @DisplayName("""
+      Demo 2: Interface & abstrakte Klasse in Kombination
+          +---------------+
+          | Identifiable  |
+          +---------------+
+                 /\
+                 . implements
+                 .
+          +---------------+
+          | NaturalPerson |
+          +---------------+
+                /\
+                | extends
+                |
+          +---------------+
+          | Citizen       |
+          +---------------+
+      """)
     public void demoInterfaceAndAbstractClass() {
         // given
-        Identifiable identifiable;
-        NaturalPerson naturalPerson;
 
         // when
-        identifiable = new Citizen("Schlossallee 1, Hamburg");
-        naturalPerson = new Citizen("Badstraße 5, Frankfurt");
+        Identifiable identifiable = new Citizen("Schlossallee 1, Hamburg");
+        NaturalPerson naturalPerson = new Citizen("Badstraße 5, Frankfurt");
 
         //String id = naturalPerson.getId();
         //String id = identifiable.getId();
-        String addressOfCitizen2 = naturalPerson.getPhysicalAddress();
 
         // then
-        assertEquals("Badstraße 5, Frankfurt", addressOfCitizen2);
+        //assertEquals(0, id);
+        assertEquals("Badstraße 5, Frankfurt", naturalPerson.getPhysicalAddress());
     }
 
 }
