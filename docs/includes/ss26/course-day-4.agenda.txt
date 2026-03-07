@@ -1,14 +1,14 @@
 1) Come in, sit down and relax
 2) Project Update
-3) Logische Operatoren >>> operators.adoc
-4) Demo zu Operatoren
-5) Kontrollstrukturen >>> loops.adoc
-6) Pause
-7) Demo zu Kontrollstrukturen
-8) Übung zu Kontrollstrukturen >>> loops.adoc/exercise 1 & 2
-9) Lösungsbesprechung
-10) Java Collections API >>> collections.adoc
-11) Demo zur Collections API
-12) Übungen Collections API >>> collections.adoc/exercise 1 & 2
-13) Lösungsbesprechung
+3) Java Collections API >>> collections.adoc
+4) Demo zur Collections API
+5) Übungen Collections API >>> collections.adoc/exercise 1 & 2
+6) Lösungsbesprechung
+7) Pause
+8) Kontrollstrukturen >>> loops.adoc
+9) Demo zu Kontrollstrukturen
+10) Übung zu Kontrollstrukturen >>> loops.adoc/exercise 1 & 2
+11) Lösungsbesprechung
+12) Logische Operatoren >>> operators.adoc
+13) Demo zu Operatoren
 

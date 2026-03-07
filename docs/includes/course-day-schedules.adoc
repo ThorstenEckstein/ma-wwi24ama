@@ -1,6 +1,6 @@
 include::../settings.adoc[]
 
-*Stand der Planung*: `[red]#11.02.2026#`
+*Stand der Planung*: `[red]#07.03.2026#`
 
 *LV planning for: SS26 (V3)*
 
@@ -29,144 +29,141 @@ LV planning for: SS26 (V3)
 "Course Day 2" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 26.02.2026, 09:15 - 12:15, 180min] "Course Day 2"
-  [Content:Setup       ] [Do., 26.02.2026, 09:15 - 09:20, 5min] "Update Project (git pull)"
-  [Content:Topic       ] [Do., 26.02.2026, 09:20 - 09:35, 15min] "Test-Driven-Development (TDD)" >>> tools-and-help.adoc/chapter 2
-  [Content:Topic       ] [Do., 26.02.2026, 09:35 - 10:00, 25min] "Klassen & Instanzen" >>> classes.adoc
-  [Content:Demo        ] [Do., 26.02.2026, 10:00 - 10:00, 0min] "Organisation & Nutzung von Java Klassen (Packages)"
-  [Content:Demo        ] [Do., 26.02.2026, 10:00 - 10:15, 15min] "Demo zu Klassen & Instanzen"
-  [Content:Exercise    ] [Do., 26.02.2026, 10:15 - 10:35, 20min] "Übungen zu Klassen & Instanzen" >>> classes.adoc/exercise 1 & 2
-  [Content:Review      ] [Do., 26.02.2026, 10:35 - 10:45, 10min] "Erstellung einer Java Klasse mithilfe von KI"
-  [Content:Break       ] [Do., 26.02.2026, 10:45 - 11:00, 15min] "Pause"
-  [Content:Topic       ] [Do., 26.02.2026, 11:00 - 11:15, 15min] "Vererbung (Inheritance)"
-  [Content:Demo        ] [Do., 26.02.2026, 11:15 - 11:25, 10min] "Demo zum Thema Vererbung"
-  [Content:Exercise    ] [Do., 26.02.2026, 11:25 - 11:40, 15min] "Übungen zur Vererbung" >>> classes.adoc/exercise 3
-  [Content:Review      ] [Do., 26.02.2026, 11:40 - 11:50, 10min] "Lösungsbesprechung"
-  [Content:Topic       ] [Do., 26.02.2026, 11:50 - 12:00, 10min] "Datentypen II: Die Klasse als komplexer Datentyp" >>> datatypes.adoc/chapter 1.4
-  [Content:Demo        ] [Do., 26.02.2026, 12:00 - 12:15, 15min] "Demo: Typumwandlung von Klassen (ohne Abstraktionen)"
+[Group:CourseDay   ] [Do., 26.02.2026, 09:00 - 12:00, 180min] "Course Day 2"
+  [Content:Setup       ] [Do., 26.02.2026, 09:00 - 09:05, 5min] "Update Project (git pull)"
+  [Content:Topic       ] [Do., 26.02.2026, 09:05 - 09:20, 15min] "Test-Driven-Development (TDD)" >>> tools-and-help.adoc/chapter 2
+  [Content:Topic       ] [Do., 26.02.2026, 09:20 - 09:45, 25min] "Klassen & Instanzen" >>> classes.adoc
+  [Content:Demo        ] [Do., 26.02.2026, 09:45 - 09:45, 0min] "Organisation & Nutzung von Java Klassen (Packages)"
+  [Content:Demo        ] [Do., 26.02.2026, 09:45 - 10:00, 15min] "Demo zu Klassen & Instanzen"
+  [Content:Exercise    ] [Do., 26.02.2026, 10:00 - 10:20, 20min] "Übungen zu Klassen & Instanzen" >>> classes.adoc/exercise 1 & 2
+  [Content:Review      ] [Do., 26.02.2026, 10:20 - 10:30, 10min] "Erstellung einer Java Klasse mithilfe von KI"
+  [Content:Break       ] [Do., 26.02.2026, 10:30 - 10:45, 15min] "Pause"
+  [Content:Topic       ] [Do., 26.02.2026, 10:45 - 11:00, 15min] "Vererbung (Inheritance)"
+  [Content:Demo        ] [Do., 26.02.2026, 11:00 - 11:10, 10min] "Demo zum Thema Vererbung"
+  [Content:Exercise    ] [Do., 26.02.2026, 11:10 - 11:25, 15min] "Übungen zur Vererbung" >>> classes.adoc/exercise 3
+  [Content:Review      ] [Do., 26.02.2026, 11:25 - 11:35, 10min] "Lösungsbesprechung"
+  [Content:Topic       ] [Do., 26.02.2026, 11:35 - 11:45, 10min] "Datentypen II: Die Klasse als komplexer Datentyp" >>> datatypes.adoc/chapter 1.4
+  [Content:Demo        ] [Do., 26.02.2026, 11:45 - 12:00, 15min] "Demo: Typumwandlung von Klassen (ohne Abstraktionen)"
 
 "Course Day 3" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 05.03.2026, 09:15 - 12:15, 180min] "Course Day 3"
-  [Content:Setup       ] [Do., 05.03.2026, 09:15 - 09:20, 5min] "Update Project (git pull)"
-  [Content:Topic       ] [Do., 05.03.2026, 09:20 - 09:35, 15min] "Sichtbarkeiten & Scopes" >>> visibility.adoc
-  [Content:Demo        ] [Do., 05.03.2026, 09:35 - 09:50, 15min] "Demo zu Sichtbarkeiten"
-  [Content:Exercise    ] [Do., 05.03.2026, 09:50 - 10:05, 15min] "Kombinationsübungen: Klassen & Sichtbarkeiten" >>> visibility.adoc/exercise 1
-  [Content:Topic       ] [Do., 05.03.2026, 10:05 - 10:20, 15min] "Interfaces"
-  [Content:Demo        ] [Do., 05.03.2026, 10:20 - 10:30, 10min] "Interfaces Demo"
-  [Content:Break       ] [Do., 05.03.2026, 10:30 - 10:45, 15min] "Pause"
-  [Content:Exercise    ] [Do., 05.03.2026, 10:45 - 11:00, 15min] "Interfaces Exercise" >>> interfaces.adoc/exercise 1
-  [Content:Topic       ] [Do., 05.03.2026, 11:00 - 11:15, 15min] "Abstrakte Klassen"
-  [Content:Demo        ] [Do., 05.03.2026, 11:15 - 11:25, 10min] "Demo abstrakte Klassen"
-  [Content:Exercise    ] [Do., 05.03.2026, 11:25 - 11:45, 20min] "Übung zu abstrakten Klassen" >>> interfaces.adoc/exercise 2
-  [Content:Review      ] [Do., 05.03.2026, 11:45 - 12:05, 20min] "Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI"
-  [Content:Buffer      ] [Do., 05.03.2026, 12:05 - 12:15, 10min] "Pufferzeit"
+[Group:CourseDay   ] [Do., 05.03.2026, 09:00 - 12:00, 180min] "Course Day 3"
+  [Content:Setup       ] [Do., 05.03.2026, 09:00 - 09:05, 5min] "Update Project (git pull)"
+  [Content:Topic       ] [Do., 05.03.2026, 09:05 - 09:20, 15min] "Sichtbarkeiten & Scopes" >>> visibility.adoc
+  [Content:Demo        ] [Do., 05.03.2026, 09:20 - 09:35, 15min] "Demo zu Sichtbarkeiten"
+  [Content:Exercise    ] [Do., 05.03.2026, 09:35 - 09:50, 15min] "Kombinationsübungen: Klassen & Sichtbarkeiten" >>> visibility.adoc/exercise 1
+  [Content:Topic       ] [Do., 05.03.2026, 09:50 - 10:05, 15min] "Interfaces"
+  [Content:Demo        ] [Do., 05.03.2026, 10:05 - 10:15, 10min] "Interfaces Demo"
+  [Content:Break       ] [Do., 05.03.2026, 10:15 - 10:30, 15min] "Pause"
+  [Content:Exercise    ] [Do., 05.03.2026, 10:30 - 10:45, 15min] "Interfaces Exercise" >>> interfaces.adoc/exercise 1
+  [Content:Topic       ] [Do., 05.03.2026, 10:45 - 11:00, 15min] "Abstrakte Klassen"
+  [Content:Demo        ] [Do., 05.03.2026, 11:00 - 11:10, 10min] "Demo abstrakte Klassen"
+  [Content:Exercise    ] [Do., 05.03.2026, 11:10 - 11:30, 20min] "Übung zu abstrakten Klassen" >>> interfaces.adoc/exercise 2
+  [Content:Review      ] [Do., 05.03.2026, 11:30 - 11:50, 20min] "Erstellung einer Hierarchie: Klasse erbt von abstrakter Klasse implementiert Interface mithilfe von KI"
+  [Content:Buffer      ] [Do., 05.03.2026, 11:50 - 12:00, 10min] "Pufferzeit"
 
 "Course Day 4" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 12.03.2026, 09:15 - 12:15, 180min] "Course Day 4"
-  [Content:Arrival     ] [Do., 12.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 12.03.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 12.03.2026, 09:20 - 09:40, 20min] "Logische Operatoren" >>> operators.adoc
-  [Content:Demo        ] [Do., 12.03.2026, 09:40 - 09:50, 10min] "Demo zu Operatoren"
-  [Content:Topic       ] [Do., 12.03.2026, 09:50 - 10:10, 20min] "Kontrollstrukturen" >>> loops.adoc
-  [Content:Break       ] [Do., 12.03.2026, 10:10 - 10:25, 15min] "Pause"
-  [Content:Demo        ] [Do., 12.03.2026, 10:25 - 10:40, 15min] "Demo zu Kontrollstrukturen"
-  [Content:Exercise    ] [Do., 12.03.2026, 10:40 - 10:55, 15min] "Übung zu Kontrollstrukturen" >>> loops.adoc/exercise 1 & 2
-  [Content:Review      ] [Do., 12.03.2026, 10:55 - 11:05, 10min] "Lösungsbesprechung"
-  [Content:Topic       ] [Do., 12.03.2026, 11:05 - 11:35, 30min] "Java Collections API" >>> collections.adoc
-  [Content:Demo        ] [Do., 12.03.2026, 11:35 - 11:50, 15min] "Demo zur Collections API"
-  [Content:Exercise    ] [Do., 12.03.2026, 11:50 - 12:05, 15min] "Übungen Collections API" >>> collections.adoc/exercise 1 & 2
-  [Content:Review      ] [Do., 12.03.2026, 12:05 - 12:15, 10min] "Lösungsbesprechung"
+[Group:CourseDay   ] [Do., 12.03.2026, 09:00 - 12:00, 180min] "Course Day 4"
+  [Content:Arrival     ] [Do., 12.03.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 12.03.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 12.03.2026, 09:05 - 09:35, 30min] "Java Collections API" >>> collections.adoc
+  [Content:Demo        ] [Do., 12.03.2026, 09:35 - 09:50, 15min] "Demo zur Collections API"
+  [Content:Exercise    ] [Do., 12.03.2026, 09:50 - 10:05, 15min] "Übungen Collections API" >>> collections.adoc/exercise 1 & 2
+  [Content:Review      ] [Do., 12.03.2026, 10:05 - 10:15, 10min] "Lösungsbesprechung"
+  [Content:Break       ] [Do., 12.03.2026, 10:15 - 10:30, 15min] "Pause"
+  [Content:Topic       ] [Do., 12.03.2026, 10:30 - 10:50, 20min] "Kontrollstrukturen" >>> loops.adoc
+  [Content:Demo        ] [Do., 12.03.2026, 10:50 - 11:05, 15min] "Demo zu Kontrollstrukturen"
+  [Content:Exercise    ] [Do., 12.03.2026, 11:05 - 11:20, 15min] "Übung zu Kontrollstrukturen" >>> loops.adoc/exercise 1 & 2
+  [Content:Review      ] [Do., 12.03.2026, 11:20 - 11:30, 10min] "Lösungsbesprechung"
+  [Content:Topic       ] [Do., 12.03.2026, 11:30 - 11:50, 20min] "Logische Operatoren" >>> operators.adoc
+  [Content:Demo        ] [Do., 12.03.2026, 11:50 - 12:00, 10min] "Demo zu Operatoren"
 
 "Course Day 5" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 19.03.2026, 09:15 - 12:15, 180min] "Course Day 5"
-  [Content:Arrival     ] [Do., 19.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 19.03.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 19.03.2026, 09:20 - 09:35, 15min] "Override & Overload" >>> classes.adoc/chapter 6
-  [Content:Demo        ] [Do., 19.03.2026, 09:35 - 09:50, 15min] "Demo zu Überladen & Übersteuern"
-  [Content:Topic       ] [Do., 19.03.2026, 09:50 - 10:20, 30min] "Assoziationen zwischen Klassen" >>> associations.adoc
-  [Content:Demo        ] [Do., 19.03.2026, 10:20 - 10:40, 20min] "Demo zu Assoziationen"
-  [Content:Break       ] [Do., 19.03.2026, 10:40 - 10:55, 15min] "Pause"
-  [Content:Exercise    ] [Do., 19.03.2026, 10:55 - 11:15, 20min] "Übungen zu Assoziationen" >>> associations.adoc/exercise 1 (optional 2)
-  [Content:Review      ] [Do., 19.03.2026, 11:15 - 11:25, 10min] "Lösungsbesprechung"
-  [Content:Topic       ] [Do., 19.03.2026, 11:25 - 11:40, 15min] "Enums" >>> enums.adoc
-  [Content:Demo        ] [Do., 19.03.2026, 11:40 - 11:50, 10min] "Demo zu Enums"
-  [Content:Exercise    ] [Do., 19.03.2026, 11:50 - 12:05, 15min] "Übungen zu Enums" >>> enums.adoc/exercise 1 & 2
-  [Content:Buffer      ] [Do., 19.03.2026, 12:05 - 12:15, 10min] "Pufferzeit"
+[Group:CourseDay   ] [Do., 19.03.2026, 09:00 - 12:00, 180min] "Course Day 5"
+  [Content:Arrival     ] [Do., 19.03.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 19.03.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 19.03.2026, 09:05 - 09:20, 15min] "Override & Overload" >>> classes.adoc/chapter 6
+  [Content:Demo        ] [Do., 19.03.2026, 09:20 - 09:35, 15min] "Demo zu Überladen & Übersteuern"
+  [Content:Topic       ] [Do., 19.03.2026, 09:35 - 10:05, 30min] "Assoziationen zwischen Klassen" >>> associations.adoc
+  [Content:Demo        ] [Do., 19.03.2026, 10:05 - 10:25, 20min] "Demo zu Assoziationen"
+  [Content:Break       ] [Do., 19.03.2026, 10:25 - 10:40, 15min] "Pause"
+  [Content:Exercise    ] [Do., 19.03.2026, 10:40 - 11:00, 20min] "Übungen zu Assoziationen" >>> associations.adoc/exercise 1 (optional 2)
+  [Content:Review      ] [Do., 19.03.2026, 11:00 - 11:10, 10min] "Lösungsbesprechung"
+  [Content:Topic       ] [Do., 19.03.2026, 11:10 - 11:25, 15min] "Enums" >>> enums.adoc
+  [Content:Demo        ] [Do., 19.03.2026, 11:25 - 11:35, 10min] "Demo zu Enums"
+  [Content:Exercise    ] [Do., 19.03.2026, 11:35 - 11:50, 15min] "Übungen zu Enums" >>> enums.adoc/exercise 1 & 2
+  [Content:Buffer      ] [Do., 19.03.2026, 11:50 - 12:00, 10min] "Pufferzeit"
 
 "Course Day 6" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 26.03.2026, 09:15 - 12:15, 180min] "Course Day 6"
-  [Content:Arrival     ] [Do., 26.03.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 26.03.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 26.03.2026, 09:20 - 09:50, 30min] "Java Generics" >>> generics.adoc
-  [Content:Demo        ] [Do., 26.03.2026, 09:50 - 10:10, 20min] "Demos zu Java Generics"
-  [Content:Exercise    ] [Do., 26.03.2026, 10:10 - 10:30, 20min] "Übungen zu Java Generics" >>> generics.adoc/exercise 1 & 2 [commons-testdata]
-  [Content:Review      ] [Do., 26.03.2026, 10:30 - 10:40, 10min] "Lösungsbesprechung"
-  [Content:Break       ] [Do., 26.03.2026, 10:40 - 10:55, 15min] "Pause"
-  [Content:Topic       ] [Do., 26.03.2026, 10:55 - 11:25, 30min] "Funktionale Programmierung in Java" >>> functional-programming.adoc
-  [Content:Demo        ] [Do., 26.03.2026, 11:25 - 11:45, 20min] "Demos zu funktionaler Programmierung"
-  [Content:Exercise    ] [Do., 26.03.2026, 11:45 - 12:05, 20min] "Übungen zu funktionaler Programmierung" >>> functional-programming.adoc/exercise 1 & 2 (a,b)
-  [Content:Review      ] [Do., 26.03.2026, 12:05 - 12:15, 10min] "Lösungsbesprechung"  [/cop/code-examples/src/test/java/de/db/itcs/cop/datagram/ParseDatagramsTest.java]
+[Group:CourseDay   ] [Do., 26.03.2026, 09:00 - 12:00, 180min] "Course Day 6"
+  [Content:Arrival     ] [Do., 26.03.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 26.03.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 26.03.2026, 09:05 - 09:35, 30min] "Java Generics" >>> generics.adoc
+  [Content:Demo        ] [Do., 26.03.2026, 09:35 - 09:55, 20min] "Demos zu Java Generics"
+  [Content:Exercise    ] [Do., 26.03.2026, 09:55 - 10:15, 20min] "Übungen zu Java Generics" >>> generics.adoc/exercise 1 & 2 [commons-testdata]
+  [Content:Review      ] [Do., 26.03.2026, 10:15 - 10:25, 10min] "Lösungsbesprechung"
+  [Content:Break       ] [Do., 26.03.2026, 10:25 - 10:40, 15min] "Pause"
+  [Content:Topic       ] [Do., 26.03.2026, 10:40 - 11:10, 30min] "Funktionale Programmierung in Java" >>> functional-programming.adoc
+  [Content:Demo        ] [Do., 26.03.2026, 11:10 - 11:30, 20min] "Demos zu funktionaler Programmierung"
+  [Content:Exercise    ] [Do., 26.03.2026, 11:30 - 11:50, 20min] "Übungen zu funktionaler Programmierung" >>> functional-programming.adoc/exercise 1 & 2 (a,b)
+  [Content:Review      ] [Do., 26.03.2026, 11:50 - 12:00, 10min] "Lösungsbesprechung"  [/cop/code-examples/src/test/java/de/db/itcs/cop/datagram/ParseDatagramsTest.java]
 
 "Course Day 7" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 02.04.2026, 09:15 - 12:15, 180min] "Course Day 7"
-  [Content:Arrival     ] [Do., 02.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 02.04.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 02.04.2026, 09:20 - 09:50, 30min] "Exceptions & Exception Handling" >>> exception-handling.adoc
-  [Content:Demo        ] [Do., 02.04.2026, 09:50 - 10:00, 10min] "Demo zu Exceptions"
-  [Content:Exercise    ] [Do., 02.04.2026, 10:00 - 10:20, 20min] "Übungen zu Exceptions"
-  [Content:Break       ] [Do., 02.04.2026, 10:20 - 10:35, 15min] "Pause"
-  [Content:Topic       ] [Do., 02.04.2026, 10:35 - 10:50, 15min] "Statische Elemente" >>> statics.adoc
-  [Content:Demo        ] [Do., 02.04.2026, 10:50 - 11:10, 20min] "Demo zu statischen Elementen"
-  [Content:Topic       ] [Do., 02.04.2026, 11:10 - 11:25, 15min] "Enums" >>> enums.adoc
-  [Content:Demo        ] [Do., 02.04.2026, 11:25 - 11:35, 10min] "Demo zu Enums"
-  [Content:Exercise    ] [Do., 02.04.2026, 11:35 - 12:15, 40min] "Klassenmodell/Szenario" >>> /exam-preparation/docs/exam-preparation.adoc > Szenario 1: Semester-Planung (Teil I)
+[Group:CourseDay   ] [Do., 02.04.2026, 09:00 - 12:00, 180min] "Course Day 7"
+  [Content:Arrival     ] [Do., 02.04.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 02.04.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 02.04.2026, 09:05 - 09:35, 30min] "Exceptions & Exception Handling" >>> exception-handling.adoc
+  [Content:Demo        ] [Do., 02.04.2026, 09:35 - 09:45, 10min] "Demo zu Exceptions"
+  [Content:Exercise    ] [Do., 02.04.2026, 09:45 - 10:05, 20min] "Übungen zu Exceptions"
+  [Content:Break       ] [Do., 02.04.2026, 10:05 - 10:20, 15min] "Pause"
+  [Content:Topic       ] [Do., 02.04.2026, 10:20 - 10:35, 15min] "Statische Elemente" >>> statics.adoc
+  [Content:Demo        ] [Do., 02.04.2026, 10:35 - 10:55, 20min] "Demo zu statischen Elementen"
+  [Content:Topic       ] [Do., 02.04.2026, 10:55 - 11:10, 15min] "Enums" >>> enums.adoc
+  [Content:Demo        ] [Do., 02.04.2026, 11:10 - 11:20, 10min] "Demo zu Enums"
+  [Content:Exercise    ] [Do., 02.04.2026, 11:20 - 12:00, 40min] "Klassenmodell/Szenario" >>> /exam-preparation/docs/exam-preparation.adoc > Szenario 1: Semester-Planung (Teil I)
 
 "Course Day 8" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 09.04.2026, 09:15 - 12:15, 180min] "Course Day 8"
-  [Content:Arrival     ] [Do., 09.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 09.04.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 09.04.2026, 09:20 - 09:35, 15min] "Der Objektvertrag" >>> object-contract.adoc
-  [Content:Demo        ] [Do., 09.04.2026, 09:35 - 09:50, 15min] "Demos zum Objektvertrag"
-  [Content:Exercise    ] [Do., 09.04.2026, 09:50 - 10:10, 20min] "Übungen zum Objektvertrag"
-  [Content:Topic       ] [Do., 09.04.2026, 10:10 - 10:30, 20min] "Referenzsemantik" >>> references-semantics.adoc
-  [Content:Break       ] [Do., 09.04.2026, 10:30 - 10:45, 15min] "Pause"
-  [Content:Demo        ] [Do., 09.04.2026, 10:45 - 11:00, 15min] "Demo Referenzsemantik"
-  [Content:Topic       ] [Do., 09.04.2026, 11:00 - 11:15, 15min] "Java Records" >>> records.adoc
-  [Content:Demo        ] [Do., 09.04.2026, 11:15 - 11:30, 15min] "Demo zu Java Records"
-  [Content:Topic       ] [Do., 09.04.2026, 11:30 - 11:55, 25min] "Clean Code"
-  [Content:Buffer      ] [Do., 09.04.2026, 11:55 - 12:15, 20min] "Pufferzeit"
+[Group:CourseDay   ] [Do., 09.04.2026, 09:00 - 12:00, 180min] "Course Day 8"
+  [Content:Arrival     ] [Do., 09.04.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 09.04.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 09.04.2026, 09:05 - 09:20, 15min] "Der Objektvertrag" >>> object-contract.adoc
+  [Content:Demo        ] [Do., 09.04.2026, 09:20 - 09:35, 15min] "Demos zum Objektvertrag"
+  [Content:Exercise    ] [Do., 09.04.2026, 09:35 - 09:55, 20min] "Übungen zum Objektvertrag"
+  [Content:Topic       ] [Do., 09.04.2026, 09:55 - 10:15, 20min] "Referenzsemantik" >>> references-semantics.adoc
+  [Content:Break       ] [Do., 09.04.2026, 10:15 - 10:30, 15min] "Pause"
+  [Content:Demo        ] [Do., 09.04.2026, 10:30 - 10:45, 15min] "Demo Referenzsemantik"
+  [Content:Topic       ] [Do., 09.04.2026, 10:45 - 11:00, 15min] "Java Records" >>> records.adoc
+  [Content:Demo        ] [Do., 09.04.2026, 11:00 - 11:15, 15min] "Demo zu Java Records"
+  [Content:Topic       ] [Do., 09.04.2026, 11:15 - 11:40, 25min] "Clean Code"
+  [Content:Buffer      ] [Do., 09.04.2026, 11:40 - 12:00, 20min] "Pufferzeit"
 
 "Course Day 9" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 16.04.2026, 09:15 - 12:15, 180min] "Course Day 9"
-  [Content:Arrival     ] [Do., 16.04.2026, 09:15 - 09:19, 4min] "Come in, sit down and relax"
-  [Content:Setup       ] [Do., 16.04.2026, 09:19 - 09:20, 1min] "Project Update"
-  [Content:Topic       ] [Do., 16.04.2026, 09:20 - 09:40, 20min] "Polymorphismus" >>> /module-classes/docs/classes.adoc, chapter 6
-  [Content:Demo        ] [Do., 16.04.2026, 09:40 - 09:50, 10min] "Demo Polymorphismus"
-  [Content:Exercise    ] [Do., 16.04.2026, 09:50 - 10:20, 30min] "KI in der Softwareentwicklung"   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
-  [Content:Break       ] [Do., 16.04.2026, 10:20 - 10:35, 15min] "Pause"
-  [Content:Topic       ] [Do., 16.04.2026, 10:35 - 12:05, 90min] "Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen"
-  [Content:Buffer      ] [Do., 16.04.2026, 12:05 - 12:15, 10min] "Pufferzeit"
+[Group:CourseDay   ] [Do., 16.04.2026, 09:00 - 12:00, 180min] "Course Day 9"
+  [Content:Arrival     ] [Do., 16.04.2026, 09:00 - 09:04, 4min] "Come in, sit down and relax"
+  [Content:Setup       ] [Do., 16.04.2026, 09:04 - 09:05, 1min] "Project Update"
+  [Content:Topic       ] [Do., 16.04.2026, 09:05 - 09:25, 20min] "Polymorphismus" >>> /module-classes/docs/classes.adoc, chapter 6
+  [Content:Demo        ] [Do., 16.04.2026, 09:25 - 09:35, 10min] "Demo Polymorphismus"
+  [Content:Exercise    ] [Do., 16.04.2026, 09:35 - 10:05, 30min] "KI in der Softwareentwicklung"   (NOTE: Tools: ChatGPT, GitHub Copilot, Amazon Q Developer etc.)
+  [Content:Break       ] [Do., 16.04.2026, 10:05 - 10:20, 15min] "Pause"
+  [Content:Topic       ] [Do., 16.04.2026, 10:20 - 11:50, 90min] "Prüfungsvorbereitung/FAQ: Fragen, Aufgaben, Demos, Wiederholungen"
+  [Content:Buffer      ] [Do., 16.04.2026, 11:50 - 12:00, 10min] "Pufferzeit"
 
 "Course Day 10" matches the planned time of 180 min! Everything's ok!
 
 LV planning for: SS26 (V3)
-[Group:CourseDay   ] [Do., 23.04.2026, 09:15 - 12:15, 180min] "Course Day 10"   (NOTE: Eigentlich Slot für Abschlussprüfungen, ggf. aber Angebot meinerseits: Gemeinsame Prüfungsvorbereitung)
-
-Process finished with exit code 0
-
+[Group:CourseDay   ] [Do., 23.04.2026, 09:00 - 12:00, 180min] "Course Day 10"   (NOTE: Eigentlich Slot für Abschlussprüfungen, ggf. aber Angebot meinerseits: Gemeinsame Prüfungsvorbereitung)
 
 ----

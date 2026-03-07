@@ -71,7 +71,7 @@ include::{agendas}/course-day-3.agenda.txt[]
 . {icon-module} link:../module-interfaces/docs/interfaces.adoc[module-interfaces]
 
 
-== Tag 4 - Operatoren, Kontrollstrukturen & Collections API
+== Tag 4 - Collections API, Kontrollstrukturen & Operatoren
 
 [subs=normal]
  [*Do., 12.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 4"#
@@ -85,9 +85,9 @@ include::{agendas}/course-day-4.agenda.txt[]
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
-. {icon-module} link:../module-loops/docs/loops.adoc[module-loops]
 . {icon-module} link:../module-collections/docs/collections.adoc[module-collections]
+. {icon-module} link:../module-loops/docs/loops.adoc[module-loops]
+. {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
 
 
 == Tag 5 - Assoziationen & Java Generics
