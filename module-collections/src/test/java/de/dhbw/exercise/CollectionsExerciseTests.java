@@ -38,7 +38,7 @@ public class CollectionsExerciseTests {
             Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch
             für den Wert (V).
             
-            Überprüfe die Haupt-Charakteristik "natürliche Sortierung" dieses Map-Typs mithilfe von 'assertEquals'.
+            Überprüfe die Haupt-Charakteristik "natürliche Sortierung" dieses Map-Typs, z.B. mithilfe von 'assertEquals'.
             """)
     public void exercise2() {
         // given

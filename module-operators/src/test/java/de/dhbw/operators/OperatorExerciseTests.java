@@ -26,7 +26,7 @@ public class OperatorExerciseTests {
         boolean result = one && two | three;
 
         // then
-        //  ... Prüfung ...
+        //  ... Assertions bzw. Prüfungen ...
     }
 
     @Test

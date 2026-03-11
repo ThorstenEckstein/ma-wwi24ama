@@ -23,10 +23,19 @@ Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten unter Nutzun
 
  boolean bzw. Boolean
 
-und werden u.a. für *Bedingungen von Kontrollstrukturen* (siehe nächstes Thema), etwa für `if` Anweisungen oder Schleifen verwendet.
+und werden u.a. für *Bedingungen von Kontrollstrukturen* (vgl. vorheriges Thema), etwa für `if` Anweisungen oder Schleifen verwendet.
 
 Durch logische Operatoren können einzelne Wahrheitswerte verändert bzw. negiert und auch verknüpft werden.
 Egal wie, das Ergebnis der Verarbeitung von logischen Operatoren ist immer ein Wahrheitswert, also wieder ein `boolean`.
+
+*Ausdruck*:
+
+ boolean b = operand1 operator operand2
+
+also z.B. der Test, ob eine Zahl eine einstellige Ganzzahl ist:
+
+ boolean b =  i >= 1  &&  i < 10
+ boolean b = (i >= 1) && (i < 10) // für bessere Verständlichkeit
 
 Es gibt verschiedene *logische Operatoren*:
 
@@ -37,18 +46,18 @@ TIP: Vgl. Testklasse: `/module-operators/src/test/java/de/dhbw/operators/Operato
 | Operator | Erläuterung/Bedeutung | Testmethode
 
 | &&
-| Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Werte wahr sind. Ist an dieser Stelle bereits der erste Operator falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
+| Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Operanden wahr sind. Ist an dieser Stelle bereits der erste Operand falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
 | testOperator1()
 
 | &
 | Einfaches UND ist eine logische UND-Verknüpfung. Bei dieser logischen UND-Verknüpfung werden beide Operanden ausgewertet.
 | testOperator2()
 
-| &vert;&vert;
-| Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Werte falsch sind. Ist an dieser Stelle bereits der erste Operator wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
+| \|\|
+| Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Operanden falsch sind. Ist an dieser Stelle bereits der erste Operand wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
 | testOperator3()
 
-| &vert;
+| \|
 | Einfaches ODER ist eine logische ODER-Verknüpfung. Bei dieser logischen ODER-Verknüpfung werden beide Operanden ausgewertet.
 | testOperator4()
 

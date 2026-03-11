@@ -25,10 +25,14 @@ public class CollectionsDemoTest {
         String[] arr6 = {"A", "xdre", "Frg%5"};
 
         // when
+        int i = arr3[1];
+        boolean areEq = Arrays.equals(arr2, arr3);
 
         // then
         assertEquals(4, arr1.length);
         assertEquals(3, arr4.length);
+        assertEquals(2, i);
+        assertTrue(areEq);
     }
 
     @Test
@@ -60,13 +64,13 @@ public class CollectionsDemoTest {
         Student s1 = new Student("Michaela");
         Student s2 = new Student("Alexander");
         Student s3 = new Student("Henrik");
-
         //Student s4 = new Student("Alexander");
 
         // when
         students.add(s1);
         students.add(s2);
         students.add(s3);
+        //students.add(s4);
 
         // Alternativ: List.of(s1, s2, s3);
 

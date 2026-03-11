@@ -69,73 +69,72 @@ image::images/collections-api.png["Collections API",width="100%",align="center"]
 
 === Java Collections API
 
-Java collection interfaces are the foundation of the Java Collections Framework. All core collection interfaces are generic.
-For example `public interface Collection<E>`. The `<E>` syntax is for Generics (_später mehr zum Thema_ `Generics`)
+Die Java-Collection-Interfaces bilden die Grundlage des Java Collections Frameworks. Alle zentralen Collection-Interfaces sind generisch.
+Zum Beispiel `public interface Collection<E>`. Die Syntax `<E>` steht für Generics (_mehr dazu später im Kapitel_ `Generics`).
 
-. *Collection interface*.
-This is the root of the collection hierarchy. A collection represents a group of objects known as its elements. Some basic operations are provided.
+. *Collection-Interface*
+Dies ist die Wurzel der Collection-Hierarchie. Eine Collection repräsentiert eine Gruppe von Objekten, die als ihre Elemente bezeichnet werden. Einige grundlegende Operationen werden bereitgestellt.
 
-. *Iterator Interface*.
-Iterator interface provides methods to iterate over the elements of the Collection. Iterators allow the caller to remove elements from the underlying collection during the iteration.
+. *Iterator-Interface*
+Das Iterator-Interface stellt Methoden bereit, um über die Elemente einer Collection zu iterieren. Iteratoren ermöglichen es dem Aufrufer, während der Iteration Elemente aus der zugrunde liegenden Collection zu entfernen.
 
-. *Set Interface*
-Set is a collection that cannot contain duplicate elements.
-The Java platform contains three general-purpose Set implementations: HashSet, TreeSet, and LinkedHashSet.
+. *Set-Interface*
+Ein Set ist eine Collection, die keine Duplikate, doppelte Elemente, enthalten darf.
+Die Java-Plattform enthält drei allgemeine Set-Implementierungen: `HashSet`, `TreeSet` und `LinkedHashSet`.
 
-. *List Interface*
-List is an ordered collection and can contain duplicate elements. You can access any element by its index.
-List has a dynamic length. ArrayList and LinkedList are implementation classes of List interface.
+. *List-Interface*
+Eine List ist eine geordnete Collection und kann doppelte Elemente enthalten. Auf jedes Element kann über seinen Index zugegriffen werden.
+Listen haben eine dynamische Länge. `ArrayList` und `LinkedList` sind Implementierungsklassen des List-Interfaces.
 
-. *Queue Interface*
-Queue is a collection used to hold multiple elements prior to processing.
-Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.
-Queues typically, but do not necessarily, order elements in a FIFO (first-in-first-out) manner.
+. *Queue-Interface*
+Eine Queue ist eine Collection, die mehrere Elemente vor deren Verarbeitung hält.
+Neben den grundlegenden Collection-Operationen bietet eine Queue zusätzliche Einfüge-, Entnahme- und Überprüfungsoperationen.
+Queues ordnen Elemente typischerweise (aber nicht zwingend) nach dem FIFO-Prinzip („first-in-first-out“).
 
-. *Dequeue Interface*
-A linear collection that supports element insertion and removal at both ends. The name deque is short for "double-ended queue"
+. *Dequeue-Interface*
+Eine lineare Collection, die das Einfügen und Entfernen von Elementen an beiden Enden unterstützt. Der Name *deque* ist die Kurzform von *„double-ended queue“*.
 
-. *Map Interface*
-Java Map is an object that maps keys to values. A map cannot contain duplicate keys, each key can map to at most one value.
-The Java platform contains three general-purpose Map implementations: HashMap, TreeMap, and LinkedHashMap.
+. *Map-Interface*
+Eine Java-Map ist ein Objekt, das Schlüssel zu Werten zuordnet. Eine Map darf keine doppelten Schlüssel enthalten; jeder Schlüssel kann höchstens einem Wert zugeordnet sein.
+Die Java-Plattform enthält drei allgemeine Map-Implementierungen: `HashMap`, `TreeMap` und `LinkedHashMap`.
 
-. *SortedSet Interface*
-SortedSet is a Set that maintains its elements in ascending order. Sorted sets are used for naturally ordered sets.
+. *SortedSet-Interface*
+Ein SortedSet ist ein Set, das seine Elemente in aufsteigender Reihenfolge hält. SortedSets werden für natürlich geordnete Mengen verwendet.
 
-. *SortedMap Interface*
-A map that maintains its mappings in ascending key order. This is the Map analog of SortedSet.
-Sorted maps are used for naturally ordered collections of key/value pairs.
+. *SortedMap-Interface*
+Eine Map, die ihre Zuordnungen in aufsteigender Schlüsselreihenfolge verwaltet. Dies ist das Map-Äquivalent zu SortedSet.
+SortedMaps werden für natürlich-geordnete Sammlungen von Schlüssel/Wert-Paaren verwendet.
 
-TIP: Übrigens, das ist eine beliebte Prüfungsfrage: _"Welche Eigenschaften hat das Collections-Interface ...?"_
+TIP: Übrigens, das ist eine beliebte Prüfungsfrage: _„Welche Eigenschaften hat das Collections-Interface ...?“_
 
 
-=== Special Java Collections Classes
+=== Spezielle Java-Collection-Klassen
 
-Java Collections framework comes with many implementation classes for the interfaces. Most common implementations are:
+Das Java-Collections-Framework enthält viele Implementierungsklassen für die Interfaces. Die gängigsten Implementierungen sind:
 
-. `HashSet` Class
-. `TreeSet` Class
-. `ArrayList` Class
-. `LinkedList` Class
-. `HashMap` Class
-. `TreeMap` Class
+. `HashSet`-Klasse
+. `TreeSet`-Klasse
+. `ArrayList`-Klasse
+. `LinkedList`-Klasse
+. `HashMap`-Klasse
+. `TreeMap`-Klasse
 
 
 === Synchronized Wrappers
 
-The *synchronization* wrappers add automatic synchronization (thread-safety) to an arbitrary collection.
-Each of the six core collection interfaces - Collection, Set, List, Map, SortedSet, and SortedMap - has one static factory method, which return a synchronized (thread-safe) collection backed up by the specified collection.
+Die *synchronisierten* Wrapper fügen einer beliebigen Collection eine automatische Synchronisierung (Thread-Sicherheit) hinzu.
+Jedes der sechs zentralen Collection-Interfaces – Collection, Set, List, Map, SortedSet und SortedMap – besitzt eine statische Fabrikmethode, die eine synchronisierte (thread-sichere) Collection zurückgibt, die auf der angegebenen Collection basiert.
 
 
 === Unmodifiable Wrappers
 
-*Unmodifiable* wrappers take away the ability to modify the collection by intercepting all the operations that would modify the collection
-and throwing an `UnsupportedOperationException`.
+*Unmodifiable* Wrapper entziehen einer Collection die Möglichkeit, verändert zu werden. Sie fangen alle Operationen ab, die die Collection modifizieren würden, und werfen stattdessen eine `UnsupportedOperationException`.
 
-Its main usage is:
+Die Hauptanwendungsfälle sind:
 
-- To make a collection immutable once it has been built
-- To allow certain clients read-only access to data structures (keep a reference to the backing collection but hand out a reference to the wrapper)
-- To avoid `ConcurrentModificationException`
+- Um eine Collection unveränderlich zu machen, sobald sie aufgebaut ist
+- Um bestimmten Clients nur Lesezugriff auf Datenstrukturen zu geben (eine Referenz auf die ursprüngliche Collection behalten, aber eine Referenz auf den Wrapper ausgeben)
+- Um `ConcurrentModificationException` zu vermeiden
 
 
 *Demos*:
@@ -155,7 +154,7 @@ Zu finden in:
 
 *Übungen*:
 
-Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
+Die *Übungen* werden wie immer in Form von *Unit-Tests* in folgendem _Package_ implementiert:
 
 [subs=normal]
  -> {mod-ref-test}/exercise/CollectionsExerciseTests.java

@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SuppressWarnings("InnerClassMayBeStatic")
+@SuppressWarnings({"InnerClassMayBeStatic", "ConstantValue"})
 public class OperatorDemoTests {
 
     private final List<Combination> combinations = new LinkedList<>();
@@ -29,6 +29,22 @@ public class OperatorDemoTests {
         combinations.add(new Combination(true, false));
         combinations.add(new Combination(false, true));
         combinations.add(new Combination(false, false));
+    }
+
+    @Test
+    @DisplayName("Grundstruktur")
+    public void testOperator() {
+        // given
+        int i = 7;
+
+        // when
+        //          operand1  operator operand2
+        boolean x =   i >= 1     &&     i < 10;
+        boolean y =  (i >= 1)    &&    (i < 10);
+
+        // then
+        assertTrue(x);
+        assertTrue(y);
     }
 
     @Test
@@ -70,7 +86,7 @@ public class OperatorDemoTests {
     public void testOperator3() {
         // given
         for (Combination combination : combinations) {
-            // when - evaluation stops after operand1 has been evaluated to 'false'
+            // when - evaluation stops after operand1 has been evaluated to 'true'
             boolean result = combination.operand1 || combination.operand2;
 
             // then
@@ -87,7 +103,7 @@ public class OperatorDemoTests {
     public void testOperator4() {
         // given
         for (Combination combination : combinations) {
-            // when
+            // when - both are evaluated!
             boolean result = combination.operand1 | combination.operand2;
 
             // then

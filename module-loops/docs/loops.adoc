@@ -270,16 +270,17 @@ Die Unit-Tests zur *Demonstration* finden sich hier:
 
 Gegeben eine Liste mit Zahlen. Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` Schleife (IntelliJ: _"fori"_) und teste das Ergebnis mithilfe von `assertEquals`.
 
-_Optional_: Wandele die for Schleife in eine `enhanced for` Schleife um.
+_Optional_: Wandle die `for` Schleife in eine `enhanced for` Schleife um.
 
 *Übung 2*:
 
 Gegeben ein Startwert von `10`. Implementiere einen _CountDown_ mithilfe einer `while` Schleife, die den CountDown solange runterzählt, bis die `0` erreicht ist und dann abbricht.
 
-
+////
 == References
 
 See also:
 
 * https://www.baeldung.com/java-for-loop[For Loop]
 * https://www.baeldung.com/java-while-loop[While Loop]
+////
