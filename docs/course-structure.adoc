@@ -90,7 +90,7 @@ include::{agendas}/course-day-4.agenda.txt[]
 . {icon-module} link:../module-operators/docs/operators.adoc[module-operators]
 
 
-== Tag 5 - Assoziationen & Java Generics
+== Tag 5 - Überladen & Übersteuern, Assoziationen & Enums
 
 [subs=normal]
  [*Do., 19.03.2026*, 09:00 - 12:00, 180min] [red]#"Course Day 5"#
@@ -104,8 +104,9 @@ include::{agendas}/course-day-5.agenda.txt[]
 
 *Zugehörige Module*:
 
+. {icon-module} link:../module-classes/docs/classes.adoc[module-classes] (Kap. 6)
 . {icon-module} link:../module-associations/docs/associations.adoc[module-associations]
-. {icon-module} link:../module-generics/docs/generics.adoc[module-generics (Einf.)]
+. {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
 
 
 == Tag 6 - Java Generics, funktionale Programmierung
@@ -143,7 +144,7 @@ include::{agendas}/course-day-7.agenda.txt[]
 . {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
 . {icon-module} link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]
 . {icon-module} link:../module-statics/docs/statics.adoc[module-statics]
-. {icon-module} link:../module-enums/docs/enums.adoc[module-enums]
+
 
 
 == Tag 8 - Referenzsemantik, Object-Vertrag & Records
