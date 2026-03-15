@@ -20,8 +20,8 @@ public class AssociationsExerciseTest {
             
             Speichere die Klassen im Paket "src/main/java/de/dhbw/exercise/associations"
             
-            Zusatzfrage 2: Welcher Listentyp eignet sich hier am besten?
             Zusatzfrage 1: Handelt es sich um eine "Aggregation" oder um eine "Komposition"?
+            Zusatzfrage 2: Welcher Listentyp eignet sich hier am besten?
             """)
     public void exercise1() {
         // given
@@ -32,7 +32,7 @@ public class AssociationsExerciseTest {
     }
 
     @Test
-    @DisplayName("Übung 2: 'getter' und 'setter' anstelle direktem Feld-Zugriff")
+    @DisplayName("Übung 2: 'getter' und 'setter' anstelle von direktem Feld-Zugriff")
     public void exercise2() {
         // given
         Course course = new Course();

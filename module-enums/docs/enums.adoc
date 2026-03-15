@@ -126,7 +126,7 @@ public enum FoodGroup {
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {mod-ref-test}/EnumsDemoTests.java
+ {mod-ref-test}/EnumsDemoTest.java
 
 
 *Übungen*:

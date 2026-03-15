@@ -263,7 +263,7 @@ Zugehörige Unit-Tests zur *Demonstration*:
 sowie Implementierungen für V1 und V2:
 
 [subs=normal]
- {mod-ref-src}/demo/associations.[red]#*n*#.*.java
+ {mod-ref-src}/demo/associations/[red]#*n*#/*.java
 
 {a} Übung 1 (Beschreibung siehe unten)
 
