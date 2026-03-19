@@ -18,7 +18,7 @@ public class NumberCalculator<T extends Number> {
 
     public double divide(T a, T b) {
         if (b.doubleValue() == 0) {
-            throw new ArithmeticException("Division durch Null ist nicht erlaubt.");
+            throw new ArithmeticException("Division durch 0 ist nicht erlaubt.");
         }
         return a.doubleValue() / b.doubleValue();
     }

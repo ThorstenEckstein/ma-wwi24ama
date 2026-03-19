@@ -32,12 +32,12 @@ end::content[]
 
 Erst bei der Verwendung der Klassen, Schnittstellen und Methoden im Code werden diese Typ-Variablen durch konkrete Typen durch den Entwickler ersetzt.
 
-Damit kann *typsichere Programmierung* meistens gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: `DRY`), manchmal wird er allerdings auch schwerer wartbar und abnehmende Lesbarkeit. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:
+Damit kann generische und *typsichere Programmierung* gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: `DRY` (_Don't Repeat Yourself_)), z.T. wird er allerdings dadurch auch schwerer wartbar und die Lesbarkeit nimmt ab. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:
 
-* Java Generics `Klasse`
-* Java Generics `Methode`
+* Java Generics bzgl. einer `Klasse`
+* Java Generics bzgl. einer `Methode`
 
-TIP: [small]#_Viele Beispiele finden sich auch im Collections Framework, etwa die  Interfaces `List<T>` oder `Map<K,V>`. Siehe dazu z.B. -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/package-summary.html[Java 17 Package Documentation für `java.util`]!_#
+TIP: [small]#_Viele Beispiele finden sich, wie wir schon gesehen haben, im Collections Framework, etwa bei den Interfaces `List<T>` oder `Map<K,V>`. Siehe dazu z.B. -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/package-summary.html[Java 17 Package Documentation für `java.util`]!_#
 
 [source,java,lines,title="Beispiel einer generischen Klasse"]
 ----
@@ -46,10 +46,12 @@ include::../src/main/java/de/dhbw/generics/demo/Joiner.java[tag="generic-class"]
 
 Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 
-Die Nutzung einer generischen Klasse sieht entsprechend so aus, d.h. der Typ `T` wird konkret angegeben:
+Die Nutzung einer generischen Klasse, z.B. in einem Test, sieht entsprechend so aus, indem der Typ `T` konkret angegeben wird:
 
 [,java]
 ----
+Joiner<String> joiner = new Joiner<Joiner>();
+// Typ kann bei der Initalisierung auch weggelassen werden
 Joiner<String> joiner = new Joiner<>();
 ----
 
@@ -64,6 +66,8 @@ include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method
 
 Oft kommen sogenannte Begrenzungsausdrücke oder *bounded generics* zum Einsatz.
 
+"Upper Bound"::
+
 Dabei wird bei der Definition die Oberklasse angegeben, von welcher der *generische Typ erben muss*. Die Blickrichtung ist sozusagen _"nach unten"_.
 
 Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
@@ -77,28 +81,35 @@ Hier kann z.B. der genutzte Datentyp ausschließlich ein Zahlen-Datentyp sein, d
 
 Auch die *gegenteilige Blickrichtung* _"nach oben"_ kann auch angegeben werden:
 
+"Lower Bound"::
+
 Der Begrenzungsausdruck
 
 [, java]
 ----
-<? super Number>
+<? super FilledCircle>
 ----
 
-bedeutet, dass der Typ hier ein Supertyp von `Number` sein muss, also Number selbst oder eine Oberklasse von Number.
+bedeutet, dass der Typ hier ein Supertyp von `FilledCircle` sein muss, also FilledCircle selbst oder eine Oberklasse von dieser.
 
-Es definiert eine untere Grenze (_"lower bound"_) für den erlaubten Typ. Dazu ein Beispiel:
+Es definiert eine untere Grenze für den erlaubten Typ. Dazu ein Beispiel:
 
 [, java]
 ----
-<T extends Number> void add(List<? super Number> list, T element)
+public void draw(List<? super FilledCircle> list)
 ----
 
-`List<? super Number>` ist hier die Angabe dafür, das eine Liste nur Typen akzeptiert, deren Elementtyp Number oder ein Supertyp von Number ist.
+`List<? super FilledCircle>` ist hier die Angabe dafür, das die "draw" Methode die   Liste mit bestimmten Typen "zeichnen" kann, nämlich deren Elemente "kreisförmig" sind.
+
+Der Unterschied lässt sich grafisch besser verstehen:
+
+.Grafische Erläuterung der Wildcard-Logik
+image::diagrams/wildcards.svg[width="80%", align="center"]
 
 
 === Wildcards
 
-Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durchaus auch die sogenannte *Wildcard* `?` nutzen. Das schafft Flexibilität hinsichtlich der spezifizierbaren Typen, verhindert aber die Nutzung der Typvariable selbst innerhalb der Klasse.
+Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durchaus auch die sogenannte *Wildcard* `?` nutzen. Das schafft Flexibilität hinsichtlich der spezifizierbaren Typen (erschwert aber die Nutzung der Typvariable selbst innerhalb der Klasse, weil `?` für "irgendwas" steht).
 
 
 === Demonstrationen

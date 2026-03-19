@@ -1,6 +1,5 @@
 package de.dhbw.generics;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.generics.demo.Joiner;
 import de.dhbw.generics.demo.NaturalPerson;
 import de.dhbw.generics.demo.Person;
@@ -17,8 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
 public class GenericsDemoTests {
-
-    private final Logger logger = new Logger(GenericsDemoTests.class);
 
     @Test
     @DisplayName("Demo 1: Joiner mit Strings")

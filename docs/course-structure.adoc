@@ -123,7 +123,7 @@ include::{agendas}/course-day-6.agenda.txt[]
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-generics/docs/generics.adoc[module-generics] (Forts.)
+. {icon-module} link:../module-generics/docs/generics.adoc[module-generics]
 . {icon-module} link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]
 
 
