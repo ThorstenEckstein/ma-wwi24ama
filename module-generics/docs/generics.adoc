@@ -50,7 +50,7 @@ Die Nutzung einer generischen Klasse, z.B. in einem Test, sieht entsprechend so 
 
 [,java]
 ----
-Joiner<String> joiner = new Joiner<Joiner>();
+Joiner<String> joiner = new Joiner<String>();
 // Typ kann bei der Initalisierung auch weggelassen werden
 Joiner<String> joiner = new Joiner<>();
 ----
@@ -61,6 +61,16 @@ Auch Methoden können generisch sein, sie werden ähnlich wie Klassen definiert:
 ----
 include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method"]
 ----
+
+Die Nutzung sieht dann so aus (z.B. wenn die Methode in einer Klasse `Printer` definiert ist):
+
+[,java]
+----
+...
+Document doc = Document.of("langer Text ...");
+String printed = printer.print(doc);
+----
+
 
 === Bounded Generics
 
@@ -104,7 +114,7 @@ public void draw(List<? super FilledCircle> list)
 Der Unterschied lässt sich grafisch besser verstehen:
 
 .Grafische Erläuterung der Wildcard-Logik
-image::diagrams/wildcards.svg[width="80%", align="center"]
+image::images/wildcards-and-bounds.png[width="80%", align="center"]
 
 
 === Wildcards

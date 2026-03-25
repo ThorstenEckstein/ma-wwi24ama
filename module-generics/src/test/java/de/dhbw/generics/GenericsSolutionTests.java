@@ -23,10 +23,30 @@ public class GenericsSolutionTests {
         - multiplizieren und
         - dividieren.
         
-        Der Taschenrechner sollte mit einem beliebigen Zahlen-Datentyp umgehen können. Zahlentypen in Java haben 
+        Der Taschenrechner sollte mit einem beliebigen Zahlen-Datentyp umgehen können. Zahlentypen in Java haben
         eine gemeinsame Superklasse: java.lang.Number.
         """)
     public void solution1() {
+        /*
+        Siehe: /module-generics/src/main/java/de/dhbw/generics/solution/Calculator.java
+
+        public interface Calculator<T extends Number> {
+            T add(T first, T second);
+            T subtract(T first, T second);
+            T multiply(T first, T second);
+            T divide(T first, T second);
+        }
+        */
+    }
+
+    @Test
+    @DisplayName("""
+        Zu Übung 1: Was, wenn man nun die Interfaces einfach implementiert?
+        
+        Frage: Kann man diese Umsetzung noch als "generisch" bezeichnen?
+        
+        """)
+    public void solution1b() {
         // given - mandatory part
         Calculator<Integer> calculator = new IntegerCalculator();
         //Calculator<Double> calculator = new DoubleCalculator();
