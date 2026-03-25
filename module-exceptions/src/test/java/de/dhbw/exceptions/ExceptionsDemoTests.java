@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ExceptionsDemoTests {
 
     @Test()
-    @DisplayName("Demo 1: Do not print stack trace without any exception handle!")
+    @DisplayName("Demo 1: Throwing an exception (+Antipattern: Do not print stack trace without any exception handle!)")
     public void demo1() {
         // given
         boolean exceptionCondition = true;
@@ -33,12 +33,12 @@ public class ExceptionsDemoTests {
     @DisplayName("Demo 2: How to test an expected exception")
     public void demo2() {
         // given
-        TrainObservationMonitor model = new TrainObservationMonitor();
+        TrainObservationMonitor monitor = new TrainObservationMonitor();
 
         // when
         TrainTooLateException thrown = assertThrows(TrainTooLateException.class, () -> {
             // Code under test that can throw an exception
-            model.observeOperatingTrain("RB-21");
+            monitor.observeOperatingTrain("RB-21");
         });
 
         // then
@@ -57,12 +57,12 @@ public class ExceptionsDemoTests {
                     // Code under test that can throw an exception
                     monitor.observeOperatingTrainWithContext("RB-21");
                 });
-        Object passengersCount = thrown.getContext().getItem("passengers");
+        // repeat: narrowing/down-casting
+        int passengersCount = (int)thrown.getContext().getItem("passengers");
 
         // then
         assertEquals(Severity.WARN, thrown.getContext().getSeverity());
-        // repeat: narrowing/down-casting
-        assertTrue((int)passengersCount > 80);
+        assertTrue(passengersCount > 80);
 
         System.out.println(Colourizer.red(thrown.getContext().getMessage()));
     }

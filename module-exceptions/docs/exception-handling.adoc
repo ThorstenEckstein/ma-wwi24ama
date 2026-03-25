@@ -23,11 +23,17 @@ end::content[]
 
 == Exceptions & Exception-Handling
 
-Beim Ausführen von Anweisungen in Java Programmen kann es (immer) zu *Fehlern* im Code kommen. Eine gute Ausnahmebehandlung kann Fehler behandeln und das Programm ordnungsgemäß umleiten, um Benutzern - trotz Fehler - ein positives Erlebnis zu bieten.
+Beim Ausführen von Anweisungen in Java Programmen kann es (immer) zu *Fehlern* im Code kommen. Eine gute *Ausnahmebehandlung* muss Fehler behandeln und das Programm ordnungsgemäß fortsetzen, um Benutzern - trotz Fehler - ein positives Erlebnis zu bieten.
 
-Normalerweise wird Code in einer idealisierten Umgebung geschrieben: Das Dateisystem enthält immer unsere Dateien, das Netzwerk ist fehlerfrei und die JVM verfügt immer über genügend Speicher. Manchmal wird dies auch als *"happy path"* bezeichnet.
+Häufig wird Code in einer idealisierten Umgebung geschrieben:
 
-In der Produktion können jedoch Dateisysteme beschädigt werden, Netzwerke zusammenbrechen und JVMs nicht mehr über genügend Speicher verfügen. Das Funktionieren des Codes hängt von vielen Aspekten ab, die während der Programmierung nicht beachtet werden oder bekannt sind.
+_Das Dateisystem enthält immer die Testdateien, das Netzwerk funktioniert fehlerfrei und die JVM verfügt immer über genügend Speicher_.
+
+Manchmal wird dies auch als *"happy path"* bezeichnet.
+
+In der realen Produktionsumgebung können jedoch eben diese z.B. Dateisysteme beschädigt werden, Netzwerke zusammenbrechen und JVMs nicht mehr über genügend Speicher verfügen.
+
+Das Funktionieren des Codes hängt von vielen Aspekten ab, die während der Programmierung nicht beachtet werden oder bekannt sind.
 
 Die Software muss mit diesen Bedingungen umgehen können, da sie den Ablauf der Anwendung negativ beeinflussen und Fehlersituationen bilden:
 
@@ -41,11 +47,14 @@ public static List<Player> getPlayers() throws IOException {
 }
 ----
 
-Dieser Code ist so (mangelhaft) geschrieben, die möglicherweise auftretende Exception nicht zu behandeln, sondern sie stattdessen einfach zu *"werfen"*. In einer idealisierten, kontrollierten Umgebung wird der Code in aller Regel aber einwandfrei funktionieren.
+Dieser Code ist so (mangelhaft) geschrieben, dass die möglicherweise auftretende Exception nicht "behandelt" wird, sondern sie wird stattdessen einfach *"geworfen"*. In einer idealisierten, kontrollierten Umgebung wird _dieser_ Code aber in aller Regel aber einwandfrei funktionieren!
 
-Aber was könnte in der Produktion passieren, wenn die Datei `players.dat` fehlt?
+Aber was würde nun in der Produktion passieren, wenn die Datei `players.dat` fehlt?
 
-Ohne die *Behandlung* dieser Ausnahme kann es sein, dass ein ansonsten fehlerfreies Programm überhaupt nicht mehr ausgeführt wird! Es muss sichergestellt werden, dass der Code einen Plan für den Fall hat, dass etwas schiefgeht.
+Ohne die *Behandlung* dieser Ausnahme kann es sein, dass ein ansonsten fehlerfreies Programm überhaupt nicht mehr ausgeführt wird! Es muss also irgendwie sichergestellt werden, dass der Code einen _"Plan"_ für den Fall hat, dass etwas schiefgeht.
+
+NOTE: Im allgemeinen Sprachgebrauch werden Fehler oder Ausnahmen _"geworfen"_ (ausgelöst, sie treten auf) und _"gefangen"_ (behandelt), im Code werden genau diese englischen Schlüsselworte benutzt!
+
 
 === Exceptions Hierarchie
 
@@ -105,7 +114,7 @@ Ein *Beispiel*-Klassenmodell:
 include::diagrams/exceptions-model.puml[]
 ....
 
-* _gelbe Klassen sind eigenen Implementierungen, also anwendungsspezifische Erweiterungen der allgemeinen Java Exceptions API_
+* _gelbe Klassen sind eigene Implementierungen, also anwendungsspezifische Erweiterungen der allgemeinen Java Exceptions API_
 * _graue Klassen werden von Java zur Verfügung gestellt und sind Teil der API_
 
 

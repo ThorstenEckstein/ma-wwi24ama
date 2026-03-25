@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 public class ScenarioTests {
 
     @Test
-    public void canRealizeScenarioLV() {
+    @DisplayName("Semester-Planung")
+    public void canRealizeScenario1() {
         // given
 
         // when
@@ -17,7 +18,7 @@ public class ScenarioTests {
 
     @Test
     @DisplayName("Stromkunden-Verwaltung")
-    public void canRealizeScenarioModel1() {
+    public void canRealizeScenario2() {
         // given
 
         // when
@@ -26,8 +27,8 @@ public class ScenarioTests {
     }
 
     @Test
-    @DisplayName("World of Codecraft")
-    public void canRealizeScenarioModel2() {
+    @DisplayName("World of CodeCraft")
+    public void canRealizeScenario3() {
         // given
 
         // when
