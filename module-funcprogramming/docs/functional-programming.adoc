@@ -67,7 +67,7 @@ Die *funktionale Programmierung* ist eine _Teilmenge_ der deklarativen Programmi
 
 === (Funktionale) Lambda Ausdrücke
 
-Bei der *funktionalen Programmierung* stehen also Funktionen im Mittelpunkt, sie werden nicht nur
+Bei der *funktionalen Programmierung* stehen also *Funktionen* im Mittelpunkt, sie werden nicht nur
 
 * (_wie Variablen_) *definiert* und
 * (_wie Methoden_) *angewendet*
@@ -89,7 +89,11 @@ Um _mehr als einen Parameter_ zu nutzen, müssen runde Klammern angegeben werden
 
 Weil die Ausdrücke limitiert sind und direkt einen Wert zurückgeben, kann auch ein Code-Block genutzt werden:
 
- (parameter1, parameter2) -> { code block }
+ (parameter1, parameter2) -> {
+        ...
+        code block: mehrzeiliger Code
+        ...
+ }
 
 Zu beachten ist, dass der `{ code block }` ein `return` Statement enthalten muss.
 
@@ -105,10 +109,10 @@ Ein Lambda ist ein *Behälter für Sourcecode*, einer Methode sehr ähnlich, im 
 * ohne expliziten _Rückgabewert_ (größtenteils) und
 * ohne Deklaration von _Exceptions_
 
-Vereinfacht ausgedrückt kann man einen Lambda-Ausdruck am ehesten als
+Vereinfacht ausgedrückt kann man einen Lambda-Ausdruck am ehesten als eine
 
 ====
-eine *anonyme Methode* mit einer *speziellen Syntax* bzw. Kurzform
+*anonyme Methode* mit einer *speziellen Syntax* bzw. Kurzform
 ====
 
 bezeichnen. Seit `Java 8` sind diese Elemente in der Sprache enthalten.

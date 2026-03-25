@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -46,14 +48,15 @@ public class StreamingDemoTests {
 
         // when
         List<Schedule> filtered = timetable.getSchedules().stream()
-                .filter(s -> s.getFrom().equals("MA"))
-                .toList();
+            .filter(s -> s.getFrom().equals("MA"))
+            .toList();
 
         // a bit more readable (wobei Predicate am ehesten mit (besondere) 'Eigenschaft' übersetzbar)
-        //Predicate<Schedule> departingFromMannheim = s -> s.getFrom().equals("MA");
-        //List<Schedule> filtered = timetable.getSchedules().stream()
-        // .filter(departingFromMannheim)
-        // .toList();
+        Predicate<Schedule> departingFromMannheim = s -> s.getFrom().equals("MA");
+        Stream<Schedule> stream = timetable.getSchedules().stream();
+        List<Schedule> filtered2 = stream
+            .filter(departingFromMannheim)
+            .toList();
 
         // then
         System.out.println("Full timetable     : " + timetable.getSchedules());
