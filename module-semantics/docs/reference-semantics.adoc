@@ -118,24 +118,27 @@ Account.process(a1)
 
 [source,java,indent=0]
 ----
-include::{mod-lnk-src}/semantics/demo/Account.java[lines="24"]
+Account a2 = new Account(100);
 ----
+// include::{mod-lnk-src}/semantics/demo/Account.java[lines="24"]
 
 | [yellow]#(5)#
-| Bei der Zuweisung von `acc = a2` wird die Referenz auf die neue Instanz "gelenkt"
+| Bei der folgenden Zuweisung wird die Referenz `acc` auf die neue Instanz "gelenkt"
 
 [source,java,indent=0]
 ----
-include::{mod-lnk-src}/semantics/demo/Account.java[lines="25"]
+acc = a2
 ----
+//include::{mod-lnk-src}/semantics/demo/Account.java[lines="25"]
 
 | [yellow]#(6)#
 | Hier wird der interne Status der Instanz von `Account`, nämlich der Attributwert von `amount` um `250` erhöht, der Objektzustand wird also verändert!
 
 [source,java,indent=0]
 ----
-include::{mod-lnk-src}/semantics/demo/Account.java[lines="27"]
+acc.deposit(250)
 ----
+//include::{mod-lnk-src}/semantics/demo/Account.java[lines="27"]
 |===
 
 
