@@ -161,10 +161,12 @@ include::{agendas}/course-day-8.agenda.txt[]
 
 *Zugehörige Module*:
 
-. {icon-module} link:../module-object-contract/docs/object-contract.adoc[module-object-contract]
 . {icon-module} link:../module-semantics/docs/reference-semantics.adoc[module-semantics]
-. {icon-module} link:../module-records/docs/records.adoc[module-records]
-. {icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code]
+. {icon-module} link:../module-object-contract/docs/object-contract.adoc[module-object-contract]
+. Stromkunden Modell, Fortsetzung
+
+. ({icon-module} link:../module-records/docs/records.adoc[module-records])
+. ({icon-module} link:../module-clean-code/docs/clean-code.adoc[module-clean-code])
 
 
 == Tag 9 - Polymorphismus, KI in der Softwareentwicklung & Prüfungsvorbereitung

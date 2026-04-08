@@ -69,7 +69,31 @@ Die `toString()` Methode ist vor allem deshalb interessant, wie sie die Möglich
 
 === Objektidentität mit `==`
 
-Ergänzen: technische Identität mittels Gleichheitsoperator, Gegenüberstellung + Code.
+Der Gleichheitsoperator `==` vergleicht in Java zwei Referenzen und prüft, ob sie auf genau dasselbe Objekt zeigen. Das heißt: `==` testet die referenzielle bzw. technische Identität (Speicheradresse), nicht den inneren Zustand oder die fachliche Gleichheit zweier Objekte.
+
+Ein kurzes Beispiel mit einer benutzerdefinierten Klasse verdeutlicht das:
+
+[source,java]
+----
+class Point {
+    final int x, y;
+    public Point(int x, int y) {
+        this.x = x; this.y = y;
+    }
+}
+
+Point p1 = new Point(1, 2);
+Point p2 = new Point(1, 2); // andere Instanz, gleicher Zustand
+Point p3 = p1;              // p3 referenziert dasselbe Objekt wie p1
+
+System.out.println(p1 == p2);      // false -> unterschiedliche Referenzen
+System.out.println(p1 == p3);      // true  -> gleiche Referenz
+System.out.println(p1.equals(p2)); // false (Standard-Implementation von Object)
+----
+
+Im obigen Beispiel sind `p1` und `p2` fachlich gleich (gleiche Koordinaten), aber nicht identisch. Die Standard-Implementierung von `equals()` in `Object` entspricht `==` (Referenzvergleich).
+
+IMPORTANT: `==` ist also nur dann die richtige Wahl, wenn man wirklich prüfen möchte, ob zwei Referenzen dasselbe Objekt bezeichnen. Für fachliche/inhaltliche Gleichheit wird `equals()` (bzw. `Objects.equals(a, b)` eingesetzt, dazu mehr im übernächsten Kapitel.
 
 
 === Objektidentität mit `hashCode()`
@@ -112,6 +136,13 @@ include::{mod-lnk-test}/demo/ObjectContractDemoTest.java[tag="object-contract-1"
 ----
 include::{mod-lnk-test}/demo/ObjectContractDemoTest.java[tag="object-contract-2"]
 ----
+
+Tipps:
+
+* Nutze `==` ausschließlich für Identitätsprüfungen (Referenzen).
+* Verwende `equals()` für inhaltliche Vergleiche; überschreibe `equals()` zusammen mit `hashCode()` nach dem Objektvertrag.
+* Nutze für null-sichere Vergleiche: `Objects.equals(a, b)`.
+
 
 === Objektrepräsentation mit `toString()`
 

@@ -1,11 +1,11 @@
 1) Come in, sit down and relax
 2) Project Update
-3) Der Objektvertrag >>> object-contract.adoc
-4) Demos zum Objektvertrag
-5) Übungen zum Objektvertrag
-6) Referenzsemantik >>> references-semantics.adoc
-7) Pause
-8) Demo Referenzsemantik
+3) Referenzsemantik >>> references-semantics.adoc
+4) Demo Referenzsemantik
+5) Der Objektvertrag >>> object-contract.adoc
+6) Demos zum Objektvertrag
+7) Übungen zum Objektvertrag
+8) Pause
 9) Java Records >>> records.adoc
 10) Demo zu Java Records
 11) Clean Code
