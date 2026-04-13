@@ -74,6 +74,10 @@ _Zwei bekannte Beispiele für ..._
 * synchrone Kommunikation: `<<_restful_webservices>>`
 * asynchrone Kommunikation: `<<_messaging>>`
 
+////
+* `<<_synchrone_integration_mit_rest, Synchrone Kommunikation>>`
+* `<<_asynchrone_integration_mit_nachrichten_messaging, Asynchrone Kommunikation>>`
+////
 
 == Integrationsoptionen bzw. -muster
 
