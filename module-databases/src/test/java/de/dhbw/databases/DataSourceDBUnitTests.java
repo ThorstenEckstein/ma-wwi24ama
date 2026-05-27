@@ -21,6 +21,9 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 /**
  * Tuo use the H2 shell from CLI, type:
  * (path-to-jar: /Users/thorsteneckstein/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar)
